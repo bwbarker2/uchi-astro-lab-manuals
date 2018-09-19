@@ -1,0 +1,201 @@
+\documentclass[]{msulabm}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+%\usepackage[linktocpage]{hyperref}  % if not using colorlinks, use linktocpage
+\usepackage[colorlinks]{hyperref}  % if not using colorlinks, use linktocpage
+\usepackage{bm}            % bold math
+\usepackage{multirow}
+\usepackage[table]{xcolor} % provide alternating rows with colors
+\usepackage{textcomp}
+\usepackage{xfrac} % gives split-level fractions with '\sfrac{a}{b}
+\usepackage{multicol}
+\usepackage[section]{placeins} % provides \FloatBarrier, to keep floats from crossing this barrier
+\usepackage{amssymb}
+\usepackage{wrapfig} % provides wrapping figures with text.
+%\usepackage{enumitem} % gives \begin{enumerate}[resume] to resume counting from previous enumerate
+%\usepackage{subfigure}
+%\usepackage{tikz} % to draw arrows
+\usepackage{xtab} % provides xtabular, tabular environment that spans multiple pages and other awesome things
+\usepackage[style=phys,biblabel=brackets,pageranges=false]{biblatex}
+\usepackage{pdflscape}
+\usepackage{ragged2e}
+\usepackage{longtable}
+
+\bibliography{references,MyLibrary}
+
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+
+\title{Laboratory Manual}
+\author{PHSC 12600 Matter, Energy, Space, \& Time \\ \\ The University of Chicago}
+\date{Autumn 2018}
+
+\pagestyle{ruled}
+
+\definecolor{lgray}{rgb}{.2,.2,.2}
+
+\makeevenfoot{ruled}{\thepage}{\footnotesize{\textit{Last updated \today}}}{}
+%\makeevenfoot{ruled}{\thepage}{}}{}
+\makeoddfoot{ruled}{}{\color{lgray} \tiny{This work is licensed under \href{http://creativecommons.org/licenses/by-sa/4.0/}{CC BY-SA 4.0} by \href{mailto:bbarker@uchicago.edu}{Brent W.~Barker}.}}{\thepage}
+
+
+% allows us to use subcaptions from the memoir class in figures. See Memoir Section 10.9
+\newsubfloat{figure}
+
+% don't worry so much about filling every page.
+%\raggedbottom
+
+% raise the penalty for splitting footnotes across different pages. Default is 100.
+\interfootnotelinepenalty=10000
+
+%\includeonly{amplifier/amplifier} 
+
+% creates a standard length to use 
+\newlength{\answerskip}
+%\setlength{\answerskip}{90pt} 
+
+%% use plus / minus if latex is squeezing the answer space too much
+\setlength{\answerskip}{2cm plus 0.2cm minus 0.2cm}
+
+\newlength{\qaskip}
+\setlength{\qaskip}{\answerskip}
+\addtolength{\qaskip}{\baselineskip}
+
+% reduce vertical space between chapters in table of contents. Default is 2em.
+\setlength{\cftbeforechapterskip}{1em}
+
+% allow for extra line on a page to help prevent widow/orphan lines.
+\sloppybottom
+
+% Now we can caption a table outside of the table float environment (good for multi-page tables)
+\newfixedcaption{\freetabcaption}{table}
+
+%\includeonly{snells-law/snells-law}
+%\includeonly{ohms-law/ohms-law}
+
+\begin{document}
+\maxtocdepth{chapter}
+
+ % start roman numbering
+ \frontmatter
+
+\maketitle
+
+%\clearpage
+
+%Brent W. Barker
+
+%Department of Astronomy \& Astrophysics
+
+%The University of Chicago
+
+%5640 South Ellis Ave.
+
+%Chicago, IL 60637
+
+%\href{mailto:bbarker@uchicago.edu}{bbarker@uchicago.edu}
+
+%\vspace{2\baselineskip}
+
+%\includegraphics{cc-by-sa-88x31}
+
+%\textcopyright{} 2018 Brent W. Barker. Except where otherwise noted, this work is copyrighted under the Creative Commons Attribution-ShareAlike International 4.0 License. To view a copy of this license, visit \url{http://creativecommons.org/licenses/by-sa/4.0/}.
+
+%\vspace{\baselineskip}
+
+%These labs, excluding "Impulse and Momentum" and the appendices, are a derivative of "\href{https://%sites.google.com/site/scientificabilities/ISLE-labs}{ISLE Labs}" by the Rutgers Physics and Astronomy %Education Research group, used under the Creative Commons Attribution International 4.0 License.
+%To view a copy of this license, visit \url{http://creativecommons.org/licenses/by/4.0/}.
+
+%At Rutgers University, many people contributed to this project over the years.
+%The list of names is very long and includes: Eugenia Etkina, Alan Van Heuvelen, Suzanne Brahmia, David %Brookes, Michael Gentile, Anna Karelina, Michael Lawrence, Marina Milner-Bolotin, Sahana Murthy, Maria %Ruibal-Villasenor, Aaron Warren, Xueli Zou.
+
+ % skip to next right leaf (``recto'')
+ \cleartorecto
+
+ % the star means that the ToC itself is not listed in the ToC
+ \tableofcontents*
+
+ % start arabic numbering
+\mainmatter 
+
+\include{measurement/lab}
+
+
+%\include{isle-force-motion-1/lab}
+%\include{isle-1d-kinematics/lab}
+%\include{isle-force-motion-2/lab}
+%\include{isle-newtons-laws-circular-motion/lab}
+%\include{isle-circular-motion/lab}
+%\include{isle-impulse-momentum/lab}
+%\include{isle-practical-n2l/lab}
+%\include{isle-toys/lab}
+%\include{isle-statics/lab}
+%\include{isle-your-own/lab}
+%\include{isle-gases/lab}
+%\include{isle-thermo/lab}
+%\include{isle-practical-fluids/lab}
+
+%\include{isle-electric-1/lab}
+%\include{isle-electric-2/lab}
+%\include{isle-electric-pot/lab}
+%\include{isle-magnetism/lab}
+%\include{isle-em-induction/lab}
+%\include{practical-circuits-mag/lab}
+%\include{isle-vibration/lab}
+%\include{isle-waves/lab}
+%\include{isle-reflection/lab}
+%\include{isle-refraction/lab}
+%\include{isle-lens-applications/lab}
+%\include{isle-wave-optics/lab}
+%\include{isle-practical-vib-lens/lab}
+%\include{rotational-motion/rotational-motion}
+%\include{rtp-intro-motion/rtp-intro-motion}
+%\include{rtp-changing-motion/rtp-changing-motion}
+%\include{rtp-2d-motion/rtp-2d-motion}
+%\include{rtp-force-mass-acceleration/rtp-force-mass-acceleration}
+%\include{rtp-passive-forces/rtp-passive-forces}
+%\include{rtp-1d-collisions/rtp-1d-collisions}
+%\include{rtp-newtons-third-momentum/rtp-newtons-third-momentum}
+%\include{rtp-work-energy/experiment}
+%\include{rtp-conservation-energy/experiment}
+%\include{buoyancy-pressure/buoyancy-pressure}
+%\include{simple-harmonic-motion/simple-harmonic-motion}
+% \include{electric-fields/electric-fields}
+% \include{ohms-law/ohms-law}
+% \include{electrical-energy/electrical-energy}
+% \include{rc-circuits/rc-circuits}
+% \include{snells-law/snells-law}
+% \include{thin-lens/thin-lens}
+% \include{interference/interference}
+% \include{emission-spectra/emission-spectra}
+% \include{rydberg-constant/rydberg-constant}
+% \include{color/color}
+
+% \include{oscilloscope/oscilloscope}
+% \include{amplifier/amplifier}
+% \include{bioelectric/bioelectric}
+
+\appendix
+
+\include{uncertainty/uncertainty}
+\chapter{Lab Report Format}
+
+\include{rubrics/rubrics}
+% \include{dealing-with-uncertainty/dealing-with-uncertainty}
+% \include{spreadsheet-commands/spreadsheet-commands}
+% \include{report-contents/report-contents}
+% \include{intro-computer/intro-computer}
+%\include{glossary/glossary}
+%\include{uncertainty/uncertainty}
+%\include{physical-constants/physical-constants}
+%\include{all-rubrics/all-rubrics}
+%\include{app-force-sensor/app-force-sensor}
+%\include{app-motion-detector/app-motion-detector}
+%\include{app-logger-pro/app-logger-pro}
+% \include{oscilloscope-cursor/oscilloscope-cursor}
+
+% \bibliography{references,MyLibrary}
+% \bibliographystyle{plain}
+\printbibliography
+
+\end{document}

@@ -1,0 +1,38 @@
+\chapter{Analysis of Uncertainty}
+
+A physical quantity consists of a value, unit, and uncertainty. For example, ``$5 \pm 1\,$m'' means that the writer believes the true value of the quantity to most likely lie within 4 and 6 meters\footnote{The phrase ``most likely'' can mean different things depending on who is writing. This is discussed in more detail in Section\ ???.}. Without knowing the uncertainty of a value, the quantity is next to useless. For example, in our daily lives, we use an implied uncertainty. If I say that we should meet at around 5:00 pm, and I arrive at 5:05 pm, you will probably consider that within the range that you would expect. Perhaps your implied uncertainty is plus or minus 15 minutes. On the other hand, if I said that we would meet at 5:07 pm, then if I arrive at 5:10 pm, you might be confused, since the implied uncertainty of that time value is more like 1 minute.
+
+Scientists use the mathematics of probability and statistics, along with some intuition, to be precise and clear when talking about uncertainty, and it is vital to understand and report the uncertainty of quantitative results that we present.
+
+\section{Significant figures}
+
+In science classrooms, the notion of \textbf{significant figures} is a codified way of implied uncertainty, as well as a crude way of combining uncertainties (or ``propagating'' them) when using uncertain quantities in calculations.
+
+If a value for a 
+
+\section{Propagation of Uncertainty}
+
+When we use an uncertain quantity in a calculation, the result is also uncertain. To determine by how much, we give some simple rules for basic calculations, and then a more general rule for use with any calculation which requires knowledge of calculus.
+
+If the measurements are completely independent of each other, then for quantities $a \pm \delta a$ and $b \pm \delta b$, we can use the following formulas:
+\begin{equation}\label{unc:add}
+\textrm{For } c = a + b \textrm{ (or for subtraction), } \delta c = \sqrt{(\delta a)^2 + (\delta b)^2}
+\end{equation}
+
+\begin{equation}\label{unc:mult}
+\textrm{For } c = ab \textrm{ (or for division), } \frac{\delta c}{c} = \sqrt{\left(\frac{\delta a}{a}\right)^2 + \left(\frac{\delta b}{b}\right)^2}
+\end{equation}
+
+\begin{equation}\label{unc:exp}
+\textrm{For } c = a^n,\, \frac{\delta c}{c} = n \frac{\delta a}{a}
+\end{equation}
+
+If you are familiar with calculus, you may want to use this general formula for the uncertainty $\delta f$ of a function $f$ of $N$ independent values $x_i$, each with uncertainty $\delta x_i$:
+\begin{equation}\label{unc:general}
+\delta f = \sqrt{ \sum_{i=1}^{N} \left(\frac{\partial f}{\partial x_i} \delta x_i\right)^2 } \, .
+\end{equation}
+Notice that Eqs.\ \ref{unc:add} through \ref{unc:exp} can be derived from Eq.\ \ref{unc:general} for those specific cases.
+
+
+
+how many digits to use in value and uncertainty?
