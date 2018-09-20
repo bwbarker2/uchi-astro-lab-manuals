@@ -4,11 +4,11 @@ A physical quantity consists of a value, unit, and uncertainty. For example, ``$
 
 Scientists use the mathematics of probability and statistics, along with some intuition, to be precise and clear when talking about uncertainty, and it is vital to understand and report the uncertainty of quantitative results that we present.
 
-\section{Significant figures}
+\section{Significant digits}
 
-In science classrooms, the notion of \textbf{significant figures} is a codified way of implied uncertainty, as well as a crude way of combining uncertainties (or ``propagating'' them) when using uncertain quantities in calculations.
+In science classrooms, the notion of \textbf{significant digits} (also called significant figures) is a formalized way of notating implied uncertainty, as well as a crude way of combining uncertainties (or ``propagating'' them) when using uncertain quantities in calculations.
 
-If a value for a 
+In general, 
 
 \section{Propagation of Uncertainty}
 
@@ -33,6 +33,25 @@ If you are familiar with calculus, you may want to use this general formula for 
 \end{equation}
 Notice that Eqs.\ \ref{unc:add} through \ref{unc:exp} can be derived from Eq.\ \ref{unc:general} for those specific cases.
 
+\subsubsection{How many digits to report?}
 
+After even a single calculation, a calculator will often give ten or more digits in an answer.
+For example, if I travel $11.3 \pm 0.1\:$km in $350 \pm 10\:$s, then my average speed will be the distance divided by the duration. Entering this into my calculator, I get the resulting value ``\texttt{0.0322857142857143}''.
+Perhaps it is obvious that my distance and duration measurements were not precise enough for all of those digits to be useful information.
+We can use the propagated uncertainty to decide how many decimals to include.
+Using the formulas above, I find that the uncertainty in the speed is given by my calculator as ``\texttt{9.65683578099600e-04}'', where the `\texttt{e}' stands for ``times ten to the''.
+I definitely do not know my uncertainty to 14 decimal places.
+For reporting uncertainties, it general suffices to use just the 1 or 2 most significant digits (left-most digits that are not merely used as placeholders), unless you have a more sophisticated method of quantifying your uncertainties.
+So here, I would round this to 1 significant digit, resulting in an uncertainty of $0.001\:$km/s.
+Now I have a guide for how many digits to report in my value.
+Any decimal places to the right of the one given in the uncertainty are distinctly unhelpful, so I report my average speed as ``$0.032 \pm 0.001\:$km/s''.
+You may also see the equivalent, more succinct notation ``$0.032(1)\:$km/s''.
 
-how many digits to use in value and uncertainty?
+\subsubsection{What if there is no reported uncertainty?}
+
+Sometimes you'll be calculating with numbers that have no uncertainty given.
+In some cases, the number is exact.
+For example, the circumference $C$ of a circle is given by $C = 2 \pi r$. Here, the coefficient, $2\pi$, is an exact quantity and you can treat its uncertainty as zero.
+If you find a value that you think is uncertainty, but the uncertainty is not given, a good rule of thumb is to assume that the uncertainty is half the least significant digit (the right-most digit that is not merely used as a placeholder to identify the decimal places).
+So if you are given a measured length of $1400\:$m, then you might assume that the uncertainty is $50\:$m.
+This is an assumption, however, and should be described as such in your lab report.
