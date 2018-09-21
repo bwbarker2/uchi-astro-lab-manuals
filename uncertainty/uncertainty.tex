@@ -1,16 +1,41 @@
 \chapter{Analysis of Uncertainty}
 
-A physical quantity consists of a value, unit, and uncertainty. For example, ``$5 \pm 1\,$m'' means that the writer believes the true value of the quantity to most likely lie within 4 and 6 meters\footnote{The phrase ``most likely'' can mean different things depending on who is writing. This is discussed in more detail in Section\ ???.}. Without knowing the uncertainty of a value, the quantity is next to useless. For example, in our daily lives, we use an implied uncertainty. If I say that we should meet at around 5:00 pm, and I arrive at 5:05 pm, you will probably consider that within the range that you would expect. Perhaps your implied uncertainty is plus or minus 15 minutes. On the other hand, if I said that we would meet at 5:07 pm, then if I arrive at 5:10 pm, you might be confused, since the implied uncertainty of that time value is more like 1 minute.
+A physical quantity consists of a value, unit, and uncertainty.
+For example, ``$5 \pm 1\,$m'' means that the writer believes the true value of the quantity to most likely lie within 4 and 6 meters\footnote{The phrase ``most likely'' can mean different things depending on who is writing.
+	If a physicist gives the value and does not given a further explanation, we can assume that they mean that the measurements are randomly distributed according to a normal distribution around the value given, with a standard deviation of the uncertainty given.
+	So if one were to make the same measurement again, the author believes it has a 68\% chance of falling within the range given.
+	Disciplines other than physics may intend the uncertainty to be 2 standard deviations.}.
+Without knowing the uncertainty of a value, the quantity is next to useless.
+For example, in our daily lives, we use an implied uncertainty.
+If I say that we should meet at around 5:00 pm, and I arrive at 5:05 pm, you will probably consider that within the range that you would expect.
+Perhaps your implied uncertainty is plus or minus 15 minutes.
+On the other hand, if I said that we would meet at 5:07 pm, then if I arrive at 5:10 pm, you might be confused, since the implied uncertainty of that time value is more like 1 minute.
 
 Scientists use the mathematics of probability and statistics, along with some intuition, to be precise and clear when talking about uncertainty, and it is vital to understand and report the uncertainty of quantitative results that we present.
 
-\section{Significant digits}
+\section{Types of measurement uncertainty}
 
-In science classrooms, the notion of \textbf{significant digits} (also called significant figures) is a formalized way of notating implied uncertainty, as well as a crude way of combining uncertainties (or ``propagating'' them) when using uncertain quantities in calculations.
+For simplicity, we limit ourselves to the consideration of two types of uncertainty in this lab course, instrumental and random uncertainty.
 
-In general, 
+\subsection{Instrumental uncertainties}
 
-\section{Propagation of Uncertainty}
+Every measuring instrument has an inherent uncertainty that is determined by the precision	  of the instrument.
+Usually this value is taken as a half of the smallest increment of the instrument's scale. For example, $0.5\:$mm is the precision of a standard metric ruler; $0.5\:$s is the precision of a watch, etc. For electronic digital displays, the equipment's manual often gives the instrument's resolution, which may be larger than that given by the rule above.
+
+Instrumental uncertainties are the easiest ones to estimate, but they are not the only source of the uncertainty in your measured value.
+You must be a skillful experimentalist to get rid of all other sources of uncertainty so that all that is left is instrumental uncertainty.
+
+\subsection{Random uncertainties}
+
+Very often when you measure the same physical quantity multiple times, you can get different results each time you measure it.
+That happens because different uncontrollable factors affect your results randomly.
+This type of uncertainty, random uncertainty, can be estimated only by repeating the same measurement several times.
+For example if you measure the distance from a cannon to the place where the fired cannonball hits the ground, you could get different distances every time you repeat the same experiment.	  
+For example, say you took three measurements and obtained 55.7, 49.0, 52.5, 42.4, and 60.2 meters. We can quantify the variation in these measurements by finding their standard deviation using a calculator or spreadsheet.\footnote{By using the standard deviation, we are assuming the values are normally distributed around the mean.} The resulting standard deviation is 6.8 meters. Generally we are interested not in the variation of the measurements, but how uncertain we are of the average of the measurements. For this, the ``uncertainty of the mean'' can be found by dividing the standard deviation by the square root of the number of measurements. So, in this example, the uncertainty of the mean is 3.0 meters. We can thus report the length as $52 \pm 3\:$m.
+
+Note that if we take more measurements, the standard deviation of those measurements will not generally change, since the variability of our measurements shouldn't change over time. However, our uncertainty of the mean will decrease.
+
+\section{Propagation of uncertainty}
 
 When we use an uncertain quantity in a calculation, the result is also uncertain. To determine by how much, we give some simple rules for basic calculations, and then a more general rule for use with any calculation which requires knowledge of calculus.
 
@@ -33,6 +58,29 @@ If you are familiar with calculus, you may want to use this general formula for 
 \end{equation}
 Notice that Eqs.\ \ref{unc:add} through \ref{unc:exp} can be derived from Eq.\ \ref{unc:general} for those specific cases.
 
+\subsubsection{What if there is no reported uncertainty?}
+
+Sometimes you'll be calculating with numbers that have no uncertainty given.
+In some cases, the number is exact.
+For example, the circumference $C$ of a circle is given by $C = 2 \pi r$. Here, the coefficient, $2\pi$, is an exact quantity and you can treat its uncertainty as zero.
+If you find a value that you think is uncertain, but the uncertainty is not given, a good rule of thumb is to assume that the uncertainty is half the right-most significant digit.
+So if you are given a measured length of $1400\:$m, then you might assume that the uncertainty is $50\:$m.
+This is an assumption, however, and should be described as such in your lab report.
+For more examples, see Table~\ref{unc:tab:implied}.
+
+\begin{table}
+	\begin{center}
+		\begin{tabular}{cc}
+			\textbf{Expression} & \textbf{Implied uncertainty} \\
+			12 & 0.5 \\
+			12.0 & 0.05 \\
+			120 & 5 \\
+			120. & 0.5
+		\end{tabular}
+		\caption{Expression of numbers and their implied uncertainty.}\label{unc:tab:implied}
+	\end{center}
+\end{table}
+
 \subsubsection{How many digits to report?}
 
 After even a single calculation, a calculator will often give ten or more digits in an answer.
@@ -41,17 +89,25 @@ Perhaps it is obvious that my distance and duration measurements were not precis
 We can use the propagated uncertainty to decide how many decimals to include.
 Using the formulas above, I find that the uncertainty in the speed is given by my calculator as ``\texttt{9.65683578099600e-04}'', where the `\texttt{e}' stands for ``times ten to the''.
 I definitely do not know my uncertainty to 14 decimal places.
-For reporting uncertainties, it general suffices to use just the 1 or 2 most significant digits (left-most digits that are not merely used as placeholders), unless you have a more sophisticated method of quantifying your uncertainties.
+For reporting uncertainties, it general suffices to use just the 1 or 2 left-most significant digits, unless you have a more sophisticated method of quantifying your uncertainties.
 So here, I would round this to 1 significant digit, resulting in an uncertainty of $0.001\:$km/s.
 Now I have a guide for how many digits to report in my value.
 Any decimal places to the right of the one given in the uncertainty are distinctly unhelpful, so I report my average speed as ``$0.032 \pm 0.001\:$km/s''.
 You may also see the equivalent, more succinct notation ``$0.032(1)\:$km/s''.
 
-\subsubsection{What if there is no reported uncertainty?}
+\section{Comparing two values}\label{unc:sec:comparing}
 
-Sometimes you'll be calculating with numbers that have no uncertainty given.
-In some cases, the number is exact.
-For example, the circumference $C$ of a circle is given by $C = 2 \pi r$. Here, the coefficient, $2\pi$, is an exact quantity and you can treat its uncertainty as zero.
-If you find a value that you think is uncertainty, but the uncertainty is not given, a good rule of thumb is to assume that the uncertainty is half the least significant digit (the right-most digit that is not merely used as a placeholder to identify the decimal places).
-So if you are given a measured length of $1400\:$m, then you might assume that the uncertainty is $50\:$m.
-This is an assumption, however, and should be described as such in your lab report.
+If we compare two quantities and want to find out how different they are from each other, we can use a measure we call a $t'$ value (pronounced ``tee prime''). This measure is not a standard statistical measure, but it is simple and its meaning is clear for us.
+
+Operationally, for two quantities having the same unit, $a \pm \delta a$ and $b \pm \delta b$, the measure is defined as\footnote{Statistically, if $\delta a$ and $\delta b$ are uncorrelated, random uncertainties, then $t'$ represents how many standard deviations the difference $a - b$ is away from zero.}
+
+\begin{equation}
+%t' = \frac{\abs{a-b}}{\sqrt{(\delta a)^2 + (\delta b)^2}}
+t' = \frac{\abs{a-b}}{\sqrt{(\delta a)^2 + (\delta b)^2}}
+\end{equation}
+
+If $t' \lesssim 1$, then the values are so close to each other that they are indistinguishable. It is either that they represent the same true value, or that the measurement should be improved to reduce the uncertainty.
+
+If $1 \lesssim t' \lesssim 3$, then the result is inconclusive. One should improve the experiment to reduce the uncertainty.
+
+If $t' \gtrsim 3$, then the true values are very probably different from each other.
