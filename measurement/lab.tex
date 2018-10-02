@@ -40,48 +40,139 @@ Imagine you have rejected the first hypothesis (you didn't find any children's c
 	\caption{A model of the process some scientists go through to create knowledge.\cite{etkina_millikan_2015}}\label{me:fig:isle}
 \end{figure}
 
-% ideas: measure cotton balls, rocks, rigid objects with finger, ruler, caliper; discover pi with various circles; quantify using popcorn popper and distance; everyone measures the same thing repeatedly, build up a normal distribution; dropping a needle on a lined paper repeatedly to get something like pi.
- 
-% pieces: Sci Ab rubrics B, G, F; measurement uncertainty terminology, practice handout
+\section*{Observation experiment: Observing falling filters}
 
-%\section*{Premise}
-
-%\textbf{Premise:} In large competitive engineering grants and awards, for example Google Lunar X-Prize, teams must complete milestones by certain deadlines to stay in the race, so that they justify being granted continued resources for the next stages. In our imaginary situation, you are competing for the Barker X-Prize, to push the envelope of Galilean mechanics to address the question, ``do objects really fall at the same rate? If not, what affects this?'' Team performance will be compared with other teams at each stage.
-
-\section*{Today's lab}
-
-In today's lab, you will investigate the relationship between the size of coffee filters and how long it takes them to fall. In the first section, you will determine the size of the coffee filters. In the second, you will determine how long each take to fall, controlling for other variables, and then find a mathematical pattern that describes the relationship.
-
-\section{Application experiment: how big are the filters?}
-
-\textbf{Goal:} Find the cross-sectional area of each coffee filter using two different methods and make a final determination of that area, including uncertainty in that area, for use in the next experiment.
-%In Stage 1 of the Barker X-Prize, each team has been tasked with determining precisely how big various objects are, including marbles, cotton balls, and coffee filters, including a detailed determination of their uncertainty of these measurements.
- 
-\textbf{Available equipment:} several differently-sized coffee filters, meter stick, camera (on your phone), Computer with ImageJ installed, string
+In today's lab, you will investigate the relationship between the size of coffee filters and how long it takes them to fall. In the first section, you will determine the size of the coffee filters. In the second, you will determine how long each take to fall, controlling for other variables, and then find a mathematical pattern that describes the relationship. Note that this lab does not include any hypothesis testing.
 
 \begin{framed}
-	ImageJ is an image analysis program that includes, among other things, the ability to measure lengths, angles, and areas in images, provided that you give it a scale for how long some reference object is in the image.
-\end{framed}
+	\textbf{Self-assessment:} To help you improve your scientific abilities, we provide you with self-assessment rubrics.
+	A rubric is a scoring system.
+	Self-assessment is determining how well you performed a particular task.
+	So, these self-assessment rubrics are designed to help you evaluate your performance while you are designing and performing your experiment.
+	
+	The complete set of rubrics is available in Appendix~\ref{cha:rubrics}.
+	In each lab, your report will be assessed using Rubric F, found in Table~\ref{rubric:f}, as well as 5 additional rubric rows listed in that lab.
+	Each week, read through these and use them to evaluate your work as you design and perform the experiment.
+	Your instructor will use the same rubrics to determine part of your grade for the lab.
+	We will use the other rubrics in future labs.
+\end{framed}	
+
+\textbf{Rubrics to focus on during this experiment:} B5, B7, B8, F1, F2, G1, G2. See Appendix~\ref{cha:rubrics} for details.
+
+\textbf{Available equipment:} several differently-sized coffee filters, meter stick, balance or scale, stopwatch, scratch paper%, camera (on your phone), Computer with ImageJ installed, string
+
+\subsection{How big are the filters?}
+
+% DevNote: I decided to not make this a whole application experiment with 2 different methods, for the sake of time. I also removed image analysis with ImageJ, for the same reason. --bbarker, 2018-10-02
+
+\textbf{Goal:} Find the cross-sectional area of each coffee filter and make a determination of that area, including uncertainty in that area, for use in the next section.
+%In Stage 1 of the Barker X-Prize, each team has been tasked with determining precisely how big various objects are, including marbles, cotton balls, and coffee filters, including a detailed determination of their uncertainty of these measurements.
+ 
+%\begin{framed}
+%	ImageJ is an image analysis program that includes, among other things, the ability to measure lengths, angles, and areas in images, provided that you give it a scale for how long some reference object is in the image.
+%\end{framed}
 
 \begin{enumerate}
-	\item You may want to decide on roles for each group member. Example roles include Facilitator (ensures time and group focus are efficiently used), Scribe (ensures work is recorded), Technician (oversees apparatus assembly, usage), Skeptic (ensures group is questioning itself). Note that each role is responsible for ensuring that the thing happens, rather than necessarily doing it themselves.
+	\item You may want to \textbf{decide on roles} for each group member. Example roles include Facilitator (ensures time and group focus are efficiently used), Scribe (ensures work is recorded), Technician (oversees apparatus assembly, usage), Skeptic (ensures group is questioning itself). Note that each role is responsible for ensuring that the thing happens, rather than necessarily doing it themselves. 
 	
-	\item Review Rubrics D and G and discuss any unclear expectations with your group and the instructor.
+	\item Review Rubric G (Table~\ref{rubric:g}) and discuss any unclear expectations with your group and the instructor.
 	
-	\item Discuss with your group what cross-sectional area means and why it might affect the fall time.
+	\item Discuss with your group what cross-sectional area means and why it might affect the fall time. Feel free to use your resources (books, internet, etc.) to do this.
 	
-	\item Brainstorm different methods to measure the cross-sectional area. Come up with two independent methods for determining the cross-sectional area. The purpose is that if you make a mistake or wrong assumption in one method, then the method (hopefully) gives a different result than the other method. For discovering new things, this is one quantitative way of checking your work, since you don't have the answer ahead of time.
+	\item Brainstorm different methods you could use to determine the cross-sectional area. Feel free to play with the equipment as desired. Here are some things to consider:
+	\begin{itemize}
+		\item Will you measure the area directly, or will you measure something else and use that to calculate the area?
+		
+		\item With any method, you will probably make one or more assumptions about the shape of the filter. How valid are those assumptions?
+		
+		\item For each method you consider, there may be different sources of uncertainty --- the resolution of the measuring devices themselves, how you use them to measure, etc. If there is a source of random uncertainty, then you will need to take several measurements and use Appendix~\ref{unc:random} to determine the uncertainty. The decision of how many measurements to take is a trade-off between increasing precision (decreasing the uncertainty of the mean) and decreasing the time the measurement process takes.
+		
+		\item If you make a measurement and use that measurement in an equation to find the area, you will need to propagate uncertainty as described in Appendix~\ref{unc:sec:prop}.
+	\end{itemize}
+	% Come up with two independent methods for determining the cross-sectional area. The purpose is that if you make a mistake or wrong assumption in one method, then the method (hopefully) gives a different result than the other method. For discovering new things, this is one quantitative way of checking your work, since you don't have the answer ahead of time.
 	
-	\item Discuss with an instructor your two methods before you begin. They will help increase the chances that your method will lead to successful results, or at least that the unhelpful path that you choose will take a short enough amount of time for you to change it when you discover it does not work. We want you to have productive failure that you have time to learn from.
 	
-	\item For each method,
-	\begin{enumerate}
-		\item Agree on a procedure and collect the data.
-	\end{enumerate}
+	
+	\item Decide on your method and discuss it with an instructor before you begin. They will help increase the chances that your method will lead to successful results, or at least that the unhelpful path that you choose will take a short enough amount of time for you to change it when you discover it does not work. We want you to have productive failure that you have time to learn from.
+	
+	\item Write down an outline of your intended procedure. You might end up changing this as you go, but it is helpful to start with a plan and then change it, rather than having no plan at all.
+	
+	\item For your procedure, list the sources of uncertainty involved with each measurement. For each source, identify whether it is a random or instrumental uncertainty.
+	
+	\item Execute your procedure, including setup, data collection, calculation of area, uncertainty estimation and propagation.
+	
+	\begin{framed}
+	At the end of this step, you should have a table of coffee filter cross-sectional areas, with uncertainties.
+	\end{framed}
+	
+	\item Once you are done collecting this data, review your written procedure and correct it to match what you actually did, and ensure you have sketched any measurement setups, so you can include it in the lab report. In particular, ensure that you have enough written so you can demonstrate Rubric Rows F1, G1 and G2 in your report (see Tables~\ref{rubric:f} and \ref{rubric:g}).
 	
 \end{enumerate}
  
-\section{how things fall}
+\subsection{How fast do the filters fall?}
+
+\textbf{Goal:} Determine how long it takes each coffee filter to fall.
+
+\begin{enumerate}
+	\item Review Rubric B (Table~\ref{rubric:b}) and discuss any unclear expectations with your group and the instructor.
+	
+	\item Identify any variables (things that could change between measurements --- either between measurements of the same filter, or among different filters) that could affect the fall time other than the coffee filter's cross-sectional area. If there is controversy in the group, feel free to test what variables might affect that fall time.
+	
+	\item Since you are testing how the fall time is related to the filter's area, you should hold the other variables constant, so that they affect all the filters in the same way. For each variable identified in the previous step, decide how to keep that constant.
+	
+	\item Brainstorm different methods you could use to determine the time it takes for the filter to fall. Feel free to play with the equipment as desired. Here are some things to consider:
+	\begin{itemize}
+		
+		\item Will you measure the fall time directly, or will you measure something else and use that to calculate the area?
+		
+		\item For each method you consider, there may be different sources of uncertainty --- the resolution of the measuring devices themselves, how you use them to measure, etc. If there is a source of random uncertainty, then you will need to take several measurements and use Appendix~\ref{unc:random} to determine the uncertainty.
+		
+		\item If you make a measurement and use that measurement in an equation to find the time, you will need to propagate uncertainty as described in Appendix~\ref{unc:sec:prop}.
+	\end{itemize}
+		
+	\item Decide on your method and discuss it with an instructor before you begin. They will help increase the chances that your method will lead to successful results, or at least that the unhelpful path that you choose will take a short enough amount of time for you to change it when you discover it does not work. We want you to have productive failure that you have time to learn from.
+	
+	\item Write down an outline of your intended procedure. You might end up changing this as you go, but it is helpful to start with a plan and then change it, rather than having no plan at all.
+	
+	\item For your procedure, list the sources of uncertainty involved with each measurement. For each source, identify whether it is a random or instrumental uncertainty.
+	
+	\item Execute your procedure, including setup, data collection, calculation of area, uncertainty estimation and propagation.
+	
+	\begin{framed}
+	At the end of this step, you should have a table of coffee filter cross-sectional areas, with uncertainties, with another column for fall time, with uncertainty in the fall time.
+	\end{framed}
+	
+	\item Once you are done collecting this data, review your written procedure and correct it to match what you actually did, and ensure you have sketched any measurement setups, so you can include it in the lab report. In particular, ensure that you have enough written so you can demonstrate Rubric Rows B5, F1, G1 and G2 in your report (see Tables~\ref{rubric:b}, \ref{rubric:f}, and \ref{rubric:g}).
+\end{enumerate}
+
+Now that you have these measurements, it is time to find a pattern.
+
+\subsection{Finding a pattern}
+
+The penultimate step in an observational experiment is to find a pattern. Note that we are not explaining why this pattern is happening yet --- we are focusing on describing it first.
+
+\textbf{Goal:} Find a pattern in the data and describe it mathematically.
+\textbf{Available equipment:} Computer with spreadsheet software
+
+\begin{enumerate}
+	\item Use a plotting program, for example LibreOffice Calc or Microsoft Excel, to plot a graph of fall time vs. filter area. The independent variable should be on the horizontal axis. The axes should each be labeled with the quantity name and the unit in parentheses. For example, if you measured fall time in seconds, then the axis label should be something like ``fall time (s)''.
+	
+	\item In that graph, include also the uncertainty in each value. This usually involves right-clicking on a data point and selecting ``error bars''. Then you can highlight the column of cells that include the uncertainties.
+	
+	\item Visually, discuss what shape the data points make. Speculate what kind of relationship you see. Is it proportional? Linear? Parabolic? Exponential? Logarithmic?
+	
+	\item Create a line of best fit (or ``trend line'') in the graph using the software. Choose the equation type to match what your group guessed in the previous step. If the line obviously does not match the data, try again with a different equation type. Quantitatively, the goodness of fit of a line (how close the line is to your data points) can be represented by the correlation coefficient, given as $r^2$ in the software. If $r^2 \gtrsim 0.8$, then the equation that you found describes the data fairly well.
+	
+	\item Review Rubric Rows B7 and B8 in Table~\ref{rubric:b} and ensure that you are demonstrating them here or have enough information to do so in your lab report.
+\end{enumerate}
+
+\subsection{Finishing up}
+
+XXXX TO FINISH XXXX
+
+what to include in lab report
+
+extra fun: extrapolate to 0 area, compare with freefall time.
 
 %Rationale:
 %\begin{enumerate}
@@ -95,19 +186,6 @@ In today's lab, you will investigate the relationship between the size of coffee
  
 % \item for video tracking, need to know how students can find framerate of videos they take, make sure it's easily imported to OSP Tracker.
 %\end{enumerate}
-
-Steps:
-\begin{enumerate}
- \item Identify the phenomemon to be investigated.
- 
- \item Design a reliable experiment that investigates the phenomenon.
- 
- \item Decide what physical quantities are to be measured and identify independent and dependent variables.
- 
- \item Describe how to use available equipment to make measurements.
- 
- \item 
-\end{enumerate}
 
 \section{If in Stars class, also do this:}
 
