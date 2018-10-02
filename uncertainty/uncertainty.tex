@@ -19,7 +19,8 @@ For simplicity, we limit ourselves to the consideration of two types of uncertai
 
 \subsection{Instrumental uncertainties}
 
-Every measuring instrument has an inherent uncertainty that is determined by the precision	  of the instrument.
+Every measuring instrument has an inherent uncertainty that is determined by the precision	
+  of the instrument.
 Usually this value is taken as a half of the smallest increment of the instrument's scale. For example, $0.5\:$mm is the precision of a standard metric ruler; $0.5\:$s is the precision of a watch, etc. For electronic digital displays, the equipment's manual often gives the instrument's resolution, which may be larger than that given by the rule above.
 
 Instrumental uncertainties are the easiest ones to estimate, but they are not the only source of the uncertainty in your measured value.
@@ -30,14 +31,24 @@ You must be a skillful experimentalist to get rid of all other sources of uncert
 Very often when you measure the same physical quantity multiple times, you can get different results each time you measure it.
 That happens because different uncontrollable factors affect your results randomly.
 This type of uncertainty, random uncertainty, can be estimated only by repeating the same measurement several times.
-For example if you measure the distance from a cannon to the place where the fired cannonball hits the ground, you could get different distances every time you repeat the same experiment.	  
-For example, say you took three measurements and obtained 55.7, 49.0, 52.5, 42.4, and 60.2 meters. We can quantify the variation in these measurements by finding their standard deviation using a calculator or spreadsheet.\footnote{By using the standard deviation, we are assuming the values are normally distributed around the mean.} The resulting standard deviation is 6.8 meters. Generally we are interested not in the variation of the measurements, but how uncertain we are of the average of the measurements. For this, the ``uncertainty of the mean'' can be found by dividing the standard deviation by the square root of the number of measurements. So, in this example, the uncertainty of the mean is 3.0 meters. We can thus report the length as $52 \pm 3\:$m.
+For example if you measure the distance from a cannon to the place where the fired cannonball hits the ground, you could get different distances every time you repeat the same experiment.	
+  
+For example, say you took three measurements and obtained 55.7, 49.0, 52.5, 42.4, and 60.2 meters. We can quantify the variation in these measurements by finding their standard deviation using a calculator, spreadsheet, or the formula (assuming the data distributed according to a normal distribution)
+\begin{equation}
+ \sigma = \sqrt{\sum_{i=1}^{N} \frac{(x_i-\bar{x})^2}{N-1}} \, ,
+\end{equation}
+where $\{x_1, x_2, \dots, x_N\}$ are the measured values, $\bar{x}$ is the mean of those values, and $N$ is the number of measurements.
+For our example, the resulting standard deviation is 6.8 meters. Generally we are interested not in the variation of the measurements themselves, but how uncertain we are of the average of the measurements. The uncertainty of this mean value is given, for a normal distribution, by the so-called ``standard deviation of the mean'', which can be found by dividing the standard deviation by the square root of the number of measurements,
+\begin{equation}
+\sigma_\textrm{mean} = \frac{\sigma}{\sqrt{N}} \, .
+\end{equation}
+So, in this example, the uncertainty of the mean is 3.0 meters. We can thus report the length as $52 \pm 3\:$m.
 
-Note that if we take more measurements, the standard deviation of those measurements will not generally change, since the variability of our measurements shouldn't change over time. However, our uncertainty of the mean will decrease.
+Note that if we take more measurements, the standard deviation of those measurements will not generally change, since the variability of our measurements shouldn't change over time. However, the standard deviation of the mean, and thus the uncertainty, will decrease.
 
 \section{Propagation of uncertainty}
 
-When we use an uncertain quantity in a calculation, the result is also uncertain. To determine by how much, we give some simple rules for basic calculations, and then a more general rule for use with any calculation which requires knowledge of calculus.
+When we use an uncertain quantity in a calculation, the result is also uncertain. To determine by how much, we give some simple rules for basic calculations, and then a more general rule for use with any calculation which requires knowledge of calculus. Note that these rules are strictly valid only for values that are normally distributed, though for the purpose of this course, we will use these formulas regardless of the underlying distributions, unless otherwise stated, for simplicity.
 
 If the measurements are completely independent of each other, then for quantities $a \pm \delta a$ and $b \pm \delta b$, we can use the following formulas:
 \begin{equation}\label{unc:add}
