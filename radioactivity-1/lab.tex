@@ -1,0 +1,125 @@
+\chapter{Radioactivity Part 1}
+
+\section{Introduction}
+
+Over the next two weeks, we will explore a few basic properties of radioactive decay: (1) counting statistics, (2) types of radioactive decay, and (3) half-life. In the first week, we'll use samples of radioactive materials --- isotopes of cobalt, strontium, cesium, and polonium --- to generate energetic particles. We'll then make measurements to explore the properties of these particles and the counting statistics related to their decays. In the second week, we’ll produce our own short-lived isotope of silver and watch the new atoms decay by counting the number of particles they emit. From that, we will measure the so-called half-life of the silver isotope we produce.
+
+\subsection{Learning Goals}
+
+\begin{itemize}
+	\item Become familiar with the statistics of counting events.
+	
+	\item Describe the four types of radioactive decay products
+	
+	\item Identify sources of random and systematic error.
+	
+	\item Make careful measurements.
+	
+	\item Use a spreadsheet application to calculate and plot data.
+	
+	\item Relate small scale physics (studying atoms in the lab) to large scale astrophysics (dating the big bang, supernovae, and the solar system)
+\end{itemize}
+
+\subsection{Scientific Background}
+
+Nuclear reactions play an important role in astronomy, geophysical sciences, archaeology, and physical anthropology. They explain energy generation in stars, the relative abundance of chemical elements, and provide a method for determining the age of things --- from a piece of wood, to a meteorite, to the universe itself.
+
+Most elements exist in a number of different forms, called isotopes, some of which are unstable and can change from one type of element to another. When this occurs, a high-energy particle is usually emitted from the nucleus of the element as it changes. By measuring the ratios of isotopes with differing decay rates, one can infer the age of an object.
+
+\section{Testing experiment: Do radioactive isotopes decay randomly?}
+
+\textbf{Goal:} Answer the question, ``Given what we understand about the standard deviation of measurements of random processes, do radioactive isotopes decay randomly?'' Or, in the frame of a testing experiment, test the following hypothesis: ``Radioactive sources decay randomly.''
+
+\textbf{Available equipment:} Stopwatch, SpecTech Geiger counter, computer with spreadsheet software, radioactive source ($^{137}$Cs)
+
+\begin{framed}
+	\textbf{Warning: Radioactive Material!} The radiation levels are very low and they present no hazard for the short time that you are in the lab. We estimate that you will receive an additional $10\:\mu$Sv dose of ionizing radiation for the time that you are in lab today, about the same as you receive every day normally. You can compare this to the example doses in Fig.~\ref{rad1:doses}. Here are tips to keep your exposure low:
+	\begin{itemize}
+		\item \textbf{Do not have any food, drink, food containers, or make-up on the lab bench, and do not consume any food or drink, and do not apply make-up, in the lab.} These might get irradiated and become radioactive themselves, and when you eat them, you might get dose internally, where your skin is not present to protect you.
+		
+		\item \textbf{Decrease time with and increase distance from sources.} Handle the sources only when you need to be for the lab, and return them to their container when not using them.
+	\end{itemize}
+\end{framed}
+
+\begin{framed}
+	\textbf{Caution: Fragile Equipment!} The Geiger tube (the upright cylinder sitting in the plastic stand and connected to a coaxial cable at the top) hold a gas under vacuum, with a thin, fragile window at the bottom of the tube. Do not touch it, as it breaks extremely easily.
+\end{framed}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{radioactivity-1/radiation-xkcd}
+	\caption{A chart of ionizing radiation dose from various sources. Source: \url{https://xkcd.com/radiation/}}\label{rad1:doses}
+\end{figure}
+
+\textbf{Rubrics to focus on during this experiment:} C1, C4, C7, C8, F1, F2, G2. See Appendix~\ref{cha:rubrics} for details.
+
+\subsection{Theory of counting statistics}
+
+If you've ever worked in a not-too-busy retail environment, you’ve probably had the
+experience of realizing (perhaps) that random and uniform are two quite different things.
+You no doubt have sat waiting for customers, with nobody around for long stretches of
+time, and then, as though they'd coordinated in advance, a half dozen people all show up
+within a few minutes of each other. Each customer is indeed independent (no, they didn't
+have a Twitter call to organize a flashmob!\footnote{Yes, popular interest in flash mobs peaked in 2011. Bear with us here.}) yet their arrival times clearly appear clustered. They are, in fact. But randomly. Uniform – one customer each minute – is quite dramatically different than a random procedure that yields one customer per minute on average. Retail customers (to a great extent), and elementary particles, act randomly, not uniformly.
+
+Each atom in a radioactive sample has, per unit time, some probability of undergoing
+radioactive decay. That probability is independent of all the other atoms in the sample.
+Each atom decays, or not, based on its own probability and no other. The ensemble of
+particle decay counts that one would measure in the sample (using a Geiger counter as we will
+do, for example) is described by the something called the Poisson distribution, which
+gives, in this instance, the probability of a integer number of events occurring in a fixed
+interval of time, given an average rate. For large count rates, like we have here, the
+Poisson distribution is indistinguishable from the normal distribution (that is, a simple
+Gaussian function).
+
+Specifically, for a process that produces an average $\bar{N}$ counts in a certain time duration (in the case of large $N$), the expected measurement of that count for that time duration is a
+random draw from a normal distribution with mean $\bar{N}$ and a standard deviation of
+$\sqrt{N}$.
+
+\subsection{Doing the experiment}
+
+\begin{enumerate}
+	\item To find the steps of a testing experiment, review Rubric C, found in Table~\ref{rubric:c}.
+	
+	\item\label{rad1:step:predict-random} A prediction is what the hypothesis says will happen in the event of a particular experimental procedure. Given the hypothesis stated in the goal, and the theory described above, if you collect a series of counts of radioactive decay, what does the hypothesis predict the standard deviation of those counts should be equal to? Record this prediction in your lab notebook.
+	
+	\item \textbf{Collecting data.} In order to find the standard deviation of a number of measurements, you will need to take those measurements. In the following steps, you will do 10 trials of measuring the count rate (counts per unit time) during periods of about 30 seconds, then take the standard deviation of those 10 trials. Since you will not be able to stop the counter after exactly 30 seconds, you will divide the displayed count by the displayed time to get a count rate (in units of ``counts per second'').
+	
+	\begin{framed}
+		\textbf{The Apparatus.}
+		
+		For this lab and the following one, you will be provided with a number of different radioactive materials packaged in small plastic disks. Note that each disk has the name of
+		the isotope (e.g.\ $^{60}$Co), the type of radiation, and the half-life printed on one side of the
+		sample. Half lives can range from fractions of a second to billions of years, depending on
+		the isotope.
+		
+		The energetic particles produced in radioactive decay reactions can be detected by a
+		device called a Geiger counter. This consists of a tube filled with inert gas with a wire
+		running through it. A high voltage is applied between the wire and the tube. When a high-
+		energy particle enters the tube, it can ionize the gas. The freed electrons produce a brief
+		pulse of current at the output of the device. The pulses can then be counted.
+		
+		The counter itself is controlled using buttons on the front panel. \texttt{COUNT} begins the count
+		and starts the timer, \texttt{STOP} pauses the count and timer, and \texttt{RESET} sets the count and
+		timer to zero. Use the dial on the counter to change the display between the count and the
+		elapsed time. When you first turn on the Geiger counter you need to set the voltage to
+		$1000\:$V --- the TA will demonstrate how. \textbf{Caution:} Do not turn off the voltage during the
+		experiment; use the \texttt{STOP} button to stop the count. \textbf{Do not touch the window on the
+		bottom of the tube, as it breaks extremely easily.}
+	\end{framed}
+	\begin{enumerate}
+		\item Take one of the $^{137}$Cs disks and place it printed side down in the plastic shelf shaped to hold it, and place that shelf in the slot second from the top in the stand under the Geiger counter. Note that if you have the Geiger counter on, that it is measuring a large count rate.
+		
+		\item Use the controls \texttt{COUNT}, \texttt{STOP}, and \texttt{RESET} to measure the number of counts in 10 approximately 30-second intervals. Use the dial on the display to access both the counts and the elapsed time. The provided stopwatch may also help you organize your effort --- \textit{but use the time from the Geiger counter apparatus directly} for your calculations.
+		
+		\item Record the counts and elapsed time in each interval in a spreadsheet and calculate the count rate in counts per minute (``cpm'' for short).
+	\end{enumerate}
+
+	\item \textbf{Analysis.} Note that the count rate is not identical in each trial, even though you accounted for the different measurement durations. Let's see how far away the standard deviation here is from the prediction in Step\ref{rad1:step:predict-random}. Calculate the standard deviation of these measurements. How close is it?
+	
+	\item Qualitatively, it might appear close or far away, but to test the hypothesis, you should take into account the uncertainty of the standard deviation. This is, effectively, the \textit{standard deviation of the standard deviation}. You would need to take, for example, 10 trials of these 10 trials and compute the standard deviation of that. Fortunately, you have other lab groups who are doing the same experiment. Share the standard deviation you found with the other lab groups, calculate the average and standard deviation of those standard deviations, and use Appendix~\ref{unc:sec:comparing} to compare your average standard deviation to the prediction that your hypothesis made.
+	
+	\item Use this quantitative comparison to determine if the prediction and the outcome agree or not.
+	
+	\item Based on that agreement, and taking into account the experimental conditions, make a judgment about the hypothesis.
+\end{enumerate}
