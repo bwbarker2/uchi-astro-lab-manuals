@@ -77,7 +77,7 @@ Specifically, for a process that produces an average $\bar{N}$ counts in a certa
 random draw from a normal distribution with mean $\bar{N}$ and a standard deviation of
 $\sqrt{N}$.
 
-\subsection{Doing the experiment}
+\subsection{Procedure and analysis}
 
 \begin{enumerate}
 	\item To find the steps of a testing experiment, review Rubric C, found in Table~\ref{rubric:c}.
@@ -113,12 +113,16 @@ $\sqrt{N}$.
 		
 		\item Use the controls \texttt{COUNT}, \texttt{STOP}, and \texttt{RESET} to measure the number of counts in 10 approximately 30-second intervals. Use the dial on the display to access both the counts and the elapsed time. The provided stopwatch may also help you organize your effort --- \textit{but use the time from the Geiger counter apparatus directly} for your calculations.
 		
-		\item Record the counts and elapsed time in each interval in a spreadsheet and calculate the count rate in counts per minute (``cpm'' for short).
+		\item Record the counts and elapsed time in each interval in a spreadsheet and calculate the count rate in counts per half-minute.
 	\end{enumerate}
 
-	\item \textbf{Analysis.} Note that the count rate is not identical in each trial, even though you accounted for the different measurement durations. Let's see how far away the standard deviation here is from the prediction in Step~\ref{rad1:step:predict-random}. Calculate the standard deviation of these measurements. How close is it?
+	\item \textbf{Analysis.} Note that the count rate is not identical in each trial, even though you accounted for the different measurement durations. Let's see how far away the standard deviation here is from the prediction in Step~\ref{rad1:step:predict-random}. Calculate the standard deviation of these measurements. How close is it? Answer this quantitatively by calculating the \textit{percent difference},
+	\begin{equation}
+	 \textrm{percent difference} = 200\% \times \frac{\abs{A - B}}{A+B} \,,
+	\end{equation}
+	where $A$ and $B$ are the two quantities that you are comparing. Without taking the time to find the uncertainty in the standard deviation, this is the best you can do to say how close it is.
 	
-	\item Qualitatively, it might appear close or far away, but to test the hypothesis, you should take into account the uncertainty of the standard deviation. This is, effectively, the \textit{standard deviation of the standard deviation}. You would need to take, for example, 10 trials of these 10 trials and compute the standard deviation of that. Fortunately, you have other lab groups who are doing the same experiment. Share the standard deviation you found with the other lab groups, calculate the average and standard deviation of those standard deviations, and use Appendix~\ref{unc:sec:comparing} to compare your average standard deviation to the prediction that your hypothesis made.
+%	\item Qualitatively, it might appear close or far away, but to test the hypothesis, you should take into account the uncertainty of the standard deviation. This is, effectively, the \textit{standard deviation of the standard deviation}. You would need to take, for example, 10 trials of these 10 trials and compute the standard deviation of that. Fortunately, you have other lab groups who are doing the same experiment. Share the standard deviation you found with the other lab groups, calculate the average and standard deviation of those standard deviations, and use Appendix~\ref{unc:sec:comparing} to compare your average standard deviation to the prediction that your hypothesis made.
 	
 	\item Use this quantitative comparison to determine if the prediction and the outcome agree or not.
 	
@@ -155,7 +159,7 @@ Alpha is stopped by a piece of paper, beta is stopped by a book, while gamma ray
 	\item Count the number of particles detected in 60 seconds from this source, and record this number.
 	
 	\item Qualitative observe the effect of different shields by placing them between the sample and the Geiger counter and recording the count rate (for example, in counts per minute) for each shield.
-	You should try a few different shields with different thicknesses (measured in g/cm$^2$).
+	You should try a few different shields with different thicknesses (measured in mg/cm$^2$).
 	
 	\item One way to quantity the penetrating ability of radiation is to find it's ``stopping length'', which is the thickness of shielding that reduces the detected count to half the unshielded amount. Find the stopping length of the radiation emitted by $^{90}$Sr and include uncertainties in your reported count rates.
 
@@ -168,7 +172,7 @@ Alpha is stopped by a piece of paper, beta is stopped by a book, while gamma ray
 	\item Now, finally, we will examine the radioactive properties of the $^{137}$Cs source.
 	Place it in the sample holder as before, and record the unshielded count rate in a 60 second interval.
 	The sample is noted as having both gamma and beta radiation.
-	Use the shields to attempt to establish this experimentally, by comparison to the results you got for the $^{60}$Co and $^{90}$Sr samples. \textit{Note that this last step is an application than an observational experiment.}
+	Use the shields to attempt to establish this experimentally, by comparison to the results you got for the $^{60}$Co and $^{90}$Sr samples. \textit{Note that this last step is not a standard part of an observational experiment, but rather an application experiment.}
 	
 \end{enumerate}
 
