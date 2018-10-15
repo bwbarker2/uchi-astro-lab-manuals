@@ -1,20 +1,304 @@
 \chapter{Spectroscopy}
 
-\section{End of Lab - Queue observations for 61 Cygnus AB}
+\section{Introduction}
 
-As we did in the first lab session, we will end this lab by queuing observations for a future lab. Specifically, each group will take an observation of the binary star system 61 Cygnus AB. The observational parameters are listed in Table~\ref{61Cyg_obs}. Refer to the previous lab manual for instructions on submitting observations. 
+In this lab we will study light produced in gas discharge tubes.
+You will first familiarize yourself with operation of the software by making careful measurements of emission lines from a hydrogen discharge tube.
+You will then use your knowledge of spectra to identify which elements are present in several other discharge tubes.
+
+\section{Learning goals}
+
+\begin{itemize}
+	\item Use experimentally derived quantities to calculate the Rydberg constant.
+	\item Identify unknown elements based on their spectra.
+	\item Compare continuum vs.\ line emission.
+	\item Demonstrate an ability to make careful measurements.
+	\item Demonstrate proficiency in basic calculations and plotting using spreadsheets.
+	\item Gain familiarity with a common physics tool (the spectroscope).
+\end{itemize}
+
+\section{Scientific background}
+
+When an electron collides with an atom in the discharge tube, the atom absorbs energy and transitions from its \textit{ground state} to an \textit{excited state}.
+When the atom later transitions back to its ground state, it emits energy in the form of light.
+Light from these transitions is emitted only at distinct colors, or wavelengths.
+The wavelengths of the spectral lines from each element are different, thus each element has it own ``fingerprint'' by which it can be identified.
+Spectroscopy can therefore be used to detect and measure elements in a material from a distance.
+Critically, the same lines that appear in gas discharge tubes the lab are also found in stars, allowing astronomers to study their elemental makeup.
+Without spectral information, there would be no other way for us to know what stars are made of because we cannot travel and take a sample, even for the closest star --- our Sun.
+
+As with much of astrophysics, we'll begin by studying the properties of hydrogen.
+Although hydrogen is the most abundant element in the universe, its lines in the sun are
+quite weak because the strength of the lines depends critically on the physical conditions
+in the star. Hydrogen was first identified on earth by Anders Jonas Ångström in 1853, but
+it was not detected in the sun until a decade later. Although Ångström was able to
+measure the four characteristic lines of hydrogen --- known today as H$\alpha$, H$\beta$, H$\gamma$, and H$\delta$ --- to a high degree of accuracy, it was not until 1885 that Johann Balmer (a sixty year old
+Swiss school teacher and mathematician with no physics background) found the correct
+mathematical relationship between the wavelengths of hydrogen. Balmer's relation suggested that the physical processes which produce hydrogen lines are connected to
+integer numbers, an explanation that ultimately required the overthrow of 19th century
+classical physics in favor of the first version of quantum theory by Bohr and others circa
+1915.
+
+The four Balmer lines correspond to transitions to the $n=2$ state in hydrogen %TODO (see Figure~???)
+and follow the equation
+\begin{equation}\label{spec:eqn:balmer}
+ \frac{1}{\lambda} = R \left( \frac{1}{n^2_\textrm{final}} - \frac{1}{n^2_\textrm{initial}} \right)
+ = R \left( \frac{1}{4} - \frac{1}{n^2_\textrm{initial}} \right) \,,
+\end{equation}
+where $\lambda$ is the wavelength of a particular line and $R = 1.097 \times 10^7\:\mathrm{m}^{-1}$ is the Rydberg constant, with $n_\textrm{initial}>2$.
+
+\section{Apparatus description: spectrometer}
+
+To measure spectral lines, astronomers use a device called a spectrometer, spectroscope, or spectrograph. Spectrometers used for precision scientific measurements have three basic elements:
+\begin{enumerate}
+	\item A collimator consisting of a slit and mirror or lens. The collimator produces a
+parallel beam of light in one direction, similar to an eyepiece of a telescope
+
+	\item A dispersive grating that bends the light at an angle that depends on the
+wavelength of light, thereby decomposing it into a spectrum
+
+	\item A mirror or lens that collects the light and focuses it onto a detector
+The main part of any spectrograph is a dispersive element, which is usually a grating that
+consists of a very finely spaced lines etched on a substrate. The spacing between the
+lines can be 1/10 of the diameter of a human hair and the distance between each line is
+controlled to less than the diameter of a single atom. The process used to etch the grating
+is similar to that used in making CDs. Not surprisingly, CDs can be used to decompose a
+white light from a lamp into rainbow.%TODO, as shown in Figure ???.
+\end{enumerate}
+
+The angle $\theta$ at which grating reflects the light depends on the wavelength and is given by
+\begin{equation}
+ m \lambda = d \sin{\theta}\,,
+\end{equation}
+where $m$ is the order of the maximum, $\lambda$ is the wavelength (generally measured in nanometers, where a nanometer is $10^{-9}$ meters), $d$ is the spacing of the lines on the diffraction grating (also in nm). Visible light has a wavelength of about $500\:$nm.
+
+\section{Apparatus: the digital spectrometer}
+
+A digital spectrometer also uses a diffraction grating, but instead of collecting the dispersed light on a screen to be viewed by people, it collects the light with a charge-coupled device (CCD), an array of light-sensitive pixels much like a digital camera. It then translates the position on the CCD to individual wavelengths and displays a plot of intensity vs. wavelength on a computer. %TODO (see Figure~???)
+Another difference is that we use an optical fiber to collect the light.
+
+Here are a few guidelines:
+\begin{itemize}
+	\item Save the images of spectra and numeric files that you generated with SpectraSuite
+	during your experiments on a USB stick, so that you can use them at home during
+	preparation of your report (you can also email them as attachments from your
+	computer at the end of the lab).
+	
+	\item You should open a word processor document and a spreadsheet document in which you can save your measured
+	spectra at the beginning of your work. To save an image of your graph, click on
+	the fourth icon from the left in the Spectrum IO controls. %TODO (Fig.~???)
+	This will copy
+	an image of the graph to the clipboard. Then in your word processor, paste the image by pressing
+	Ctrl-V.
+	
+	\item To save spectrum in the digital form, click on the third from the left icon in
+	Spectrum IO controls (to the right of print icon). This copies it to clipboard. In
+	Excel file make sure you are in a new sheet and press Ctrl-V. This should create
+	to columns of numbers: wavelength (in nm) and counts for your spectrum.
+	
+	\item An alternative way to save the data is to click on the floppy disk icon in the
+	Spectrum IO controls. The format must be ``Tab delimiter, no header''. The
+	writing directory must be specified (``Browse'' button). The spectrum is saved in a
+	text file (.txt) as two columns, the first column giving the wavelength in nm, the
+	second column the corresponding intensity. This file can be imported into a spreadsheet or plotting program.
+\end{itemize}
+
+\section{Observation experiment: Spectrum of the sky and of fluorescent lamps}
+
+\textbf{Goal:} Observe the spectrum of the sky and of the fluorescent lights in the room, notice the differences, and identify some elements present in the fluorescent light bulb.
+
+\textbf{Rubric rows to focus on:} B5, F1, F2.  See Appendix~\ref{cha:rubrics} for details.
+
+\textbf{Available equipment:} Ocean Optics Red Tide digital spectrometer with USB cable and fiber optic cable attached, computer with SpectraSuite software, window with daylight visible (or incandescent bulb if night-time lab), fluorescent light source
+
+\begin{framed}
+	\textbf{Caution: Fragile Equipment!} The fiber optic cable is a precision instrument. If it is bent in too tight a curve, it will be damaged. Do not bend these cables beyond a $12\:$cm radius ($4.5\:$inches) (into part of a circle with a radius smaller than that).
+	
+	Also, the openings have covers to protect from dust and debris. Be sure to replace the end cover when you are done with the cable.
+\end{framed}
+
+\begin{enumerate}
+	\item Turn on the computer and start Spectra Suite.
+	
+	\item Ensure the digital spectrometer is connected to the computer and the fiber optic cable is connected to the spectrometer.
+	
+	\item Remove the blue end cap from the fiber optic cable by twisting it.
+	
+	\item Press S (``Scope'') to start measuring the spectrum %TODO (see Figure~???)
+	and point the fiber towards the overhead fluorescent light. You should see live spectrum of the light
+	entering the fiber in the graph window, which is characterized by many strong peaks
+	(strong emission lines).
+	
+\begin{framed}
+	A \textbf{fluorescent lamp tube} is filled with a gas containing low pressure mercury vapor,
+		argon, neon, xenon or krypton, with corresponding lines in the spectrum. Emission lines
+		are also produced by a phosphorous material (typically europium and terbium) covering
+		the glass, after excitation by the ultraviolet emission from the lamp gas.
+\end{framed}
+
+	\item Record a spectrum and identify the different lines and their corresponding element, by
+	comparison with other measurements of fluorescent light spectra (see Table~\ref{spec:tab:emissions}). Save the spectrum and
+	include it in your lab report along with markers of lines that you were able to identify.
+	
+	\item Once you examine the spectrum you obtained with spectrometer, look at it with the visual
+	spectroscope and identify lines you see visually with the lines you see in the digital
+	spectrum.
+	
+	\item Repeat the above procedure, but looking out a window at the sky. Record what you see,
+	and make notes of how the spectrum from the sky differs from the spectrum of the
+	fluorescent lights.
+
+\end{enumerate}
+
+\section{Application experiment: Measuring the Rydberg constant}\label{spec:sec:rydberg}
+
+\textbf{Goal:} Measure the wavelengths of light emitted from electrified hydrogen gas, and use those wavelengths to determine the Rydberg constant.
+
+\textbf{Rubrics rows to focus on:} D4, D7, F1, F2, G2, G4. See Appendix~\ref{cha:rubrics} for details.
+
+\textbf{Available equipment:} direct viewing spectrometer, Ocean Optics Red Tide digital spectrometer with USB cable and fiber optic cable attached, computer with SpectraSuite software, gas discharge tube power supply, hydrogen gas discharge tube
+
+\begin{framed}
+ \textbf{Warning: Shock Hazard!} When turned on, the power supply generates $5000\:$V of electric potential difference across the terminals, with enough current available to injure you. Make sure that the discharge tube has its ON/OFF switch (on the side) in the
+ OFF position when you install or change the discharge tube. If not, switch the lamp into
+ the OFF position. Switch on the lamp to ON position only after tube is installed. The
+ lamp will now be illuminated when the pedal is pressed. While the pedal is pressed, do not touch any part of the tube. Moving the
+ whole unit by the base is safe.
+\end{framed}
+
+\begin{framed}
+	\textbf{Caution: Fragile Tube!} Avoid touching the tube with your skin, as skin oils can degrade the glass over time. Wear a nitrile glove when touching a tube.
+	
+	Also, the tubes have a limited lifetime of running. Turn on the tube only for as long as you need it to be on for measurement.
+\end{framed}
+
+\begin{enumerate}
+	\item Ensure that the hydrogen tube is installed in the power supply.
+	
+	\item Turn on the power supply and examine its spectrum through a direct viewing spectroscope. You should be able to see a bright
+	magenta and a cyan line --- these are the first two lines in the Balmer series. The other two
+	lines are probably too faint for you to see; in order to measure them, we will need to use a
+	more sensitive device.
+	
+	\item Observe using the digital spectrometer by starting the SpectraSuite software, uncapping the optical fiber, and placing it as close as possible to the discharge tube and turn on the lamp. Adjust
+	pointing of the fiber so that the height of the lines in the acquired spectrum is maximized.
+	If the strongest lines are saturated, you can either move the fiber a bit farther away from
+	the discharge tube or adjust integration time within the SpectraSuite software.
+	
+	\item Follow these steps to measure the spectrum of light that enters the fiber using controls of the SpectraSuite software: %TODO (Figure~???):
+	\begin{enumerate}
+		\item Make sure you are in a new graph and enter Scope mode by pressing S in the
+		controls. Point fiber at the discharge tube.
+		
+		\item Take a background ``dark'' measurement with the light source under study off by
+		clicking the gray light bulb button in spectrum storage controls%TODO (Figure~???)
+		
+		\item Subtract the background spectrum from the signal by clicking gray light bulb with
+		minus sign button in the Processing controls. This removes contribution of
+		background light to the spectrum.
+		
+		\item turn on the source discharge tube and record its spectrum, saving an image of it as describe above in the guidelines.
+		
+		\item While source is on, click on the spectrum graph. You should see a peak icon in the
+		bottom right corner of the graph. This is useful peak finder: click on it and adjust
+		controls, setting the Baseline, which is the intensity above which it will search for peaks. Peak finder identifies peaks and you can step through them and see their
+		wavelengths using $<$ and $>$ buttons in the bottom left corner of the graph.
+	\end{enumerate}
+
+	\item You should adjust the setup and acquisition time so that you can easily see four peaks
+	(emission lines in the spectrum). Analyze the spectra and determine the wavelength of
+	the four most prominent lines. Assume that these wavelength measurements are exact for the purposes of uncertainty analysis.
+	
+	\item\label{spec:step:rydberg} Write down the measured wavelengths of each line in the descending order of
+	wavelength ($n_1 =3$ corresponds to the peak with the longest wavelength that you measure,
+	while $n_1 = 6$ to the shortest of the four you measure) in a table like Table~\ref{spec:tab:rydberg}. Be careful to
+	measure the correct lines! The spectrometer is sensitive to wavelength is the near infrared
+	and near ultraviolet, beyond detection of the human eye. Do you observe any such lines?
+	Can they be included in your analysis?
+\end{enumerate}
 
 \begin{table}
-    \centering
-    \caption{61 Cyg AB Observations}
-    \label{61Cyg_obs}
-    \begin{tabular}{|l|c|c|c|c|r|}
-    \hline
-    \textbf{Program} & \textbf{Target} & \textbf{Exp Time (s)} & \textbf{Exp Count} & \textbf{Bin}
-         & \textbf{Filters} \\
-    \hline
-    General & 61 Cyg & 1 & 1 & 2 & Dark, g' \\
-    \hline
-    \end{tabular}
-\end{table} 
+	\centering
+	\begin{tabular}{c|c|c}
+		\textbf{Energy level ($n$)} & \textbf{Measured Wavelength (nm)} & \textbf{Rydberg constant (nm$^{-1}$)} \\ \midrule
+		3 & & \\ \midrule
+		4 & & \\ \midrule
+		5 & & \\ \midrule
+		6 & & \\ \bottomrule
+	\end{tabular}
+	\caption{Suggested table for recording data for Step~\ref{spec:step:rydberg} in Section~\ref{spec:sec:rydberg}.}\label{spec:tab:rydberg}
+\end{table}
 
+\subsection{Analysis}
+
+Using your data for each line, calculate the corresponding value of the
+Rydberg constant in units of 1/nm using Equation~\ref{spec:eqn:balmer} and enter it into the column for the Rydberg constant
+in each line's row. The spectral lines you observe correspond to the first four transitions
+in the Balmer series, the transitions of electrons to the $n_\mathrm{final}=2$ level from higher energy
+levels.
+
+The differences in values you get for the Rydberg constant are due to random uncertainty. To find your determination for this quantity, use your average for the value, and calculate the standard deviation for the uncertainty.
+
+A more sophisticated way of calculating the Rydberg constant would be to plot a graph of
+your measurements of $1/\lambda$ vs $1/n_i^2$ and fit a straight line through it. The
+average value of the Rydberg constant is the slope of this line, which will be given by the
+slope. Carry out and present such a measurement along with the plot in your report.
+
+\section{Application experiment: identification of mystery elements}
+
+\textbf{Goal:} Identify the gas that is contained in the four tubes with colored tape on them.
+
+\textbf{Rubric rows to focus on:} F1, F2
+
+\textbf{Available equipment:} Ocean Optics Red Tide digital spectrometer with USB cable and fiber optic cable attached, computer with SpectraSuite software, gas discharge tube power supply, various gas discharge tubes with unknown gases
+
+Turn off the lamp using the switch on the side, and replace glass tube with hydrogen gas
+with one of the color-coded bulbs that will be provided to you. As before, use the
+spectrometer to acquire spectrum using the SpectraSuite software and measure
+wavelengths of the prominent lines (peaks in the spectrum).
+
+Once you have measured a few prominent wavelengths, compare them with wavelengths
+of known lines of elements listed in the table below and identify the mystery element
+within the color-coded tube. Present your measurements of wavelengths in a list and a
+plot of the graph with several lines from Table~\ref{spec:tab:emissions}.
+
+\begin{table}
+	\centering
+	\begin{tabular}{c|c|c|c}
+		\toprule
+		\textbf{Helium (nm)} & \textbf{Argon (nm)} & \textbf{Neon (nm)} & \textbf{Mercury (nm)} \\ \midrule
+		389 & 697 & 585 & 365 \\
+		447 & 707 & 594 & 404 \\
+		469 & 738 & 614 & 435 \\
+		492 & 751 & 627 & 546 \\
+		502 & 764 & 640 & 579 \\
+		588 & 772 & 651 & \\
+		668 & 795 & 660 & \\
+		707 & 801 & 668 & \\
+		727 & 811 & 693 & \\
+		& 826 & 703 & \\
+		& 841 & 717 & \\
+		& 852 & 744 & \\
+		& 866 & & \\
+		& 912 & & \\ \bottomrule
+	\end{tabular}
+	\caption{Some known emission lines of various elements.}\label{spec:tab:emissions}
+\end{table}
+
+\section{End of Lab - Queue observations for 61 Cygnus AB}
+
+As we did in the first lab session, we will end this lab by queuing observations for a future lab. Specifically, each group will take an observation of the binary star system 61 Cygnus AB. The observational parameters are listed in Table~\ref{61Cyg_obs}. Refer to the previous chapter for instructions on submitting observations.
+
+\begin{table}
+	\centering
+	\caption{61 Cyg AB Observations}
+	\label{61Cyg_obs}
+	\begin{tabular}{|l|c|c|c|c|r|}
+		\hline
+		\textbf{Program} & \textbf{Target} & \textbf{Exp Time (s)} & \textbf{Exp Count} & \textbf{Bin}
+		& \textbf{Filters} \\
+		\hline
+		General & 61 Cyg & 1 & 1 & 2 & Dark, g' \\
+		\hline
+	\end{tabular}
+\end{table}
