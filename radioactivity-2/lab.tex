@@ -1,0 +1,126 @@
+\chapter{Radioactivity Part 2}
+
+%TODO add instructor note: to close door to KPTC 003, need to toggle switch that keeps it open, which is above the door.
+
+%TODO rename lab to "Radioactive Half-Life" to remove confusion about two-week lab
+
+%TODO add notes about neutron howitzer from https://wiki.uchicago.edu/display/phylabs/Mass+of+the+Neutron and from this email from David McCowan:
+%The source is a mixture of plutonium and beryllium. The plutonium decays via alpha emission and the beryllium absorbs the alpha to become carbon + a free neutron. The neutron has an energy given by a very complicated distribution, but the energy distribution goes up to ~11 MeV. The paraffin shielding (and the lucite in the plug) slows down neutrons, so that anything which escapes is thermalized such that E ~ kT ~ 1/40 eV. At the point where the foils are placed, the neutrons have been slowed some, but not completely... if they are a full 11 MeV still, they are too energetic to bind with the silver, so the foils are absorbing from the lower end of the spectrum or from neutrons that have scattered enough material to have less energy than they started with.
+%
+%The activity of the Pu-Be core is an astounding 5 Ci (!!), but that's the alpha flux which doesn't penetrate out of the core. The neutron flux is considerably less. Looking back at the original purchase order, it looks like we have 80 g of plutoinium mixed with 41 g of beryllium and a listed (I think unshielded?) emission rate of 9 x 10^6 N/sec.
+
+Building on our work from last week, we will continue to study the radioactive decay.
+The physical laws of radioactivity predict that the rate of decay (number of atoms
+decayed / time interval) is proportional to the number of radioactive nuclei present. This
+is due, as we saw in counting statistics previously, to the independence of the decay of
+each atom in the sample. The proportionality constant that describes the decay rate
+depends on the specific radioactive nucleus. A concise and suggestive way to
+characterize the nucleus is by its half-life, the time it takes for the number of radioactive
+nuclei to decrease to half of the initial value. You will obtain data to check the form of
+the law and to determine the half-life of one or more isotopes of silver.
+
+We will use a device known as a neutron ``Howitzer''. It consists of a source of alpha
+particles and a material that absorbs alpha particles and immediately decays by emitting
+neutrons. (The neutrons shoot out from the barrel of the shielded volume, vaguely like
+shells from WWI artillery, hence the name.)
+
+\section{Background}
+
+We will let the neutrons bombard a small sample of the stable isotope of silver, $^{107}$Ag, to
+produce $^{108}$Ag, via the reaction
+\begin{equation}
+ ^{107}\textrm{Ag} + \mathrm{n} \rightarrow\, ^{108}\textrm{Ag} + \gamma \,,
+\end{equation}
+where $\mathrm{n}$ represents a neutron and $\gamma$ a gamma particle --- that is, a high energy photon.
+
+The radioactive isotope of silver, $^{108}$Ag, spontaneously decays to an isotope of cadmium
+with the same mass number, $^{108}$Cd, by the reaction
+\begin{equation}
+ ^{108}\textrm{Ag} \rightarrow\, ^{108}\textrm{Cd} + \mathrm{e}^- + \gamma \,,
+\end{equation}
+where $\mathrm{e}^-$ is an electron (that is, a $\beta$ particle, as we saw and measured last week).
+
+Your TA will bombard silver foils with neutrons using the neutron howitzer. Some of the
+nuclei in the foil will have captured a neutron and transformed into a different isotope
+which is unstable and can be detected via their decay products. Each group will be given
+one of these silver foils.
+
+\section{Procedure}
+
+\textbf{Rubric rows to be assessed:} D1, D4, F1, F2, G2, G3 (ignore actually doing it), G4
+
+Your task is to measure the half-life of $^{108}$Ag. We will use the Geiger tube to count
+decays. That is, we will count the $\beta$ particles --- the gamma rays make only a small
+contribution to the counts in this instance. You should attempt to carry out the counting
+fairly quickly after the silver foil is removed from the howitzer as the decay time is quite
+short.
+
+Before the neutron irradiation begins you will want to record the background rate. Press
+\texttt{STOP} and \texttt{RESET} on the counter to set the display to zero. Next, press \texttt{COUNT} with no
+sample below the Geiger tube and collect the total number of background counts, $N_\textrm{bkg}$ ,
+that accumulate in approximately 5 minutes. Once 5 minutes has elapsed press \texttt{STOP} to
+end the count. Turn the dial to \texttt{TIME} and record a precise measurement of the elapsed
+time, $t$, in seconds. The background rate $R_\textrm{bkg}$ is found with
+\begin{equation}
+R_\textrm{bkg} = N_\textrm{bkg} /t
+\end{equation}
+with an uncertainty given by Poisson statistics. Report both the background rate and uncertainty in your lab report.
+
+While the samples are being irradiated, set up your measurement apparatus. Once the samples are ready, quickly place a silver foil sample in the tray below the Geiger tube. Using a stopwatch and the
+counter, record the number of counts and the time at 30 second intervals for
+about 10 minutes, continuously. Unlike last week's lab with the same apparatus, you will
+be recording data continuously, and so will need to use the watch to record times rather
+than timer built into the Geiger counter. Record your data.
+
+\section{Calculations}
+
+The experimental data will be used to determine a half-life (or half-lives). We know that
+the decay rate ($R=\Delta N / \Delta t$) of a radioactive nuclide is proportional to the number of nuclei present. The proportionality constant is called the decay constant $\lambda$, and the equation that describes what was just discussed is
+\begin{equation}
+ R = \lambda N \,,
+\end{equation}
+where $N$ is the background-subtracted counts. Using integral calculus and the above equation, we find
+\begin{equation}
+ N = N_0 e^{-\lambda t} \,,
+\end{equation}
+where $N_0$ is the number of nuclei at the initial time $t=0$. The half life $T_{1/2}$ is defined by
+the time it takes for $N = N_0 /2$ and is related to the decay constant by $T_{1/2} = \ln(2)/ \lambda$, where
+$\ln()$ is the natural logarithm function, and so $\ln(2) \approx 0.693$.
+
+We can now write the radioactive decay equation as
+\begin{equation}
+ R = \lambda N_0 e^{-t \ln(2) / T_{1/2}} \,.
+\end{equation}
+Taking the logarithm of both sides and substituting for $N$ gives
+\begin{equation}
+ \ln(R) = - \left(\frac{\ln(2)}{T_{1/2}} \right) t + \mathrm{const} \,.
+\end{equation}
+Your TA will help you to understand the details of this derivation.
+
+Make a plot showing $\ln(R)$ on the vertical axis and elapsed time, $t$, along the horizontal
+axis. Don’t forget to subtract the background where appropriate. Calculate the slope
+8and use this value to solve for the half life using the above equations. Report this value
+along with a table of your decay rate data and the plot described above.
+
+\section{Questions (these should be included in your lab report)}
+
+\begin{enumerate}
+	\item Look up the half-lives of the various nuclides of silver. What is the published
+	half-life of the nuclide you’re observing? How does this compare with your
+	calculated result? Calculate the percent difference in your result.
+	
+	\item For the silver foil, how long would it take before you would expect to detect only
+	one count per second, background corrected?
+	
+	\item The detector only measures particles that travel up into the detector. The majority
+	of particles traveling in the other directions escape detection. Will this short-
+	coming affect the measured half-life? If so, how? If not, why not?
+	
+	\item Describe one thing you could change in this experiment that could lead to a more
+	accurate measurement of the half-life of the silver isotope.
+	
+	\item The particular irradiated silver sample you used contained some unknown
+	percentage of the unstable silver isotope, and was irradiated at some unmeasured
+	time before you began your experiment. Does this matter to your results? Explain.
+	
+\end{enumerate}
