@@ -1,0 +1,180 @@
+\chapter{Local Gravitational Field}
+
+One of Newton's revelations was that physical laws that governed the movement of objects near Earth also predicted the movements of objects in the sky.
+The apocryphal story of an apple falling on Newton's head brings to mind the mechanism of gravity --- the phenomenon of massive objects attracting each other.
+In this lab, you will measure the strength that gravity has where we are, near the Earth's surface. This measurement might also enable us to learn more about the mass of the Earth itself in a future lab.
+
+\section{Learning goals}
+
+\begin{itemize}
+	\item Understand Newton's law of universal gravitation and its linear approximation
+	
+	\item Identify sources of statistical and systematic error
+	
+	\item Demonstrate an ability to make careful measurements
+	
+	\item Demonstrate proficiency in basic calculations and plotting
+	
+	\item Explain the importance of repeated measurements and sufficiently large datasets
+	
+	\item Use experimentally derived quantities to obtain a mass for the Earth.
+\end{itemize}
+
+\section{Scientific Background}
+
+\subsection{The gravitational field strength and Newton's second law}
+
+The force of gravity, $F$, between two objects with mass $m_1$ and $m_2$ and whose centers are separated by a distance $R$ is given by Newton's law,
+\begin{equation}\label{lg:eq:newtons}
+ F_\textrm{gravity} = G \frac{m_1 \: m_2}{r^2} \,,
+\end{equation}
+where the Newtonian constant of gravitation $G = 6.67408(31) \times 10^{-11} \: \textrm{m}^3 \: \textrm{kg}^{-1} \: \textrm{s}^{-2}$. Astronomers apply Newton's law to infer fundamental information about astrophysical objects, for example the mass of binary stars. Indeed, this is one of the most common methods by which astronomers ``weigh'' astrophysical objects, including the Earth itself. For measuring the force acting on an object of mass $m$ that is affected predominantly by the Earth's gravity, the force acting on it would be
+\begin{equation}\label{lg:eq:fearth}
+ F_\textrm{Earth} = \frac{G M_\Earth}{(R_\Earth + h)^2} m
+\end{equation}
+where $M_\Earth$ and $R_\Earth$ are the mass and radius of the Earth, respectively, and $h$ is the height above the Earth.
+
+For objects near the Earth's surface, where $h$ is much less than $R_\Earth$, $h$ can be treated as zero, resulting in a constant gravitational force, with Equation~\ref{lg:eq:fearth} reducing to
+\begin{equation}\label{lg:eq:fearthred}
+F_\textrm{Earth} = \frac{G M_\Earth}{(R_\Earth)^2} m \,.
+\end{equation}
+Notice that on the right-hand-side of this equation, the only variable is the mass. The others, together, constitute the \textit{strength of the local gravitational field}, $g$ (sometimes pronounced ``little g''). So our simplified equation is
+\begin{equation}\label{lg:eq:fegm}
+ F_\textrm{Earth} = g m \,,
+\end{equation}
+where we have made the substitution
+\begin{equation}\label{lg:eq:g}
+g = \dfrac{G M_\Earth}{(R_\Earth)^2} \, .
+\end{equation}
+Notice that we have taken a complicated inverse square equation (Equation~\ref{lg:eq:fearth}) and
+converted it to a much simpler one (Equation~\ref{lg:eq:fegm}). This process is called \textit{linearization} and is a
+trick astronomers often use to make calculations more manageable. You will encounter
+this technique throughout this and other PHSC courses.
+
+We see from Equation~\ref{lg:eq:g} that if we can make accurate measurements of $g$, $G$, and $R_\Earth$, we can calculate the mass of the Earth. We'll look up $R_\Earth$ online, and next week we will measure $G$. To find $g$, we note that Newton's second law of motion states that the acceleration $a$ of an object is directly proportional to the net force $F_\textrm{net}$ acting on it and inversely proportional to its mass, $m$, or, more succinctly and slightly rearranged,
+\begin{equation}
+ F_\textrm{net} = m a \,.
+\end{equation}
+If the Earth's gravity is the only force acting on our object, then $F_\textrm{net} = F_\textrm{Earth}$, and substituting Equation~\ref{lg:eq:fegm}, we find that
+\begin{equation}
+ g m = m a \,,
+\end{equation}
+and thus, simplifying,
+\begin{equation}
+ a = g \,.
+\end{equation}
+So, the acceleration of an object that is subject only to the Earth's gravity is equal to the local gravitational field strength. If we can measure the acceleration, then we can find $g$, and get one step closer to determining the mass of the Earth.
+
+\subsection{Constantly accelerated motion}
+
+If an object is subject to a constant force, then according to Newton's second law, it undergoes constant acceleration. If an object undergoes constant acceleration $a$, and we know the object's initial position $x_0$ and velocity $v_0$, then after a time duration $t$, we can derive using calculus that the object's position $x$ and velocity $v$ are given by
+\begin{equation}\label{lg:eq:x-const-a}
+ x = x_0 + v_0 t + \frac{1}{2} a t^2
+\end{equation}
+and
+\begin{equation}
+ v = v_0 + a t \,.
+\end{equation}
+
+\section{Application experiment: determine $\bm{g}$ on the Earth's surface}
+
+\textbf{Goal:} Determine $g$ near the Earth's surface by finding the acceleration of an object undergoing freefall (no substantial forces other than gravity) using two different methods: 
+
+\textbf{Rubrics to be assessed:} D4, D5, F1, F2, G1, G2, G4
+
+\textbf{Available equipment:} stopwatch, dense object to drop, meter stick, camera (including the one on your phone), computer with Tracker\footnote{Open Source Physics Tracker can be downloaded from \url{https://physlets.org/tracker} and is also installed on the lab computers.} installed.
+
+\subsection{Method 1: freefall time}
+
+\begin{enumerate}
+	\item Drop the object from a known height and measure the time to fall with a stopwatch. Do this as many times as makes sense to you.
+	
+	\item List the sources of uncertainty and determine whether each is a random uncertainty or an instrumental uncertainty.
+	
+	\item Calculate the average fall time.
+	
+	\item Calculate the standard deviation of the average fall time (using Equation~\ref{unc:eq:stdevmean}), and report the latter as the uncertainty in the average fall time.
+	
+	\item Use the average fall time and the initial position and velocity of the object to calculate the acceleration.
+	
+	\item Propagate the uncertainty in the time and position to find the uncertainty of your measured acceleration (see Section~\ref{unc:sec:prop})
+	
+	\item Report the acceleration found by this method as ``value $\pm$ uncertainty [units]''. For example, $9.73 \pm 0.04\:$m/s$^2$.
+\end{enumerate}
+
+\subsection{Method 2: Video tracking}
+
+It is helpful to use two methods to find the same quantity, so that mistakes or incorrect assumptions made in one method do not carry over to the other, and are thus more likely to be detected. In this method, you will record a video of an object falling, make a position vs. time plot, and fit the constant acceleration equation (Equation~\ref{lg:eq:x-const-a}). You will use a computer program to make this analysis easier.
+
+\subsubsection{Record the video}
+
+\begin{enumerate}
+	\item Find a good object to drop. It should be dense enough to not be slowed down significantly by air resistance.
+	
+	\item Using the camera on one of your group member's phones, record a video of the object falling.
+	
+	Here are some tips to get a quality video:
+	\begin{itemize}
+		\item Include an object of known length in the shot, at the same distance from the camera as the falling object. This gives a reference length, so that you can find how each camera pixel scales to the physical situation.
+		
+		\item Avoid parallax error by having the object be at about the same distance from the camera throughout the fall. Having the camera be farther away can help. Also, you can ensure that the top and the bottom of the fall are the same distance from the camera.
+		
+		\item Hold the camera steady.
+	\end{itemize}
+
+	\item Record that video and transfer the video to a computer that has Tracker installed.
+\end{enumerate}
+
+\subsubsection{Importing the data into Tracker}
+
+In this part, you'll use Tracker to record the position of the object at each timestep. To do this, you'll need to tell it what direction ``down'' is in, what the scale of the image is, and when time $t=0$ is. Then you'll record the positions, find out what parameters best fit the curve that is produced, and use those to find the acceleration.
+
+\begin{enumerate}
+	\item Open Tracker on a computer. You can install it on your own computer by visiting \url{https://physlets.org/tracker}.
+	
+	\item In Tracker, open your video.
+	
+	\item \textbf{Find frame when zero time is.} Move the slider below the video to the right to advance the frames until you find the first one in which the object is falling. Record that start frame number, which is found to the left of the slider bar in red.
+	
+	\item \textbf{Find the last relevant frame.} Keep moving the slider to the right until you find the last frame before the object hits the floor. Record that end frame number.
+	
+	\item To \textbf{tell Tracker about these frames}, click the 5th icon from the left on the toolbar above the video (``Clip settings'') and enter the start frame and end frame.
+	
+	\item \textbf{Tell Tracker how long things are.} In astronomy applications, this is known as the ``pixel scale''. Here we can just draw a line on the frame and tell Tracker how long that line is in real life. Click the 6th icon from the left (blue, with a ``10'') and select \texttt{New} $\rightarrow$ \texttt{Calibration Stick}. Shift-click to mark each end of your known length, and type in your known length, with units in the box that appears along the stick. Use ``m'' for meters.
+	
+	\item \textbf{Align the coordinate system.} In the toolbar, click the 7th icon from the left (magenta crossed lines). Click and drag the coordinate system's origin (the intersection of long lines) to the location of the object in the start frame.
+	
+	\item \textbf{Check to see if the camera was tilted.} Advance the video to see if the object moves along an axis. If it goes off at an angle, the camera was tilted compared to the direction of motion. In this case, rotate the coordinate system to align with the motion by clicking and dragging the small line that crosses one of the axes.
+	
+	\item \textbf{Tell Tracker where the object is in every frame.}
+	\begin{enumerate}
+		\item In the toolbar, click \texttt{Create} $\rightarrow$ \texttt{Point Mass}.
+		\item Ensure the slider is at the start frame.
+		\item Shift-click on the object. Notice that the frame advances to the next one automatically.
+		\item Continue to shift-click to mark the object's position throughout the duration.
+	\end{enumerate}
+\end{enumerate}
+
+\subsubsection{Analysis}
+
+\begin{enumerate}
+	\item \textbf{Ensure the correct axis is selected for analysis.} Look at the plot to the right of the video. If there is not a smooth-ish curved line, click on the axis label ``x (m)'' and choose instead ``y (m)''.
+	
+	\item In the drop-down menu, select \texttt{View} $\rightarrow$ \texttt{Data Tool (Analyze...)}.
+	
+	\item In the window that appears, above the plot, click \texttt{Analyze} $\rightarrow$ \texttt{Curve Fits}.
+	
+	\item Notice that Eq.~\ref{lg:eq:x-const-a}, which describes freefall, is a quadratic equation, which means the shape is a parabola. For ``Fit Name'', choose ``Parabola'' from the drop-down menu.
+	
+	\item Use the Fit Equation and Parameter Values, comparing with Equation~\ref{lg:eq:x-const-a}, to find the acceleration $a$, and thus the gravitational field strength $g$.
+	
+	\item To get an uncertainty for this value, use the ``rms dev'' value, which describes the average deviation of the fit equation from the points, divide that by the average (mean) position, and multiply that by your value for the acceleration. You can find the mean position by selecting \texttt{Analyze} $\rightarrow$ \texttt{Statistics} and reading above the data table column.
+\end{enumerate}
+
+\subsection{Comparing the methods, final determination of $\bm{g}$}
+
+\begin{enumerate}
+	\item Compare the values of $g$ from the two methods using the $t'$ statistic as described in Appendix~\ref{unc:sec:comparing}.
+	
+	\item Use that comparison and your assessment of which method had fewer questionable assumptions to decide on your final answer for $g$ (including an uncertainty). How close is it to the average $g$ described, for example, on Wikipedia?
+\end{enumerate}
