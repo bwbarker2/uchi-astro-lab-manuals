@@ -1,24 +1,24 @@
-\chapter{Binary Orbit}
+\chapter{The Binary Orbit of 61 Cyg AB}
 
 \section{Introduction}
 
-In this lab we will use our observations of the binary star system Cyg 61 to add a data point to historical measurements of its constituent star's positions, which we will then use to estimate the orbital parameters of the binary system, specifically the orbital period $P$ and semi-major axis $a$. These we will combine with Kepler's Third Law of orbital motion to obtain an estimate for the combined mass of the two stars
+In this lab we will estimate the orbital parameters of the binary star system Cyg 61 AB using our own (in addition to data from historical) observations. Specifically, we will estimate the period $P$ and semi-major axis $a$ of the orbit, which we will then plug into Kepler's Third Law of orbital motion to calculate the combined mass of the two stars
 
 \section{Learning goals}
 
 \begin{itemize}
-\item Gain understanding of celestial coordinate system used in astronomical observation
-\item Understand how Kepler's Laws can be used to determine the physical properties of asophysical systems
-\item Gain practice graphically representing scientific data and inferring values from those graphs
+\item Gain an understanding of the Celestial coordinate system used in astronomical observation
+\item Understand how Kepler's Laws can be used to determine the physical properties of astrophysical systems
+\item Gain practice graphically representing scientific data and inferring values (and their errors) from those graphs
 \end{itemize}
 
 \section{Introduciton to 61 Cygni AB}
 One of the questions beguiling humanity for millennia was: how far away are the stars?  Until 1838, no one could tell!  They looked to be almost astoundingly far away, because their parallax, their back-and-forth motion on the sky when the Earth orbits the Sun, was too small to measure.  In fact, stars appearing fixed on the sky was an argument for geocentricism!
 
-Friedrich Wilhelm Bessel made the first measurement of parallax, and thus the distance to a star. Giuseppe Piazzi had tipped him off, discovering in 1804 that the binary star 61 Cygni AB had a high proper motion, and thus was likely close to us. By 1838, Bessel had carried out the precise measurements needed to determine that it is only 10.3 light years away (modern figure, 11.4 light years).  Quickly other investigators measured parallaxes for other stars, including the closest star we know of now, Proxima Centauri (part of the triple system Alpha Centauri, which is in the Southern hemisphere).  See pages 32-33 of the book for this story. 
+Friedrich Wilhelm Bessel made the first measurement of parallax, and thus the distance to a star. Giuseppe Piazzi had tipped him off, discovering in 1804 that the binary star 61 Cygni AB had a high proper motion, and thus was likely close to us. By 1838, Bessel had carried out the precise measurements needed to determine that it is only 10.3 light years away (modern figure, 11.4 light years).  Quickly other investigators measured parallaxes for other stars, including the closest star we know of now, Proxima Centauri (part of the triple system Alpha Centauri, which is in the Southern hemisphere).  %See pages 32-33 of the book for this story. 
 
-Last lab we found that the same substances on Earth are also in the heavens (on the surface of the Sun in particular).  Newton’s triumph was to realize the gravitational acceleration pulling on falling objects is the same force that holds the Moon in orbit.  This insight can be generalized further to pairs of stars that orbit around their mutual center-of-mass.  The 61 Cygni binary system has an observable orbit. We have a long baseline of measurements on it partially due to the intense observations to determine its parallax.  We will use these measurements to determine its orbit, and from that, the mass of the system (see pages 56-58 of the book). This measurement serves as an example of how we use dynamical properties of stars to learn about their physical properties. 
-
+Newton’s triumph was to realize the gravitational acceleration pulling on falling objects is the same force that holds the Moon in orbit.  This insight can be generalized further to pairs of stars that orbit around their mutual center-of-mass.  The 61 Cygni binary system has an observable orbit. We have a long baseline of measurements on it partially due to the intense observations to determine its parallax.  We will use these measurements to determine its orbit, and from that, the mass of the system  This measurement serves as an example of how we use dynamical properties of stars to learn about their physical properties. 
+%(see pages 56-58 of the book).
 \section{Introduction to Keplerian Orbits}
  
 Kepler's three laws are the following:
@@ -29,31 +29,47 @@ Kepler's three laws are the following:
 \item The orbital period squared is proportional to the semi-major axis cubed
 \end{enumerate}
 
-These \textit{emperical} (i.e. data-derived) laws were given a physical explaination by Newton. He postulated that a gravitational force proportional to the inverse square of the mutual distance acts between all bodies, and he showed this postulate resulted in Kepler’s three laws. Newton's theory gives the constant of proportionality in Kepler's third law:
+These \textit{empirical} (i.e. data-derived) laws were given a physical explanation by Newton. He postulated that a gravitational force proportional to the inverse square of the mutual distance acts between all bodies, and he showed this postulate resulted in Kepler’s three laws. Newton's theory gives the constant of proportionality in Kepler's third law:
 
 \begin{equation}
 P^2 = \frac{4\pi^2}{G(M_A + M_B)}a^3
 \end{equation}
 
-where $P$ is the orbital period, $G = 6.672 \times 10^{-11} \textrm{m}^3\textrm{kg}^{-1}\textrm{s}^{-2}$ is Newton's Gravitational Constant, $M_A + M_B$ is the sum of the masses of the two orbiting bodies, and $a$ is the \textbf{semi-major axis} of the ellipse swept out by the difference in the positions between bodies A and B. This week we will estimate $P$ and $a$ for 61 Cyg AB from both our contemporary data as well as centuries-old data. Then we will use the above equation to estimate the sum of the masses of the stars. 
+where $P$ is the orbital period, $G = 6.672 \times 10^{-11} \textrm{m}^3\textrm{kg}^{-1}\textrm{s}^{-2}$ is Newton's Gravitational Constant, $M_A + M_B$ is the sum of the masses of the two orbiting bodies, and $a$ is the \textbf{semi-major axis} of the ellipse swept out by the difference in the positions between bodies A and B. The semi-major axis of an ellipse is half the length of its longest axis. This week we will estimate $P$ and $a$ for 61 Cyg AB from both our contemporary data as well as centuries-old data. Then we will then use the above equation to estimate the sum of the masses of the stars. 
 
-\section{The Celestial Coordinate System and Sky Orientation Coordinates}
+\section{The Celestial Coordinate System}
+
+Right Ascension (RA, symbol $\alpha$) and Declination (Dec, symbol $\delta$) are the coordinates on the Celestial Sphere.  They serve the same purpose as Latitude and Longitude on the surface of the Earth.  
+
+Declination tells us how far away from the North Celestial Pole the star is.  Conveniently, for the past millennium there is a star (Polaris, the North Star) within a few degrees of the North Celestial Pole, so it has $\delta \sim 90$\textdegree.  The celestial equator has $\delta = 0$\textdegree, and it corresponds to all the stars lying directly above the Earth’s equator. Stars with negative $\delta$ are best viewed from the Southern Hemisphere of the Earth.  Stars with $\delta$ of our current latitude, $-90$\textdegree, are always hidden from view by the horizon. Right Ascension tells us the longitude-like angle.  Its lines bunch up at the poles of the coordinate system, just as lines of longitude do. These coordinates rotate with the Earth so that an astronomical object fixed with respect to the Earth maintains a constant Right Ascension and Declination, despite the 24-hour rotation of the sky as viewed by an observer on Earth. Consequently, this is the system we will use to analyze the binary star data.
+
 \section{Assembling the data}
 \subsection{Adding a 2018 value to the 61 Cygni AB Observations}
 
-Download your data for 61 Cyg in the same way as you did for the HR diagram lab, except this time use the \texttt{WCS.fits} file. If you do not have one of those in your observation's directory, ask another group to share theirs with you (since everyone took identical observations, this won't change your analysis). Open up the image in DS9. In the top pannel, you should notice coordinates labeled $\alpha$ and $\delta$ --- these are Right Ascention and Declination in the celestial coordinate system. To record both coordinates \textit{in degrees} for the centers of both stars, make a region centereda on your star, double-click to show region info. Right of \texttt{Center} coordinates is a menue. In the last section of that menue, change \texttt{Sexagesimal} to \texttt{Degrees} to get center coordinates in degrees. Record there for both stars.   
+Download your data for 61 Cyg in the same way as you did for the HR diagram lab, except this time use the \texttt{WCS.fits} file. If you do not have one of those in your observation's directory, use the example observation posted to the class website (since everyone took identical observations, this won't change your analysis). Open up the image in DS9. Note that occasionally the telescope becomes misaligned and takes an observation in the wrong part of the sky. If this is the case, you won't see a bright binary (i.e. double) star in the center of the image, and you should use the example observation as well. 
 
-The relative orbit depends on the difference in these coordinates, ($\Delta\alpha$, $\Delta\delta$), which are the positions of star B minus the positions of star A. Calculate these values given central coordinates you just obtained, and convert them to \textbf{arcseconds}. There are 60 \textbf{arcminutes} in a degree, and 60 \textbf{arcseconds} in an arcminuite. Note, however, that because of the ``bunching up" of $\alpha$ near the poles (something called a singularity in the spherical coordinate system), we need to multiply $\Delta\alpha$ by $\cos(\delta)$ to obtain a physical value. 
+%On the bar above the DS9 display, select \texttt{edit} $\blacktriangleright$ \texttt{region}. Then \textit{on the bar at the top of the desktop display, above the DS9 window} select \texttt{Region} $\blacktriangleright$ \texttt{Ruler} $\blacktriangleright$ \texttt{Shape} $\blacktriangleright$ \texttt{Ruler}. Then, click on the center of one star and drag the  
 
-To compare our observation with historical data, we have to convert our differences in the celestial coordinate system to a polar coordinate system definied by separation $r$ and position angle $\theta$:
+In the top panel of the DS9 display, you should notice coordinates labeled $\alpha$ and $\delta$ which correspond to Right Ascension and Declination in the celestial coordinate system. To record both coordinates \textit{in degrees} for the centers of both stars, make a region centered on your star, and double-click to show region info. Right of \texttt{Center} coordinates is a menu. In the last section of that menu, change \texttt{Sexagesimal} to \texttt{Degrees} to get center coordinates in degrees. Record these for both stars.   
+
+The relative orbital position of the stars depends on the difference in these coordinates, ($\Delta\alpha$, $\Delta\delta$), which are the positions of star B (the fainter star) minus the positions of star A (the brighter star). Calculate these values given central coordinates you just obtained, and convert them to \textbf{arcseconds}. There are 60 \textbf{arcminutes} in a degree, and 60 \textbf{arcseconds} in an arcminute. Also calculate the average Declination of the two stars $\delta_{\textrm{avg}}$, in degrees. As always, record errors for each value.  %Note, however, that because of the ``bunching up" of $\alpha$ near the poles, we need to multiply $\Delta\alpha$ by $\cos(\delta)$ to obtain a physical value. 
+
+To compare our observation with historical data, we have to convert our differences in the celestial coordinate system to a polar coordinate system defined by separation $r$ and position angle $\theta$ between the two stars. Usually, $r$ is measured in arcsec and $\theta$ is measured in degrees counter-clockwise from North, so $0$\textdegree means star B is directly North of star A, and 90\textdegree means star B is directly East of star A (East seems backwards, because we’re looking up at the sky), and so on. This coordinate transformation can be calculated from the celestial coordinates using the following equations:
 
 \begin{equation}
-r = \sqrt{\Delta\alpha^2 + \Delta\delta^2}
+r = \sqrt{[\cos(\delta_{\textrm{avg}})\Delta\alpha]^2 + \Delta\delta^2}
 \end{equation}
 
 \begin{equation}
-\theta = \arctan{\frac{\Delta\alpha}{\Delta\delta}}
+\theta = \arctan{\frac{\cos(\delta_{\textrm{avg}})\Delta\alpha}{\Delta\delta}}
 \end{equation}
+
+Two pitfalls to be aware of: 
+
+\begin{enumerate}
+\item Be certain your calculator-of-choice expects angles in degrees, not radians.
+\item If your calculator returns a negative $\theta$, then use your knowledge of geometry to equivalently express it as a positive angle.  
+\end{enumerate}
 
 These values (and their errors!) can now be added to the historical data given in Table~\ref{61cyg_data}.(Note: The errors given for 1914 and 1951 were pretty generous, greater than the pixel scale, but limited because the images of the stars were saturated.  The pre-1900 values were given in the literature by other methods, and without an error bar quoted.)
 
@@ -63,26 +79,26 @@ These values (and their errors!) can now be added to the historical data given i
     \label{61cyg_data}
     \begin{tabular}{|l|c|c|r|}
     \hline
-    \textbf{Date} & \textbf{separation $r$ (arcsec)} & \textbf{Position Angle $\theta$ ($\degree$)} & \textbf{Reference} \\
+    \textbf{Date} & \textbf{separation $r$ (arcsec)} & \textbf{Position Angle $\theta$ (\textdegree)} & \textbf{Reference} \\
     \hline
     1753 & 19.6 & 35 & J. Bradley, obtained via WVDSC\\
 	1838 & 16.204 & 95.325 & Bessel 1938, AN, 16, 65\\
-	1914 & 23.3 \pm 1.4 & 136.4 \pm 3.5 & Yerkes Plates\\
-	1951 & 26.3 \pm 3.0 & 141 \pm 7 & Digitized Sky Survey, Blue I\\
-	2018 & & & your measurement
+	1914 & 23.3 $\pm$ 1.4 & 136.4 $\pm$ 3.5 & Yerkes Plates\\
+	1951 & 26.3 $\pm$ 3.0 & 141 $\pm$ 7 & Digitized Sky Survey, Blue I\\
+	2018 & & & your measurement\\
     \hline
     \end{tabular}
 \end{table}
 
 \section{Estimating Orbital Parameters}
 
-A precise and accurate measurement from our data would require fitting the positions of the stars as a function of time for an orbital model including eccentricity and inclination, which is too complicated for this lab. Instead, we can esimate visually the period and orbital semi-major axis by plottig our data. To do this, we must convert our $(r, \theta)$ coordinates to $(x, y)$ coordinates with the following equations:
+A precise and accurate measurement from our data would require fitting the positions of the stars as a function of time for an orbital model including eccentricity and inclination, which is too complicated for this lab. Instead, we can estimate visually the period and orbital semi-major axis by plotting our data. To do this, we must convert our polar $(r, \theta)$ coordinates to rectangular $(x, y)$ coordinates with the following equations:
 
 \begin{equation}
 x = r\cos\theta\;\;\;y = r\sin\theta
 \end{equation}
 
-To put these in physical uints, divide these values by the measured parallax of the system, 0.314 arcsec, to get coordinates in AU. Plot the data points using the software or coding language of your choice.  Estimate the semi-major axis of the orbit as half the greatest distance between two data points, and the period as twice the difference in time between those same points. Determine an error estimate, which you should explain and record for both quantities.
+To put these in physical units, divide these values by the measured parallax of the system, 0.314 arcsec, to get coordinates in AU. Plot the $(x,y)$ data points using the software or coding language of your choice.  Estimate the semi-major axis of the orbit as half the greatest distance between two data points, and the period as twice the difference in time between those same points. Determine an error estimate, which you should explain and record for both quantities.
 
 \section{Deriving the mass of the binary}
 
