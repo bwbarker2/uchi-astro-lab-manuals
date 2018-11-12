@@ -236,6 +236,50 @@ rotational alignment of the pendulum bob arms. Follow the instructions on pages 
 the PASCO manual. Ask the TA for advice and help if necessary. At the end of the
 session, show to the TA which steps you have been able to complete.
 
+\section{Procedure: Measure $\bm{G}$ with the PASCO Cavendish balance}
+
+Once you have your own Cavendish balance built and leveled (see the previous section), you are ready to take your own data.
+
+Since the expected deflection angle $\theta_G$ is on the order of milliradians, measuring it with a protractor directly is not a practical solution (the instrumental uncertainty of a typical protractor is 0.5\textdegree$\approx 9\:$milliradians). Instead, you will direct a laser beam toward a mirror mounted on the pendulum bob and measure the linear displacement of reflected ray on a screen on the other side of the room (the larger the distance to the screen, $L$, the larger the linear displacement $d$ for the same bob deflection angle $\theta_d$, which leads to a smaller uncertainty). Then, you will use that displacement length to calculate that angle, according to
+\begin{equation}\label{cav:eq:displacement}
+ \theta_d = \frac{d}{2 L} \,.
+\end{equation}
+
+Here is a suggested step-by-step procedure:
+\begin{enumerate}
+	
+	\item Ensure that the laser, pendulum, and screen are arranged such that the laser can strike the pendulum mirror and reflect onto the screen, which is set up across the room (the larger the distance, the less uncertainty in the angle determination).
+	
+	\item Measure and record the distance $L$ from the pendulum to the screen.
+	
+	\item Rotate the large-mass support arm so that it makes an approximately 90\textdegree angle with the pendulum arm.
+		
+	\item Setup and level the balance according to pages 3--6 of the equipment manual in Appendix~\ref{cha:pasco-cavendish}, sections Initial Setup, Leveling the Gravitational Torsion Balance, Vertical Adjustment of the Pendulum, and Rotational Alignment of the Pendulum Bob Arms. In this last section, you do not need to be extremely precise about alignment --- aim for ``roughly aligned''. We will correct for any misalignment by using differences in angles, rather than the angles themselves.
+
+	\item Decide how to collect the data. Your aim is to measure the linear displacement of the beam from an arbitrarily marked zero point on the screen, as a function of time. The result should be a table of (time,displacement) values.
+	\begin{itemize}
+		\item To take data manually, use a stopwatch, meter stick, and teamwork to take data at regular time intervals that are close enough together to capture the periodic motion.
+	
+		\item To take data with video tracking, record the movement of the laser beam on the screen with a camera whose line of sight is at roughly a right angle to the surface of the screen. Load the video in Open Source Physics Tracker and record the position of the laser similar to the local gravitational field (``little gee'') lab.
+	\end{itemize}
+	
+	\item Quiet the pendulum by following Steps 5a and 5b from page 5 of the equipment manual.
+	
+	\item Slowly and gently rotate the large-mass support arms counter-clockwise until one of the large spheres is touching the case plate.
+	
+	\item Collect the data according to your chosen method. Ensure that you record several complete cycles of oscillation.
+	
+	\item Rotate the large-mass support arms clockwise until a sphere is touching a case plate.
+	
+	\item Continue collecting data, ensuring that you record several complete cycles of oscillation.
+	
+	\item Using Tracker or the manual method, create a spreadsheet with columns Time (s) and Displacement (m).
+	
+	\item Create another column ``Deflection Angle (rad)'' and calculate this angle for each row using Eq.~\ref{cav:eq:displacement}.
+	
+	\item Follow the numbered steps in Section~\ref{cav:sec:measurement} to calculate $G$ and its uncertainty.
+\end{enumerate}
+
 \section{Calculations \& Analysis}
 
 The data acquired by the computerized Cavendish balance are provided as an Excel file,
