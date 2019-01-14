@@ -4,9 +4,27 @@
 
 The Michelson interferometer, named after University of Chicago professor Albert A. Michelson (Nobel prize in Physics 1907), is an extremely sensitive instrument capable of measuring incredibly tiny displacements.
 A modern version of the Michelson interferometer has been developed by The Laser Interferometer Gravitational-Wave Observatory (LIGO) experiment to detect changes in distance of $10^{-19}\:$m (much less than the size of the nucleus of an atom!).
-This displacement is sensed between mirrors separated by 4 km (see Figure ???). There are two sites for LIGO --- one in Hanford, WA and the other in Livingston, LA.
+This displacement is sensed between mirrors separated by 4 km (see Figure~\ref{rt:fig:ligo-aerial}). There are two sites for LIGO --- one in Hanford, WA and the other in Livingston, LA.
 The LIGO interferometer has recently detected gravitational waves for the first time (September 15, 2015); the first announced gravitational wave detection fits, with remarkable precision, the expected signal from the merging of two black holes, 29 and 36 solar masses, located 410 Mpc away.
-The reported signal and the comparison to the fitted model are shown in Figure ???.
+The reported signal and the comparison to the fitted model are shown in Figure~\ref{rt:fig:ligo-signals}.
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{ripple-tank/ligo-aerial.png}
+	\caption{An aerial view of the two LIGO sites.}\label{rt:fig:ligo-aerial}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\textwidth]{ripple-tank/ligo-signals.png}
+	\caption{The left panels show the LIGO signal at the Hanford site (top) and the best-fit model
+		(middle) and the residual of the model minus the data (bottom). The residuals are consistent
+		with noise. The right panels show the same for the Livingston site, with the Hanford signal
+		plotted in red in the top panel to demonstrate the similarity of the two measurements (as
+		expected in the event of a true gravitational wave signal). This first LIGO detection of a
+		gravitational wave event marks a significant transformation in our collective ability to
+		measure and understand black holes, and since that first detection, more black hole merger
+		events have been detected and reported.}\label{rt:fig:ligo-signals}
+\end{figure}
 
 The working principle of the Michelson interferometer is the interference of light.
 In this lab, you will first explore the concepts of interference with waves produced in water, in a device known as a ripple tank.
@@ -27,6 +45,8 @@ Having established the wavelike nature of light, you will then finally use a tab
 	\item Discover the relationship between frequency and wavelength of waves.
 	
 	\item Learn how to conduct a testing experiment, including identifying a hypothesis, designing an experiment, making a prediction, and comparing it to an experimental outcome.
+	
+	\item Gain familiarity with wave interference.
 \end{itemize}
 
 \section{An aside: picking a project topic}
@@ -73,7 +93,7 @@ Once a hypothesis has been tested enough for people to find it useful, then it c
 	Your instructor will use the same rubrics to determine part of your grade for the lab.
 \end{framed}	
 
-\textbf{Rubrics to focus on during this experiment:} B7, B8, F1, F2, G1, G2. See Appendix~\ref{cha:rubrics} for details.
+\textbf{Rubrics to focus on during this experiment:} B7, B8, F1, F2. See Appendix~\ref{cha:rubrics} for details.
 
 \subsection{The ripple tank and generator}
 
@@ -146,7 +166,7 @@ ImageJ (\url{http://imagej.nih.gov/ij/download.html}), which is installed on the
 	
 	\item Select the icon with the straight line on it, and click and drag along the known length.
 	
-	\item From the drop-down menu, select ``Analyze'' > ``Set Scale...''.
+	\item From the drop-down menu, select ``Analyze'' $>$ ``Set Scale...''.
 	
 	\item Set ``Known distance'' to the value of the known length.
 	
@@ -171,11 +191,15 @@ where $\Delta d$ is the ``path length difference'', $\lambda$ is the wavelength,
 
 \textbf{Rubric rows to be assessed in this experiment:} C1, C4, C7, F1, F2. See Appendix~\ref{cha:rubrics} for details.
 
-
-
 \subsection{Testing this hypothesis}
 
-In general, one tests a hypothesis by using it to make a prediction about what will happen in a certain experimental procedure. With this hypothesis, it asserts a relationship between path length difference, wavelength, and constructive interference. But there are only certain points on the ripple tank image where it is easy to see constructive interference --- the bright spots at the intersection of waves originating from both sources.
+In general, one tests a hypothesis by using it to make a prediction about what will happen in a certain experimental procedure. With this hypothesis, it asserts a relationship between path length difference, wavelength, and constructive interference. But there are only certain points on the ripple tank image where it is easy to see constructive interference --- the bright spots at the intersection of waves originating from both sources. For an example, see Figure~\ref{rt:fig:interference-2d}.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\textwidth]{ripple-tank/interference-2d.png}
+	\caption{Example interference pattern for 2 dippers. The bright spots are circled. For a particular bright spot of constructive interference, the two path lengths PS1 and PS2 are drawn.}\label{rt:fig:interference-2d}
+\end{figure}
 
 In this case, it is easier to start by finding those locations, measuring the $\Delta d$, finding the wavelength for the given frequency using the relationship you found in Experiment 1, and solving for $m$. The hypothesis predicts that $m$ should always be an integer. As a result, your experiment becomes this: find out how close the experimentally determined $m$'s are to integers.
 
