@@ -1,0 +1,137 @@
+\documentclass[]{msulabm}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+%\usepackage[linktocpage]{hyperref}  % if not using colorlinks, use linktocpage
+\usepackage[colorlinks]{hyperref}  % if not using colorlinks, use linktocpage
+\usepackage{bm}            % bold math
+\usepackage{multirow}
+\usepackage[table]{xcolor} % provide alternating rows with colors
+\usepackage{textcomp}
+\usepackage{xfrac} % gives split-level fractions with '\sfrac{a}{b}
+\usepackage{multicol}
+\usepackage[section]{placeins} % provides \FloatBarrier, to keep floats from crossing this barrier
+\usepackage{amssymb}
+\usepackage{wrapfig} % provides wrapping figures with text.
+%\usepackage{enumitem} % gives \begin{enumerate}[resume] to resume counting from previous enumerate
+%\usepackage{subfigure}
+%\usepackage{tikz} % to draw arrows
+\usepackage{xtab} % provides xtabular, tabular environment that spans multiple pages and other awesome things
+\usepackage[style=phys,biblabel=brackets,pageranges=false]{biblatex}
+\usepackage{pdflscape}
+\usepackage{ragged2e}
+\usepackage{longtable}
+\usepackage{mathabx} % gives astronomy symbols like \Earth
+\usepackage{pdfpages}
+
+\bibliography{references-manual,bbarker-zotero}
+
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+
+\title{Laboratory Manual}
+\author{ASTR 24100 Physics of Stars \\ \\ The University of Chicago}
+\date{Winter 2019}
+
+\pagestyle{ruled}
+
+\definecolor{lgray}{rgb}{.2,.2,.2}
+
+\makeevenfoot{ruled}{\thepage}{\footnotesize{\textit{Last updated \today}}}{}
+%\makeevenfoot{ruled}{\thepage}{}}{}
+\makeoddfoot{ruled}{}{\color{lgray} \tiny{This work is licensed under \href{http://creativecommons.org/licenses/by-sa/4.0/}{CC BY-SA 4.0} by \href{mailto:bbarker@uchicago.edu}{the University of Chicago}.}}{\thepage}
+
+
+% allows us to use subcaptions from the memoir class in figures. See Memoir Section 10.9
+\newsubfloat{figure}
+
+% don't worry so much about filling every page.
+%\raggedbottom
+
+% raise the penalty for splitting footnotes across different pages. Default is 100.
+\interfootnotelinepenalty=10000
+
+%\includeonly{amplifier/amplifier} 
+
+% creates a standard length to use 
+\newlength{\answerskip}
+%\setlength{\answerskip}{90pt} 
+
+%% use plus / minus if latex is squeezing the answer space too much
+\setlength{\answerskip}{2cm plus 0.2cm minus 0.2cm}
+
+\newlength{\qaskip}
+\setlength{\qaskip}{\answerskip}
+\addtolength{\qaskip}{\baselineskip}
+
+% reduce vertical space between chapters in table of contents. Default is 2em.
+\setlength{\cftbeforechapterskip}{1em}
+
+% allow for extra line on a page to help prevent widow/orphan lines.
+\sloppybottom
+
+% Now we can caption a table outside of the table float environment (good for multi-page tables)
+\newfixedcaption{\freetabcaption}{table}
+
+%\includeonly{snells-law/snells-law}
+%\includeonly{ohms-law/ohms-law}
+
+\begin{document}
+\maxtocdepth{chapter}
+
+ % start roman numbering
+ \frontmatter
+
+\maketitle
+
+%\clearpage
+
+%Brent W. Barker
+
+%Department of Astronomy \& Astrophysics
+
+%The University of Chicago
+
+%5640 South Ellis Ave.
+
+%Chicago, IL 60637
+
+%\href{mailto:bbarker@uchicago.edu}{bbarker@uchicago.edu}
+
+%\vspace{2\baselineskip}
+
+%\includegraphics{cc-by-sa-88x31}
+
+%\textcopyright{} 2018 Brent W. Barker. Except where otherwise noted, this work is copyrighted under the Creative Commons Attribution-ShareAlike International 4.0 License. To view a copy of this license, visit \url{http://creativecommons.org/licenses/by-sa/4.0/}.
+
+%\vspace{\baselineskip}
+
+%These labs, excluding "Impulse and Momentum" and the appendices, are a derivative of "\href{https://%sites.google.com/site/scientificabilities/ISLE-labs}{ISLE Labs}" by the Rutgers Physics and Astronomy %Education Research group, used under the Creative Commons Attribution International 4.0 License.
+%To view a copy of this license, visit \url{http://creativecommons.org/licenses/by/4.0/}.
+
+%At Rutgers University, many people contributed to this project over the years.
+%The list of names is very long and includes: Eugenia Etkina, Alan Van Heuvelen, Suzanne Brahmia, David %Brookes, Michael Gentile, Anna Karelina, Michael Lawrence, Marina Milner-Bolotin, Sahana Murthy, Maria %Ruibal-Villasenor, Aaron Warren, Xueli Zou.
+
+ % skip to next right leaf (``recto'')
+ \cleartorecto
+
+ % the star means that the ToC itself is not listed in the ToC
+ \tableofcontents*
+
+ % start arabic numbering
+\mainmatter 
+
+\include{blackbody/lab}
+%\include{ripple-tank/lab}
+
+\appendix
+
+%\include{uncertainty/uncertainty}
+%\include{rubrics/rubrics}
+\include{report-format/report-format}
+%\include{pasco-cavendish/pasco-cavendish}
+
+% \bibliography{references,MyLibrary}
+% \bibliographystyle{plain}
+\printbibliography
+
+\end{document}
