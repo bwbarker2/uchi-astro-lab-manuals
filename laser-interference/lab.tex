@@ -1,0 +1,132 @@
+\chapter{Behavior of electromagnetic waves in space (lasers and slits)}
+
+% TODO include reason for different formula from previous lab with ripple tank
+
+\section{Introduction}
+
+In 1801, Thomas Young's ``double-slit'' experiment demonstrated the wave nature of light by showing that two coherent light sources produce interference patterns. You will perform a modern version of Young's experiment using a
+laser as light source. The laser illuminates two thin slits, each of width $a$ separated by a distance $d$, which act as two
+coherent sources of light. This is analogous to what you have observed with water waves in the previous lab section, in
+which you saw a plane wave combined with an aperture (a slit) acting as a circular source of waves. An interference
+pattern appears on a viewing screen, placed at a distance $L$ from the double slit, in the form of bright and dark regions
+corresponding to maxima and minima of interference. You will use the interference pattern to measure the wavelength
+$\lambda$ of the laser, and show that the same framework of equations that is derived in the introduction to the previous lab
+holds for light too.
+
+\section{Experiment 1: Observing patterns made by 1 and by 2 slits}\label{li:sec:exp1}
+
+\textbf{Goal:} Describe the patterns made by a laser that is incident on 1 slit and on 2 slits, and the differences and similarities between them.
+
+\textbf{Available equipment:} optical bench, viewing screen, blank white paper, PASCO ``Multiple Slits'' assembly, red laser with mounting clamp, support stand, optionally computer with ImageJ installed
+
+\begin{framed}
+	\textbf{Warning: Laser Hazard!} The power of our lasers is low enough that the normal human blink reflex is sufficient to protect against incidental eye exposure.
+	
+	That being said, the following rules reduce the risk of eye exposure to laser light:
+	\begin{enumerate}
+		\item Do not direct the laser beam into anyone's eye.
+		\item Be aware of the laser reflecting off of mirror-like surfaces and where that beam goes.
+		\item Turn off the laser when not in use.
+		\item Keep the laser pointing horizontally and near the plane of the table, while keep your eyes above that plane.
+		\item To determine whether the laser is on, put your hand or a light-colored object in front of the beam, rather than looking into the laser aperture.
+	\end{enumerate}
+\end{framed}
+
+\textbf{Rubrics to be assessed for this section:} F1, F2. See Appendix~\ref{cha:rubrics} for details.
+
+\subsection{Setup}
+Ensure the red laser is turned on and pointed at the slit assembly. Rotate the head of the slit assembly so that the active slit is the ''Comparison'' slit location with both a single
+and double slit furthest counter-clockwise. Adjust the laser so that the active slit
+is well illuminated by the laser spot. Note the laser should be pointed slightly upward if the laser head is ~10cm off the
+table, and pointed so it hits the screen ~5cm from the top edge, and so moving the slit assembly closer to the laser will
+move the spot on the slit assembly lower, and moving it further will move the spot higher. With the slits aligned with the
+laser, you will see light on the screen, but no longer a simple spot. Instead, you will see a vertical feature, the details of
+which depend on whether the laser is illuminating the single slit, or the double slit. Nudge the rail end back and forth to
+see the difference.
+
+Include the following in your report:
+\begin{enumerate}
+	\item A labeled photo or sketch of the experimental setup.
+	
+	\item An image of each pattern from the first slit assembly setting, taken from the same camera location.
+	
+	\item A written description of each pattern and how they are alike and different. Do you see same pattern in the double slit as you do in the single slit (in addition to another pattern)?
+	
+	\item What happens to the double-slit image if the slit separation is wider, like in the second setting in the ``Comparisons'' section of the assembly?
+	
+	\item How about when the slits are wider, like in the third setting? 
+\end{enumerate}
+
+\section{Experiment 2: Testing the wave hypothesis}
+
+\textbf{Goal:} Determine whether light can be described as a wave. Note that if this is true, then light from a laser would be a plane wave.
+
+
+
+\textbf{Available equipment:} Same as in Section~\ref{li:sec:exp1}, plus a green laser with mounting clamp
+
+\textbf{Rubrics to be assessed for this section:} C4, C7, C8, G2, G4, F1, F2. See Appendix~\ref{cha:rubrics} for details.
+
+\subsection{Behavior of a plane wave incident on single and double slits}
+
+The following equation describes the location, $y_m$ (measured relative to the center of the pattern), of the $m$th interference minimum (dark spot) seen on a screen when a plane wave is incident on a single slit.
+\begin{equation}
+y_m = \frac{m \lambda L}{a} \,,
+\end{equation}
+where $L$ is the distance from the slit to the screen, and $a$ is the width of the slit.
+
+For a double slit, the following equation describes the location $y_n$ of the $n$th interference maximum (bright spot) seen on a screen when a plane wave is incident on a double slit.
+\begin{equation}
+y_n = \frac{n \lambda L}{d} \,,
+\end{equation}
+where $d$ is the distance between the two slits.
+
+\subsection{Suggestions for your experiment}
+
+\begin{itemize}
+	
+	\item \textbf{REQUIRED:} Use both the green laser and the red laser for this experiment, and ensure that you keep the data (image and setup parameters) for use in the individual homework.
+	
+	\item For measuring the interference minima and maxima, you can do so by putting a paper on the screen and marking the locations directly, then measuring the marks with a ruler or with ImageJ. You could also take a picture of the pattern directly. Ensure that you take a reference photo with a known length on the screen, and take the image as face-on as possible, from the same location every time if you are taking multiple images.
+	
+	\item The green laser has a wavelength of $532\:$nm. You can assume that this value is exact, with zero uncertainty.
+	
+	\item The stated uncertainty in the slit size and separation according to the manufacturer (PASCO) is $\pm$ 0.005 mm for the slit width ($a$), and $\pm$ 0.01 mm for the slit spacing ($d$).
+	
+	\item If you use a value with an uncertainty in a calculation, if you want to use that value for comparison, you must propagate the uncertainty through to the final value. See Appendix~\ref{unc:sec:prop}.
+	
+	\item To compare your outcomes to your predictions, get a value with uncertainty for each, then compare them using the $t'$ test, described in Section~\ref{unc:sec:comparing}.
+\end{itemize}
+
+\subsection{Items to include in your report}
+
+Relevant rubric rows from Appendix~\ref{cha:rubrics} are listed in parentheses.
+
+\begin{enumerate}
+	\item Statement of the hypothesis (C1).
+
+	\item Description of the experimental setup and procedure (C2, F1).
+	
+	\item The quantitative prediction that the hypothesis makes about what will happen during the experimental procedure (C4). Ensure that uncertainty is handled correctly (G2).
+	
+	\item A report of the experimental outcome (results), neatly organized (G4).
+	
+	\item Determination of whether / how much the prediction agrees with the outcome, comparing using uncertainties (C7, G2).
+	
+	\item Judgment about the hypothesis --- based on this experiment, does it lead you to support the hypothesis more or less, about how much (qualitative)? (C8)
+	
+	\item A discussion of the findings of the experiment and why it's helpful (for you and/or for science) (F2).
+\end{enumerate}
+
+\section{Individual homework}
+
+The tolerances in the slit manufacturing make a direct computation of the laser wavelength somewhat uncertain, as the uncertainties in the slit spacing are at best a few percent (0.01mm/0.5mm = 2\%). Unfortunately, the red lasers we have in the lab could be quite a few different wavelengths, and we don't have a manufacturers record of the exact value. Diode lasers like this can be found online with “red” values of 633, \textbf{635}, 637, 638, 639, 640, 642, \textbf{650}, 653, \textbf{655}, \textbf{658}, \textbf{660}, \textbf{670}, and 680 nm (bolded values are more common --- the laser is likely one of these).
+A 2\% uncertainty in the slit spacing translates to a $\pm$13nm uncertainty at 650nm, and so is useless for selecting the actual laser wavelength from the choices above.
+
+However, we can do better. The ratio of the computed wavelengths for the red and green laser measurements of a given slit configuration (i.e. the $a = 0.04\:$mm and $d = 0.50\:$mm case, since you
+recorded data for both) is a number that doesn't include the slit manufacturing uncertainty (or for that matter any
+uncertainty in your measurement of the distance between the slit and the screen) because both numbers cancel
+when you compute the ratio. Thus, with a green laser of known wavelength (532nm) and that ratio you can compute
+the red laser wavelength with greater accuracy.
+
+Use this method to determine the red laser's wavelength. What do you get? What, of the choices above, is the most likely actual wavelength for the red laser?
