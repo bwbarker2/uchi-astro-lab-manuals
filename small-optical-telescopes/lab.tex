@@ -11,6 +11,8 @@ Your project work with the Stone Edge Observatory use a similar (although somewh
 get your hands on the hardware and build some understanding for how it works and what it can
 do.
 
+\textbf{Rubric Rows to be assessed:} B5, B9, D2, D4. These are referenced in the lab manual where they should be addressed.
+
 \section{Reflection Telescopes}
 
 The primary utility of a telescope is its ability to gather light, thereby enabling visualization and analysis of the faint astronomical objects we are trying to observe. This requires focusing light incident on a large surface area. We will be using a \textbf{reflecting} telescope, which means that light rays from observation targets are focused into an eyepiece or onto a detector with reflecting mirrors. This is in contrast to refracting telescopes, which use refracting lenses to focus light rays. Figure~\ref{sot:fig:schmidt} shows schematically how this kind of telescope works. 
@@ -31,7 +33,7 @@ The main thing to note is that the CCD material is not sensitive to all waveleng
 \subsection{Filters}
 Light is composed of photons with energies that determine their wavelengths (sorter wavelength $\implies$ higher energy). Thus every light source exhibits a textbf{spectrum} of energies based on its energetic components, determined by the physics of the light emission process. Thus, observing the energetic constituents of light from astronomical objects - a.k.a. observing the spectrum of emitted radiation - is a fundamental tool in observational astrophysics. However, obtaining the specific intensity of radiation as a function of energy from an astronomical source is challenging. An easier way to asses the electromagnetic energies observed is to image them in different filters: materials that are transparent to a known range of wavelengths and opaque to all others. Thus, one can image the same object with multiple different filters to get a sense of the wavelength regimes that make the strongest contributions to the overall electromagnetic output. 
 
-A filer is characterized by its \textbf{transmission function}: a function that characterizes the amount of light that is transmitted by the filter at each wavelength. Figure~\ref{sot:fig:filters} shows the transmission functions for some standard astronomical filters (similar to the one's you'll be using in this class).
+A filter is characterized by its \textbf{transmission function}: a function that characterizes the amount of light that is transmitted by the filter at each wavelength. Figure~\ref{sot:fig:filters} shows the transmission functions for some standard astronomical filters (similar to the one's you'll be using in this class).
 
 \begin{figure}
 	\centering
@@ -65,7 +67,9 @@ First we will be observing an object at the opposite end of the lab room with th
 	\item Next we want to precisely focus the telescope. Do this with most of the lights off - otherwise
 	the image has too much light. Use the 4th filter of the five available; this can be selected
 	from the ‘Filter’ menu. Then, use the \textbf{Focus} task from the camera control system toolbar,
-	and take images of a few seconds (at most). Start the focus sequence - the camera will just
+	and take images of a few seconds (at most). If the image is completely dark, and the peak intensity number in the focus box is reading around 65000, then the CCD is saturated, and the light in the room should be reduced, or the exposure time shortened.
+	
+	\item Start the focus sequence - the camera will just
 	take and display images repeatedly, of the exposure duration you specified. Now, adjust
 	the focus knob (on the back of the telescope, off center) until you achieve an optimal focus.
 	Note that you can (and should) zoom the magnification of the image so you can see the
@@ -76,22 +80,33 @@ First we will be observing an object at the opposite end of the lab room with th
 	will cause image shake that will make focusing difficult, so enforce a still classroom while
 	you do this.
 	
-	\item Once the telescope is focused to the sharpest possible images, acquire an image using the
+	\item Time to demonstrate one helpful aspect of telescopes by taking an image in the dark. Once the telescope is focused to the sharpest possible images, turn off the lights and acquire an image using the
 	\textbf{Grab} button on the toolbar. An exposure time of 40--60 seconds is usually good with all of
-	the lab lights off and the blinds closed. Save this image in ‘fits’ format; the ‘ds9’ tool available on all of the lab
+	the lab lights off and the blinds closed.
+	
+	\item Save this image in ‘fits’ format; the ‘ds9’ tool available on all of the lab
 	computers can be used to examine the image in detail. We’ll use the university supported
 	’Box’ system to share data with your lab classmates. See \url{uchicago.account.box.com/login}
 	for details.
 	
 	\item With the lights back on, gather around the target on the lab bench and then
 	turn the light off again. Observe the target. Can you see it? Can you see the details? Does
-	it matter how close you are? Compute and report the ratio of the light gathering power of
+	it matter how close you are (Rubric Row B5)?
+	
+	\item Compute and report the ratio of the light gathering power of
 	the telescope relative to your eye, and comment on how that relates to what you do (or do
-	not) observe by eye compared to the telescope.
+	not) observe by eye compared to the telescope (Rubric Row B9).
 	
 	\item In the acquired and saved image you can see a mm scale, which correponds to some number
 	of pixels. Compute and report the ‘plate scale’ in mm/pixel. Given the distance between the
-	telescope and the target, what is the angular plate scale in arcseconds/pixel? What do you
+	telescope and the target, what is the angular plate scale in arcseconds/pixel?
+	
+	To find this, note that for an arc (segment) of a circle, the length of that arc $s$ is related to the radius of circle $r$, and the angle (in radians) subtended by that arc $\theta$ by
+	\begin{equation}
+	 s = r \theta
+	\end{equation}
+	
+	\item What do you
 	think is the smallest feature (in arcsec) that you could resolve using this setup? Would we
 	expect to see images of stars that sharp if we turned the telescope and camera skyward?
 	Also, what is the field of view (arcseconds $\times$
@@ -167,9 +182,10 @@ The filter wheel contains two narrow band and three broad band filters. As alrea
 above, one of the narrow band filters is H-alpha, and the other is OIII-5007 (an emission line
 at 500.7nm from star forming regions that is strong in star-forming galaxies, such as the Milky
 Way). The broad band filters are the g-band (’g’=green) r-band (’r’=red) i-band (’i’=infrared) ;
-see Figure 2 for details. Based on the data taken in Sections~\ref{sot:sec:grating} and \ref{sot:sec:h-lamp}, deduce the identification of
-each filter; provide your final list in your lab report - i.e. filter 1 as ’this’, filter 2 is ’that’ etc.
-Also, describe how you came to these conclusions.
+see Figure 2 for details.
+
+Based on the data taken in Sections~\ref{sot:sec:grating} and \ref{sot:sec:h-lamp}, deduce the identification of
+each filter; provide your final list in your lab report - i.e. filter 1 as ’this’, filter 2 is ’that’ etc. Describe step-by-step how you solved this problem (Rubric Rows D2, D4 (do not worry about experimental uncertainties, since this is a qualitative problem)).
 
 \section{Optional Section: See yourself with a telescope!}
 
