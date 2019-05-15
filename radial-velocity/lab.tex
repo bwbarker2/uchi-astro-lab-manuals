@@ -1,0 +1,145 @@
+\chapter{Detecting exoplanets with the radial velocity method}
+
+%todo radial velocity simulator gives a blank window on some personal browsers, while other websites that host the same simulator open fine for them. Maybe note this in relevant section.
+
+% TA will demonstrate two hanging masses on a ruler, which is balanced on a horizontal rod mounted on a support stand. The masses should be very uneven to simulate a star and planet. Demonstrate how the center of mass changes with the change in separation and change in mass of the planet.
+
+\section{Introduction}
+
+In the Fall of 1995, two Swiss astronomers announced evidence for a planet orbiting the star 51 Pegasi, a groundbreaking discovery since the star, 51 Pegasi, is very similar to our own Sun. Since 1995, thousands of potential exoplanets have been detected and the field of exoplanet science has become a pillar of modern astronomy.
+
+In this lab, we will explore the radial velocity technique, the method used to detect the first exoplanets and a powerful technique for studying exosolar planetary systems.
+
+\subsection{Grading}
+
+Each bolded instruction is worth 4 points, and each numbered question is worth 2 points. We include 10 points for attendance and participation to arrive at 60 points for this lab.
+
+\section{Building Intuition}
+
+The radial velocity method works because in a planetary system, both the host star and its planet orbit the Center of Mass for the system. Since the host star is also moving, the star has a non-zero velocity, which we can study through the Doppler effect on light.
+
+Open the link for the Center of Mass webpage (\url{http://astro.unl.edu/naap/esp/centerofmass.html}). The animation in the upper left illustrates the orbit of two bodies about their Center of Mass. Read through the webpage and use the sliders to explore how varying separation and relative mass changes the Center of Mass.
+
+For this lab, the following values will be useful:
+\begin{itemize}
+	\item $1\:\textrm{AU} = 1.496 \times 10^{11}\:$m (approximate distance between the Earth and the Sun)
+	
+	\item $1\:\textrm{M}_\textrm{J} = 1.898 \times 10^{27}\:$kg (mass of Jupiter)
+	
+	\item $1\:\textrm{M}_\textrm{Sun} = 1.989 \times 10^{30}\:$kg (mass of the Sun)
+	
+	\item $G = 6.674 \times 10^{-11}\:\mathrm{N}\:\mathrm{m}^2/\mathrm{kg}^2$ (Newtonian constant of gravitation)
+\end{itemize}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.4\textwidth]{radial-velocity/two-body-cm}
+	\caption{Schematic of a star (upper-left) and planet (lower-right) orbiting a common center-of-mass.}\label{rv:fig:two-body-cm}
+\end{figure}
+
+Consider the picture in Figure~\ref{rv:fig:two-body-cm} and define $M_\textrm{p} = 0.5 M_\textrm{J}$ as the mass of the planet (the smaller object),  $M_\textrm{S} = 1.0 M_\textrm{Sun}$ as the mass of the star (the larger object), and $d = 0.0527\:$AU be the separation between the two. Assume the system is in a circular orbit.
+
+\begin{steps}
+	\item How far is the Center of Mass from the center of the star (in AU)?
+	
+	\item What is the star’s orbital radius (in AU)?
+\end{steps}
+
+Since the star is moving around the Center of Mass, it has a non-zero velocity. Let the orbital period of the system be $T = 4.23\:$days.
+
+\begin{steps}
+	\item What is the orbital velocity of the host star?
+	
+	\item Sketch the figure, then on that sketch, draw arrows showing the velocity at different parts of the orbit. What happens to the direction of the star’s velocity as the planet traces out its orbit?
+\end{steps}
+
+Astronomers can use spectroscopic techniques for measuring the velocity of stars along the line of sight between the earth and the star. In the illustration in Figure~\ref{rv:fig:two-body-cm}, suppose the earth is to the right of the system so that we are observing the system edge on from the right side of the page. \textbf{Draw a graph} similar to Figure~\ref{rv:fig:graph} and then draw on it the ``line of sight'' velocity for the star as a function of time (hint: it will be a trigonometric function).
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\textwidth]{radial-velocity/radial-graph}
+	\caption{Graph to draw for radial velocity estimation.}\label{rv:fig:graph}
+\end{figure}
+
+\begin{steps}
+	\item How are the period and amplitude related to the orbital period and the star’s velocity?
+\end{steps}
+
+Consider a similar system only with a planet that is twice the mass ($M_\textrm{p} = M_\textrm{J}, M_\textrm{S} = M_\textrm{Sun}$, $d = 0.0527\:$AU, and $T = 4.23\:$days).
+
+\begin{steps}
+	\item What is the system's host star orbital radius (in AU) and orbital velocity (in m/s)?
+	
+	\item How do these compare with the values for the previous system with a less massive planet?
+\end{steps}
+
+\textbf{Sketch the line of sight velocity} for this more massive system on the same plot that you already drew.
+
+\begin{steps}
+	\item How does the line of sight velocity depend on the planet’s mass?
+\end{steps}
+
+Open the link for the radial velocity simulator (\url{http://astro.unl.edu/naap/esp/animations/radialVelocitySimulator.html}). Under ``Visualization Controls'' click ``show multiple views.'' Under ``Planet Properties'' set the eccentricity to zero. Under ``Animation Controls,'' press ``Start Animation'' to set things in motion. Vary the mass of the planet, the mass of the star and the semimajor axis and note how the radial velocity graph changes. Vary the other parameters (eccentricity, longitude, inclination) and see how the radial velocity changes. \textbf{Include your findings in your report.}
+
+\section{Radial velocity of 51 Peg}
+
+Table~\ref{rv:tab:51peg} lists actual line of sight velocities for 51 Peg measured by Marcy \& Buttler in 1995 at the Lick Observatory in California.
+
+\begin{table}
+	\centering
+	\includegraphics[width=\textwidth]{radial-velocity/51-peg-velocities}
+	\caption{Line-of-sight velocities for 51 Pegasi measured over time.}\label{rv:tab:51peg}
+\end{table}
+
+Use the free software SciDAVis to plot this data. You can download and install it on your computer, or you can use the lab computers, which have it installed already.
+
+Then, fit an equation to the data. To do so in SciDAVis, first save the project, so you won't accidentally lose your work. Then, select Analysis $\blacktriangleright$ Fit Wizard... from the drop-down menu. Type your desired equation into the large box. You can use any of the functions you can find in the lists at the top of the window and combine them how you would like. For fit parameters, use the letters a, b, c, and so on. For each fit parameter you use, include it in the list of parameters. For example, if you think the data are best represented by a tangent function, you could put ``\texttt{b*tan(c*x+d)}'' in the box. Then click the ``Fit $>>$'' button, then the ``Fit'' button to fit the data with this equation. This finds the parameters for the equation that make it best fit the data. Experiment to find an equation that seems to fit well.
+
+You can retrieve the fit parameters and their uncertainties from the Results Log on the main window. \textbf{Include the graph, the fit parameters, and their uncertainties in your report.}
+
+\begin{steps}
+	\item From your fit to the data, what is the orbital period (days) and host star orbital velocity (m/s)?
+	
+	\item What is the orbital radius (in AU) for the host star?
+\end{steps}
+
+Kepler's third law relates the orbital period to the system's semimajor axis. In the case where the planet’s mass is much smaller than the star’s mass, Kepler's third law is
+\begin{equation}
+ P^2=\frac{4 \pi^2}{GM} a^3 \,,
+\end{equation}
+where $P$ is the orbital period, $G$ is Newton's constant, $M$ is the mass of the star, and $a$ is the semimajor axis. The mass of 51Peg is $1.0 M_\textrm{Sun}$.
+
+\begin{steps}
+	\item According to your fitted orbital period and Kepler's third law, what is the system's semimajor axis?
+\end{steps}
+
+The host star orbital radius and the semimajor axis are related by the Center of Mass.
+
+\begin{steps}
+	\item Using the system's semimajor axis, the mass of 51Peg, and the host star’s orbital period, determine the planet’s mass (in units of $M_\textrm{J}$).
+\end{steps}
+
+\section{Radial velocities for other systems}
+
+Go to the webpage for SystemicLive (\url{http://www.stefanom.org/systemic-live/}). Note that while the graphics within the tutorial are currently not visible on the website, the data visualization and analysis software are still functional). Click ``Open Systemic'' to start the program. Then on that first page, scroll down to ``Tutorials and Resources'' and click on the link ``51 Pegged: Rediscovering the first exoplanet with Systemic Live'' and follow that tutorial. You will use the Systemic software to analyze radial velocity data for 51Peg.
+
+Note that one key analysis tool you will use in the remainder of the lab is the power spectrum of the radial velocity data. We know that we can create any periodic function from the sum of sinusoids of different frequencies and phases. The power spectrum tells us which frequencies dominate that decomposition. Therefore, peaks in the power spectrum correspond to periodicities in the data, and hence point to possible planetary periods in the radial velocity measurements.
+
+\begin{steps}
+	\item How do the mass and separation results from Systemic compare with your earlier 51Peg numbers? Print out a plot of the ``Phased Radial Velocity'' and write on it the Period and Mass for the system.
+	
+	\item Use Systemic to determine orbit parameters for the following systems: 47Uma, 70Vir. Print out plots for your ``Phased Radial Velocity'' for each system. Write on your plots the Period and Mass for each system orbit.
+	
+	\item Use Systemic to analyze the data for system: upsand. Hint, there are multiple planets for this system. How many planets do you find? What are their masses and orbital periods?
+	
+\end{steps}
+
+\section{Reflection}
+
+Do some research on the history and background of the systems you analyzed (51Peg, 47Uma, 70Vir, and upsand). Write a one paragraph summary of this lab and discuss the following:
+
+\begin{steps}
+	\item What was the historical context and significance of these measurements?
+	
+	\item How do they relate to what you did in this lab?
+\end{steps}

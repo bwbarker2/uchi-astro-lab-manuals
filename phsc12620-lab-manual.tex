@@ -10,7 +10,7 @@
 \usepackage{textcomp}
 \usepackage{xfrac} % gives split-level fractions with '\sfrac{a}{b}
 \usepackage{multicol}
-\usepackage[section]{placeins} % provides \FloatBarrier5, to keep floats from crossing this barrier
+\usepackage[section]{placeins} % provides \FloatBarrier, to keep floats from crossing this barrier
 \usepackage{amssymb}
 \usepackage{wrapfig} % provides wrapping figures with text.
 %\usepackage{enumitem} % gives \begin{enumerate}[resume] to resume counting from previous enumerate
@@ -23,15 +23,14 @@
 \usepackage{longtable}
 \usepackage{mathabx} % gives astronomy symbols like \Earth
 \usepackage{pdfpages}
-\usepackage{wasysym}
 
 \bibliography{references-manual,bbarker-zotero}
 
 \newcommand{\abs}[1]{\left\lvert#1\right\rvert}
 
 \title{Laboratory Manual}
-\author{PHSC 12610 Black Holes \\ \\ The University of Chicago}
-\date{Winter 2019}
+\author{PHSC 12620 The Big Bang \\ \\ The University of Chicago}
+\date{Spring 2019}
 
 \pagestyle{ruled}
 
@@ -121,22 +120,18 @@
  % start arabic numbering
 \mainmatter 
 
-\include{ripple-tank/lab}
-\include{laser-interference/lab}
-\include{michelson-interferometer/lab}
-\include{galactic-center/lab}
-%\include{measurement/lab}
-%\include{radioactivity-1/lab}
-%\include{radioactivity-2/lab}
-%\include{little-g/lab}
-%\include{cavendish/lab}
+\include{parallax/lab}
+\include{globular-cluster/lab}
+\include{hubble-diagram/lab}
+\include{dark-energy/lab}
+\include{cmb/lab}
 
 \appendix
 
+\include{report-format-short/report-format-short}
 \include{uncertainty/uncertainty}
-\include{rubrics/rubrics}
-\include{report-format/report-format}
-%\include{pasco-interferometer/pasco-interferometer}
+%\include{rubrics/rubrics}
+
 %\include{pasco-cavendish/pasco-cavendish}
 
 % \bibliography{references,MyLibrary}

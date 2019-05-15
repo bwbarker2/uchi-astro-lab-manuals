@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 
-\ProvidesClass{msulabm}[2014/10/03 UChicago Lab Manual]
+\ProvidesClass{msulabm}[2019/04/12 UChicago Lab Manual]
 
 %\renewcommand{\normalsize}{\fontsize{12pt}{0pt}\selectfont}
 %\setlength{\textwidth}{
@@ -91,7 +91,7 @@
 }
 
 % Steps to follow in an activity. These are numbered lists, but we don't always want to be in a list environment during an activity. So the steps continue the enumerate counter from before.
-\newcounter{steps}[activity]
+\newcounter{steps}[chapter]
 \NewEnviron{steps}{
  \begin{enumerate}
  \setcounter{enumi}{\thesteps}

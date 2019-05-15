@@ -1,0 +1,35 @@
+* Imagine making an accurately scaled model of the Solar System on a 100-yard long football field, with the Sun on one end, and Neptune on the other. Without using a book, or the Internet, or any resource, place and label a dot for your best guess orbital distance for each of the eight planets orbiting the Sun. There are no wrong answers here - this is for you to gauge your current intuition.
+-> turn in or something. post it. clearly separate.
+
+* Do something similar for the size of the Sun and the eight planets. Draw a circle to represent each of these objects, proportionately sized.
+
+* Now make another scale model of relative position for the sun, Neptune, our nearest star Proxima Centauri, and its planet, Proxima Centauri b. Again, do not use any resources - this is to capture your current intuition.
+
+* students build scale models
+ * solar system sizes - sun, planets
+ * solar system distances - sun, planets, Kuiper belt
+ * distance from here to next star and solar system extent - sun, neptune, AC, ACb
+
+* parallax example? parsec
+  * measuring near thing, vs far thing -> need wider lens
+
+(homework)
+* appreciating distances:
+ * how long would it take to drive around equator, to sun, from sun to neptune, from sun to proxima centauri?
+ * if you wanted to travel each of those distances in 100 years, how fast would you need to go?
+ * for the longest distance, how does that speed compare to the speed of light, which is the fastest anything can go? (maybe 1 year?)
+
+
+
+
+
+
+* diffraction limit?
+ * example for eyes - when does row of lines look like a solid square? What is angular resolution of eyes? What is prediction of diffraction limit?
+
+* walking at light-speed, maybe 10x light-speed, to get feel for it 
+
+ Proxima Centauri b
+ * discovered in 2016
+ * potentially habitable
+ 
