@@ -14,8 +14,6 @@ Last week, you queued up some images to be taken by the robotic telescope and le
 	\item Gain insight of and appreciation for the scale of astronomical distances.
 \end{itemize}
 
-
-
 \section{How big is your face?}
 
 This is a simple question, so that you can learn some astronomical concepts and tools while answering it and still keeping the subject matter intuitive.
@@ -37,7 +35,7 @@ smartphone. Every time a photon within a certain energy range hits the detector,
 
 The main thing to note is that the CCD material is not sensitive to all wavelengths of light uniformly. Photons of certain energies are more likely to excite electrons in the detector and thus contribute to the output image. Consequently, the observed image intensity will be weighted by the response function of the detector.
 
-\subsection{Telescope Set Up, Preliminary ``Observations"}\label{ai:sec:setup}
+\subsection{Telescope Set Up, Preliminary Observations}\label{ai:sec:setup}
 
 The telescope and camera assembly is an expensive and relatively fragile piece of hardware, so
 move carefully when interacting with the system. We have only two setups, so the class will be split into two groups for using the classroom telescope.
@@ -69,42 +67,44 @@ First we will be observing an object at the opposite end of the lab room with th
 	have to adjust, then move away, wait, and repeat. Your classmates walking around the lab
 	will cause image shake that will make focusing difficult, so enforce a still classroom while
 	you do this.
+
+	\item Once the telescope is focused, \textbf{grab a 1-second exposure} using the Grab command.
 	
-	\item Time to demonstrate one helpful aspect of telescopes by taking an image in the dark. Once the telescope is focused to the sharpest possible images, turn off the lights and acquire an image using the
-	\textbf{Grab} button on the toolbar. An exposure time of 40--60 seconds is usually good with all of
-	the lab lights off and the blinds closed.
+%	\item Time to demonstrate one helpful aspect of telescopes by taking an image in the dark. Once the telescope is focused to the sharpest possible images, turn off the lights and acquire an image using the
+%	\textbf{Grab} button on the toolbar. An exposure time of 40--60 seconds is usually good with all of
+%	the lab lights off and the blinds closed.
 	
 	\item Save this image in ‘fits’ format; the ‘ds9’ tool available on all of the lab
-	computers can be used to examine the image in detail. You can use the university supported
-	’Box’ system to share data with your lab classmates. See \url{uchicago.account.box.com/login}
+	computers can be used to examine the image in detail (you can also install this free software on your computer). You can use the university supported
+	’Box’ system to share data with your lab classmates (or any other filesharing app that you prefer). See \url{uchicago.account.box.com/login}
 	for details.
 	
-	\item With the lights back on, gather around the target on the lab bench and then
-	turn the light off again. Observe the target. Can you see it? Can you see the details? Does
-	it matter how close you are (Rubric Row B5)?
-	
-	\item Compute and report the ratio of the light gathering power of
-	the telescope relative to your eye, and comment on how that relates to what you do (or do
-	not) observe by eye compared to the telescope (Rubric Row B9).
+%	\item With the lights back on, gather around the target on the lab bench and then
+%	turn the light off again. Observe the target. Can you see it? Can you see the details? Does
+%	it matter how close you are (Rubric Row B5)?
+%	
+%	\item Compute and report the ratio of the light gathering power of
+%	the telescope relative to your eye, and comment on how that relates to what you do (or do
+%	not) observe by eye compared to the telescope (Rubric Row B9).
+
+	\item Load the image in DS9. You can adjust the contrast of the image by holding down the right-click and dragging left, right, up, and down. In the upper right window, you can drag the frame around to view different parts of the image. To measure a length, select Region $>$ Shape $>$ Ruler from the drop-down menu. Then select Edit $>$ Region. Now if you click and drag on the image, it will draw a line and display the distance in pixels, or in angular separation if the image file has been calibrated withe pixel scale already.
 	
 	\item In the acquired and saved image you can see a mm scale, which correponds to some number
-	of pixels. Compute and report the ‘plate scale’ in mm/pixel. Given the distance between the
-	telescope and the target, what is the angular plate scale in arcseconds/pixel?
+	of pixels. Compute and report the ‘pixel scale’ in mm/pixel. Given the distance between the
+	telescope and the target, what is the angular pixel scale in arcseconds/pixel?
 	
 	To find this, note that for an arc (segment) of a circle, the length of that arc $s$ is related to the radius of circle $r$, and the angle (in radians) subtended by that arc $\theta$ by
 	\begin{equation}
 	s = r \theta
 	\end{equation}
+
+	\item Based on the pixel scale alone, how far apart in angle would two stars need to be in order to be distinguished as two objects instead of one?
 	
-	\item What do you
-	think is the smallest feature (in arcsec) that you could resolve using this setup? Would we
-	expect to see images of stars that sharp if we turned the telescope and camera skyward?
-	Also, what is the field of view (arcseconds $\times$
-	arcseconds) of this camera+telescope setup? Finally, observe the target from the vantage
+	\item Observe the target from the vantage
 	point of the telescope by eye. What detail can you see? How does that compare to what
 	you can see with the telescope?
 	
-	\item Now take an image of part of one of your groupmates with the telescope. Centering on their eye can make for a fun picture. Use the pixel scale that you determined, along with that image, to find the angular separation (or ``angular distance'') between two points in the image --- for example, what is the angle subtended by their eye? Use the distance from the telescope to the person to also determine the distance between those two points, for example in millimeters. Estimate your uncertainty and compare this measurement to a direct one (by holding up a ruler, for example.)
+	\item Now take an image of part of one of your groupmates with the telescope. Centering on their eye can make for a fun picture. Use the pixel scale that you determined, along with that image, to find the angular separation (or ``angular distance'') between two points in the image --- for example, what is the angle subtended by their eye? Use the distance from the telescope to the person to also determine the distance between those two points, for example in millimeters. %Estimate your uncertainty and compare this measurement to a direct one (by holding up a ruler, for example.)
 \end{steps}
 
 \section{How far apart are these stars?}
@@ -118,19 +118,19 @@ Note that since we are using a real robotic telescope, many things can go wrong 
 	
 	\item Select the link ``Download Selected FITS File'' to do so. Open it in DS9.
 	
-	\item Also open Stellarium on a computer. It is a free open source virtual observatory, so you can install it on your computer if you'd like. Use Stellarium to find your target. Zoom in by selecting the rectangle icon third from the right in the upper-right-hand corner. This simulates a field of view that is similar to our telescope.
+	\item Also open Stellarium on a computer. It is a free open source virtual observatory, so you can install it on your computer if you'd like. Use Stellarium to find your target (hover over the left edge of the screen to find the menu that includes the Search function). Toggle the Ground and Atmosphere in the bottom menu, so you can see the star clearly. Zoom in by selecting the rectangle icon third from the right in the upper-right-hand corner. This simulates a field of view that is similar to our telescope.
 	
 	\item Use the Stellarium view to identify two stars from your image. The two pictures might be rotated relative to each other.
 	
-	\item For those two stars, use DS9 to measure the angular separation (angular distance) between them. \textbf{Record this and your uncertainty for it.}
+	\item For those two stars, use DS9 to measure the angular separation (angular distance) between them. You may need to use the pixel scale of the Stone Edge Observatory telescope, which is 0.76''/pix (arcseconds per pixel). \textbf{Record this and your uncertainty for it.}
 	
 	\item In Stellarium, select each of the two stars in turn and record their equatorial coordinates (RA/Dec J2000.0). Calculate the angular separation using a web form, for example \url{http://hea.iki.rssi.ru/AZT22/ENG/cgi-bin/c_dist.htm}.
 	
 	\item Use the $t'$ statistic (see Appendix\ \ref{unc:sec:comparing}) to compare these two values of angular separation.
 	
-	\item To find the physical distance between them, use the distances from Earth as given in Stellarium, along with the angular separation and some geometry.
+%	\item To find the physical distance between them, use the distances from Earth as given in Stellarium, along with the angular separation and some geometry.
 	
-	\item How long does it take light to travel from one of those stars to the other?
+%	\item How long does it take light to travel from one of those stars to the other?
 \end{steps}
 
 \section{But wait! Next set of observations with SEO}
@@ -143,6 +143,14 @@ Each item below is worth 10 points, and there is an additional 10 points for att
 
 \begin{itemize}
 	
-	\item 
+	\item Image of the target that you captured, with the calculation of pixel scale. (Step 8)
+	
+	\item Observation from Step 10.
+	
+	\item Image of a person, with calculation of the angular separation and linear separation. (Step 11)
+	
+	\item Image from SEO, with your two stars marked, along with the calculation of angular separation. (Step 16)
+	
+	\item Calculation of angular separation from Stellarium's coordinates, along with the comparison using the $t'$ statistic.
 	
 \end{itemize}
