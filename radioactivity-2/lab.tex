@@ -2,13 +2,6 @@
 
 %TODO add instructor note: to close door to KPTC 003, need to toggle switch that keeps it open, which is above the door.
 
-%TODO add notes about neutron howitzer from https://wiki.uchicago.edu/display/phylabs/Mass+of+the+Neutron and from this email from David McCowan:
-%The source is a mixture of plutonium and beryllium. The plutonium decays via alpha emission and the beryllium absorbs the alpha to become carbon + a free neutron. The neutron has an energy given by a very complicated distribution, but the energy distribution goes up to ~11 MeV. The paraffin shielding (and the lucite in the plug) slows down neutrons, so that anything which escapes is thermalized such that E ~ kT ~ 1/40 eV. At the point where the foils are placed, the neutrons have been slowed some, but not completely... if they are a full 11 MeV still, they are too energetic to bind with the silver, so the foils are absorbing from the lower end of the spectrum or from neutrons that have scattered enough material to have less energy than they started with.
-%
-%The activity of the Pu-Be core is an astounding 5 Ci (!!), but that's the alpha flux which doesn't penetrate out of the core. The neutron flux is considerably less. Looking back at the original purchase order, it looks like we have 80 g of plutoinium mixed with 41 g of beryllium and a listed (I think unshielded?) emission rate of 9 x 10^6 N/sec.
-
-%TODO include suggestion to video the counter and a stopwatch to get more accurate 30-sec readings.
-
 Building on our work from last week, we will continue to study the radioactive decay.
 The physical laws of radioactivity predict that the rate of decay (number of atoms
 decayed / time interval) is proportional to the number of radioactive nuclei present. This
@@ -45,9 +38,15 @@ nuclei in the foil will have captured a neutron and transformed into a different
 which is unstable and can be detected via their decay products. Each group will be given
 one of these silver foils.
 
+\section{The neutron source}
+
+The source is a mixture of plutonium and beryllium. The plutonium decays via alpha emission and the beryllium absorbs the alpha to become carbon + a free neutron. The neutron has an energy given by a very complicated distribution, but the energy distribution goes up to ~11 MeV. The paraffin shielding (and the lucite in the plug) slows down neutrons, so that anything which escapes is thermalized such that E ~ kT ~ 1/40 eV. At the point where the foils are placed, the neutrons have been slowed some, but not completely... if they are a full 11 MeV still, they are too energetic to bind with the silver, so the foils are absorbing from the lower end of the spectrum or from neutrons that have scattered enough material to have less energy than they started with.
+
+The activity of the Pu-Be core is an astounding 5 Ci (!!), but that's the alpha flux which doesn't penetrate out of the core. The neutron flux is considerably less. There is about 80 g of plutonium mixed with 41 g of beryllium and a listed, unshielded emission rate of $9 \times 10^6:$n/sec.
+
 \section{Procedure}
 
-\textbf{Rubric rows to be assessed:} D1, D4, F1, F2, G2, G3 (ignore actually doing it), G4
+\textbf{Rubric rows to focus on:} D1, D4, F1, F2, G2, G3 (ignore actually doing it), G4
 
 Your task is to measure the half-life of $^{108}$Ag. We will use the Geiger tube to count
 decays. That is, we will count the $\beta$ particles --- the gamma rays make only a small
@@ -55,22 +54,28 @@ contribution to the counts in this instance. You should attempt to carry out the
 fairly quickly after the silver foil is removed from the howitzer as the decay time is quite
 short.
 
-Before the neutron irradiation begins you will want to record the background rate. Press
-\texttt{STOP} and \texttt{RESET} on the counter to set the display to zero. Next, press \texttt{COUNT} with no
+\begin{steps}
+	\item Before the neutron irradiation begins you will want to record the background rate. Press
+\texttt{STOP} and \texttt{RESET} on the counter to set the display to zero.
+
+	\item Next, press \texttt{COUNT} with no
 sample below the Geiger tube and collect the total number of background counts, $N_\textrm{bkg}$ ,
 that accumulate in approximately 5 minutes. Once 5 minutes has elapsed press \texttt{STOP} to
-end the count. Turn the dial to \texttt{TIME} and record a precise measurement of the elapsed
+end the count.
+
+	\item Turn the dial to \texttt{TIME} and record a precise measurement of the elapsed
 time, $t$, in seconds. The background rate $R_\textrm{bkg}$ is found with
 \begin{equation}
 R_\textrm{bkg} = N_\textrm{bkg} /t
 \end{equation}
-with an uncertainty given by Poisson statistics. Report both the background rate and uncertainty in your lab report.
+with an uncertainty given by Poisson statistics. \textbf{Report both the background rate and uncertainty in your lab report.}
 
-While the samples are being irradiated, set up your measurement apparatus. Once the samples are ready, quickly place a silver foil sample in the tray below the Geiger tube. Using a stopwatch and the
-counter, record the number of counts and the time at 30 second intervals for
-about 10 minutes, continuously. Unlike last week's lab with the same apparatus, you will
-be recording data continuously, and so will need to use the watch to record times rather
-than timer built into the Geiger counter. Record your data.
+	\item While the samples are being irradiated, set up your measurement apparatus.
+
+	\item Once the samples are ready, quickly place a silver foil sample in the tray below the Geiger tube. Using a stopwatch and the counter, record the number of counts and the time at 30 second intervals for about 10 minutes, continuously. Unlike last week's lab with the same apparatus, you will be recording data continuously, and so will need to use the watch to record times rather
+than timer built into the Geiger counter. \textbf{Record your data.} \textit{You may want to take a video of the stopwatch and counter to get more precise readings of the 30-second intervals.}
+\end{steps}
+
 
 \section{Calculations}
 
@@ -97,14 +102,15 @@ Taking the logarithm of both sides and substituting for $N$ gives
 \end{equation}
 Your TA will help you to understand the details of this derivation.
 
-Make a plot showing $\ln(R)$ on the vertical axis and elapsed time, $t$, along the horizontal
-axis. Don’t forget to subtract the background where appropriate. Calculate the slope
-and use this value to solve for the half life using the above equations. Report this value
-along with a table of your decay rate data and the plot described above.
+\begin{steps}
+	\item Make a plot showing $\ln(R)$ on the vertical axis and elapsed time, $t$, along the horizontal axis. Don’t forget to subtract the background where appropriate.
+
+	\item Calculate the slope and use this value to solve for the half life using the above equations. \textbf{Report this value along with a table of your decay rate data and the plot described above.}
+\end{steps}
 
 \section{Questions (these should be included in your lab report)}
 
-\begin{enumerate}
+\begin{steps}
 	\item Look up the half-lives of the various nuclides of silver. What is the published
 	half-life of the nuclide you’re observing? How does this compare with your
 	calculated result? Calculate the percent difference in your result.
@@ -123,4 +129,20 @@ along with a table of your decay rate data and the plot described above.
 	percentage of the unstable silver isotope, and was irradiated at some unmeasured
 	time before you began your experiment. Does this matter to your results? Explain.
 	
+\end{steps}
+
+\section{Report checklist and grading}
+
+Each item below is worth 10 points, and there is an additional 10 points for attendance and participation.
+
+\begin{enumerate}
+	\item Background rate and uncertainty (Step 3)
+	
+	\item Plot of $\ln(R)$ vs.\ $t$ with the trendline and equation listed. (Step 6)
+	
+	\item Calculation of slope of above plot and work of solving for the half-life, with the final half-life determination. (Step 7)
+	
+	\item Answers to questions in Steps 8--9.
+	
+	\item Answers to questions in Steps 10--12.
 \end{enumerate}
