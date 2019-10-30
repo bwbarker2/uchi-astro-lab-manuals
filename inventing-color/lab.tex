@@ -6,41 +6,110 @@ Incandescent lightbulbs are so warm that they glow in the visible spectrum (like
 
 \section{Lightbulbs}
 
+Light can be made of many different wavelengths at the same time. It combines to form a color that we perceive. To see what colors make up light, we can split them again with a triangular prism, or with a \textit{diffraction grating}.
+
 \begin{steps}
-	\item Using the spectrometer, observe the spectrum created by a lightbulb at various brightnesses / voltages.  What's the overall shape? How does the shape change when the brightness increases? How does the peak frequency change? How does the visual color of the bulb change as it gets brighter? As the lightbulb gets brighter, the filament inside gets hotter. If all objects act like the tungsten filament as it gets hotter, what general pattern can you state about the EM radiation given off by an object as a function of its temperature?
+	\item Use the diffraction grating to view the lightbulb while the lightbulb is at full voltage (120 V). Hold up the grating in front of your eye, with the text on the frame upright. Start by looking at the lightbulb through it, then turn your feet to the left or right about 30 degrees, letting your whole body-arm-grating system rotate with your feet. You should see a rainbow. This is all the colors that make up the light coming from the lightbulb, split into different wavelengths.
+\end{steps}
+
+\subsection{Orientation to the digital spectrometer}
+
+\begin{framed}
+	\textbf{Warning! Fragile Equipment!} If the fiber optic cable is bent into a circle of less than 9 cm (6 inch) diameter, then the fiber inside may break.
+	
+	Also, the blue end cap should be replaced on the end of the fiber optic cable when you are done using it, to protect from dust and debris entering.
+\end{framed}
+
+A digital spectrometer also uses a diffraction grating, but instead of collecting the dispersed light on a screen to be viewed by people, it collects the light with a charge-coupled device (CCD), an array of light-sensitive pixels much like a digital camera. It then translates the position on the CCD to individual wavelengths and displays a plot of intensity vs. wavelength on a computer. %TODO (see Figure~???)
+Another difference is that we use an optical fiber to collect the light.
+
+Here are a few guidelines:
+\begin{itemize}
+	
+	\item \textbf{Background subtraction.} When you are observing the spectrum of something, there may be stray light entering that is not coming from the thing you are studying. To remove this \textit{background} from the plot, select the gray lightbulb icon in the toolbar. This records the current plot as the background. To display the plot while subtracting the background, select the icon with the minus-lightbulb. To go back to viewing the full spectrum including the background, select the blue S icon.
+
+	\item \textbf{Oversaturation}. If, when you zoom out all the way, the plot includes a flat line near the top of the plot, this means that the pixels of the image sensor are recording their maximum value, and they cannot tell you the actual intensity. Reduce the intensity by either reducing the integration time (upper-left corner) or moving the fiber optic cable off-center, so that it receives less light. Note that if you change either of these, then the background frame is no longer correct and must be remeasured.
+
+	\item \textbf{Low signal}. If the target is dim, then you might find when you zoom in, the plot is not smooth, but instead jagged and hard to find patterns in. In this case, increase the integration time using the field in the upper-left of the program window. This increases the exposure time, equivalently. Note that if you change the integration time, then the background frame is no longer correct and must be remeasured.
+
+	\item \textbf{Saving data.}
+	
+	\begin{itemize}
+		\item Save the images of spectra and numeric files that you generated with SpectraSuite
+	during your experiments on a USB stick, so that you can use them at home during
+	preparation of your report (you can also email them as attachments from your
+	computer at the end of the lab).
+	
+	\item You should open a word processor document and a spreadsheet document in which you can save your measured
+	spectra at the beginning of your work. To save an image of your graph, click on
+	the fourth icon from the left in the Spectrum IO controls. %TODO (Fig.~???)
+	This will copy
+	an image of the graph to the clipboard. Then in your word processor, paste the image by pressing
+	Ctrl-V.
+	
+	\item To save spectrum in the digital form, click on the third from the left icon in
+	Spectrum IO controls (to the right of print icon). This copies it to clipboard. In
+	Excel file make sure you are in a new sheet and press Ctrl-V. This should create
+	to columns of numbers: wavelength (in nm) and counts for your spectrum.
+	
+	\item An alternative way to save the data is to click on the floppy disk icon in the
+	Spectrum IO controls. The format must be ``Tab delimiter, no header''. The
+	writing directory must be specified (``Browse'' button). The spectrum is saved in a
+	text file (.txt) as two columns, the first column giving the wavelength in nm, the
+	second column the corresponding intensity. This file can be imported into a spreadsheet or plotting program.
+	\end{itemize}
+\end{itemize}
+
+\subsection{Observing a lightbulb}
+
+\begin{steps}
+	
+	\item Using the spectrometer, observe the spectrum created by a lightbulb at various brightnesses / voltages.  What's the overall shape? \textbf{Record your answer.}
+	
+	\item How does the shape change when the brightness increases? \textbf{Record your answer.}
+	
+	\item How does the peak frequency change? \textbf{Record your answer.}
+	
+	\item How does the visual color of the bulb change as it gets brighter? \textbf{Record your answer.}
+	
+	\item\label{ic:step:pattern} As the lightbulb gets brighter, the filament inside gets hotter --- the temperature increases. If all objects act like the tungsten filament as it gets hotter, what general pattern can you state about the light given off by an object as a function of its temperature? \textbf{Record your answer.}
 
 \end{steps}
 
 Cameras have come a long way since the days of developing film, but sensors are not as smart you might think. They register light, but they can't usually tell the color (i.e. wavelength) of the incoming photons. So then how do you get a color image? In astronomy (and in your cell phone!) color images are generated by measuring the amount of light at specific colors and then combining these measurements to create a colorful image. A filter is used to select bands of color to allow through. In consumer cameras and phone cameras, these filters are permanently attached to the front of individual pixels. In astronomical imaging, there is no permanent filter, and different filters are moved into place.
 
 \begin{steps}
+	\item View the lightbulb's spectrum with the diffraction grating again, this time alternately holding the red and green filters between the grating and the bulb. Observe and \textbf{record} the effect of the filter on the spectrum.
+	
 	\item Use the red and green filters in front of the fiber optic input to the spectrometer to see how they affect the spectrum that is received. \textbf{Save a graph of the spectrum with each filter and include in your report.}
 \end{steps}
 
 In a regular astronomical image, each pixel gives just one value --- the number of counts detected in that pixel, regardless of the wavelength of the photon detected. We can treat the fiber optic as a single-pixel camera if we count up the total number of counts detected. To find that total number, you can find the area under the curve in the plot.
 
 \begin{steps}
-	\item With no filter, add up the total number of counts detected by calculating the area under the curve. To do this in an approximate way, count the number of boxes underneath the curve, then multiply this by the height of one box (in counts per nanometer) and by the width of one box (in nanometers).
+	\item With no filter, add up the total number of counts detected by calculating the area under the curve. To do this in an approximate way, count the number of boxes underneath the curve, then multiply this by the height of one box (in counts per nanometer) and by the width of one box (in nanometers). \textbf{Record this value.}
 	
-	\item Do the same for the spectrum using the red and green filters separately.
+	\item Do the same for the spectrum using the red and green filters separately. Note that the values are different for different filters. This difference (for example, the green value minus the red value) can tell us a quantitative number for what color this object is. \textbf{Record the red, green, and $g-r$ values.}
 \end{steps}
 
-Now you have the value of our single-pixel camera for the case of clear (no filter), red, and green filters. Time to revisit the pattern found above in Step 1.
+Now you have the value of our single-pixel camera for the case of clear (no filter), red, and green filters. Time to revisit the pattern found above in Step \ref{ic:step:pattern}.
 
 \begin{steps}
-	\item If that pattern from Step 1 is true, what should happen to the relative values of red and green as the voltage is increased? Should one increase more than the other?
+	\item If that pattern from Step \ref{ic:step:pattern} is true, what should happen to the relative values of red and green as the voltage is increased? Should one increase more than the other? What should happen to the quantitative color $g-r$? \textbf{Record your answers.}
 	
-	\item Perform an experiment to test whether this prediction is supported.
+	\item Perform an experiment to test whether this prediction is supported. \textbf{Record your procedure, analysis, and results.}
 \end{steps}
 
 \section{Creating a color image}
 
-Now you'll create a color image from the three images you took last week, of the same target with r, g, and b filters.
+To create the beautiful color astronomy images we like to see, one must manually combine images taken with different filters. There are always choices to be made that will change how the combined image looks.
+
+Now you'll create a color image from the three images you took last week, of the same target with r (red), g (green), and i (infrared) filters. Since one of the filters is infrared, and we only have red, green, and blue colors available in DS9, then you will assign the image taken in the infrared to the color blue. This makes this image a \textit{false color image}, since the blue we will see in it does not correspond to the actual wavelength of the light captured.
 
 \textbf{Loading and manipulating images in ds9 consists of:}
 \begin{itemize}
-\item loading an image  (file > open)
-\item setting z1,z2 on an image  (scale > various algorithms; use scale > scale parameters for full control). See Figures \ref{ic:fig:z-min-max}--\ref{ic:fig:z-small} for examples.
+\item loading an image  (file $>$ open)
+\item setting lower, upper limits (z1,z2) on an image  (scale $>$ various algorithms; use scale $>$ scale parameters for full control). See Figures \ref{ic:fig:z-min-max}--\ref{ic:fig:z-small} for examples.
 \item controlling the intensity mapping within those bounds (mouse right click-and-hold and drag)
 \end{itemize}
 
@@ -57,15 +126,16 @@ Now you'll create a color image from the three images you took last week, of the
 
 \textbf{You can change the zoom and center location in an image by} 
 \begin{itemize}
-\item moving around in image (mouse middle click if edit>point is set[the default], or edit>pan and mouse left click)
-\item zooming in and out (mouse wheel, zoom> +,- etc.)
+\item moving around in image (mouse middle click if edit$>$point is set[the default], or edit$>$pan and mouse left click)
+\item zooming in and out (mouse wheel, zoom$>$ +,- etc.)
 \end{itemize}
 
 \textbf{To build a color image}
 \begin{itemize}
-\item Open a color (rather than monochrome) frame:  Frame > new rgb
-\item Open the red, green, blue files using the rgb subwindow to select which channel you are working in, and then scale and control intensities on each one. 
-\item There are many possible ways to scale the images. Some testing suggests that choosing Scale > ASINH (or Linear or Square Root as other choices) and Scale > 99.5\% (or maybe 99\% or 98\%)  produces reasonable results. Experiment!
+	\item Identify and download from SEO your three different filter image FITS files.
+\item Open a color (rather than monochrome) frame:  Frame $>$ new rgb
+\item Open the red, green, infrared files using the rgb subwindow to select which channel you are working in, and then scale and control intensities on each one. 
+\item There are many possible ways to scale the images. Some testing suggests that choosing Scale $>$ ASINH (or Linear or Square Root as other choices) and Scale $>$ 99.5\% (or maybe 99\% or 98\%)  produces reasonable results. Experiment!
 \item One thing to note: the rgb subwindow allows you to control how the images are aligned spatially via the “align” menu at the top. There are three relevant choices: “WCS”, “Image” or “Physical”.  The latter two should give the same result in this instance. “WCS” alignment uses information in the image header that has been added by the processing pipeline, that establishes a World Coordinate System (this tells ds9 and other programs how pixel x,y values are mapped into the sky coordinates - typically Right Ascension [east/west] and Declination [north/south]). The default is WCS and should work fine, if the images processed correctly. If that doesn’t look good, you could try the others. If that still doesn’t look good, note that you tried your best, and give an example of how it didn’t work will in either mode. Examples of good and bad image alignment are shown in Figure \ref{ic:fig:rgb-bad}.
 \end{itemize}
 
@@ -74,3 +144,16 @@ Now you'll create a color image from the three images you took last week, of the
 	\includegraphics[width=0.5\textwidth]{inventing-color/rgb-good}
 	\caption{Zoom-in on a color image, showing poor (left) and good (right) image alignment across filters. Note how objects are shifted between different color channels in the poorly aligned image.}\label{ic:fig:rgb-bad}
 \end{figure}
+
+\section{Report checklist and grading}
+
+Each item below is worth 10 points, and there is an additional 10 points for attendance and participation. See Appendix\ \ref{cha:lab-report-format} for guidance on writing the report and formatting tables and graphs.
+
+\begin{enumerate}
+	\item Qualitative observations with the digital spectrometer (Steps 2--5).
+	\item The pattern / relationship between temperature and spectrum (Step \ref{ic:step:pattern}).
+	\item Effect of filters on spectrum (Steps 7--8).
+	\item Total intensity calculations and plots of spectra with clear, red, and green filters. (Steps 9--10).
+	\item Prediction of what should happen to $g-r$ with temperature increase, and procedure, analysis, results of testing that prediction (Steps 11--12).
+	\item Your beautiful color image (Section 3.2).
+\end{enumerate}
