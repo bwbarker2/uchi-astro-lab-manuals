@@ -16,8 +16,6 @@ In this lab, you will measure the strength that gravity has where we are, near t
 	\item Demonstrate proficiency in basic calculations and plotting
 	
 	\item Explain the importance of repeated measurements and sufficiently large datasets
-	
-	\item Use experimentally derived quantities to obtain a mass for the Earth.
 \end{itemize}
 
 \section{Scientific Background}
@@ -80,13 +78,13 @@ and
 
 \textbf{Goal:} Determine $g$ near the Earth's surface by finding the acceleration of an object undergoing freefall (no substantial forces other than gravity) using two different methods: 
 
-\textbf{Rubrics to be assessed:} D4, D5, F1, F2, G1, G2, G4
+\textbf{Rubrics to focus on:} D4, D5, F1, F2, G1, G2, G4
 
 \textbf{Available equipment:} stopwatch, dense object to drop, meter stick, camera (including the one on your phone), computer with Tracker\footnote{Open Source Physics Tracker can be downloaded from \url{https://physlets.org/tracker} and is also installed on the lab computers.} installed.
 
 \subsection{Method 1: freefall time}
 
-\begin{enumerate}
+\begin{steps}
 	\item Drop the object from a known height and measure the time to fall with a stopwatch. Do this as many times as makes sense to you.
 	
 	\item List the sources of uncertainty and determine whether each is a random uncertainty or an instrumental uncertainty.
@@ -100,7 +98,7 @@ and
 	\item Propagate the uncertainty in the time and position to find the uncertainty of your measured acceleration (see Section~\ref{unc:sec:prop})
 	
 	\item Report the acceleration found by this method as ``value $\pm$ uncertainty [units]''. For example, $9.73 \pm 0.04\:$m/s$^2$.
-\end{enumerate}
+\end{steps}
 
 \subsection{Method 2: Video tracking}
 
@@ -108,7 +106,7 @@ It is helpful to use two methods to find the same quantity, so that mistakes or 
 
 \subsubsection{Record the video}
 
-\begin{enumerate}
+\begin{steps}
 	\item Find a good object to drop. It should be dense enough to not be slowed down significantly by air resistance.
 	
 	\item Using the camera on one of your group member's phones, record a video of the object falling.
@@ -123,14 +121,16 @@ It is helpful to use two methods to find the same quantity, so that mistakes or 
 	\end{itemize}
 
 	\item Record that video and transfer the video to a computer that has Tracker installed.
-\end{enumerate}
+\end{steps}
 
 \subsubsection{Importing the data into Tracker}
 
 In this part, you'll use Tracker to record the position of the object at each timestep. To do this, you'll need to tell it what direction ``down'' is in, what the scale of the image is, and when time $t=0$ is. Then you'll record the positions, find out what parameters best fit the curve that is produced, and use those to find the acceleration.
 
-\begin{enumerate}
+\begin{steps}
 	\item Open Tracker on a computer. You can install it on your own computer by visiting \url{https://physlets.org/tracker}.
+	
+	\item Optionally, watch this 3-minute tutorial on how to use Tracker: \url{https://www.youtube.com/watch?v=n4Eqy60yYUY}
 	
 	\item In Tracker, open your video.
 	
@@ -153,11 +153,11 @@ In this part, you'll use Tracker to record the position of the object at each ti
 		\item Shift-click on the object. Notice that the frame advances to the next one automatically.
 		\item Continue to shift-click to mark the object's position throughout the duration.
 	\end{enumerate}
-\end{enumerate}
+\end{steps}
 
 \subsubsection{Analysis}
 
-\begin{enumerate}
+\begin{steps}
 	\item \textbf{Ensure the correct axis is selected for analysis.} Look at the plot to the right of the video. If there is not a smooth-ish curved line, click on the axis label ``x (m)'' and choose instead ``y (m)''.
 	
 	\item In the drop-down menu, select \texttt{View} $\rightarrow$ \texttt{Data Tool (Analyze...)}.
@@ -169,12 +169,30 @@ In this part, you'll use Tracker to record the position of the object at each ti
 	\item Use the Fit Equation and Parameter Values, comparing with Equation~\ref{lg:eq:x-const-a}, to find the acceleration $a$, and thus the gravitational field strength $g$.
 	
 	\item To get an uncertainty for this value, use the ``rms dev'' value, which describes the average deviation of the fit equation from the points, divide that by the average (mean) position, and multiply that by your value for the acceleration. You can find the mean position by selecting \texttt{Analyze} $\rightarrow$ \texttt{Statistics} and reading above the data table column.
-\end{enumerate}
+\end{steps}
 
 \subsection{Comparing the methods, final determination of $\bm{g}$}
 
-\begin{enumerate}
+\begin{steps}
 	\item Compare the values of $g$ from the two methods using the $t'$ statistic as described in Appendix~\ref{unc:sec:comparing}.
 	
 	\item Use that comparison and your assessment of which method had fewer questionable assumptions to decide on your final answer for $g$ (including an uncertainty). How close is it to the average $g$ described, for example, on Wikipedia?
+\end{steps}
+
+\section{Report checklist and grading}
+
+Each item below is worth 10 points, and there is an additional 10 points for attendance and participation.
+
+\begin{enumerate}
+	\item Procedure decisions, sources of uncertainty, and average fall time with uncertainty for method 1 (Steps 1--4).
+	
+	\item Calculation of acceleration, calculation of uncertainty, and final report of both values (Steps 5--7).
+	
+	\item Sketch or picture of setup for video tracking method, with written procedure for camera setup (Step 9).
+	
+	\item Plot of distance vs. time (distance on vertical axis), with best-fit line and fit parameters (Step 24).
+	
+	\item Description of analysis to find $g$, as well as the uncertainty, with final report of both values (Steps 25--26).
+	
+	\item Quantitative comparison of $g$ found with both methods, and decision about best value (Steps 27--28).
 \end{enumerate}
