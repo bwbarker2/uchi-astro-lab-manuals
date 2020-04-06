@@ -244,7 +244,8 @@ measurements, to illustrate the process of data → measurement → analysis →
 		giving you 9 separate images of the stars in different positions on their orbits.
 		
 		\item For Kepler's Second Law, you will need to measure several areas traced out by an orbit in the same time duration. Open the first frame in the ImageJ software. Note the white arrow on the left of the
-		screen indicating the angular scale of the image. Notice that Kepler's law describes areas, while we are limited, at present, to angular areas, since we are not including how far away the stars are to us. This approximation should be just fine for testing the law, as long as the angle is small.
+		screen indicating the angular scale of the image.
+		%Notice that Kepler's law describes areas, while we are limited, at present, to angular areas, since we are not including how far away the stars are to us. This approximation should be just fine for testing the law, as long as the angle is small.
 		
 		\item On the menu tab click the straight line icon
 		located at the 5th position to the left. Click one end of the arrow and drag the line from one
@@ -260,26 +261,26 @@ measurements, to illustrate the process of data → measurement → analysis →
 		
 \begin{table}
 	\centering
-	\begin{tabular}{c|c|c|c|c}
-		frame & $d$ (arcseconds) & $\theta$ (radians) & $\Delta \theta$ (radians) & $A$ (arcseconds$^2$)
+	\begin{tabular}{c|c|c|c|c|c}
+		frame & $d$ (arcseconds) & $s$ (cm) & $\theta$ (radians) & $\Delta \theta$ (radians) & $A$ (cm$^2$)
 		\\ \midrule
-		1 & & & \cellcolor{black!25} & \cellcolor{black!25}
+		1 & & & & \cellcolor{black!25} & \cellcolor{black!25}
 		\\ \midrule
-		2 & & & & 
+		2 & & & & & 
 		\\ \midrule
-		3 & & & & 
+		3 & & & &  &
 		\\ \midrule
-		4 & & & & 
+		4 & & & &  &
 		\\ \midrule
-		5 & & & & 
+		5 & & & & &
 		\\ \midrule
-		6 & & & & 
+		6 & & & & &
 		\\ \midrule
-		7 & & & & 
+		7 & & & & &
 		\\ \midrule
-		8 & & & & 
+		8 & & & & &
 		\\ \midrule
-		9 & & & & 
+		9 & & & & &
 		\\ \bottomrule
 	\end{tabular}
 	\caption{Data table for one stellar orbit. Note that you will not have any calculations for the gray cells for frame 1, since there is no previous frame to compare to.}\label{gc:tab:orbits}
@@ -293,9 +294,9 @@ measurements, to illustrate the process of data → measurement → analysis →
 		covered by a line connecting the planet and Sag A* between measurements $i$ and $i - 1$ can
 		be given by
 		\begin{equation}
-		 A_i = \pi \left( \frac{d_{i} + d_{i-1}}{2} \right)^2 \left( \frac{\theta_{i}-\theta_{i-1}}{2\pi} \right) \,,
+		 A_i = \pi \left( \frac{s_{i} + s_{i-1}}{2} \right)^2 \left( \frac{\theta_{i}-\theta_{i-1}}{2\pi} \right) \,,
 		\end{equation}
-		which approximates the swept area as the sector of a circle. Add this calculation for each
+		which approximates the swept area as the sector of a circle. To compute the distances $s_i$ from the angular distances $d_i$, convert $d$ to radians and multiply by the distance to Sag A*, $2.47 \pm 0.05 \times 10^{22}\:$cm.  Add this calculation for each
 		segment and both stars to the data table. Does Kepler’s Second Law hold? Discuss any
 		discrepancies and how you might account for them (Rubric Rows C4, C7, C8).
 		
@@ -352,26 +353,28 @@ measurements, to illustrate the process of data → measurement → analysis →
 
 \section{Individual Homework}
 
-Now that we have determined that Sag A* is an extremely dense, massive object --- but not quite certainly a black hole --- we are left to make plausibility arguments that allow us to
-eliminate all other possible forms of matter. For each category of astrophysical objects listed
-below, estimate the observational signatures of a hypothetical object with the mass you’ve
-measured for Sag A*. Decide whether or not the estimated observable properties can be used
-to rule out this alternative to a black hole.
-\begin{enumerate}
-	\item Main-Sequence Star/Cluster (Hint: the luminosity of massive stars scales as $M^4$, so
-	what luminosity would a Sag A*-star have? What would be the luminosity of a cluster
-	of sun-like stars with a total mass equal to that of Sag A*?)
-	
-	\item Brown Dwarf Star Cluster (Hint: A typical brown dwarf luminosity is $\sim 10^{-4} L_\textrm{\astrosun}$ and
-	the maximum brown dwarf mass is $0.08M_\textrm{\astrosun}$. Brown dwarfs more massive than this are
-	just stars, which you presumably ruled out above.)
-	
-	\item White Dwarf Star Cluster (Hint: a typical White Dwarf luminosity is $0.03L_\textrm{\astrosun}$, and the
-	maximum white dwarf mass is $1.4M_\textrm{\astrosun}$. There are fundamental physical arguments that
-	preclude the stable existence of a white dwarf above this mass.)
-	
-	\item Neutron Star Star Cluster (Hint: a typical Neutron Star luminosity is $10^{-6} L_\textrm{\astrosun}$ , and the
-	maximum neutron star mass is estimated to be $1.4M_\textrm{\astrosun}$. This maximum mass is also
-	derived from fundamental physics considerations). Would such a configuration, even if
-	hypothetically possible, be physically reasonable?
-\end{enumerate}
+There is no individual homework for this lab.
+
+%Now that we have determined that Sag A* is an extremely dense, massive object --- but not quite certainly a black hole --- we are left to make plausibility arguments that allow us to
+%eliminate all other possible forms of matter. For each category of astrophysical objects listed
+%below, estimate the observational signatures of a hypothetical object with the mass you’ve
+%measured for Sag A*. Decide whether or not the estimated observable properties can be used
+%to rule out this alternative to a black hole.
+%\begin{enumerate}
+%	\item Main-Sequence Star/Cluster (Hint: the luminosity of massive stars scales as $M^4$, so
+%	what luminosity would a Sag A*-star have? What would be the luminosity of a cluster
+%	of sun-like stars with a total mass equal to that of Sag A*?)
+%	
+%	\item Brown Dwarf Star Cluster (Hint: A typical brown dwarf luminosity is $\sim 10^{-4} L_\textrm{\astrosun}$ and
+%	the maximum brown dwarf mass is $0.08M_\textrm{\astrosun}$. Brown dwarfs more massive than this are
+%	just stars, which you presumably ruled out above.)
+%	
+%	\item White Dwarf Star Cluster (Hint: a typical White Dwarf luminosity is $0.03L_\textrm{\astrosun}$, and the
+%	maximum white dwarf mass is $1.4M_\textrm{\astrosun}$. There are fundamental physical arguments that
+%	preclude the stable existence of a white dwarf above this mass.)
+%	
+%	\item Neutron Star Star Cluster (Hint: a typical Neutron Star luminosity is $10^{-6} L_\textrm{\astrosun}$ , and the
+%	maximum neutron star mass is estimated to be $1.4M_\textrm{\astrosun}$. This maximum mass is also
+%	derived from fundamental physics considerations). Would such a configuration, even if
+%	hypothetically possible, be physically reasonable?
+%\end{enumerate}

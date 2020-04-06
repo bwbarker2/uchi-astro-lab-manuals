@@ -7,11 +7,11 @@ capable of, and why this is useful for astronomical observations. The goal is fo
 understanding and appreciation for how telecopes of this size, equipped with a digitial camera and
 filters, can be used to take images, and how those images relate to the capabilities of your most
 familiar imaging system --- i.e. your eye.
-Your project work with the Stone Edge Observatory use a similar (although somewhat larger telescope) setup; this lab is designed to let you
-get your hands on the hardware and build some understanding for how it works and what it can
-do.
+%Your project work with the Stone Edge Observatory use a similar (although somewhat larger telescope) setup; this lab is designed to let you
+%get your hands on the hardware and build some understanding for how it works and what it can
+%do.
 
-\textbf{Rubric Rows to be assessed:} B5, B9, D2, D4. These are referenced in the lab manual where they should be addressed.
+%\textbf{Rubric Rows to be assessed:} B5, B9, D2, D4. These are referenced in the lab manual where they should be addressed.
 
 \section{Reflection Telescopes}
 
@@ -24,16 +24,18 @@ The primary utility of a telescope is its ability to gather light, thereby enabl
 		Light rays from astronomical objects enter the telescope in parallel because their source is effectively at infinity. They are then reflected by a parabolic primary mirror onto a secondary mirror that again reflects the light to a focus. An eyepiece or a camera is placed at the focal plane of the resulting image. Image source: \url{https://en.wikipedia.org/wiki/Cassegrain\_reflector\#/media/File:Schmidt-Cassegrain-Telescope.svg}}\label{sot:fig:schmidt}
 \end{figure}
 
-To take images in this lab, and to observe astronomical objects using the SEO, we make use of a \textbf{Charge Coupled Device (CCD)}. CCDs are the standard detectors for taking astronomical images at wavelengths blueward of approximately 1 micron. Think of the CCD we are using as a
+To take images in this lab,
+% and to observe astronomical objects using the SEO,
+ we make use of a \textbf{Charge Coupled Device (CCD)}. CCDs are the standard detectors for taking astronomical images at wavelengths blueward of approximately 1 micron. Think of the CCD we are using as a
 very advanced low-noise digital detector, not wholly dissimilar from the digital detector in your
 smartphone. Every time a photon within a certain energy range hits the detector, an electron is knocked off of the incident pixel, charging that pixel's capacitor. Thus, for each pixel, more photons $\implies$ more electrons $\implies$ more charge, and the charge can be read off into a digital signal that is then processed as an image. 
 
-The main thing to note is that the CCD material is not sensitive to all wavelengths of light uniformly. Photons of certain energies are more likely to excite electrons in the detector and thus contribute to the otput image. Consequently, the observed image intensity will be weighted by the response function of the detector.
+The main thing to note is that the CCD material is not sensitive to all wavelengths of light uniformly. Photons of certain energies are more likely to excite electrons in the detector and thus contribute to the output image. Consequently, the observed image intensity will be weighted by the response function of the detector.
 
 \subsection{Filters}
 Light is composed of photons with energies that determine their wavelengths (sorter wavelength $\implies$ higher energy). Thus every light source exhibits a textbf{spectrum} of energies based on its energetic components, determined by the physics of the light emission process. Thus, observing the energetic constituents of light from astronomical objects - a.k.a. observing the spectrum of emitted radiation - is a fundamental tool in observational astrophysics. However, obtaining the specific intensity of radiation as a function of energy from an astronomical source is challenging. An easier way to asses the electromagnetic energies observed is to image them in different filters: materials that are transparent to a known range of wavelengths and opaque to all others. Thus, one can image the same object with multiple different filters to get a sense of the wavelength regimes that make the strongest contributions to the overall electromagnetic output. 
 
-A filter is characterized by its \textbf{transmission function}: a function that characterizes the amount of light that is transmitted by the filter at each wavelength. Figure~\ref{sot:fig:filters} shows the transmission functions for some standard astronomical filters (similar to the one's you'll be using in this class).
+A filter is characterized by its \textbf{transmission function}: a function that characterizes the amount of light that is transmitted by the filter at each wavelength. Figure~\ref{sot:fig:filters} shows the transmission functions for some standard astronomical filters (similar to the ones you'll be using in this class).
 
 \begin{figure}
 	\centering
@@ -56,12 +58,12 @@ First we will be observing an object at the opposite end of the lab room with th
 	lab while the lights are off; instead, turn the lights off only as needed to gather data
 	or make observations, and when the lights are off, don’t move about significantly.}
 
-\begin{enumerate}
+\begin{steps}
 	\item The telescope should already be set up, with the camera on and cooled, and be approximately
 	in focus and pointed at the target at the other end of the lab bench. If not, your TA will
 	work with you to get the setup roughly correct.
 	
-	\item Your first task will be to tweak the centering of the image target. This doesn’t have to be
+	\item Your first task will be to tweak the centering of the image target. This doesn't have to be
 	perfect, but you should be able to see the mm scale marks. The telescope can be moved in elevation (up-down). The fine control of elevation is achieved using a knob on the mount - your TA will show you details. To shift the image left or right, move the target instead.
 	
 	\item Next we want to precisely focus the telescope. Do this with most of the lights off - otherwise
@@ -85,17 +87,17 @@ First we will be observing an object at the opposite end of the lab room with th
 	the lab lights off and the blinds closed.
 	
 	\item Save this image in ‘fits’ format; the ‘ds9’ tool available on all of the lab
-	computers can be used to examine the image in detail. We’ll use the university supported
-	’Box’ system to share data with your lab classmates. See \url{uchicago.account.box.com/login}
-	for details.
+	computers can be used to examine the image in detail.
+%	We’ll use the university supported ’Box’ system to share data with your lab classmates.
+%	See \url{uchicago.account.box.com/login} for details.
 	
 	\item With the lights back on, gather around the target on the lab bench and then
 	turn the light off again. Observe the target. Can you see it? Can you see the details? Does
-	it matter how close you are (Rubric Row B5)?
+	it matter how close you are?% (Rubric Row B5)?
 	
 	\item Compute and report the ratio of the light gathering power of
 	the telescope relative to your eye, and comment on how that relates to what you do (or do
-	not) observe by eye compared to the telescope (Rubric Row B9).
+	not) observe by eye compared to the telescope.% (Rubric Row B9).
 	
 	\item In the acquired and saved image you can see a mm scale, which correponds to some number
 	of pixels. Compute and report the ‘plate scale’ in mm/pixel. Given the distance between the
@@ -113,7 +115,7 @@ First we will be observing an object at the opposite end of the lab room with th
 	arcseconds) of this camera+telescope setup? Finally, observe the target from the vantage
 	point of the telescope by eye. What detail can you see? How does that compare to what
 	you can see with the telescope?
-\end{enumerate}
+\end{steps}
 
 \section{Grating Spectrum and Filters}\label{sot:sec:grating}
 
@@ -121,7 +123,7 @@ The next portion of the lab will involve observing a grating spectrum projected 
 target. We will use this to understand how the filters work. In addition, you will combine the
 outputs of this and the third portion of the lab to unambiguously identify the 5 filters in the filter
 wheel.
-\begin{enumerate}
+\begin{steps}
 	\item Replace the reticle target and box with the blank white target mounted in a stand. Ensure
 	the stand is placed so the target occupies the same plane as the reticle target did (otherwise,
 	you’ll need to refocus the telescope; The paper has a pen mark on it - use this a reference if you do need to tweak the focus.). Next, place the light box with the attached diffraction
@@ -137,20 +139,20 @@ wheel.
 	vertical axis to move spectrum slightly left or right on the screen. Adjust until the light band of the image is centered left/right. Also,
 	to center vertically so that the light fully covers the image along the vertical axis, you may
  adjust the telescope elevation. To do these adjustments, you may find it easiest to put the camera
-	in focus mode again. Centering vertically is less important - so long as a signficant portion
+	in focus mode again. Centering vertically is less important - so long as a significant portion
 	of the image contains light on the vertical axis there is no particular need to fine-tune the
 	vertical alignment.
 	
 	\item Once you have the telescope aligned and focused on the reflected grating spectrum, grab an
 	image of 1 second for each filter available in the CCD filter wheel. Save each image and note
-	the differences. Where are the bands located on the CCD? How constant is the intensity of
+	the differences. Comparing the different images, where are the bands located? How constant is the intensity of
 	light across the band in the horizontal direction? How broad/narrow are the bands? What
 	is the physical explanation for these observations (see also the end of the next section)?
-\end{enumerate}
+\end{steps}
 
 \section{Indirect H-lamp observations}\label{sot:sec:h-lamp}
 
-\begin{enumerate}
+\begin{steps}
 	\item Now we will make some observations to demonstrate the utility of the narrow-band filters.
 	Turn off the lamp with the grating attached and remove it from the lab bench. Remove the
 	white screen that was used to reflect the grating spectrum, and again place the reticle target
@@ -176,7 +178,7 @@ wheel.
 	which filters are narrow in wavelength - is an H-alpha filter that isolates emission at the
 	wavelength of the H-alpha Balmer line. Which filter is this? Filter1? Filter2? Filter3?
 	Explain, using the data taken.
-\end{enumerate}
+\end{steps}
 
 The filter wheel contains two narrow band and three broad band filters. As already indicated
 above, one of the narrow band filters is H-alpha, and the other is OIII-5007 (an emission line
@@ -184,8 +186,11 @@ at 500.7nm from star forming regions that is strong in star-forming galaxies, su
 Way). The broad band filters are the g-band (’g’=green) r-band (’r’=red) i-band (’i’=infrared) ;
 see Figure 2 for details.
 
-Based on the data taken in Sections~\ref{sot:sec:grating} and \ref{sot:sec:h-lamp}, deduce the identification of
-each filter; provide your final list in your lab report - i.e. filter 1 as ’this’, filter 2 is ’that’ etc. Describe step-by-step how you solved this problem (Rubric Rows D2, D4 (do not worry about experimental uncertainties, since this is a qualitative problem)).
+\begin{steps}
+	
+	\item Based on the data taken in Sections~\ref{sot:sec:grating} and \ref{sot:sec:h-lamp}, deduce the identification of each filter; provide your final list in your lab report - i.e. filter 1 as ’this’, filter 2 is ’that’ etc. Describe step-by-step how you solved this problem.
+% (Rubric Rows D2, D4 (do not worry about experimental uncertainties, since this is a qualitative problem)).
+\end{steps}
 
 \section{Optional Section: See yourself with a telescope!}
 
@@ -197,3 +202,25 @@ look like in H-alpha light). Or, place a stool nearby, take a seat, and
 snap a partial portrait. Your face is far too large to fit in the field of
 view at that distance, but your eye would fit! (refocusing will be
 necessary in this case...)
+
+\section{Report checklist and grading}
+
+Each item below is worth 10 points, and there is an additional 10 points for attendance and participation. See Appendix\ \ref{cha:lab-report-format} for guidance on writing the report and formatting tables and graphs.
+
+\begin{itemize}
+	
+	\item Image of the target that you captured and qualitative observations (Steps 6--7)
+	
+	\item Ratio of light-gathering power (Step 8) with comments.
+	
+	\item Calculation of pixel scale, questions regarding resolution and field of view. (Steps 9--10)
+	
+	\item Images of spectrum with each filter with analysis (Step 13).
+	
+	\item Qualitative observations of the hydrogen emission with diffraction gratings (Step 15).
+	
+	\item Images of hydrogen emission with each filter and identification of H-alpha filter (Steps 16--17).
+	
+	\item Identification of each filter in the filter wheel, with justification (Step 18).
+	
+\end{itemize}
