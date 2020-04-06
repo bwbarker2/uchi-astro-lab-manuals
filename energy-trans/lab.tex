@@ -1,6 +1,12 @@
 \chapter{Cosmic Energy Transformations}
 
 %TODO add Heat Death of the Universe to end of this lab.
+%TODO:
+% - get backup LEDs and flashlights, our own solar panels
+% - cart and track worked well
+% - double pendulum was too complicated
+% - groups with all women could not get the fire syringe to work
+% - some syringes leak air and thus don't work
 
 \section{Background: Energy Conservation}
 
@@ -24,9 +30,13 @@ Now, you will investigate, quantitatively, several different kinds of energy tra
 
 Helpful formulas:
 \begin{itemize}
-	\item Kinetic energy $E_\textrm{k} = \frac{1}{2} m v^2$, where $m$ is mass (in kg) and $v$ is speed of the object (in m/s).
+	\item Kinetic energy $E_\textrm{k} = \frac{1}{2} m v^2$, where $m$ is mass (in kilograms (kg)) and $v$ is speed of the object (in meters per second (m/s)).
 	
 	\item Gravitational potential energy for small vertical displacements near the Earth's surface $U_\textrm{grav} = m g h$, where $m$ is mass (in kg), $g$ is the gravitational field strength ($9.8\:\textrm{m}/\textrm{s}^2$), and $h$ is the height above some reference point (in m).
+	
+	\item The power $P$ (in watts (W)) transferred onto a surface by light is equal to the intensity $I$ (in W/m$^2$) of that light multiplied by the area of the surface $A$ (in m$^2$), or $P = I A$.
+	
+	\item The power $P$ (in W) transferred in an element of an electric circuit is equal to the current $I$ (in amps (A)) going through the circuit element multiplied by the voltage $V$ (in volts (V)), or $P=IV$.
 \end{itemize}
 
 \section{Falling and picking up speed}
@@ -75,23 +85,45 @@ Two masses each hang from their own $\sim 1\:$meter long string, and the strings
 
 \section{Absorbing light}
 
-The photodiode is a kind of solar panel. It is connected in a circuit to a multimeter that can measure the current through and voltage across the photodiode. There is also a light meter that can be used to measure the intensity of incoming light.
+The solar panel is connected to an light emitting diode (LED) that lights up when the panel is exposed to light. A multimeter can be connected to record the current through and voltage across the LED. There is also a light meter that can be used to measure the intensity of incoming light.
+
+\begin{framed}
+	In the following steps, if the setup looks correct, but the \textbf{LED is not lighting up}, it might be because the current is going the wrong direction through the LED. Try switching the direction the current goes by switching the cables leading to it.
+\end{framed}
 
 \begin{steps}
-	\item Ensure that the multimeter is set up to measure current (the 'A' setting) and the red plug is plugged into the 'A' socket, rather than the 'V'. This will measure a number, the current, that is proportional to the number of electrons passing through the wire every second.
-	
-	\item Shine the flashlight on the photodiode and notice what happens to the current. Move the flashlight away and toward the diode and notice how the current changes.
-	
-	\item Follow these directions to measure the incoming energy from the flashlight and electric current flowing through the wire. Since you are measuring a continuous flow of energy on both sides, you will compare the ``power'' instead of the energy. Power is defined as energy per time, so it is how much energy is flowing every second.
-	\begin{enumerate}
-		\item Hold the flashlight a set distance from the light meter and record the intensity of light in W/m$^2$. This is watts per meter squared. The watt is a unit of power. To find the power here, multiply the intensity by the area (in meters squared) of the photodiode.
-		
-		\item While holding the flashlight the same distance from the photodiode, record the current (in amps, A) from the multimeter. Then switch the multimeter to read voltage ('V'). Record this value (in volts, V).
-		
-		\item The power flowing through the wire is equal to the current multiplied by the voltage.
-	\end{enumerate}
+	\item \textbf{Making the LED light.} Connect the solar panel to the LED as in Fig.\ \ref{et:fig:solar-led} and see that it lights up. Try exposing the solar panel to less and more light and see what happens to the brightness of the LED.
 
-	\item Compare the total power input to the photodiode and output through the multimeter. Is it the same, within uncertainties? If not, how do you account for the change? Is there an energy type that you are not measuring? What is that energy type? \textbf{Record your calculations and answers.}
+\end{steps}
+	
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.7\textwidth]{energy-trans/solar-led}
+		\caption{Solar panel connected to the LED.}\label{et:fig:solar-led}
+	\end{figure}
+
+Since energy is continuously flowing onto the solar panel and being output from the LED, you will compare the ``power'' instead of the energy. Power is defined as energy per time, so it is how much energy is flowing every second. You can use the last two equations in the Background section to find the input and output power.
+
+\begin{steps}
+	\item \textbf{Measure the incoming power.} Turn on the light meter and hold it so that the white dot on top of it is positioned where the solar panel will be. Record the value from the meter. Repeat several times to get an uncertainty.
+
+	\item \textbf{Measure the voltage across the LED.} Ensure that the multimeter is set up to measure voltage (the 'V' setting), one end of the red cable is plugged into the red 'V' socket, and the black cable is plugged into 'COM'. Then plug the other ends of the cables into the two clips attached to the LED. This setup is shown in Fig.\ \ref{et:fig:solar-led-v}. This measures the voltage across the LED, which is like the amount of pressure the solar panel has to apply to get the electrons to go through it.
+	
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\textwidth]{energy-trans/solar-led-v}
+	\caption{Solar panel connected to the LED, with the multimeter attached and set up to measure voltage.}\label{et:fig:solar-led-v}
+\end{figure}
+
+	\item \textbf{Measure current through the LED.} Now you will measure the current through the LED. This is a number that is proportional to the number of electrons passing through the wire every second. Ensure that the multimeter is set up to measure current (the `$\mu$A' setting). Then, set up the cables so that the electric current goes from the solar panel's red wire, to the LED, from the other side of the LED to the 'mA' socket on the multimeter, and then from the black 'COM' socket on the multimeter back to the solar panel. This creates a connected loop (circuit) for the electricity to flow through. This setup is described in Figure\ \ref{et:fig:solar-led-ma}. The LED should be lit up when this is correctly set up. \textbf{Record the current reading on the multimeter.}
+	
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\textwidth]{energy-trans/solar-led-ma}
+	\caption{Solar panel connected to the LED, with the multimeter attached and set up to measure current.}\label{et:fig:solar-led-ma}
+\end{figure}
+
+	\item Compare the total power input to the solar panel and output through the multimeter. Is it the same, within uncertainties? If not, how do you account for the change? Is there an energy type that you are not measuring? What is that energy type? \textbf{Record your calculations and answers.}
 	
 	\item In what ways is this similar to light from our sun shining on plants and on water on Earth, and how is it different? \textbf{Record your answers.}
 \end{steps}
@@ -119,7 +151,7 @@ Each item below is worth 10 points, and there is an additional 10 points for att
 	
 	\item Analogy of masses on strings to black holes merging (Step 14).
 	
-	\item Data, analysis, and results for the photodiode, including types of energy (per time) measured before and after, and amounts of those energies (per time), with uncertainties (Steps 17--18).
+	\item Data, analysis, and results for the solar panel and LED, including types of energy (per time) measured before and after, and amounts of those energies (per time), with uncertainties (Steps 16--19).
 	
-	\item Analogy of photodiode to light impinging on Earth (Step 19).
+	\item Analogy of solar planel to light impinging on Earth (Step 20).
 \end{enumerate}
