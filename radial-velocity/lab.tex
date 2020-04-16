@@ -10,15 +10,30 @@ In the Fall of 1995, two Swiss astronomers announced evidence for a planet orbit
 
 In this lab, we will explore the radial velocity technique, the method used to detect the first exoplanets and a powerful technique for studying exosolar planetary systems.
 
-\subsection{Grading}
+%\subsection{Grading}
 
-Each bolded instruction is worth 4 points, and each numbered question is worth 2 points. We include 10 points for attendance and participation to arrive at 60 points for this lab.
+%Each bolded instruction is worth 4 points, and each numbered question is worth 2 points. We include 10 points for attendance and participation to arrive at 60 points for this lab.
 
 \section{Building Intuition}
 
 The radial velocity method works because in a planetary system, both the host star and its planet orbit the Center of Mass for the system. Since the host star is also moving, the star has a non-zero velocity, which we can study through the Doppler effect on light.
 
 Open the link for the Center of Mass webpage (\url{http://astro.unl.edu/naap/esp/centerofmass.html}). The animation in the upper left illustrates the orbit of two bodies about their Center of Mass. Read through the webpage and use the sliders to explore how varying separation and relative mass changes the Center of Mass.
+
+\begin{framed}
+	To use the interactive sliders on the above website, you need to enable Adobe Flash in your browser. If you don't see the diagram of two masses with adjustable masses and separation, then you don't have Flash enabled.
+	
+	If it does not automatically run, then depending on your browser, try the following:
+	\begin{itemize}
+		\item Mozilla Firefox: \url{https://support.mozilla.org/en-US/kb/keep-flash-up-to-date-and-troubleshoot-problems}
+		
+		\item Google Chrome: \url{https://support.google.com/chrome/answer/6258784}
+		
+		\item Safari: \url{https://helpx.adobe.com/flash-player/kb/enabling-flash-player-safari.html}
+		
+		\item Microsoft Edge: \url{https://helpx.adobe.com/flash-player/kb/flash-player-issues-windows-10-edge.html}
+	\end{itemize}
+\end{framed}
 
 For this lab, the following values will be useful:
 \begin{itemize}
@@ -65,7 +80,7 @@ Astronomers can use spectroscopic techniques for measuring the velocity of stars
 	\item How are the period and amplitude related to the orbital period and the star’s velocity?
 \end{steps}
 
-Consider a similar system only with a planet that is twice the mass ($M_\textrm{p} = M_\textrm{J}, M_\textrm{S} = M_\textrm{Sun}$, $d = 0.0527\:$AU, and $T = 4.23\:$days).
+Consider a similar system only with a planet that is twice the mass ($M_\textrm{p} = M_\textrm{J}$, $M_\textrm{S} = M_\textrm{Sun}$, $d = 0.0527\:$AU, and $T = 4.23\:$days).
 
 \begin{steps}
 	\item What is the system's host star orbital radius (in AU) and orbital velocity (in m/s)?
@@ -91,7 +106,14 @@ Table~\ref{rv:tab:51peg} lists actual line of sight velocities for 51 Peg measur
 	\caption{Line-of-sight velocities for 51 Pegasi measured over time.}\label{rv:tab:51peg}
 \end{table}
 
-Use the free software SciDAVis to plot this data. You can download and install it on your computer, or you can use the lab computers, which have it installed already.
+Use the free software SciDAVis to plot this data. You can download and install it on your computer from \url{https://sourceforge.net/projects/scidavis/}.
+%, or you can use the lab computers, which have it installed already.
+
+\begin{framed}
+\textbf{Mac users:} if you get an error when trying to run SciDaVis, saying that it is from an unidentified developer, follow the directions at the following website to let it run:
+
+\url{https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/10.15/mac/10.15}
+\end{framed}
 
 Then, fit an equation to the data. To do so in SciDAVis, first save the project, so you won't accidentally lose your work. Then, select Analysis $\blacktriangleright$ Fit Wizard... from the drop-down menu. Type your desired equation into the large box. You can use any of the functions you can find in the lists at the top of the window and combine them how you would like. For fit parameters, use the letters a, b, c, and so on. For each fit parameter you use, include it in the list of parameters. For example, if you think the data are best represented by a tangent function, you could put ``\texttt{b*tan(c*x+d)}'' in the box. Then click the ``Fit $>>$'' button, then the ``Fit'' button to fit the data with this equation. This finds the parameters for the equation that make it best fit the data. Experiment to find an equation that seems to fit well.
 
@@ -143,3 +165,19 @@ Do some research on the history and background of the systems you analyzed (51Pe
 	
 	\item How do they relate to what you did in this lab?
 \end{steps}
+
+\section{Report checklist}
+
+Include the following in your lab report. See Appendix~\ref{cha:lab-report-format} for formatting details. Each item below is worth 10 points.
+
+\begin{enumerate}
+	\item Answers to Questions 1--4, including figure with sketch of velocities
+	\item Graph of line of sight velocty vs time for two stars (bold text above Steps 5 and 8)
+	\item Answers to Questions 5--8
+	\item Your findings from varying parameters in the radial velocity animation (bold text at end of Section 2.2)
+	\item Your graph for line-of-sight velocities, fit parameters, and their uncertainties (bold text above Question 9)
+	\item Answers to Questions 9--12
+	\item Answers to Questions 13--15
+	\item Answers to Questions 16--17
+	\item A 100--200 word reflection on group dynamics and feedback on the lab manual. Address the following topics: who did what in the lab, how did you work together, what successes and challenges in group functioning did you have, and what would you keep and change about the lab write-up?
+\end{enumerate}
