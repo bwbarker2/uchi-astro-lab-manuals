@@ -1,16 +1,19 @@
 \chapter{Using Kepler’s Laws to find the density of Jupiter}
 
+%todo include caution about rotation of image compared to website
+%todo give the density of water, to aid analysis of planet as rocky or gaseous
+
 \section{Introduction}
 
 So far, you have been using several techniques to learn about the properties of planets orbiting other stars based one what we can observe from Earth, including using orbital properties to discover the mass of planets. The same physical laws can be used to study planets and their moons.
 
-To study the composition of a planet, it is useful to know its density --- then one can learn more about whether it is rocky or gaseous. In this lab, you will use Kepler's Laws to find the density of Jupiter, given orbital properties of its moon. In this case, we can use actual images of the these using Stone Edge Observatory, a remotely operated telescope in California.
+To study the composition of a planet, it is useful to know its density --- then one can learn more about whether it is rocky or gaseous. In this lab, you will use Kepler's Laws to find the density of Jupiter, given orbital properties of its moons. In this case, we can use actual images of the these using Stone Edge Observatory, a remotely operated telescope in California.
 
 Under nominal circumstances, we would have you schedule the observations yourself, so you could analyze the data that you, yourself, took. However, the observatory is not operating well enough right now to let that happen. Fortunately, we have archival images that were taken in 2017 by this observatory that you can analyze.
 
 \section{Using Kepler's laws}
 
-Keplers third law relates the orbital period to the systems semi-major axis. In the case where the planets mass is much smaller than the stars mass, Keplers third law is:
+Keplers third law relates the orbital period to the systems semi-major axis. In the case where the planets mass is much smaller than the stars mass, Kepler's third law is:
 \begin{equation}
 P^2 = \frac{4\pi^2}{G M}a^2 \,,
 \end{equation}
@@ -22,7 +25,7 @@ We can rewrite the third law as:
 \frac{a^3}{P^2} = \frac{G}{4\pi^2}\left(\frac{4}{3}\pi R^3\rho \right) = \rho\frac{G R^3}{3\pi}
 \end{equation}
 
-where $R$ is the radius of Jupiter and $\rho$ is the density of Jupiter. Solving for $\rho$ gives:
+where $R$ is the radius of Jupiter and $\rho$ (the Greek letter pronounced ``row'') is the density of Jupiter. Solving for $\rho$ gives:
 
 \begin{equation}
 \rho = \left(\frac{a}{R}\right)^3\frac{3\pi}{G P^2}
@@ -34,7 +37,7 @@ To determine the semi-major axis, $a$, for a moon's orbit, we can assume that th
 
 \section{The set of observations}
 
-The images can be found on Canvas, in the Files > Lab folder, in the compressed file ``jupiter\_data.zip''.
+The images can be found on Canvas, in the Files section, in the compressed file ``jupiter\_data.zip''.
 
 Observations were taken on four separate dates between April 14 and 23, 2017, as stated in the names of the files. Images were taken in each of the \textit{g}, \textit{r}, \textit{i}, and \textit{clear} bands. These refer approximately to the color filters used in each case: green, red, infrared, and  clear (no filter). See Figure~\ref{jd:fig:filters} for the frequency response of such a filter set. All images were taken with a $0.05\:$second exposure time.
 
@@ -44,12 +47,12 @@ Observations were taken on four separate dates between April 14 and 23, 2017, as
 	\caption{Typical transmission rates of various filters used in astronomy. This is from the Sloan Digital Sky Survey.}\label{jd:fig:filters}
 \end{figure}
 
-\section{Make color images}
-
-All CCDs which are used in astronomical images are monochrome --- they do not have different pixels for different wavelengths of light, which allows them to achieve higher resolution. To create a color image, we must combine the images taken with different color filters and add color ourselves.
-
-One can easily make RGB images in DS9 by selecting \textit{Frame} $>$ \textit{New Frame RGB}, which allows one to upload different .fits files for each color with \textit{File} $>$ \textit{Open} depending on the color selected in the pop-up window. You can then scale each image as needed to make 3-color images. \textbf{Make an RGB image for Jupiter.}
-
+%\section{Make color images}
+%
+%All CCDs which are used in astronomical images are monochrome --- they do not have different pixels for different wavelengths of light, which allows them to achieve higher resolution. To create a color image, we must combine the images taken with different color filters and add color ourselves.
+%
+%One can easily make RGB images in DS9 by selecting \textit{Frame} $>$ \textit{New Frame RGB}, which allows one to upload different .fits files for each color with \textit{File} $>$ \textit{Open} depending on the color selected in the pop-up window. You can then scale each image as needed to make 3-color images. \textbf{Make an RGB image for Jupiter.}
+%
 \section{Analysis}
 
 You will use the \textit{clear} images to measure the position of the moons relative to Jupiter and
@@ -111,9 +114,13 @@ The amplitude from your fit corresponds to the ratio, $(a/R)$ which we will use 
 
 Each item below is worth 10 points, and there is an additional 10 points for attendance and participation.
 
-\begin{itemize}
+\begin{enumerate}
 	\item Data table including times and positions for each moon, as well as the radius of Jupiter.
 	
 	\item Graphs of position ($x/R$) vs. time for each moon, with the fitted curve plotted as well.
 	
 	\item Answers or evidence of completion for Steps~\ref{jd:step:density}--\ref{jd:step:composition}.
+	
+	\item A 100--200 word reflection on group dynamics and feedback on the lab manual. Address the following topics: who did what in the lab, how did you work together, what successes and challenges in group functioning did you have, and what would you keep and change about the lab write-up?
+	
+\end{enumerate}

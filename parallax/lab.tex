@@ -1,7 +1,6 @@
 \chapter{Measuring distant objects with parallax}
 
 %todo make two more telescopes on tripods, to have two setups going at a time. each group can use one telescope at a time, as long as scopes don't move.
-%todo explain better in write-up what they are actually doing - maybe include conceptual tasks first, like the thumb demo and drawing objects, like in the lecture activity preview packet
 
 \section{Introduction}
 
@@ -39,6 +38,11 @@ where $p$ is the parallax angle in radians, $d$ is the distance to the star, and
 \begin{equation}
 	p = \frac{a}{d}\,.
 \end{equation}
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{parallax/parallax-figure}
+	\caption{Illustration of the geometry involved in a parallax measurement to determine $d$, the distance to a nearby star.}\label{par:fig:figure}
+\end{figure}
 
 \begin{steps}
 	\item Use the above equation to calculate the distance to the nearby star.
@@ -156,10 +160,7 @@ Now that you have the pixel scale of the image, you can use that to measure the 
 %p = \frac{a}{d},
 %\end{equation}
 
-%\begin{figure}
-%	\includegraphics[width=\textwidth]{parallax/parallax-figure}
-%	\caption{Illustration of the geometry involved in a parallax measurement to determine $d$, the distance to a nearby star.}\label{par:fig:figure}
-%\end{figure}
+
 
 %Use each reference star to calculate an independent measurement of parallax. To do this, for each reference star, you'll need to find how far (in radians) the target star has moved between the two observations. Using vector arithmetic\footnote{See \url{https://www.mathsisfun.com/algebra/vectors.html} for a short tutorial}, subtract the two displacement vectors from each other by components and find the magnitude of that difference vector. Divide by 2 and convert to radians to find $p$. After finding $p$ from each reference star, average these values together and estimate your uncertainty by finding the standard deviation of these measurements. You can perform this calculations in Excel using the functions AVERAGE() and STDEV(). Report your measurements in a table in your lab
 %report.
@@ -187,7 +188,7 @@ Include the following in your lab report. See Appendix~\ref{cha:lab-report-forma
 	\item Work and final answer for your distance measurements using your finger, with uncertainty.
 	\item Work and final answer for direct distance measurement, along with percent difference.
 	\item A figure with your three images (pixel scale image and two parallax images).
-	\item The table of reference stars and displacement vectors.
+	\item The displacement vectors from distant star to nearby star.
 	\item Final determined value of the distance and comparison with the direct distance. Show your work (see Appendix~\ref{cha:lab-report-format}).
 	\item Answers to the questions in Section~\ref{par:sec:questions}, with justification.
 	\item A 100--200 word reflection on group dynamics and feedback on the lab manual. Address the following topics: who did what in the lab, how did you work together, what successes and challenges in group functioning did you have, and what would you keep and change about the lab write-up?

@@ -3,9 +3,9 @@
 %todo add lab activity to measure differential light intensity at different distances from light bulbs
 %todo clarify that M5 (rather than Sun) should be used to compare to M87 cluster
 
-In this lab, you will measure the distance to the Virgo galaxy, which we will use for next week’s laboratory as the first rung in our distance ladder measuring the distance to other galaxies.
+%In this lab, you will measure the distance to the Virgo galaxy, which we will use for next week’s laboratory as the first rung in our distance ladder measuring the distance to other galaxies.
 
-We will use a globular cluster in the Milky Way called M5 (see Figure~\ref{gc:fig:m5}) as the first step of our distance
+In this lab, we will use a globular cluster in the Milky Way called M5 (see Figure~\ref{gc:fig:m5}) as the first step of our distance
 ladder to other galaxies. By comparing this globular cluster to another in a nearby galaxy
 called M87 in the Virgo cluster, we will estimate its distance, adding another rung to our
 distance ladder. Ideally, we should compare many globular clusters in the Milky Way to
@@ -22,7 +22,7 @@ M87, here we will use just one cluster, which is enough to demonstrate the princ
 		Image source: ESA/Hubble \& NASA, \url{http://www.spacetelescope.org/images/potw1118a/}}\label{gc:fig:m5}
 \end{figure}
 
-If sources 1 and 2 have the same luminosity, then their distances $d$ and apparent brightness
+If two identical lightbulbs are placed with one close to you and another farther away, the more distant one will appear dimmer. This is because the light from a spherical emitting source spreads out over a spherical shell that gets larger as the light gets more distant from the source. So if sources 1 and 2 have the same luminosity, then their distances $d$ and apparent brightness
 $b$ are related by
 \begin{equation}
 \frac{b_1}{b_2} = \left( \frac{d_2}{d_1} \right)^2 \,.
@@ -43,18 +43,18 @@ derive the ratio of their distances from us, \textit{as long as they have the sa
 \section{Road Map}
 
 To keep track of the steps in this lab, we will fill in Table~\ref{gc:tab:mag}. In this table, the entry for the magnitude of M5 refers to the sum of all of its stars. In
-principle, we could measure this ourselves wit the roof-top telescope, but for this lab we take
-a value from a catalog of such numbers. The SDSS data cannot be used because the stars
+principle, we could measure this ourselves with the roof-top telescope, but for this lab we take
+a value from a catalog of such data. The SDSS data cannot be used because the stars
 are too crowded together for an accurate measurement.
 
 \begin{table}
 	\centering
-	\begin{tabular}{lcc}
+	\begin{tabular}{l|c|c}
 		\toprule
-		Object & Magnitude & Distance (AU) \\ \midrule
-		Sun & -26.89 & 1 \\
-		Sun-like stars in M5 &  & \\
-		M5 itself & 5.65 & \\
+		\textbf{Object} & \textbf{Magnitude} & \textbf{Distance (AU)} \\ \midrule
+		Sun & -26.89 & 1 \\\midrule
+		Sun-like stars in M5 &  & \\\midrule
+		M5 itself & 5.65 & \\\midrule
 		M87 globular clusters & &
 		\\ \bottomrule
 	\end{tabular}
@@ -69,7 +69,7 @@ and you derive the distance to M5.
 The second step is to identify faint things surrounding the galaxy M87 that are likely to be
 globular clusters associated with it, and get their magnitudes (again the $r$-band magnitude)
 from the database. Some value that properly represents the ensemble gets entered into the
-above table and you derive the distance to M87.
+above table and you derive the distance to M87 by comparing the magnitudes of M5 and M87.
 
 \textit{To summarize:} the distance to the Virgo cluster depends on two assumptions: 1) stars
 with Sun-like colors in the globular cluster M5 have the same luminosity of the Sun. 2)
@@ -79,7 +79,7 @@ are good enough for at least a first estimate of distance.
 
 \section{Analyzing the M5 globular cluster}
 
-In the window at \url{http://skyserver.sdss.org/dr13/en/tools/search/sql.aspx}, enter the following query:
+First you'll retrieve from an online database the magnitude of stars in the region of sky where M5 is. In the window at \url{http://skyserver.sdss.org/dr13/en/tools/search/sql.aspx}, enter the following query:
 
 \begin{verbatim}
 SELECT TOP 200
@@ -139,8 +139,8 @@ WHERE
    AND dec between 12.278 and 12.504
 \end{verbatim}
 
-The globular clusters are so far away that they appear as, and are categorized as, stars in
-the SDSS data. As a cross-check, also run the above query in a random piece of sky at least
+The globular clusters are so far away that each cluster of stars appears as, and is categorized as, stars in
+the SDSS database. As a cross-check, also run the above query in a random piece of sky at least
 5\textdegree away.
 
 \subsection{Questions and results for your report}
@@ -157,16 +157,18 @@ the SDSS data. As a cross-check, also run the above query in a random piece of s
 	process more precise? What other sources of uncertainty do you think
 	there are?
 	
-	\item Calculate the distance to M87 using Equation~\ref{gc:eq:m-d}. If you have not already converted AU to
+	\item Calculate the distance to M87 using Equation~\ref{gc:eq:m-d}, comparing its magnitude to that of M5. If you have not already converted AU to
 	parsecs, do so now to get the distance in mega-parsecs ($1\:\mathrm{Mpc} = 2.06 \times
 	10^{11}\:\mathrm{AU}$). The accepted value for the distance to the Virgo cluster is 16.4
 	Mpc. From your uncertainties above, how well do these two values agree within your expected level
 	of uncertainty? See Appendix~\ref{unc:sec:comparing} for details of how to determine this.
+	
+	\item Based on the distance you found, when did the light from the Virgo galaxy arrive at the sky survey's telescope? What was happening on Earth at that time?
 \end{steps}
 
 \section{Include in your report}
 
-Each of the following items will be graded out of 10 points, with 10 additional points for attendance and participation, for a total of 50 points possible for this lab.
+Each of the following items will be graded out of 10 points.
 
 \begin{itemize}
 	\item Completed table
@@ -176,5 +178,7 @@ Each of the following items will be graded out of 10 points, with 10 additional 
 	\item Questions 1--2 from the first section
 	
 	\item Questions 3--6 from the second section
+	
+	\item A 100--200 word reflection on group dynamics and feedback on the lab manual. Address the following topics: who did what in the lab, how did you work together, what successes and challenges in group functioning did you have, and what would you keep and change about the lab write-up?
 		
 \end{itemize}
