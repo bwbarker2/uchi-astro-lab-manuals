@@ -10,9 +10,9 @@
 *.log
 *.out
 *.run.xml
-*.pdf
+/*.pdf
 *.swp
 *.toc
 
 # include archived files in general
-!/archive/*
+#!/archive/*
