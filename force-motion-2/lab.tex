@@ -1,0 +1,101 @@
+\chapter{Force and Motion 2}
+
+\section{Learning Goals}
+
+\begin{itemize}
+	\item Make careful observations and find quantitative patterns.
+	
+	\item Choose and fit models to data in order to describe a pattern.
+	
+	\item Test a hypothesis quantitatively.
+
+\end{itemize}
+
+\section{Lab Team Roles}
+
+Decide which team members will hold each role this week: facilitator, scribe, technician, skeptic. If there are three members, consider having the technician and skeptic roles be held by one person.
+
+\section{Observation experiment: how fast and how far does force get you?}\label{fm2:sec:obs}
+
+\textbf{Goal:} Your friend Taylor noticed that when they pushed on a skateboard, it started going faster. They started wondering --- how does force and mass affect how far an object goes and how fast it gets? Investigate this and find some quantitative patterns. Represent the patterns in graphical and formula form.
+
+\textbf{Available equipment:} Force and Motion Basics simulation (\url{https://phet.colorado.edu/sims/html/forces-and-motion-basics/latest/forces-and-motion-basics_en.html})
+
+\textbf{Rubric rows to focus on:} B1, B3, B5, B7, B8 (and F1 and F2 for all sections, like normal)
+
+\begin{steps}
+	\item read through the rubric B to see the steps to follow and what to ensure you include, given the rubric rows listed above.
+	
+	\item Taylor's description of what to look at might not be specific enough for you. They're not answering your texts about it, so you'll need to decide what specific phenomenon to investigate. Discuss and brainstorm experiments with your group (and play with the sim), then discuss with a TA or instructor. (There are several different phenomena you can choose. There is not a right one we are looking for)
+	
+	\item Design and record your experimental setup and procedure, including a diagram of the setup.
+	
+	\item What quantities are you measuring, in particular? And which are the independent and dependent variables?
+	
+	\item Describe in detail how you are making the measurements.
+	
+	\item Conduct your experiment and record your data. Express in a table or graph form.
+	
+	\item Identify a pattern in the data. Your resulting pattern should be described precisely in words, and in an equation that describes how the dependent variable changes in response to a change in the independent variable(s).
+	
+	\item You may find it useful in this experiment or future ones to fit a test function to data. This is called curve fitting. You can use your preferred curve fitting program, or use SciDaVis, a free open source graphical analysis program.
+	
+	\begin{itemize}
+		\item You can download and install it on your computer from \url{https://sourceforge.net/projects/scidavis/}.
+		%, or you can use the lab computers, which have it installed already.
+		
+		\begin{framed}
+			\textbf{Mac users:} if you get an error when trying to run SciDaVis, saying that it is from an unidentified developer, follow the directions at the following website to let it run:
+			
+			\url{https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/10.15/mac/10.15}
+		\end{framed}
+		
+		\item Optionally, watch the short video tutorial from the Lab Module on Canvas, describing how to enter data into SciDAVis and create a curve fit.
+		
+		\item In SciDAVis X is the independent variable and Y is the dependent variable.
+		
+		\item To plot the data, Highlight the data X,Y, and/or yEr you want to plot (by clicking the X column, holding the Ctrl key, then clicking the Y column).  Then click Plot $\Rightarrow$ Scatter. Clicking on the axis, curves, axis titles, or data points allows you to customize your graph.
+		
+		\item To fit an equation to the data, first enter the data, then save the project, so you won't accidentally lose your work. Then, select Analysis $\blacktriangleright$ Fit Wizard... from the drop-down menu. Type your desired equation into the large box. You can use any of the functions you can find in the lists at the top of the window and combine them how you would like. For fit parameters, use the letters a, b, c, and so on. For each fit parameter you use, include it in the list of parameters. For example, if you think the data are best represented by a tangent function, you could type ``\texttt{b*tan(c*x+d)}'' in the box. Then click the ``Fit $>>$'' button. A new screen will come up.  Enter your initial guesses for the parameters.  Also enter the high and low range for X. Then the ``Fit'' button to fit the data with this equation. This finds the parameters for the equation that make it best fit the data. The values for the fit and their uncertainties will be displayed in the Results log. Experiment to find an equation that seems to fit well.
+	\end{itemize}
+\end{steps}
+
+\section{Testing experiment: displacement and time under constant acceleration}
+
+\textbf{Goal:} Taylor performed their own observation experiment and arrived at the following mathematical description for the displacement $x$ of an object of mass $m$ subject to a constant force $F$ for a duration $t$, starting from rest:
+\begin{equation}
+ x = \frac{F t^2}{m} \,.
+\end{equation}
+Taylor would like you to verify this. I, the lab manual, would like to show you one way of using curve fitting to test it.
+
+\textbf{Available equipment:} 
+Force and Motion Basics simulation (\url{https://phet.colorado.edu/sims/html/forces-and-motion-basics/latest/forces-and-motion-basics_en.html})
+
+\textbf{The idea} is to produce a number of $(t,x)$ data points from an object of known mass, subject to a constant force and plot them (time on the horizontal axis and displacement on the vertical axis). Then fit a quadratic function to those points, of the form $Y = C*X^2$. The curve fit will produce the best fit parameter $C \pm \delta C$. In this situation, the hypothesis predicts that $C = F/m$. Comparing the values using their uncertainties, the prediction will match the outcome if the $t'$ statistic is less than 1.
+
+\begin{steps}
+	\item Discuss what experimental procedure to use to collect the data using the sim. How many data points do you need? How will you determine the uncertainty of each data point? What will you use to take the measurements and what role will each person take in the experimental procedure? \textit{Hint: if things are happening too quickly to record, you can take a video and then pause as needed during playback.}
+	
+	\item Write down your procedure and draw a sketch to describe the setup.
+	
+	\item Conduct the data collection, including uncertainty estimation for each point.
+	
+	\item Execute the data analysis as described above. \textbf{Record the graph and best fit parameters with their uncertainties.}
+	
+	\item Calculate the $t'$ statistic and use it to decide if the outcome matches the prediction.
+	
+	\item Based on this experiment, what would you say to Taylor about their hypothesis?
+\end{steps}
+
+\section{Application experiment: mass of the mystery box}
+
+\textbf{Goal:} Use the pattern you discovered in Section \ref{fm2:sec:obs} to find the mass of the mystery box in the Force and Motion Basics simulation.
+
+\textbf{Available equipment:} 
+Force and Motion Basics simulation (\url{https://phet.colorado.edu/sims/html/forces-and-motion-basics/latest/forces-and-motion-basics_en.html})
+
+\begin{steps}
+	\item Design and conduct the experiment. Include a description and sketch of the setup and procedure, data table, uncertainty analysis, and final determination of the box's mass.
+	
+	If you are unable to use the pattern you discovered to solve the problem, and your TA agrees, then you can use results from Newtonian mechanics, for example $F = ma$ and $a = \frac{v_f - v_i}{t}$ , where $a$ is the acceleration, $v_f$ is the final velocity, and $v_i$ is the initial velocity.
+\end{steps}
