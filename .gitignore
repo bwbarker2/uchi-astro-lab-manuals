@@ -16,3 +16,9 @@
 
 # include archived files in general
 #!/archive/*
+
+# specific additional compiled document
+1d-kinematics/hw1.pdf
+
+# created by the latex package "comment"
+*.cut
