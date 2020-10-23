@@ -1,4 +1,4 @@
-\chapter{Inventing Color}
+\chapter{Inventing Color}\footnote{Contributions from Brent Barker, Mike Gladders, Amanda Pagul, and others.}
 
 %todo subtraction of colors for filter part does not work. magnitudes are already logarithmic, so it works for them. Try doing measurements and using ratio of g/r instead of difference, adjust lab accordingly.
 
@@ -8,109 +8,208 @@
 
 Everything glows (gives off electromagnetic radiation) when it has a temperature --- particles are wiggling around randomly (faster if it's hotter) and giving off energy as they wiggle. This \textbf{thermal radiation}, also called blackbody radiation, is the same for any object at the same temperature. This means we can take something's temperature by looking at the spectrum of light it gives off. This is great for learning about something's temperature at a distance, like stars.
 
-Incandescent lightbulbs are so warm that they glow in the visible spectrum (like stars). In this lab, you'll investigate the radiation that is given off by a lightbulb at various temperatures, then use filters to mimic the situation astronomers are in when they observe astronomical objects with different color filters. You'll invent a metric to numerically state the temperature of the lightbulb, even without knowing the actual temperature. Finally, you'll use the various images that you took with SEO with different color filters and combine them to form a color image.
+%Incandescent lightbulbs are so warm that they glow in the visible spectrum (like stars). In this lab, you'll investigate the radiation that is given off by a lightbulb at various temperatures, then use filters to mimic the situation astronomers are in when they observe astronomical objects with different color filters. You'll invent a metric to numerically state the temperature of the lightbulb, even without knowing the actual temperature. Finally, you'll use the various images that you took with SEO with different color filters and combine them to form a color image.
 
-\section{Lightbulbs}
+\section{Lab Team Roles}
 
-Light can be made of many different wavelengths at the same time. It combines to form a color that we perceive. To see what colors make up light, we can split them again with a triangular prism, or with a \textit{diffraction grating}.
+Decide which team members will hold each role this week: facilitator, scribe, technician, skeptic. If there are three members, consider having the skeptic double with another role. Consider taking on a role you are less comfortable with, to gain experience and more comfort in that role.
 
-\begin{steps}
-	\item Use the diffraction grating to view the lightbulb while the lightbulb is at full voltage (120 V). Hold up the grating in front of your eye, with the text on the frame upright. Start by looking at the lightbulb through it, then turn your feet to the left or right about 30 degrees, letting your whole body-arm-grating system rotate with your feet. You should see a rainbow. This is all the colors that make up the light coming from the lightbulb, split into different wavelengths.
-\end{steps}
+Additionally, if you are finding the lab roles more restrictive than helpful, you can decide to co-hold some or all roles, or thinking of them more like functions that every team needs to carry out, and then reflecting on how the team executed each function.
 
-\subsection{Orientation to the digital spectrometer}
-
-\begin{framed}
-	\textbf{Warning! Fragile Equipment!} If the fiber optic cable is bent into a circle of less than 9 cm (6 inch) diameter, then the fiber inside may break.
-	
-	Also, the blue end cap should be replaced on the end of the fiber optic cable when you are done using it, to protect from dust and debris entering.
-\end{framed}
-
-A digital spectrometer also uses a diffraction grating, but instead of collecting the dispersed light on a screen to be viewed by people, it collects the light with a charge-coupled device (CCD), an array of light-sensitive pixels much like a digital camera. It then translates the position on the CCD to individual wavelengths and displays a plot of intensity vs. wavelength on a computer. %TODO (see Figure~???)
-Another difference is that we use an optical fiber to collect the light.
-
-Here are a few guidelines:
-\begin{itemize}
-	
-	\item \textbf{Background subtraction.} When you are observing the spectrum of something, there may be stray light entering that is not coming from the thing you are studying. To remove this \textit{background} from the plot, select the gray lightbulb icon in the toolbar. This records the current plot as the background. To display the plot while subtracting the background, select the icon with the minus-lightbulb. To go back to viewing the full spectrum including the background, select the blue S icon.
-
-	\item \textbf{Oversaturation}. If, when you zoom out all the way, the plot includes a flat line near the top of the plot, this means that the pixels of the image sensor are recording their maximum value, and they cannot tell you the actual intensity. Reduce the intensity by either reducing the integration time (upper-left corner) or moving the fiber optic cable off-center, so that it receives less light. Note that if you change either of these, then the background frame is no longer correct and must be remeasured.
-
-	\item \textbf{Low signal}. If the target is dim, then you might find when you zoom in, the plot is not smooth, but instead jagged and hard to find patterns in. In this case, increase the integration time using the field in the upper-left of the program window. This increases the exposure time, equivalently. Note that if you change the integration time, then the background frame is no longer correct and must be remeasured.
-
-	\item \textbf{Saving data.}
-	
-	\begin{itemize}
-		\item Save the images of spectra and numeric files that you generated with SpectraSuite
-	during your experiments on a USB stick, so that you can use them at home during
-	preparation of your report (you can also email them as attachments from your
-	computer at the end of the lab).
-	
-	\item You should open a word processor document and a spreadsheet document in which you can save your measured
-	spectra at the beginning of your work. To save an image of your graph, click on
-	the fourth icon from the left in the Spectrum IO controls. %TODO (Fig.~???)
-	This will copy
-	an image of the graph to the clipboard. Then in your word processor, paste the image by pressing
-	Ctrl-V.
-	
-	\item To save spectrum in the digital form, click on the third from the left icon in
-	Spectrum IO controls (to the right of print icon). This copies it to clipboard. In
-	Excel file make sure you are in a new sheet and press Ctrl-V. This should create
-	to columns of numbers: wavelength (in nm) and counts for your spectrum.
-	
-	\item An alternative way to save the data is to click on the floppy disk icon in the
-	Spectrum IO controls. The format must be ``Tab delimiter, no header''. The
-	writing directory must be specified (``Browse'' button). The spectrum is saved in a
-	text file (.txt) as two columns, the first column giving the wavelength in nm, the
-	second column the corresponding intensity. This file can be imported into a spreadsheet or plotting program.
-	\end{itemize}
-\end{itemize}
-
-\subsection{Observing a lightbulb}
+\section{Exploring thermal radiation}\label{ic:sec:exploring}
 
 \begin{steps}
+	\item Load the interactive thermal radiation simulation at \url{https://phet.colorado.edu/sims/html/blackbody-spectrum/latest/blackbody-spectrum_en.html}
 	
-	\item Using the spectrometer, observe the spectrum created by a lightbulb at various brightnesses / voltages.  What's the overall shape? \textbf{Record your answer.}
+	\item Play with the controls and see what happens. Discuss among your team.
 	
-	\item How does the shape change when the brightness increases? \textbf{Record your answer.}
+	\item Find a pattern --- how does the shape change as the temperature goes up? For example, how does the peak wavelength change, and how about the total radiated power (area under curve)? \textbf{Record your observations.}
 	
-	\item How does the peak frequency change? \textbf{Record your answer.}
+	\item At what peak wavelength do you radiate? Use the sim to determine this and estimate your uncertainty. \textbf{Record your findings.}
 	
-	\item How does the visual color of the bulb change as it gets brighter? \textbf{Record your answer.}
-	
-	\item\label{ic:step:pattern} As the lightbulb gets brighter, the filament inside gets hotter --- the temperature increases. If all objects act like the tungsten filament as it gets hotter, what general pattern can you state about the light given off by an object as a function of its temperature? \textbf{Record your answer.}
-
+	\item Comparing the spectra of the light bulb, Sun, and Sirius A, how can you use the spectrum to determine what color each one appears as?
 \end{steps}
+
+\section{CCDs and filters}
 
 Cameras have come a long way since the days of developing film, but sensors are not as smart you might think. They register light, but they can't usually tell the color (i.e. wavelength) of the incoming photons. So then how do you get a color image? In astronomy (and in your cell phone!) color images are generated by measuring the amount of light at specific colors and then combining these measurements to create a colorful image. A filter is used to select bands of color to allow through. In consumer cameras and phone cameras, these filters are permanently attached to the front of individual pixels. In astronomical imaging, there is no permanent filter, and different filters are moved into place.
 
-\begin{steps}
-	\item View the lightbulb's spectrum with the diffraction grating again, this time alternately holding the red and green filters between the grating and the bulb. Observe and \textbf{record} the effect of the filter on the spectrum.
-	
-	\item Use the red and green filters in front of the fiber optic input to the spectrometer to see how they affect the spectrum that is received. \textbf{Save a graph of the spectrum with each filter and include in your report.}
-\end{steps}
+\subsection{Filters}
+Light is composed of photons with energies that determine their wavelengths (shorter wavelength $\implies$ higher energy). Thus every light source exhibits a \textbf{spectrum} of energies based on its energetic components, determined by the physics of the light emission process. Thus, observing the energetic constituents of light from astronomical objects - a.k.a. observing the spectrum of emitted radiation - is a fundamental tool in observational astrophysics. However, obtaining the specific intensity of radiation as a function of energy from an astronomical source is challenging. An easier way to asses the electromagnetic energies observed is to image them in different filters: materials that are transparent to a known range of wavelengths and opaque to all others. Thus, one can image the same object with multiple different filters to get a sense of the wavelength regimes that make the strongest contributions to the overall electromagnetic output.
 
-In a regular astronomical image, each pixel gives just one value --- the number of counts detected in that pixel, regardless of the wavelength of the photon detected. We can treat the fiber optic as a single-pixel camera if we count up the total number of counts detected. To find that total number, you can find the area under the curve in the plot.
+A filter is characterized by its \textbf{transmission function}: a function that characterizes the amount of light that is transmitted by the filter at each wavelength. Figure~\ref{sot:fig:filters} shows the transmission functions for standard astronomical filters that are used in the Sloan Digital Sky Survey and now used as standard filters elsewhere.% (similar to the ones you'll be using in this class).
 
-\begin{steps}
-	\item With no filter, add up the total number of counts detected by calculating the area under the curve. To do this in an approximate way, count the number of boxes underneath the curve, then multiply this by the height of one box (in counts per nanometer) and by the width of one box (in nanometers). \textbf{Record this value.}
-	
-	\item Do the same for the spectrum using the red and green filters separately. Note that the values are different for different filters. This difference (for example, the green value minus the red value) can tell us a quantitative number for what color this object is. \textbf{Record the red, green, and $g-r$ values.}
-\end{steps}
-
-Now you have the value of our single-pixel camera for the case of clear (no filter), red, and green filters. Time to revisit the pattern found above in Step \ref{ic:step:pattern}.
+\begin{figure}
+	\centering
+	\includegraphics{small-optical-telescopes/fig_sdss_filters_1.png}
+	\caption{Filter Transmission Functions for the Sloan Digital Sky Survey, overlaid on a stellar spectrum (in this case the spectrum is probably an
+		A-type star). The magnitude observed by each filter will be proportional to the integrated spectrum multiplied by the filter transmission. It's clear in this image that the underlying spectrum of the star will cause the different filters to have different magnitudes. How would these magnitudes change if the spectrum was, say, of an M-star instead? (Image source: \url{http://www.astroml.org/\_images/fig\_sdss\_filters\_1.png})}\label{sot:fig:filters}
+\end{figure}
 
 \begin{steps}
-	\item If that pattern from Step \ref{ic:step:pattern} is true, what should happen to the relative values of red and green as the voltage is increased? Should one increase more than the other? What should happen to the quantitative color $g-r$? \textbf{Record your answers.}
+	\item Open the Google Sheet found here: \url{https://docs.google.com/spreadsheets/d/1qgTqiqWOFCzYuSmHeT-5hwy_lBYO0Tvu24kM955nfq4/edit?usp=sharing}
 	
-	\item Perform an experiment to test whether this prediction is supported. \textbf{Record your procedure, analysis, and results.}
+	\item Make a copy of this sheet for your group to use.
 \end{steps}
+
+This spreadsheet calculates the same theoretical thermal radiation curve (according to Planck's Law) as the PhET simulation above, seen in the first two columns. Then it applies the transmission functions of the SDSS filters and plots the remaining power spectrum that gets through each filter. Finally, it sums up each filter's power spectrum and gives a total pixel value and magnitude. The pixel value is the relative number of counts a pixel with that filter would read. This is proportional to the brightness it sees.
+
+Since brightness as perceived by humans is logarithmic (10 times the number of photons yields 2 times the perceived brightness), astronomers express brightness in a logarithmic form called \textit{magnitude}. The relationship between intensity (power per unit area) \textit{I} and magnitude $m$ is defined as
+\begin{equation}
+ m \equiv -2.5 \log_{10} \left(\frac{I}{I_\textrm{ref}}\right) \,,
+\end{equation}
+where $I_\textrm{ref}$ is the intensity of some standard reference object. In the spreadsheet, these values marked as magnitudes are not technically magnitudes, since we are not using the dimensions of intensity, but it will help your analysis to treat them as such.
+
+\subsection{Color index}
+
+In Section \ref{ic:sec:exploring}, you learned that the color of a thermally radiating object is related to its temperature. Here, you will develop a quantitative color index and use it to determine the temperature of the Sun.
+
+\begin{steps}
+	\item In the spreadsheet, change the temperature of the blackbody (edit cell \texttt{B1}) and watch how the spectrum changes, and how the filter magnitudes change with respect to each other. \textbf{Record your observations.}
+\end{steps}
+	
+The magnitude depends not just on the temperature, but also on the size of the star and the distance away from us. So to characterize a star's color quantitatively, independent of the size and distance, astronomers use a ratio of brightnesses of different filters. This is equivalent to subtracting the magnitudes. The subtraction of two broadband filter magnitudes is called the \textit{color index}.
+
+\subsection{Correlating color index and temperature}
+
+In order to use the color index of a star to find its temperature, you need to determine how the two related to each other. If you assume the EM radiation emitted by the star is entirely due to thermal radiation, then you can find the theoretical color index of a blackbody at various temperatures, and then find where the star's color index sits on that graph.
+
+\begin{steps}
+	\item Choose the filters from which to make your color index. Do you want to choose filters that detect wavelengths right next to each other, or farther apart? If you're not sure, try both and see which is better for this application. You can call the resulting color index ``$x - y$'', for example $g' - r'$ if you are subtracting the $r'$ filter value from the $g'$ value.
+	
+	\item Make a table and graph of various temperatures and color indices. \textbf{Record your table and graph.}
+\end{steps}
+
+\subsection{Taking the Sun's temperature}
+
+\begin{steps}
+	\item Switch to the ``Sun'' tab in the spreadsheet. This has experimentally determined values for the intensity of EM radiation impinging on the Earth from the Sun, alongside the same filtering system as in the theoretical tab.
+	
+	\item Using the filter magnitudes here, calculate the color index of the Sun.
+	
+	\item Use your theoretical data from the previous section to find the temperature of the Sun.
+	
+	\item Look up the effective temperature of the Sun's photosphere on Wikipedia.
+	
+	\item Calculate the percent difference between your value and the one that Wikipedia references:
+	\begin{equation}
+	 \textrm{percent difference} = \frac{\abs{a-b}}{\frac{a+b}{2}} \times 100\%
+	\end{equation}
+\end{steps}
+
+%\section{Lightbulbs}
+%
+%Light can be made of many different wavelengths at the same time. It combines to form a color that we perceive. To see what colors make up light, we can split them again with a triangular prism, or with a \textit{diffraction grating}.
+%
+%\begin{steps}
+%	\item Use the diffraction grating to view the lightbulb while the lightbulb is at full voltage (120 V). Hold up the grating in front of your eye, with the text on the frame upright. Start by looking at the lightbulb through it, then turn your feet to the left or right about 30 degrees, letting your whole body-arm-grating system rotate with your feet. You should see a rainbow. This is all the colors that make up the light coming from the lightbulb, split into different wavelengths.
+%\end{steps}
+%
+%\subsection{Orientation to the digital spectrometer}
+%
+%\begin{framed}
+%	\textbf{Warning! Fragile Equipment!} If the fiber optic cable is bent into a circle of less than 9 cm (6 inch) diameter, then the fiber inside may break.
+%	
+%	Also, the blue end cap should be replaced on the end of the fiber optic cable when you are done using it, to protect from dust and debris entering.
+%\end{framed}
+%
+%A digital spectrometer also uses a diffraction grating, but instead of collecting the dispersed light on a screen to be viewed by people, it collects the light with a charge-coupled device (CCD), an array of light-sensitive pixels much like a digital camera. It then translates the position on the CCD to individual wavelengths and displays a plot of intensity vs. wavelength on a computer. %TODO (see Figure~???)
+%Another difference is that we use an optical fiber to collect the light.
+%
+%Here are a few guidelines:
+%\begin{itemize}
+%	
+%	\item \textbf{Background subtraction.} When you are observing the spectrum of something, there may be stray light entering that is not coming from the thing you are studying. To remove this \textit{background} from the plot, select the gray lightbulb icon in the toolbar. This records the current plot as the background. To display the plot while subtracting the background, select the icon with the minus-lightbulb. To go back to viewing the full spectrum including the background, select the blue S icon.
+%
+%	\item \textbf{Oversaturation}. If, when you zoom out all the way, the plot includes a flat line near the top of the plot, this means that the pixels of the image sensor are recording their maximum value, and they cannot tell you the actual intensity. Reduce the intensity by either reducing the integration time (upper-left corner) or moving the fiber optic cable off-center, so that it receives less light. Note that if you change either of these, then the background frame is no longer correct and must be remeasured.
+%
+%	\item \textbf{Low signal}. If the target is dim, then you might find when you zoom in, the plot is not smooth, but instead jagged and hard to find patterns in. In this case, increase the integration time using the field in the upper-left of the program window. This increases the exposure time, equivalently. Note that if you change the integration time, then the background frame is no longer correct and must be remeasured.
+%
+%	\item \textbf{Saving data.}
+%	
+%	\begin{itemize}
+%		\item Save the images of spectra and numeric files that you generated with SpectraSuite
+%	during your experiments on a USB stick, so that you can use them at home during
+%	preparation of your report (you can also email them as attachments from your
+%	computer at the end of the lab).
+%	
+%	\item You should open a word processor document and a spreadsheet document in which you can save your measured
+%	spectra at the beginning of your work. To save an image of your graph, click on
+%	the fourth icon from the left in the Spectrum IO controls. %TODO (Fig.~???)
+%	This will copy
+%	an image of the graph to the clipboard. Then in your word processor, paste the image by pressing
+%	Ctrl-V.
+%	
+%	\item To save spectrum in the digital form, click on the third from the left icon in
+%	Spectrum IO controls (to the right of print icon). This copies it to clipboard. In
+%	Excel file make sure you are in a new sheet and press Ctrl-V. This should create
+%	to columns of numbers: wavelength (in nm) and counts for your spectrum.
+%	
+%	\item An alternative way to save the data is to click on the floppy disk icon in the
+%	Spectrum IO controls. The format must be ``Tab delimiter, no header''. The
+%	writing directory must be specified (``Browse'' button). The spectrum is saved in a
+%	text file (.txt) as two columns, the first column giving the wavelength in nm, the
+%	second column the corresponding intensity. This file can be imported into a spreadsheet or plotting program.
+%	\end{itemize}
+%\end{itemize}
+%
+%\subsection{Observing a lightbulb}
+%
+%\begin{steps}
+%	
+%	\item Using the spectrometer, observe the spectrum created by a lightbulb at various brightnesses / voltages.  What's the overall shape? \textbf{Record your answer.}
+%	
+%	\item How does the shape change when the brightness increases? \textbf{Record your answer.}
+%	
+%	\item How does the peak frequency change? \textbf{Record your answer.}
+%	
+%	\item How does the visual color of the bulb change as it gets brighter? \textbf{Record your answer.}
+%	
+%	\item\label{ic:step:pattern} As the lightbulb gets brighter, the filament inside gets hotter --- the temperature increases. If all objects act like the tungsten filament as it gets hotter, what general pattern can you state about the light given off by an object as a function of its temperature? \textbf{Record your answer.}
+%
+%\end{steps}
+%
+%Cameras have come a long way since the days of developing film, but sensors are not as smart you might think. They register light, but they can't usually tell the color (i.e. wavelength) of the incoming photons. So then how do you get a color image? In astronomy (and in your cell phone!) color images are generated by measuring the amount of light at specific colors and then combining these measurements to create a colorful image. A filter is used to select bands of color to allow through. In consumer cameras and phone cameras, these filters are permanently attached to the front of individual pixels. In astronomical imaging, there is no permanent filter, and different filters are moved into place.
+%
+%\begin{steps}
+%	\item View the lightbulb's spectrum with the diffraction grating again, this time alternately holding the red and green filters between the grating and the bulb. Observe and \textbf{record} the effect of the filter on the spectrum.
+%	
+%	\item Use the red and green filters in front of the fiber optic input to the spectrometer to see how they affect the spectrum that is received. \textbf{Save a graph of the spectrum with each filter and include in your report.}
+%\end{steps}
+%
+%In a regular astronomical image, each pixel gives just one value --- the number of counts detected in that pixel, regardless of the wavelength of the photon detected. We can treat the fiber optic as a single-pixel camera if we count up the total number of counts detected. To find that total number, you can find the area under the curve in the plot.
+%
+%\begin{steps}
+%	\item With no filter, add up the total number of counts detected by calculating the area under the curve. To do this in an approximate way, count the number of boxes underneath the curve, then multiply this by the height of one box (in counts per nanometer) and by the width of one box (in nanometers). \textbf{Record this value.}
+%	
+%	\item Do the same for the spectrum using the red and green filters separately. Note that the values are different for different filters. This difference (for example, the green value minus the red value) can tell us a quantitative number for what color this object is. \textbf{Record the red, green, and $g-r$ values.}
+%\end{steps}
+%
+%Now you have the value of our single-pixel camera for the case of clear (no filter), red, and green filters. Time to revisit the pattern found above in Step \ref{ic:step:pattern}.
+%
+%\begin{steps}
+%	\item If that pattern from Step \ref{ic:step:pattern} is true, what should happen to the relative values of red and green as the voltage is increased? Should one increase more than the other? What should happen to the quantitative color $g-r$? \textbf{Record your answers.}
+%	
+%	\item Perform an experiment to test whether this prediction is supported. \textbf{Record your procedure, analysis, and results.}
+%\end{steps}
 
 \section{Creating a color image}
 
 To create the beautiful color astronomy images we like to see, one must manually combine images taken with different filters. There are always choices to be made that will change how the combined image looks.
 
-Now you'll create a color image from the three images you took last week, of the same target with r (red), g (green), and i (infrared) filters. Since one of the filters is infrared, and we only have red, green, and blue colors available in DS9, then you will assign the image taken in the infrared to the color blue. This makes this image a \textit{false color image}, since the blue we will see in it does not correspond to the actual wavelength of the light captured.
+\begin{steps}
+	\item Using the directions below, create a false color image of either the Orion nebula (M42), a stellar nursery, or the Crab nebula (M1), the remnant of a supernova. You can find the relevant images on Canvas in the Lab module.
+\end{steps}
+
+Now you'll create a color image from three separate images of the same target. You can use the broadband filters that you used in the previous section, and you can also try using the narrowband filters h-alpha, oiii, and sii. These filters only allow specific wavelengths through, that correspond to particular electronic excitations of hydrogen, oxygen, and silicon, respectively. Different features can be seen with different filters, as seen in Figure \ref{ic:fig:m1-filters}.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{inventing-color/m1-different-filters-lores.png}
+	\caption{Images of M1, the Crab Nebula, in different wavelength filters, revealing different features. Top row from left to right are the narrowband h-alpha, oiii, and sii filters. Bottom row is the broadband g', r', and i'. The structure comes out nicely in the narrowband, while there are more stars in broadband.}\label{ic:fig:m1-filters}
+\end{figure}
+
+Since there is not a 1-to-1 correspondence between the red-green-blue options in DS9 and the filters available, you will assign a different, arbitrary filter to each color in DS9. This makes the image a \textit{false color image}, since the colors we will see in it do not correspond to the actual wavelength of the light captured.
 
 \textbf{Loading and manipulating images in ds9 consists of:}
 \begin{itemize}
@@ -153,13 +252,30 @@ Now you'll create a color image from the three images you took last week, of the
 
 \section{Report checklist and grading}
 
-Each item below is worth 10 points, and there is an additional 10 points for attendance and participation. See Appendix\ \ref{cha:lab-report-format} for guidance on writing the report and formatting tables and graphs.
+Each item below is worth 10 points. See Appendix\ \ref{cha:lab-report-format} for guidance on writing the report and formatting tables and graphs.
 
 \begin{enumerate}
-	\item Qualitative observations with the digital spectrometer (Steps 2--5).
-	\item The pattern / relationship between temperature and spectrum (Step \ref{ic:step:pattern}).
-	\item Effect of filters on spectrum (Steps 7--8).
-	\item Total intensity calculations and plots of spectra with clear, red, and green filters. (Steps 9--10).
-	\item Prediction of what should happen to $g-r$ with temperature increase, and procedure, analysis, results of testing that prediction (Steps 11--12).
-	\item Your beautiful color image (Section 3.2).
+	
+	\item Pattern of how shape of spectrum changes with temperature, your peak wavelength, and how to use spectrum to predict color (Steps 1--5).
+	
+	\item Observations of how spectrum and filter magnitudes change with temperature (Step 8).
+	
+	\item Table and graph of color index versus temperature (Step 10).
+	
+	\item Procedure, calculations, and determination of solor temperature with percent difference (Steps 12--15).
+	
+	\item Your beautiful color image (Step 16).
+	
+	\item Discuss the findings and reflect deeply on the quality and importance of the findings. This can
+	be both in the frame of a scientist conducting the experiment (“What did the experiment tell us
+	about the world?”) and in the frame of a student (“What skills or mindsets did I learn?”).
+	
+	\item A 100–200 word reflection on group dynamics and feedback on the lab manual. Address the
+	following topics: who did what in the lab, how did you work together, what successes and
+	challenges in group functioning did you have, and what would you keep and change about the
+	lab write-up?
+	
+	\item Write a paragraph reporting back from each of the four roles: facilitator, scribe, technician,
+	skeptic. Where did you see each function happening during this lab, and where did you see
+	gaps?
 \end{enumerate}
