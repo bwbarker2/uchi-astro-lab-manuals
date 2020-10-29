@@ -2,7 +2,7 @@
 
 * Each lab write-up or appendix file should start with its title as a chapter. For example, the source file for the lab about measuring the local acceleration of gravity starts with ``\chapter{Little g}''.
 
-* The name of the course lab manual .tex file follows the convention {lowercase course prefix}{course number}-{4-number calendar year}{'0' followed by the number of quarter in the calendar year}{``lab-manual.tex''}. For example, the 2018 Autumn quarter lab manual for PHSC 12700 Stars filename should be ``phsc12700-201804-lab-manual.tex''.
+* The name of the course lab manual .tex file follows the convention {lowercase course prefix}{course number}-{``lab-manual.tex''}. For example, the 2018 Autumn quarter lab manual for PHSC 12700 Stars filename should be ``phsc12700-lab-manual.tex''.
 
 * Figures should be referenced by 'Fig.~\ref{foo}'. The '~' is a space that prevents line breaking on that space. Similarly, equations should be referenced as 'Eq.~', tables as 'Table~', and questions as 'Question~'.
 
@@ -10,9 +10,9 @@
 
 * All labels should have a prefix giving the abbreviation of the lab and type of reference. For example, figures in the Rydberg Constant lab start with 'ryd:fig:'. This creates a 'namespace' for each lab, so that a lab never refers to a figure in a different lab.
 
-* If there is a sentence that defines a term, that term should be in boldface. For example,
+* If there is a sentence that defines a term, that term should be in italics. For example,
 
-The distance $f$ is called the \textbf{focal length} of the lens.
+The distance $f$ is called the \textit{focal length} of the lens.
 
 * Symbols used in formulas should be also displayed in math mode in the inline text.
 
