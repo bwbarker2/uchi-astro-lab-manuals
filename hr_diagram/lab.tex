@@ -1,4 +1,4 @@
-\chapter{How old is a star clusters}
+\chapter{How old are star clusters?}
 
 %TODO after setting "log", tell them that you can right-click and drag vert and horiz to adjust the brightness scale
 
@@ -27,10 +27,6 @@
 
 %TODO specify to flip vertical axis to account for magnitude being reverse of brightness
 
-%TODO in intro, say what magnitude is, why it's flipped and log'd.
-
-%TODO note that their H-R diagram will not necessarily have all the stages of stellar evolution on it
-
 \section{Introduction}
 
 In this lab you will use a Hertzsprung-Russell (H-R) Diagram to learn about a star cluster. This will give us insight into the stellar populations in the clusters we observe, and allow us to estimate the age of their constituent stars. 
@@ -45,7 +41,13 @@ In this lab you will use a Hertzsprung-Russell (H-R) Diagram to learn about a st
 	\item Estimate stellar cluster ages using the predictions of stellar evolutionary models. 
 \end{itemize}
 
-\textbf{Rubric rows to focus on:} D1, D4, F1, F2, G2, G4, G5
+%\textbf{Rubric rows to focus on:} D1, D4, F1, F2, G2, G4, G5
+
+\section{Lab Team Roles}
+
+Decide which team members will hold each role this week: facilitator, scribe, technician, skeptic. If there are three members, consider having the skeptic double with another role. Consider taking on a role you are less comfortable with, to gain experience and more comfort in that role.
+
+Additionally, if you are finding the lab roles more restrictive than helpful, you can decide to co-hold some or all roles, or thinking of them more like functions that every team needs to carry out, and then reflecting on how the team executed each function.
 
 \section{Scientific background}
 
@@ -60,17 +62,21 @@ The surface temperatures of stars can be deduced by fitting a blackbody radiatio
 In order to interpret evolutionary states, we look at physical groupings of stars called stellar clusters, which are located at the same distance from us and were born at the same time from the same cloud of dense gas. The spread in their properties will thus not be due to different ages or initial compositions, but mainly due to different masses. As you will see, stars occupy distinct regions of the observable equivalent of the luminosity-temperature space --- the magnitude-color space called the Hertzsprung-Russell (H-R) diagram. We will make this diagram for a star cluster.
 
 \subsection{Filters}
-Light is composed of energy-packets termed \textbf{photons} with energies that determine their wavelengths (sorter wavelength $\implies$ higher energy). Thus every light source exhibits a \textbf{spectrum} of energies based on its components, which are determined by the physics of the light emission process. Observing the spectrum of radiation emitted from astronomical objects is a fundamental tool in observational astrophysics. However, obtaining the specific intensity of radiation as a function of energy for many dim sources is challenging. An easier way to asses the electromagnetic energies observed is to image them in different \textbf{filters}: materials placed at the opening of a telescope that are transparent to a known range of wavelengths and opaque to all others (thus ``filtering'' the light). Thus, one can image the same object with multiple different filters to get a sense of the wavelength regimes that dominate the light from a source.
+Light is composed of energy-packets termed \textbf{photons} with energies that determine their wavelengths (shorter wavelength $\implies$ higher energy). Thus every light source exhibits a \textbf{spectrum} of energies based on its components, which are determined by the physics of the light emission process. Observing the spectrum of radiation emitted from astronomical objects is a fundamental tool in observational astrophysics. However, obtaining the specific intensity of radiation as a function of energy for many dim sources is challenging. An easier way to assess the electromagnetic energies observed is to image them in different \textbf{filters}: materials placed at the opening of a telescope that are transparent to a known range of wavelengths and opaque to all others (thus ``filtering'' the light). Thus, one can image the same object with multiple different filters to get a sense of the wavelength regimes that dominate the light from a source.
 
 A filter is characterized by its \textbf{transmission function}: a function that characterizes the amount of light that is transmitted by the filter at each wavelength. Figure~\ref{sdss_filters} shows the transmission functions for some standard astronomical filters (similar to the one's you'll be using in this class).
 
 \begin{figure}
 \label{sdss_filters}
 \includegraphics{hr_diagram/fig_sdss_filters_1.png}
-\caption{Filter Transmission Functions for the Sloan Digetal Sky Survey, overlaid on a stellar spectrum. The magnitude observed by each filter will be proportional to the integrated spectrum multiplied by the filter transmission. It's clear in this image that the underlying spectrum of the star will cause the different filters to have different magnitudes. Image source: \texttt{http://www.astroml.org/\_images/fig\_sdss\_filters\_1.png}}
+\caption{Filter Transmission Functions (taking into account atmospheric transmission and instrumental effects such as CCD efficiency) for the Sloan Digital Sky Survey, overlaid on a stellar spectrum. The magnitude observed by each filter will be proportional to the integrated spectrum multiplied by the filter transmission. It's clear in this image that the underlying spectrum of the star will cause the different filters to have different magnitudes. Image source: \url{http://www.astroml.org/book\_figures/appendix/fig\_sdss\_filters.html}}
 \end{figure}
 
 \section{Defining color}
+
+%TODO in intro, say what magnitude is, why it's flipped and log'd.
+
+%TODO rewrite for clarity
 
 Since different bands measure brightness in different wavelengths, the ratio of flux in two bands is a measure of an object's color. Therefore, the difference between astronomical magnitudes of an object in different bands is a measure of its color, since the magnitude scale is logarithmic:
 
@@ -78,7 +84,7 @@ Since different bands measure brightness in different wavelengths, the ratio of 
 m_A - m_B = -2.5\log\left(\frac{F_A}{F_B}\right).
 \end{equation}
 
-An H-R diagram is a plot of stellar magnitude vs. color - aka a ``color magnitude diagram''. A star's color is an observational indication of it's surface temperature. Since all of the stars in a star cluster are at approximately the same distance, their apparent magnitude gives a good relative indicator of luminosity. Therefore, a color-magnitude diagram of stars at roughly constant distance is effectively a temperature-luminosity diagram, and stars fall in characteristic regions of this parameter space based on their mass, age, and metallicity.
+An H-R diagram is a plot of stellar magnitude vs. color --- aka a ``color-magnitude diagram''. A star's color is an observational indication of it's surface temperature. Since all of the stars in a star cluster are at approximately the same distance, their apparent magnitude gives a good relative indicator of luminosity. Therefore, a color-magnitude diagram of stars at roughly constant distance is effectively a temperature-luminosity diagram, and stars fall in characteristic regions of this parameter space based on their mass, age, and metallicity.
 
 We will have data in two wavelength bands, so we can subtract those magnitudes to get a color index. With the software or coding language of your choice, you will plot $g$ on the vertical axis and $g - r$ on the horizontal axis.
 %Add error bars to your plot. If doing so for each data point becomes crowded on your figure, you can estimate a typical error from your data and include it in a legend. 
@@ -92,7 +98,7 @@ To learn about a star cluster, you'll make a color-magnitude diagram of the star
 	
 	\item Select "Show me [stars] in the region [around:]". Note that you will need to know the celestial coordinates of the part of the sky that you want retrieve data about, as well as the radius of a circle that captures all the objects you want.
 	
-	\item Look up M15 in Stellarium and record its RA and Dec (J2000 values). It may be helpful to turn off the ground and atmosphere to get a better view. Then, determine a radius in arcminutes that includes all of the cluster. You can either use the Field Of View (FOV) listed on the screen, or you can turn on the Equatorial Grid by selecting that option in the bottom toolbar or pressing 'e' and use the contour lines.
+	\item Look up M15 in Stellarium (\url{stellarium-web.org}), change the date to 2000-01-01, and record its RA and Dec. It may be helpful to turn off the ground and atmosphere to get a better view. Then, determine a radius in arcminutes that includes all of the cluster. You can either use the Field Of View (FOV) listed on the screen, or you can turn on the Equatorial Grid by selecting that option in the bottom toolbar and use the contour lines.
 	
 	\item The Search Form wants the RA and Dec in decimal degrees. So convert the RA and Dec that you recorded to decimal degrees and enter this (for example, an RA of 15h30m20s converts to 232.5833 degrees). You can use this website to assist: \url{https://www.swift.psu.edu/secure/toop/convert.htm}.
 	
@@ -104,9 +110,9 @@ To learn about a star cluster, you'll make a color-magnitude diagram of the star
 	
 	\item Once you have lots of objects, change the form to output a CSV file.
 	
-	\item Plot the data from the CSV file using your favorite spreadsheet or programming environment. Specifically plot 'g' vs. 'g-r', with 'g' on the vertical axis, as a scatter plot.
+	\item Plot the data from the CSV file using your favorite spreadsheet or programming environment. Specifically plot 'g' vs. 'g-r', with 'g' on the vertical axis, as a scatter plot. Reverse the vertical axis, so that brighter stars with lower magnitudes are towards the top of the plot.
 
-	\item Label the different stages of stellar evolution on your plot.
+	\item Label the different stages of stellar evolution on your plot. \textit{Note that your H-R diagram may not have examples of stars in all stages of stellar evolution.}
 \end{steps}
 
 \section{Comparing to stellar evolution models}
@@ -123,11 +129,34 @@ Several files containing model predictions for the magnitudes of stars at differ
 	\item What physical processes occuring inside the star underlie those changes?
 \end{steps}
 
+\section{Identifying trends in color-magnitude diagrams}
+
+Now that you have seen and used theoretical models for H-R diagrams of of a particular star cluster of different ages, you can use your understanding to learn about other star clusters.
+
+Four unlabeled color-magnitude diagrams are shown in Figure\ \ref{hr:fig:hrs}. They have been modified so that the vertical axis is the absolute magnitude rather than apparent magnitude so that they can be compared. These four clusters were not all formed at the same time. In fact, they have distinct ages that are quite different from one another.
+
+\begin{figure}
+	\includegraphics[width=0.5\textwidth]{hr_diagram/mystery-hr-1}
+	\includegraphics[width=0.5\textwidth]{hr_diagram/mystery-hr-2}
+	\includegraphics[width=0.5\textwidth]{hr_diagram/mystery-hr-3}
+	\includegraphics[width=0.5\textwidth]{hr_diagram/mystery-hr-4}
+	\caption{H-R diagrams for several clusters of stars. The vertical axes have been changed to absolute magnitude for comparison purposes.}\label{hr:fig:hrs}
+\end{figure}
+
+\begin{steps}
+
+	\item What trends do you see among these four diagrams?
+	
+	\item \textbf{Determine the sequence from youngest to oldest, and provide an explanation.}
+	
+\end{steps}
+
 \section{Report checklist and grading}
 
-Each item below is worth 10 points, and there is an additional 10 points for attendance and participation. See Appendix\ \ref{cha:lab-report-format} for guidance on writing the report and formatting tables and graphs.
+Each item below is worth 10 points. See Appendix\ \ref{cha:lab-report-format} for guidance on writing the report and formatting tables and graphs.
 
 \begin{enumerate}
+	
 	\item The coordinates of M15 and the radius you choose, along with how you found these (Step 3).
 	
 	\item The plot of $g$ vs. $g-r$ with labels of different stages of stellar evolution (Steps 9--10).
@@ -136,5 +165,20 @@ Each item below is worth 10 points, and there is an additional 10 points for att
 	
 	\item Analysis and determination of cluster age, with uncertainty (Step 11).
 	
-	\item Answers to questions in Steps 12--13.
+	\item Descriptions of stellar property changes and physical processes leading to change in isochrone shapes (Steps 12--13).
+	
+	\item Trends and ordering of the H-R diagrams of different star clusters (Steps 14--15).
+	
+	\item Discuss the findings and reflect deeply on the quality and importance of the findings. This can
+	be both in the frame of a scientist conducting the experiment (“What did the experiment tell us
+	about the world?”) and in the frame of a student (“What skills or mindsets did I learn?”).
+	
+	\item A 100–200 word reflection on group dynamics and feedback on the lab manual. Address the
+	following topics: who did what in the lab, how did you work together, what successes and
+	challenges in group functioning did you have, and what would you keep and change about the
+	lab write-up?
+	
+	\item Write a paragraph reporting back from each of the four roles: facilitator, scribe, technician,
+	skeptic. Where did you see each function happening during this lab, and where did you see
+	gaps?
 \end{enumerate}
