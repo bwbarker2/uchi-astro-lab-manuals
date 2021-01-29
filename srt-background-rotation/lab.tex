@@ -1,0 +1,106 @@
+\chapter{Rotating solar systems and radio astronomy}
+
+\section{introduction} 
+
+\section{Learning Goals}
+\begin{itemize}
+	\item Make predictions about large, gravitationally bound systems based on observations of smaller scale systems.
+	
+	\item Make observations using the small radio telescope (SRT) and learn how to interpret the data
+	
+	\item Calibrate the SRT and account for errors by measuring background noise in the Chicago sky 
+\end{itemize}
+
+\section{Rotation Experiment} %working title only
+
+\subsection{Goal}
+
+\subsection{Equipment}
+
+One of the observations you will make in the SRT is a measurement of the rotation of the Milky Way. In order to understand the results of that lab later, you will now work through a small workshop on circular motion.
+\begin{itemize}
+	\item First, we know from Newton's first law that the force on an object is equal to its mass times its acceleration, $F=ma$. We also know that an object moving in a circle will experience an acceleration towards the center of its path which is given by $a = \frac{v^2}{r}$, where $v$ is the velocity of the object and r is the radius of its path. Using these two equations, find an equation for the force experienced by an object undergoing circular motion. 
+	
+	\item Objects in orbit also move in an approximately circular path and the force of gravity they experience is given by $F = G\frac{Mm}{r^2}$, where M and m are the masses of the two objects and G is the gravitational constant. Using the equation you found in the previous step, derive an equation for the velocity of the orbiting object as a function of its radius.\textit{Remember to cancel out like factors. Your equation should be in terms of M, r, and G}
+	
+	\item After you find the equation open the link for Desmos online graphing calculator provided above and enter your equation with $y=v$ and $x=r$. For now you can ignore $G$ and have $M$ as a constant. Just have your equation in terms of $v$ and $r$. Limit the graph to the positive x and y axis. The resulting graph is what is known as a rotation curve. What does the rotation curve look like? How does the orbital velocity of an object change as it moves away from the body it is orbiting? \textbf{Write your answers in the report}
+	
+	\item Now you will do something which is not mathematically rigorous but will give you an intuition for the concepts at play. In the calculator, make it so that $M=cx$, in other words, that mass is proportional to the distance. You should now see two lines
+	
+	\item Assume that both lines that you see can be combined. Starting from the origin, follow one line until it intersects with the other and start following that line. Draw the resulting graph. How does velocity change with respect to radius now? 
+	
+	\item So far, you have taken $M$ to be the mass of a single object. Now assume that $M$ represents the total mass contained within the orbital radius. For the first graph you made, $M$ was constant. What does this say about the distribution of mass in a system with that rotation curve? \textit{Think about where all the mass would be concentrated}
+	
+	\item If you saw a second system with a rotation curve resembling the second graph, what can you conclude about the distribution of mass in that system. Think about the changes you made to the mass to get that second graph. 
+\end{itemize}
+\subsection{steps}
+\begin{steps}
+	\item
+	
+\end{steps}
+
+
+
+\section{Background Noise} %working title only
+While learning about the theory behind making astronomical observations is always useful, the best way to gain an intuition for these concepts is through hands on experience. For this experiment, you will learn how to operate the small radio telescope located on top of the Eckart Research Center. In particular, you will learn how to calibrate the telescope and measure the background noise present in the Chicago sky.
+
+When using the telescope you will notice that it outputs a temperature. This is not that the SRT is actually measuring the object's temperature, rather, it is simply interpreting the power it receives as a temperature
+
+\subsection{Telescope Control}
+Unfortunately, you will not be able to directly control the telescope and it will instead be controlled by a designated telescope technician. However, you should still learn the basics of controlling the telescope so you can give the technician proper observation instructions. 
+
+\subsection{Control Buttons}
+The control panel display has a line of control buttons at the top that set
+up a command for the telescope. For instance, if you want to change the receiver
+frequency, you click on the “freq” button. Instructions and help information are
+then displayed in the help panel below the map while the cursor is pointed to the
+button (This field is blank when you move the cursor away). If you want to
+change the frequency, then type data into the data line (e.g. “1420.4 4”), click
+“enter” or “return”. Be sure you leave a space between 1420.4 (which is the
+frequency) and the number 4 (which sets the bandwidth of the system). The
+current observing parameters will be updated in the appropriate box.
+
+\subsection{Control Display \& Sky Map}
+The control panel shows a map of the current sky in Azimuth and
+Elevation units. 0 degrees azimuth points North, 90 degrees points East, 180
+degrees points South and 270 degrees points West. The horizon is at 0 degrees
+elevation and Zenith is at 90 degrees. The telescope can point to about 85
+degrees in elevation.
+The map displays objects visible at the current time. The software tracks
+an object or a given azimuth and altitude position, including corrections for the
+rotation of the earth. Also displayed on the map are various individual
+astronomical sources and a track of dots that show the plane of the Milky Way.
+The Longitude of points along the equator of the Milky Way are shown as Gxxx,
+where xxx is the Galactic longitude. We have an unobstructed view of all objects
+above about 20 degrees.
+
+\subsection{Pointing the Telescope}
+You can point to any given position in the sky by clicking on the “AzEl”
+button and then typing the desired Azimuth and Elevation in the command line at
+the bottom of the display. (e.g., 30 45 “enter” will send the telescope to a position
+of 30 degrees azimuth and 45 degrees elevation). When you enter a position you
+will see a yellow cross and the CMD numbers will change to these numbers. 
+
+When “track” shows up in green at the top of the display, the telescope has
+acquired the position and is tracking it, this holds for sources. If the telescope
+does not move, then you probably have to click on “track”.
+Occasionally the telescope motor will get stuck and stall. Normally it fixes
+itself automatically by going back to the “Stow” position (where it is stowed after
+every observation), but if it remains stalled for several minutes click “Stow” to do
+so manually. This can be a nuisance and time-consuming but you should still be
+able to obtain the necessary data if this happens.
+
+\subsection{Steps}
+\begin{steps}
+	\item Set the receiver frequency to 1416MHz. At this frequency, you will detect the continuum radiation. That is, radiation emitted relatively uniformly over a broad band of frequencies  
+	
+	\item Point the telescope at a position in the sky away from the galactic plane. Do this by choosing Azimuth and Elevation (AzEl) coordinates which do not lie in the arc of labeled locations on the telescope display. \textbf{Record these coordinates}
+	
+	\item Once the telescope has reached the given position, click ``Clear'' to erase any previous reading. Record the raw temperature displayed. Then click ``Cal'' to calibrate the telescope. Record the new output temperature. 
+	
+	\item Repeat the calibration a few times until you read a stable system temperature $T_{sys}$. Wait around 1 minute between calibrations
+	
+	\item After you have successfully calibrated the telescope, from you calibration position, point the telescope 15 degrees lower in elevation and calibrate the telescope 2-3 more times. \textbf{Record $T_{sky}$ and $T_{sys}$ as well as the telescope coordinates}
+	
+	\item Repeat the above step at 
+\end{steps}
