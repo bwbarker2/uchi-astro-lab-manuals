@@ -4,11 +4,19 @@
 
 %todo difference between measurement uncertainty and comparing between known and unknown quantities.
 
-%todo add clarification to pixel scale section - this is used to get the pixel scale so we can get the distance for other objects later in lab using the parallax technique and not the direct measurement like we are doing here.
 
 \section{Introduction}
 
 Since it takes time for light to travel to us from objects in the universe, the further out an object is, the further back in time we see it. So for us to have an accurate picture of how the universe was in the past, we need to know how far away things are. For things that are nearby on Earth, we can travel there and see how far we went, or how long we took to get there. For things further away like the moon, we can use Kepler's laws, or we can bounce a beam of light off of it and see how long it takes to get back. For objects outside of our solar system, it would take too long, and the light would disperse too much, for us to use this last technique. For those objects that are still relatively nearby, we can use the parallax technique as the first rung on our distance ladder.
+
+\section{Forming Groups}
+
+If you are attending the lab session live and do not yet have a group, one way the TA could assist is to arrange "speed networking" among those who still need a group. This would involve the TA organizing Zoom Breakout Rooms, where each room is 2-3 students, and each group talks about how they work and what they are looking for in a group member. Then after 5 minutes or so, the Rooms are changed so people are with different people. This could help people get to know each other enough to form lab groups.
+
+\begin{steps}
+	\item Once you have a group, meet with each other and decide a) what tools you will use to communicate and collaborate, b) when you will meet, c) what you will do when you need to change an agreement, and d) what you will do when you a person has an issue with how the group is functioning.
+%\textbf{Write this in your lab report. This part counts as data collection and analysis, so it can be identical in each member's report.}
+\end{steps}
 
 \section{Team roles}
 
@@ -24,6 +32,25 @@ Since it takes time for light to travel to us from objects in the universe, the 
 These roles can rotate each lab, and you will report at the end of the lab report on how it went for each role. If you have fewer than 4 people in your group, then some members will be holding more than one role. For example, you could have the skeptic double with another role. Consider taking on a role you are less comfortable with, to gain experience and more comfort in that role.
 
 Additionally, if you are finding the lab roles more restrictive than helpful, you can decide to co-hold some or all roles, or think of them more like functions that every team needs to carry out, and then reflecting on how the team executed each function.
+
+\section{Installing SAOImage DS9}
+
+SAOImage DS9, or DS9 for short, is an image viewer, analyzer, and processor written and used by astronomers for working with astronomical images.
+
+\begin{steps}
+	\item Download and install DS9 from \url{http://ds9.si.edu/site/Download.html}. SAOImage DS9, or DS9 for short, is an image viewer, analyzer, and processor written and used by astronomers for working with astronomical images.
+	
+	If you click the link to download, it might say "redirecting" while never actually redirecting. In this case, copy the link into the address bar directly.
+	\begin{framed}	
+		\textbf{For MacOS}, unless you know otherwise, choose from the top set of choices (to the right of
+		the blue apple logo). To find your version, from the Apple menu in the corner of the screen,
+		choose “About This Mac”.
+		
+		If it displays a warning and prevents you from installed from an unidentified developer, follow the instructions at the following link to create an exception:
+		
+		\url{https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac}
+	\end{framed}
+\end{steps}
 
 \section{Worksheet}
 
@@ -108,7 +135,7 @@ Using a finger for measuring angular separation is not very precise. Here you'll
 %serving as “background stars.”
 %Place the “foreground star” part way down the hallway between the telescopes and the observing target.
 \begin{steps}
-	\item Take a picture from a digital camera (likely your phone camera) from the vantage point of each Earth position used above. Be careful to keep the camera still while taking the picture. One way is to brace it again a table or wall.
+	\item Take a picture from a digital camera (likely your phone camera) from the vantage point of each Earth position used above.
 	
 	
 %Make sure that it is positioned so that sightlines from both telescopes
@@ -161,7 +188,7 @@ of the line in physical units, that is, in pixels. \textbf{Record this value in 
 Now that you have the pixel scale of the image, you can use that to measure the parallax angle of the your nearby star and thus find the distance to that object like you did with the little finger method.
 
 \begin{steps}
-	\item Open the first parallax image. Measure the displacement from the nearby star to the distant star (this displacement is zero if the two stars are completely overlapping). Convert that displacement to radians using the pixel scale. Make sure to record both the X- and Y- offsets. Repeat these measurements for the second parallax image using the same distant star.
+	\item Open the first parallax image. Measure the displacement from the nearby star to the distant star. Convert that displacement to radians using the pixel scale. Make sure to record both the X- and Y- offsets. Repeat these measurements for the second parallax image using the same distant star.
 
 	\item Find the total angular distance the star moved between images. To do this, subtract the X- offsets from each other, and subtract the Y- offsets from each other. Then use the Pythagorean theorem to find the total distance moved ($d = \sqrt{x^2 + y^2}$). Divide this by two to get the parallax angle.
 	
@@ -216,6 +243,7 @@ Now that you have the pixel scale of the image, you can use that to measure the 
 Include the following in your lab report. See Appendix~\ref{cha:lab-report-format} for formatting details. Each item below is worth 10 points.
 
 \begin{enumerate}
+	\item Your group's agreements about communication.
 	\item The completed worksheet ``The Parsec''.
 	\item Work and final answer for your distance measurements using your finger, with uncertainty.
 	\item Work and final answer for direct distance measurement, along with percent difference.
