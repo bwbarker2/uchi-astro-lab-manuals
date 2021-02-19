@@ -1,0 +1,163 @@
+\chapter{Measuring light with a spectrometer at home}
+
+%\section{Learning goals}
+%
+%\begin{itemize}
+%	\item Use principles of light diffraction to experimentally determine the wavelength of light.
+%	\item Characterize the color filters in a digital camera.
+%\end{itemize}
+
+\section{Prior knowledge and skills needed}
+
+If your not sure if you have familiarity with these topics, check with a teammate or instructor to learn what you need.
+
+\begin{itemize}
+	\item existence of EM spectrum
+	\item continuous versus discrete spectra and causes of each.
+	\item calculation of single, double slit diffraction and interference patterns
+\end{itemize}
+
+\section{Team roles}
+
+\textbf{Decide on roles} for each group member. The available roles are:
+
+\begin{itemize}
+	\item Facilitator: ensures time and group focus are efficiently used
+	\item Scribe: ensures work is recorded
+	\item Technician: oversees apparatus assembly, usage
+	\item Skeptic: ensures group is questioning itself
+\end{itemize}
+
+These roles can rotate each lab, and you will report at the end of the lab report on how it went for each role. If you have fewer than 4 people in your group, then some members will be holding more than one role. For example, you could have the skeptic double with another role. Consider taking on a role you are less comfortable with, to gain experience and more comfort in that role.
+
+Additionally, if you are finding the lab roles more restrictive than helpful, you can decide to co-hold some or all roles, or think of them more like functions that every team needs to carry out, and then reflecting on how the team executed each function.
+
+\section{Playing around with the grating}
+
+\textbf{Goal:} Become familiar with the diffraction grating and different sources of light around you.
+
+\begin{steps}
+	
+	\item Look through the diffraction grating at several different light sources around you. The easiest ones are small and bright relative to their surroundings. Determine which are continuous, discrete, or some mix of the two. \textbf{Record your observations.}
+	
+	\item How do you need to position yourself, the grating, and the light source relative to each other to see the 1st order diffraction pattern? (for a continuous spectrum, this would be a rainbow) \textbf{Record your findings.}
+	
+\end{steps}
+
+\section{Measuring the wavelength of light}
+
+\textbf{Goal:} Use a diffraction grating and ruler to experimentally determine the wavelength of a particular color in a light source in your environment.
+
+For light of wavelength $\lambda$ incident on a diffraction grating with spacing between lines $d$, the angular location $\theta_m$ of the $m$th maximum is given by
+\begin{equation}\label{spechome:eq:grating}
+ d \left(\sin \theta_m - \sin \theta_\textrm{i} \right) = m \lambda \,,
+\end{equation}
+where $\sin \theta_\textrm{i}$ is the angle of the incident ray relative to the direction normal to the surface of the grating.
+
+To propagate uncertainty in the general case, for the uncertainty $\delta f$ of a function $f$ of $N$ independent values $x_i$, each with uncertainty $\delta x_i$:
+\begin{equation}\label{unc:general}
+\delta f = \sqrt{ \sum_{i=1}^{N} \left(\frac{\partial f}{\partial x_i} \delta x_i\right)^2 } \, .
+\end{equation}
+
+\begin{steps}
+	\item Decide on a light source to observe. Choose which part of the spectrum you will determine the wavelength of. A discrete spectrum is easier here. \textbf{Record your decisions.}
+	
+	\item Design an experiment to quantitatively find the wavelength using Equation \ref{spechome:eq:grating}. Elements of this include the following:
+	
+	\begin{itemize}
+		\item Discuss and design your setup, data collection procedure, and analysis procedure.
+		
+		\item Draw a sketch with ray diagram to illustrate your setup. \textit{Tip: to simplify things, arrange the light source and grating so that the zeroth order maximum has an angle of 0\textdegree{} with respect to the normal of the grating surface.}
+		
+		\item Decide how you will calculate uncertainty and what measurements you need to do this.
+		
+		\item What are the sources of uncertainty and how will you minimize them?
+		
+		\item Carry out any preliminary experiments to try things out or see what might work.
+	\end{itemize}
+	
+	\textbf{Record your discussion notes.}
+	
+	\item Once you have a design, discuss it with your TA.
+	
+	\item \textbf{Record your setup, data collection procedure, and analysis plan.}
+	
+	\item Conduct your experiment and analyze the data to find the wavelength of your chosen part of the spectrum, along with its uncertainty. \textbf{Record your work and results.}
+	
+	\item Checking with the wavelength you found, does it make sense given the actual color of the part of the spectrum you picked? \textbf{Record your answer and reasoning.}
+\end{steps}
+
+\section{Investigating the color filters in a phone camera}
+
+\textbf{Goal:} Use a diffraction grating, a continuous light source, and a ruler to experimentally determine the band pass range of one of the color filters installed in a phone camera.
+
+\begin{steps}
+	\item Choose a light source with a continuous spectrum for this experiment.
+	
+	\item Look through your phone's camera viewer, through the grating, at the light source's 1st order maximum. Notice that the spectrum that looks continuous when viewing with your eyes now looks separated into three bands. \textbf{Take a picture of this and include it in your report.}
+\end{steps}
+
+The spectrum appears to be separated into bands because the pixels in the CCD in your phone camera have permanently installed red, green, and blue color filters in a distributed array. Each filter can be considered a band pass filter, where a band of wavelengths are permitted through.
+
+You will use a similar setup as in the prior section, but you will use the camera lens and CCD instead of your eye's lens and retina. Using the recorded image, you can find the angular separation between the zeroth and first maxima, in a procedure that is reminiscent of analyzing astronomical images. To do this, you first need to find the pixel scale of the camera.
+
+\subsection{Finding the camera's pixel scale}
+
+In a direct manner, one can measure the size of an object in an image in pixels. Each pixel sees a certain angular region. The linear size of this angular region is called the pixel scale (in units of radians or arcseconds per pixel, for example). To find the pixel scale of your camera, you can take an object of known angular size and measure its length in pixels.
+\begin{steps}
+	\item Find an object of known length and place it a known distance from the camera (distance to camera should be at least 10 times the length of the object, so we can use the small angle approximation). Take a picture of that object.
+
+	\item Convert the image files to a .fits format using your favorite image processing software, or the software ``GIMP'' (Gnu Image Manipulation Program), or an image conversion website like \url{https://www.files-conversion.com/image/fits}. For using GIMP, open the file. From the FILE menu, select EXPORT AS, change the
+	file extension to “.fits,” and then click EXPORT. Repeat this procedure for each of your
+	images.
+	
+	\item Open a saved .fits image of the pixel scale image in DS9. Your first task is to measure the pixel scale.
+	%Adjust the contrast so you can clearly see the field of view.
+	From the menu at the top of the screen, select REGION, SHAPE, LINE. On the first row
+	of buttons in the DS9 window, click EDIT then on the second row click REGION. Draw
+	a line along the known length of the object. On the first row of buttons, click REGION then on the
+	second row click INFORMATION. A window should pop up that will give you the length
+	of the line in physical units, that is, in pixels. \textbf{Record this value in your lab notebook.}
+	
+	\item Find the angular size of the known object. Since the object is far away, we can use the small angle approximation for the triangle involved and find that the angular size of the object is equal to its length divided by the distance to the object. This angle is in radians.
+	
+	\item Find the pixel scale by dividing the number of pixels in the length by the angular size of the known object. This gives the pixel scale in pixels per radian.
+	
+\end{steps}
+
+\subsubsection{Measuring a band}
+
+Notice that when you opened the fits file in DS9, it opened a ``cube'' of three images. These are the red, green, and blue filtered images, now able to be analyzed separately.
+
+\begin{steps}
+	\item Identify which image is which color filter by comparing the position of the banded spectra to each other and to the original color image.
+	
+	\item Of the three images in the ``cube'', choose the same one in the sequence that you used to find the pixel scale (so if you used the first image in the list to find the pixel scale, use the first one again here). This assures that you will have the correct pixel scale.
+	
+	\item Design and conduct an experiment to determine the wavelength range of the filter band in that image. \textbf{Record your procedure and results.}
+	
+	\item Checking with the wavelengths you found, do they make sense given the actual color of that band?
+\end{steps}
+
+\section{Report checklist and grading}
+
+Each item below is worth 10 points. See Appendix\ \ref{cha:lab-report-format} for guidance on writing the report and formatting tables and graphs.
+
+\begin{itemize}
+	\item Qualitative observations of light through the grating (Steps 1--2)
+	
+	\item Choice of light source and discussion of experimental decisions (Steps 3--4)
+	
+	\item Sketch of setup with ray diagram, procedure, and analysis plan (Steps 6)
+	
+	\item Data, analysis, and wavelength with uncertainty, with discussion of reasonableness (Steps 7--8)
+	
+	\item Reference image for pixel scale, pixel length of reference object, and final pixel scale (Steps 11, 13--15)
+	
+	\item Color image and filtered image of target, with determination of wavelengths (Steps 10, 18--19)
+	
+	\item Discuss the findings and reflect deeply on the quality and importance of the findings. This can be both in the frame of a scientist conducting the experiment (“What did the experiment tell us about the world?”) and in the frame of a student (“What skills or mindsets did I learn?”).
+
+	\item Write a paragraph (100--200 words) reporting back from each of the four roles: facilitator, scribe, technician, skeptic. Where did you see each function happening during this lab, and where did you see gaps? Which did you do, and how did that go? what successes and	challenges in group functioning did you have, and what would you keep and change about the lab write-up?
+
+\end{itemize}
