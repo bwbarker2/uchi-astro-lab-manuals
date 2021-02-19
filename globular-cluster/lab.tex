@@ -2,15 +2,20 @@
 
 %todo add lab activity to measure differential light intensity at different distances from light bulbs
 %todo clarify that M5 (rather than Sun) should be used to compare to M87 cluster
-%todo describe M classification system, that they can represent different kinds of things
 
 %In this lab, you will measure the distance to the Virgo galaxy, which we will use for next week’s laboratory as the first rung in our distance ladder measuring the distance to other galaxies.
 
+Measuring the distance to another galaxy is not straightforward, since it would take too long to fly there, and it would take too long to bounce light off of it (among other difficulties). In this lab, you will use the apparent brightness of star clusters orbiting another galaxy to estimate the distance. After all, things that are further away from us appear dimmer.
+
 In this lab, we will use a globular cluster in the Milky Way called M5 (see Figure~\ref{gc:fig:m5}) as the first step of our distance
-ladder to other galaxies. By comparing this globular cluster to another in a nearby galaxy
-called M87 in the Virgo cluster, we will estimate its distance, adding another rung to our
-distance ladder. Ideally, we should compare many globular clusters in the Milky Way to
+ladder to other galaxies. First, we will compare the brightness of the Sun to the brightness of a sun-like star in the globular cluster M5 (which is in the Milky Way and close enough that we can resolve individual stars) to find the distance to M5. Then we will compare the brightness of the entire M5 cluster to a cluster orbiting the galaxy M87 (that cluster is so far away that we see it as just one bright mass). This will allow us to find the distance to that galaxy! Ideally, we should compare many globular clusters in the Milky Way to
 M87, here we will use just one cluster, which is enough to demonstrate the principle.
+
+\begin{framed}
+	\textbf{Confusing nomenclature alert!}
+	
+	M5 is a globular cluster in our galaxy, while M87 is an entire galaxy. They share the prefix `M', even though they are very different objects, because these numbers are part of the Messier catalogue, a numbered list of astronomical objects seen in the sky by Charles Messier, who was searching for comets and wanted to record these objects so that when he saw them during his comet search, he could ignore them. So don't forget to consider the negative space, and the work you do along the way!
+\end{framed}
 
 \begin{figure}
 	\centering
@@ -22,6 +27,23 @@ M87, here we will use just one cluster, which is enough to demonstrate the princ
 		image is 2.85 arcmin on a side, or about 1/20th of a degree.
 		Image source: ESA/Hubble \& NASA, \url{http://www.spacetelescope.org/images/potw1118a/}}\label{gc:fig:m5}
 \end{figure}
+
+\section{Team roles}
+
+\textbf{Decide on roles} for each group member. The available roles are:
+
+\begin{itemize}
+	\item Facilitator: ensures time and group focus are efficiently used
+	\item Scribe: ensures work is recorded
+	\item Technician: oversees apparatus assembly, usage
+	\item Skeptic: ensures group is questioning itself
+\end{itemize}
+
+These roles can rotate each lab, and you will report at the end of the lab report on how it went for each role. If you have fewer than 4 people in your group, then some members will be holding more than one role. For example, you could have the skeptic double with another role. Consider taking on a role you are less comfortable with, to gain experience and more comfort in that role.
+
+Additionally, if you are finding the lab roles more restrictive than helpful, you can decide to co-hold some or all roles, or think of them more like functions that every team needs to carry out, and then reflecting on how the team executed each function.
+
+\section{Brightness and distance}
 
 If two identical lightbulbs are placed with one close to you and another farther away, the more distant one will appear dimmer. This is because the light from a spherical emitting source spreads out over a spherical shell that gets larger as the light gets more distant from the source. So if sources 1 and 2 have the same luminosity, then their distances $d$ and apparent brightness
 $b$ are related by
@@ -128,7 +150,12 @@ Figure~\ref{gc:fig:m87} shows the field surrounding the giant Virgo galaxy M87, 
 
 The task is to find the magnitudes for the faint speckles surrounding M87 that are barely visible in
 Figure~\ref{gc:fig:m87}, namely its globular clusters. We set up a similar query to that used for M5, except
-of course the coordinates (RA, Dec) are different. Enter the following query:
+of course the coordinates (RA, Dec) are different.
+
+\begin{steps}
+	\item Enter the following query in SkyServer:
+
+\end{steps}
 
 \begin{verbatim}
 SELECT TOP 200
@@ -140,9 +167,14 @@ WHERE
    AND dec between 12.278 and 12.504
 \end{verbatim}
 
+
 The globular clusters are so far away that each cluster of stars appears as, and is categorized as, stars in
-the SDSS database. As a cross-check, also run the above query in a random piece of sky at least
-5\textdegree away.
+the SDSS database.
+
+\begin{steps}
+	\item As a cross-check, also run the above query in a random piece of sky at least
+5\textdegree{} away.
+\end{steps}
 
 \subsection{Questions and results for your report}
 
@@ -158,9 +190,9 @@ the SDSS database. As a cross-check, also run the above query in a random piece 
 	process more precise? What other sources of uncertainty do you think
 	there are?
 	
-	\item Calculate the distance to M87 using Equation~\ref{gc:eq:m-d}, comparing its magnitude to that of M5. If you have not already converted AU to
+	\item Calculate the distance to M87 using Equation~\ref{gc:eq:m-d}, comparing its magnitude to that of M5 (the entire cluster M5, not the individual star you used earlier). If you have not already converted AU to
 	parsecs, do so now to get the distance in mega-parsecs ($1\:\mathrm{Mpc} = 2.06 \times
-	10^{11}\:\mathrm{AU}$). The accepted value for the distance to the Virgo cluster is 16.4
+	10^{11}\:\mathrm{AU}$). The accepted value for the distance to the Virgo cluster (the galaxy cluster that M87 is in) is 16.4
 	Mpc. From your uncertainties above, how well do these two values agree within your expected level
 	of uncertainty? See Appendix~\ref{unc:sec:comparing} for details of how to determine this.
 	
@@ -171,15 +203,21 @@ the SDSS database. As a cross-check, also run the above query in a random piece 
 
 Each of the following items will be graded out of 10 points.
 
-\begin{itemize}
-	\item Completed table
+\begin{enumerate}
+	\item Completed table of magnitudes and distances
 	
-	\item Three color magnitude graphs
+	\item Color magnitude diagram for M5
 	
-	\item Questions 1--2 from the first section
+	\item Calculation and determination of magnitude and distance of a Sun-like star in M5 (Step 2)
+
+	\item Color-magnitude diagrams for M87 and random-sky
 	
-	\item Questions 3--6 from the second section
+	\item Questions in Steps 5--6
 	
-	\item A 100--200 word reflection on group dynamics and feedback on the lab manual. Address the following topics: who did what in the lab, how did you work together, what successes and challenges in group functioning did you have, and what would you keep and change about the lab write-up?
+	\item Calculation and determination of magnitude and distance of M87, with analysis of uncertainty and comparison (Step 7)
+	
+	\item Age of light and what was happening on Earth (Step 8)
+	
+	\item A 100--200 word reflection on group dynamics and feedback on the lab manual. Address the following topics: who did what in the lab, how did you work together, how group roles functioned, what successes and challenges in group functioning did you have, and what would you keep and change about the lab write-up?
 		
-\end{itemize}
+\end{enumerate}
