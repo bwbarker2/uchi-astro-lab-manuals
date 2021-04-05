@@ -12,13 +12,31 @@
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{memoir}}
 
+\AtBeginDocument{
+	\specialcomment{solution}{\begingroup \color{red} \textbf{Solution: }}{\endgroup}
+%	\excludecomment{solution}
+}
+
+\newif\ifanswerkey
+\answerkeyfalse
+
+\DeclareOption{answerkey}{
+	\answerkeytrue
+}
+
 \ProcessOptions\relax
+
+\ifanswerkey
+\else
+ \AtBeginDocument{\excludecomment{solution}}
+\fi
 
 \LoadClass[letterpaper]{memoir}
 
 \RequirePackage{environ} % provides \NewEnviron command, to access arguments in the final code of the environment
 \RequirePackage[normalem]{ulem}
 \RequirePackage{enumitem}
+\RequirePackage{comment}
 
 %\chapterstyle{bianchi}
 %\chapterstyle{lyhne}
