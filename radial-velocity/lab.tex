@@ -1,11 +1,5 @@
 \chapter{Detecting exoplanets with the radial velocity method}
 
-%todo radial velocity simulator gives a blank window on some personal browsers, while other websites that host the same simulator open fine for them. Maybe note this in relevant section.
-
-%todo include better instructions for using SciDaVis, maybe link to a video tutorial
-
-%todo include discussion of how doppler shifts are used to find the radial velocity?
-
 %todo review sinusoidal curves and how to extract info from curve fits
 
 % TA will demonstrate two hanging masses on a ruler, which is balanced on a horizontal rod mounted on a support stand. The masses should be very uneven to simulate a star and planet. Demonstrate how the center of mass changes with the change in separation and change in mass of the planet.
@@ -20,26 +14,45 @@ In this lab, we will explore the radial velocity technique, the method used to d
 
 %Each bolded instruction is worth 4 points, and each numbered question is worth 2 points. We include 10 points for attendance and participation to arrive at 60 points for this lab.
 
+\section{Team roles}
+
+\begin{steps}
+	\item \textbf{Decide on roles} for each group member.
+\end{steps}
+
+The available roles are:
+\begin{itemize}
+	\item Facilitator: ensures time and group focus are efficiently used
+	\item Scribe: ensures work is recorded
+	\item Technician: oversees apparatus assembly, usage
+	\item Skeptic: ensures group is questioning itself
+\end{itemize}
+
+These roles can rotate each lab, and you will report at the end of the lab report on how it went for each role. Some members will be holding more than one role. For example, you could have the skeptic double with another role. Consider taking on a role you are less comfortable with, to gain experience and more comfort in that role.
+
+Additionally, if you are finding the lab roles more restrictive than helpful, you can decide to co-hold some or all roles, or think of them more like functions that every team needs to carry out, and then reflecting on how the team executed each function.
+
+\section{Add members to Canvas lab report assignment group}
+
+\begin{steps}
+	\item On Canvas, navigate to the People section, then to the ``Lab 2 Groups'' tab. Find a group that is not yet used, and have each person in your group add themselves to that same lab group.
+\end{steps}
+
+This enables group grading of your lab report. Only one person will submit the group report, and all members of the group will receive the grade and have access to view the graded assignment.
+
 \section{Building Intuition}
 
-The radial velocity method works because in a planetary system, both the host star and its planet orbit the Center of Mass for the system. Since the host star is also moving, the star has a non-zero velocity, which we can study through the Doppler effect on light.
+We usually say that a planet orbits a star, but this isn't quite true --- both planet and star orbit the center of mass of the system. This is called the \textit{barycenter}. This results in the star wobbling in a circular motion. The motion is too small to detect from Earth directly. But when the source of waves moves towards or away from an observer, the wavelength of that wave is shifted higher or lower, respectively. Since stars have characteristic gaps in the spectrum of light they emit, we can detect this \textit{Doppler shift}, and thus determine the \textit{radial velocity} of the star. From this and our knowledge of orbital dynamics, we can deduce characteristics of exoplanets orbiting that star.
 
-Open the link for the Center of Mass webpage (\url{http://astro.unl.edu/naap/esp/centerofmass.html}). The animation in the upper left illustrates the orbit of two bodies about their Center of Mass. Read through the webpage and use the sliders to explore how varying separation and relative mass changes the Center of Mass.
-
-\begin{framed}
-	To use the interactive sliders on the above website, you need to enable Adobe Flash in your browser. If you don't see the diagram of two masses with adjustable masses and separation, then you don't have Flash enabled.
+\begin{steps}
+	\item Open the link for the Center of Mass webpage (\url{https://astro.unl.edu/mobile/center-of-mass-simulator/index.html}). Use the sliders to explore how varying separation and relative mass changes the Center of Mass.
 	
-	If it does not automatically run, then depending on your browser, try the following:
-	\begin{itemize}
-		\item Mozilla Firefox: \url{https://support.mozilla.org/en-US/kb/keep-flash-up-to-date-and-troubleshoot-problems}
+	\item Open the link for the radial velocity simulator (\url{https://www.bu.edu/astronomy/visualizations/AlienWorlds/simulation-radial.html}).
 		
-		\item Google Chrome: \url{https://support.google.com/chrome/answer/6258784}
-		
-		\item Safari: \url{https://helpx.adobe.com/flash-player/kb/enabling-flash-player-safari.html}
-		
-		\item Microsoft Edge: \url{https://helpx.adobe.com/flash-player/kb/flash-player-issues-windows-10-edge.html}
-	\end{itemize}
-\end{framed}
+	\item Vary the mass of the planet, the mass of the star, and the distance. Note how the radial velocity graph changes. Vary the other parameters (viewing angle, star radius, planet radius) and see how the radial velocity changes. \textbf{Include your findings in your report.}		
+\end{steps}
+
+\section{Building quantitative intuition}
 
 For this lab, the following values will be useful:
 \begin{itemize}
@@ -52,13 +65,13 @@ For this lab, the following values will be useful:
 	\item $G = 6.674 \times 10^{-11}\:\mathrm{N}\:\mathrm{m}^2/\mathrm{kg}^2$ (Newtonian constant of gravitation)
 \end{itemize}
 
+Consider the picture in Figure~\ref{rv:fig:two-body-cm} and define $M_\textrm{p} = 0.5 M_\textrm{J}$ as the mass of the planet (the smaller object),  $M_\textrm{S} = 1.0 M_\textrm{Sun}$ as the mass of the star (the larger object), and $d = 0.0527\:$AU be the separation between the two. Assume the system is in a circular orbit.
+
 \begin{figure}
 	\centering
 	\includegraphics[width=0.4\textwidth]{radial-velocity/two-body-cm}
-	\caption{Schematic of a star (upper-left) and planet (lower-right) orbiting a common center-of-mass.}\label{rv:fig:two-body-cm}
+	\caption{Schematic of a star (upper-left) and planet (lower-right) orbiting a common center-of-mass (marked with a red cross).}\label{rv:fig:two-body-cm}
 \end{figure}
-
-Consider the picture in Figure~\ref{rv:fig:two-body-cm} and define $M_\textrm{p} = 0.5 M_\textrm{J}$ as the mass of the planet (the smaller object),  $M_\textrm{S} = 1.0 M_\textrm{Sun}$ as the mass of the star (the larger object), and $d = 0.0527\:$AU be the separation between the two. Assume the system is in a circular orbit.
 
 \begin{steps}
 	\item How far is the Center of Mass from the center of the star (in AU)?
@@ -74,7 +87,11 @@ Since the star is moving around the Center of Mass, it has a non-zero velocity. 
 	\item Sketch the figure, then on that sketch, draw arrows showing the velocity at different parts of the orbit. What happens to the direction of the star’s velocity as the planet traces out its orbit?
 \end{steps}
 
-Astronomers can use spectroscopic techniques for measuring the velocity of stars along the line of sight between the earth and the star. In the illustration in Figure~\ref{rv:fig:two-body-cm}, suppose the earth is to the right of the system so that we are observing the system edge on from the right side of the page. \textbf{Draw a graph} similar to Figure~\ref{rv:fig:graph} and then draw on it the ``line of sight'' velocity for the star as a function of time (hint: it will be a trigonometric function).
+Astronomers can use spectroscopic techniques for measuring the velocity of stars along the line of sight between the earth and the star. In the illustration in Figure~\ref{rv:fig:two-body-cm}, suppose the earth is to the right of the system so that we are observing the system edge on from the right side of the page. 
+
+\begin{steps}
+	\item \textbf{Draw a graph} similar to Figure~\ref{rv:fig:graph} and then draw on it the ``line of sight'' velocity for the star as a function of time (hint: it will be a trigonometric function).
+\end{steps}
 
 \begin{figure}
 	\centering
@@ -92,19 +109,15 @@ Consider a similar system only with a planet that is twice the mass ($M_\textrm{
 	\item What is the system's host star orbital radius (in AU) and orbital velocity (in m/s)?
 	
 	\item How do these compare with the values for the previous system with a less massive planet?
-\end{steps}
 
-\textbf{Sketch the line of sight velocity} for this more massive system on the same plot that you already drew.
+	\item \textbf{Sketch the line of sight velocity} for this more massive system on the same plot that you already drew.
 
-\begin{steps}
 	\item How does the line of sight velocity depend on the planet’s mass?
 \end{steps}
 
-Open the link for the radial velocity simulator (\url{http://astro.unl.edu/naap/esp/animations/radialVelocitySimulator.html}). Under ``Visualization Controls'' click ``show multiple views.'' Under ``Planet Properties'' set the eccentricity to zero. Under ``Animation Controls,'' press ``Start Animation'' to set things in motion. Vary the mass of the planet, the mass of the star and the semimajor axis and note how the radial velocity graph changes. Vary the other parameters (eccentricity, longitude, inclination) and see how the radial velocity changes. \textbf{Include your findings in your report.}
-
 \section{Radial velocity of 51 Peg}
 
-Table~\ref{rv:tab:51peg} lists actual line of sight velocities for 51 Peg measured by Marcy \& Buttler in 1995 at the Lick Observatory in California.
+Table~\ref{rv:tab:51peg} lists measured line of sight velocities for the star 51 Pegasi measured by Marcy \& Buttler in 1995 at the Lick Observatory in California. You will use this data to determine the mass and orbital distance of the exoplanet orbiting 51 Peg.
 
 \begin{table}
 	\centering
@@ -112,18 +125,46 @@ Table~\ref{rv:tab:51peg} lists actual line of sight velocities for 51 Peg measur
 	\caption{Line-of-sight velocities for 51 Pegasi measured over time.}\label{rv:tab:51peg}
 \end{table}
 
-Use the free software SciDAVis to plot this data. You can download and install it on your computer from \url{https://sourceforge.net/projects/scidavis/}.
+\begin{steps}
+	\item Open the Google Sheet found here: \url{https://docs.google.com/spreadsheets/d/1aTp-UxxgGf3wzgCrGr6HHANdEkvuTbgkLRbQcpRHDGQ/edit?usp=sharing}
+	
+	\item Make a copy of this sheet for your group to use.
+\end{steps}
+
+This spreadsheet contains the data in Table~\ref{rv:tab:51peg}, as well as a model for the velocity as a function of time. Circular motion, projected to 1 dimension, can be described by a sine function. The most general sine function has free parameters that can be changed to represent any sinusoidal motion. For example, the velocity function can be described with
+\begin{equation}
+ v(t) = \textrm{A} \sin \left[\frac{2 \pi}{\textrm{B}}\left(t + \textrm{C}\right)\right] + \textrm{D} \,,
+\end{equation}
+where A is the amplitude of the motion and B is the period of the motion. C is a time offset, to account for where the star is in its oscillation cycle at $t=0$. D is constant velocity offset, to account for any constant line of sight velocity that was not already compensated for (for example, the motion of the Sun relative to the star).
+
+%Use the free software SciDAVis to plot this data. You can download and install it on your computer from \url{https://sourceforge.net/projects/scidavis/}.
 %, or you can use the lab computers, which have it installed already.
 
-\begin{framed}
-\textbf{Mac users:} if you get an error when trying to run SciDaVis, saying that it is from an unidentified developer, follow the directions at the following website to let it run:
+%\begin{framed}
+%\textbf{Mac users:} if you get an error when trying to run SciDaVis, saying that it is from an unidentified developer, follow the directions at the following website to let it run:
+%
+%\url{https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/10.15/mac/10.15}
+%\end{framed}
 
-\url{https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/10.15/mac/10.15}
-\end{framed}
+\begin{steps}
+	\item In your copy of the spreadsheet, explore changing the fit parameters A--D and see what effect it has on the model velocity.
+	
+	\item Find a set of parameters that makes the model velocity curve visually similar to the data. \textbf{Record these parameters and the resulting plot.}
+\end{steps}
 
-Then, fit an equation to the data. To do so in SciDAVis, first save the project, so you won't accidentally lose your work. Then, select Analysis $\blacktriangleright$ Fit Wizard... from the drop-down menu. Type your desired equation into the large box. You can use any of the functions you can find in the lists at the top of the window and combine them how you would like. For fit parameters, use the letters a, b, c, and so on. For each fit parameter you use, include it in the list of parameters. For example, if you think the data are best represented by a tangent function, you could put ``\texttt{b*tan(c*x+d)}'' in the box. Then click the ``Fit $>>$'' button, then the ``Fit'' button to fit the data with this equation. This finds the parameters for the equation that make it best fit the data. Experiment to find an equation that seems to fit well.
+To get a more precise estimate for the parameters, you can use a common statistic called the \textit{rms deviation}. "rms" stands for root-mean-square. For $N$ data points $y_{\textrm{data},i}$, the rms deviation from the theoretical model points $y_{\textrm{model},i}$ can be found by
+\begin{equation}
+ \textrm{rms deviation} = \sqrt{\dfrac{\sum_{i=0}^{N-1} \left( y_{\textrm{data},i} - y_{\textrm{model},i} \right)^2}{N}} \,.
+\end{equation}
+The smaller the rms deviation, the closer the fit. The rms deviation is already calculated for you in cell \texttt{D6} in the spreadsheet.
 
-You can retrieve the fit parameters and their uncertainties from the Results Log on the main window. \textbf{Include the graph, the fit parameters, and their uncertainties in your report.}
+\begin{steps}
+	\item Vary the parameters to minimize the rms deviation. \textbf{Record these parameters, the resulting plot, and your final rms deviation.}
+\end{steps}
+
+%Then, fit an equation to the data. To do so in SciDAVis, first save the project, so you won't accidentally lose your work. Then, select Analysis $\blacktriangleright$ Fit Wizard... from the drop-down menu. Type your desired equation into the large box. You can use any of the functions you can find in the lists at the top of the window and combine them how you would like. For fit parameters, use the letters a, b, c, and so on. For each fit parameter you use, include it in the list of parameters. For example, if you think the data are best represented by a tangent function, you could put ``\texttt{b*tan(c*x+d)}'' in the box. Then click the ``Fit $>>$'' button, then the ``Fit'' button to fit the data with this equation. This finds the parameters for the equation that make it best fit the data. Experiment to find an equation that seems to fit well.
+%
+%You can retrieve the fit parameters and their uncertainties from the Results Log on the main window. \textbf{Include the graph, the fit parameters, and their uncertainties in your report.}
 
 \begin{steps}
 	\item From your fit to the data, what is the orbital period (days) and host star orbital velocity (m/s)?
@@ -177,13 +218,14 @@ Do some research on the history and background of the systems you analyzed (51Pe
 Include the following in your lab report. See Appendix~\ref{cha:lab-report-format} for formatting details. Each item below is worth 10 points.
 
 \begin{enumerate}
-	\item Answers to Questions 1--4, including figure with sketch of velocities
-	\item Graph of line of sight velocty vs time for two stars (bold text above Steps 5 and 8)
-	\item Answers to Questions 5--8
-	\item Your findings from varying parameters in the radial velocity animation (bold text at end of Section 2.2)
-	\item Your graph for line-of-sight velocities, fit parameters, and their uncertainties (bold text above Question 9)
-	\item Answers to Questions 9--12
-	\item Answers to Questions 13--15
-	\item Answers to Questions 16--17
+	\item Discussion of how radial velocity changes based on available parameters (Step 5)
+	\item Answers to Questions 6--9, including figure with sketch of velocities
+	\item Graph of line of sight velocity vs time for two stars (Steps 10 and 14)
+	\item Answers to Questions 11--13, 15
+	\item Your plots for line-of-sight velocities and fit parameters (Steps 19--20)
+	\item The exoplanet's orbital period and the host star's orbital velocity and orbital radius (Steps 21--22)
+	\item The star-exoplanet system's semimajor axis and the exoplanet's mass (Steps 23--24)
+	\item Orbit parameters and comparison for 3 star-planet systems (Steps 25--27)
+	\item Reflection on the systems you analyzed (Steps 28--29)
 	\item A 100--200 word reflection on group dynamics and feedback on the lab manual. Address the following topics: who did what in the lab, how did you work together, what successes and challenges in group functioning did you have, and what would you keep and change about the lab write-up?
 \end{enumerate}
