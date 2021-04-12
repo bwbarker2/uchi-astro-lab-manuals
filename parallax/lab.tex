@@ -1,36 +1,18 @@
 \chapter{Measuring distant objects with parallax}
 
 %todo make two more telescopes on tripods, to have two setups going at a time. each group can use one telescope at a time, as long as scopes don't move.
-
 %todo difference between measurement uncertainty and comparing between known and unknown quantities.
 
-%todo add clarification to pixel scale section - this is used to get the pixel scale so we can get the distance for other objects later in lab using the parallax technique and not the direct measurement like we are doing here.
 
 \section{Introduction}
 
 Since it takes time for light to travel to us from objects in the universe, the further out an object is, the further back in time we see it. So for us to have an accurate picture of how the universe was in the past, we need to know how far away things are. For things that are nearby on Earth, we can travel there and see how far we went, or how long we took to get there. For things further away like the moon, we can use Kepler's laws, or we can bounce a beam of light off of it and see how long it takes to get back. For objects outside of our solar system, it would take too long, and the light would disperse too much, for us to use this last technique. For those objects that are still relatively nearby, we can use the parallax technique as the first rung on our distance ladder.
 
-\section{Team roles}
+\section{Procedure}
 
-\textbf{Decide on roles} for each group member. The available roles are:
+First, complete the worksheet ``The Parsec'' on the following pages. You can draw the diagrams needed and include a picture of your diagrams, or use a drawing program to draw on them. Each member of the group will turn in their own worksheet as part of their lab report, and you can work in groups to complete them.
 
-\begin{itemize}
-	\item Facilitator: ensures time and group focus are efficiently used
-	\item Scribe: ensures work is recorded
-	\item Technician: oversees apparatus assembly, usage
-	\item Skeptic: ensures group is questioning itself
-\end{itemize}
-
-These roles can rotate each lab, and you will report at the end of the lab report on how it went for each role. If you have fewer than 4 people in your group, then some members will be holding more than one role. For example, you could have the skeptic double with another role. Consider taking on a role you are less comfortable with, to gain experience and more comfort in that role.
-
-Additionally, if you are finding the lab roles more restrictive than helpful, you can decide to co-hold some or all roles, or think of them more like functions that every team needs to carry out, and then reflecting on how the team executed each function.
-
-\section{Worksheet}
-
-Complete the worksheet ``The Parsec'' on the following pages. You can draw the diagrams needed and include a picture of your diagrams, or use a drawing program to draw on them.
-%Each member of the group will turn in their own worksheet as part of their lab report, and you can work in groups to complete them.
-
-\includepdf[pages=1-2]{parallax/out.pdf}
+\includepdf[pages=1-3]{parallax/out.pdf}
 
 \section{A quick measurement with hand tools}
 
@@ -45,9 +27,9 @@ You'll first use crude measuring tools to compute the nearby star's distance wit
 \begin{steps}
 	\item Identify an object to be your ``nearby star'' and another as your ``distant star'', by analogy to the figure in the worksheet. Find a place where you can stand and move a meter or two side to side and still see both ``stars''. The movement will simulate the Earth moving from its January to its July position. When picking the stars and your Earth positions, check to see that from each Earth position, the distant star does not appear to move much, compared to the nearby star, and your guessed distance to the nearby star is at least 10 times greater than the distance between your two Earth positions.
 	
-	\item Looking from just one eye, move so that the two stars appear to be directly overlapping. Mark your current position as Earth (January). Hold up your smallest finger at arm's length and move to your left or right until your finger fits just in between the two stars. This means that they are 1 degree away from each other in angular separation. Mark this position as Earth (July).
+	\item Looking from just one eye, move so that the two stars appear to be just touching each other. Mark your current position as Earth (January). Hold up your smallest finger at arm's length and move to your left or right until your finger fits just in between the two stars. This means that they are 1 degree away from each other in angular separation. Mark this position as Earth (July).
 	
-	\item Draw a diagram, similar to the second figure in the worksheet, and find your own Earth-Sun distance (half the distance between your Earth positions). Calculate the parallax angle in radians, which is half the 1 degree you measured with your finger. For the distance measurement, you can use a ruler, measuring tape, or objects that have standard lengths like coins, paper money, or sheets of paper (or Google Maps if the distance is very long, like for mountains or tall buildings in the distance).
+	\item Draw a diagram, similar to the second figure in the worksheet, and find your own Earth-Sun distance (half the distance between your Earth positions). Calculate the parallax angle in radians, which is half the 1 degree you measured with your finger. For the distance measurement, you can use a ruler, measuring tape, or objects that have standard lengths like coins, paper money, or sheets of paper.
 \end{steps}
 	
 Now the distance to the nearby star can be found using the triangle formed by the line segments Sun-Earth, Earth-Star, and Star-Sun (see Figure~\ref{par:fig:figure}). Trigonometry relates these lengths to each other according to
@@ -55,7 +37,7 @@ Now the distance to the nearby star can be found using the triangle formed by th
 	\tan p = \frac{a}{d}\,,
 \end{equation}
 where $p$ is the parallax angle in radians, $d$ is the distance to the star, and $a$ is half of the distance between the two measurement positions. Since the length $d$ is much greater than $a$, the angle $p$ is very small, and so we can use the small angle approximation $\tan u \approx u$, and therefore
-\begin{equation}\label{par:eq:pad}
+\begin{equation}
 	p = \frac{a}{d}\,.
 \end{equation}
 
@@ -65,19 +47,12 @@ where $p$ is the parallax angle in radians, $d$ is the distance to the star, and
 \end{figure}
 
 \begin{steps}
-	\item Use Equation\ \ref{par:eq:pad} to calculate the distance to the nearby star.
+	\item Use the above equation to calculate the distance to the nearby star.
 	
-	\item Conduct the data collection twice more to get two more Earth-Star distances. You can use this to calculate the \textit{measurement uncertainty} --- the uncertainty is half the range of values, and the distance is the average of the 3 distances you found.
+	\item Conduct the data collection twice more to get two more Earth-Star distances. You can use this to calculate an uncertainty for your measurement --- the uncertainty is half the range of values, and the distance is the average of the 3 distances you found.
 	
 	\item Find the distance to the nearby star in a more direct way --- measure the distance with a measuring tape or pieces of paper, or for more distant objects, find them on Google Maps.
-	For this value, also measure this distance 3 times and find the value and uncertainty as in the previous step.
 \end{steps}
-
-\begin{framed}
-	\textbf{Notation for uncertain values}
-	
-To be precise about how imprecise our measurements are, scientists often express the quantities as ``$\langle \textrm{value} \rangle \pm \langle \textrm{uncertainty} \rangle$'', followed by the units. For example, if you measured your average distance to be 3.3 meters, and your uncertainty of that distance to be 0.4 meters, then to express in a succinct way, you can write the distance as ``$3.3 \pm 0.4\:$meters''.
-\end{framed}
 
 One way of describing how different two values are, without considering the uncertainty of those values, is to calculate the percent difference:
 \begin{equation}
@@ -87,9 +62,6 @@ One way of describing how different two values are, without considering the unce
 \begin{steps}	
 	\item How close is your parallax distance measurement to the direct measurement? Report the percent difference.
 \end{steps}
-
-In the next section, you will compare these values with each other using their uncertainties as well.
-
 %Go out into the third floor hallway of KPTC (the long corridor near room 311).
 %Go to the fifth floor of Eckhardt Research Center. Near the elevators on the north side, there are
 %two telescopes%
@@ -108,7 +80,7 @@ Using a finger for measuring angular separation is not very precise. Here you'll
 %serving as “background stars.”
 %Place the “foreground star” part way down the hallway between the telescopes and the observing target.
 \begin{steps}
-	\item Take a picture from a digital camera (likely your phone camera) from the vantage point of each Earth position used above. Be careful to keep the camera still while taking the picture. One way is to brace it again a table or wall.
+	\item Take a picture from a digital camera (likely your phone camera) from the vantage point of each Earth position used above.
 	
 	
 %Make sure that it is positioned so that sightlines from both telescopes
@@ -161,15 +133,13 @@ of the line in physical units, that is, in pixels. \textbf{Record this value in 
 Now that you have the pixel scale of the image, you can use that to measure the parallax angle of the your nearby star and thus find the distance to that object like you did with the little finger method.
 
 \begin{steps}
-	\item Open the first parallax image. Measure the displacement from the nearby star to the distant star (this displacement is zero if the two stars are completely overlapping). Convert that displacement to radians using the pixel scale. Make sure to record both the X- and Y- offsets. Repeat these measurements for the second parallax image using the same distant star.
+	\item Open the first parallax image. Measure the displacement from the nearby star to the distant star. Convert that displacement to radians using the pixel scale. Make sure to record both the X- and Y- offsets. Repeat these measurements for the second parallax image using the same distant star.
 
 	\item Find the total angular distance the star moved between images. To do this, subtract the X- offsets from each other, and subtract the Y- offsets from each other. Then use the Pythagorean theorem to find the total distance moved ($d = \sqrt{x^2 + y^2}$). Divide this by two to get the parallax angle.
 	
-	\item Use Equation\ \ref{par:eq:pad} to find your new calculation for the distance to the nearby star.
+	\item Use Equation 2.2 to find your new calculation for the distance to the nearby star.
 	
 	\item Calculate the percent difference between this and the direct measurement like you did in the previous section.
-	
-	\item Use the $t'$ statistic described in Appendix\ \ref{unc:sec:comparing} to compare the two values and interpret the result --- do these two ways of distance measurement really measure the same thing?
 \end{steps}
 
 %Given that the field of view of the Galileoscope is 1.5\textdegree
@@ -199,19 +169,19 @@ Now that you have the pixel scale of the image, you can use that to measure the 
 %
 %Also use a map to find the distance from you to your foreground star (with uncertainty). Compare these quantities with their uncertainties using the procedure found in Appendix~\ref{unc:sec:comparing}, to see the degree to which they agree.
 
-%\section{Questions}\label{par:sec:questions}
-%
-%These should be included in your lab report.
-%
-%\begin{steps}
-%	\item Your parallax measurements depend on an incorrect implicit assumption. What is
-%	this assumption, and how will it bias your results? How would you change the
-%	procedure in order to minimize this bias?
-%	\item What were the primary sources
-%	of uncertainty? How would you improve the procedure for future measurements?
-%\end{steps}
+\section{Questions}\label{par:sec:questions}
 
-\section{Report checklist and grading}
+These should be included in your lab report.
+
+\begin{steps}
+	\item Your parallax measurements depend on an incorrect implicit assumption. What is
+	this assumption, and how will it bias your results? How would you change the
+	procedure in order to minimize this bias?
+	\item What were the primary sources
+	of uncertainty? How would you improve the procedure for future measurements?
+\end{steps}
+
+\section{Report checklist}
 
 Include the following in your lab report. See Appendix~\ref{cha:lab-report-format} for formatting details. Each item below is worth 10 points.
 
@@ -221,7 +191,7 @@ Include the following in your lab report. See Appendix~\ref{cha:lab-report-forma
 	\item Work and final answer for direct distance measurement, along with percent difference.
 	\item A figure with your three images (pixel scale image and two parallax images).
 	\item The displacement vectors from distant star to nearby star.
-	\item Final determined value of the distance and comparison with the direct distance using percent difference and $t'$ statistic. Show your work (see Appendix~\ref{cha:lab-report-format}).
-%	\item Answers to the questions in Section~\ref{par:sec:questions}, with justification.
-	\item A 100--200 word reflection on group dynamics and feedback on the lab manual. Address the following topics: who did what in the lab, how did you work together, how group roles functioned, what successes and challenges in group functioning did you have, and what would you keep and change about the lab write-up?
+	\item Final determined value of the distance and comparison with the direct distance. Show your work (see Appendix~\ref{cha:lab-report-format}).
+	\item Answers to the questions in Section~\ref{par:sec:questions}, with justification.
+	\item A 100--200 word reflection on group dynamics and feedback on the lab manual. Address the following topics: who did what in the lab, how did you work together, what successes and challenges in group functioning did you have, and what would you keep and change about the lab write-up?
 \end{enumerate}
