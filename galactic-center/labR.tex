@@ -1,0 +1,120 @@
+\chapter{Black Hole at the Galactic Center?}
+
+\section{Mystery at the Center of the Milky Way}
+Take a moment to watch the video found in the following link \url{www.astro.ucla.edu/~ghezgroup/gc/animations.html} under the heading \textbf{3D Movie of Stellar Orbits in the Central Parsec}. At first glance the video might not seem all too surprising as having learned about the solar system you likely expect orbiting planets to be a mundane fixture of the universe. However, what if you were to learn that the objects were not planets, but in fact stars and that what you see in the video spans a distance of 3 light years? For comparison, Pluto is only about .0006ly from the sun. In fact, the video you just saw is a visualization of a phenomenon in the center of our galaxy which puzzled astronomers for a long time. As you might have learned all objects exert a gravitational force which is proportional to the mass of the object. For this reason, smaller objects tend to be "pulled in" by larger objects, forming the orbital relationships we see in our daily lives: the moon orbiting the Earth, the Earth orbiting the Sun, and so on. Some of the most massive objects in the universe are stars which is why they tend to form the center of orbital systems. However, given that all the objects in the video were stars, this meant that there had to be a much, much more massive object in the center of our galaxy attracting them, one which seemed to be invisible, save for radio signals coming from the location of the object. There were many theories as to what the object, whose signal is dubbed Sagittarius A*, could  be, but the most compelling one is that it is in fact a super massive black hole (SMBH)
+
+Black holes are some of the most extreme objects in the universe which were first theorized to exist as a result of Einstein's theory of general relativity. In the most basic terms, a black hole is an extremely massive and dense object whose gravitational pull is so strong, that not even light can escape. This fact that light cannot escape from a black hole,  however, makes them incredibly difficult to observe directly. That said, due to the strength of their gravitational pull, black holes can often be detected indirectly based on their influence over nearby objects. In this lab you will examine the gravitational system you saw in the video and you will be able to determine whether the object in the center of the milky way is, in fact, a black hole. First, however, you will learn about the basic laws which govern orbital systems and how they can be applied to determine some of the physical properties of the objects in the system.
+
+\section{goals}
+\begin{itemize}
+	\item Understand Kepler's laws of planetary motion and be able to use them to extrapolate information about orbital systems
+	\item Be able to gather data using a variety of tools and be able to understand the limitations of certain data
+	\item Be able to make inferences about physical properties of objects which cannot be directly measured
+\end{itemize}
+
+\section{Newtonian Dynamics and Orbital Dynamics Basics}
+
+\section{From 2D to 3D: Accounting for Shifts in Perspective}
+Up to now you have been working with Keplers laws in 2 dimensions. That is, you have been working with orbits assuming you are viewing them directly from above and all the distances you observe are accurate. However, the data you will be analyzing is presented in a 3D space. This means you will have to account for how shifts in the viewing angle affect observations of orbital systems. 
+
+\subsection{goal}
+Understand how shifts in viewing angle affect orbit observations and develop techniques to account for this during data collection
+
+\subsection{Equipment}
+\begin{itemize}
+	\item UCLA Sag A* video: \url{www.astro.ucla.edu/~ghezgroup/gc/animations.html}
+\end{itemize}
+\subsection{Steps}
+
+\begin{enumerate}
+	\item Go back to the video you watched at the start of the lab (the link is provided again in the equipment subsection above). Watch the video again, this time focusing on one or two orbits. As the camera moves and changes angles, how does the observed 2D shape of the orbit change? \textbf{Record your response in the lab report}
+	
+	\item Once you have a good idea of how changes in perspective affect our observation of orbits, in your group discuss how this might lead to errors when estimating orbital parameters. In other words, what errors could come about if you assume that you are always viewing an orbit directly from above? If we tried to estimate the mass of the central object using this assumption, will the mass be over or under estimated? \textbf{Record your answer in the report}
+	
+	\item Now, using Kepler's laws, create a method for determining the true parameters of an orbit. Think about the location of the foci in an elliptical orbit. 
+	
+	\item Finally, think about how the different orbits in the video are oriented relative to each other and compare them to the orbits of the planets in our solar system. Are they organized in a particular way? In your group discuss possible reasons for why the two systems are organized so differently. Try thinking about the processes which lead to the creation of each. \textbf{Write your answers in the report}
+\end{enumerate}
+
+\section{Sag A* Mass and Size Estimation}
+Now that you have a good understanding of orbits, you will analyze orbital data gathered by UCLA and use these to calculate the mass of the Sag A*.
+
+\subsection{Goal}
+
+DON'T FORGET TO FILL THIS OUT
+
+\subsubsection{Equipment}
+\begin{itemize}
+	\item ImageJ: \url{https://imagej.nih.gov/ij/download.html}. This is an image processing program which you will use this to extract numerical data from the video
+	\item Stars Orbiting Galactic Center: \url{https://youtu.be/7vcSKbXnLJA}. This is the video you will be analyzing
+\end{itemize}
+
+\subsection{Steps}
+\begin{enumerate}
+	\item First, watch the video several times and take note of the different objects and their paths. What are your initial impressions? How could this video be used to estimate the mass of Sag A*? \textbf{record your answers in the lab report}
+	
+	\item  Restart the video and take a screenshot of the first frame. Then, advance the video by one second take another screenshot. Repeat this for every second such that by the end you have 9 different frames of the stars in different positions along their orbits (the video is 11 seconds but the stars no longer advance after second 9). \textit{Capture the images with the video on full-screen} 
+\end{enumerate}
+	
+\subsubsection{Gathering data with Imagej}
+This section will guide you through the process of taking measurements using imageJ.
+\begin{enumerate}
+	\item First, note the white arrow located on the left-hand side of the image. This indicates the angular scale of the image. In the top menu bar, click on the straight line icon (hover over the icons and click on the one labeled *straight*). Now click one end from the arrow and drag the line to the other end.
+	
+	\item Now, click on ``Analyze'' above the icons and select the ``set scale'' option. In the ``known distance'' box enter 0.1. This allows you to measure distances in the image in arcseconds. 
+	
+	\item Once the scale is set, use the straight line tool (the same you used to set the scale) and draw a line from Sag A* to an orbiting star and hit ``m'' on the keyboard. This will generate a table of measurements. You will only be using the ``length'' (in arcseconds) and ``angle'' measurements. 
+\end{enumerate}
+
+\subsubsection{Measuring data for S0-2 and S0-37}
+\begin{enumerate}
+	\item First, make two separate tables following the format from table 4.1, one for each star you will track.
+	
+	\item Now, starting from the first frame, locate the stars labeled S0-2 and S0-37. Using the straight line tool, measure the distance \textit{d} from Sag A* to both stars, as well as the angle $\theta$.  \textbf{Record these measurements in the respective table for each star}
+	
+	\item Now convert the distance from arcseconds to radians, then multiply by $2.47 \pm 0.05 \times 10^22$cm. This gives you the actual distance \textit{s} in centimeters. \textbf{Record this in the table under the \textit{s} column}
+	
+	\item After you have calculated the distance in cm for all frames, calculate the area swept out by the swept by the stars using
+	\begin{equation}
+		A_i = \pi \left( \frac{s_{i} + s_{i-1}}{2} \right)^2 \left( \frac{\theta_{i}-\theta_{i-1}}{2\pi} \right) \,,
+	\end{equation}
+	where \textit{i} and $i-1$ are a frame and the frame before it respectively. Find the area covered each frame (except for the first). \textbf{Record these in the table}
+	
+	\item Based on your measurements and calculations, does Kepler's second law hold? Are there any discrepancies? What factors could account for these discrepancies? \textbf{record your answers int the lab report}
+	
+	\item Now, starting from the beginning of the video, estimate the orbital period for both S0-2 and S0-37. Use the time-stamp in the top-left corner (YEAR/MONTH) and convert your estimate into seconds. \textit{Hint: S0-37 does not complete a full orbit. However, we know that its orbit is circular. Using this fact and accounting for the effects of inclination, estimate S0-37s period} \textbf{Record in your lab report}
+	
+	\item After estimating the orbital periods, for S0-2 and S0-37, use the equation from Kepler's third law to calculate the mass of Sag A*, using the final measurement for \textit{s} as the value for \textit{a}. How does this compare to the true mass $M_\mathrm{bh} = 4.0 \times 10^6\:\textrm{M}_\textrm{\astrosun}$ (Boehle \textit{et al.} 2016). 
+	
+	\item How different was your estimate from the true mass? What factors could have contributed to this difference? What assumptions did you have to make when estimating the period? How did you account for the effects of inclination? Why can we use Kepler's third law here? \textbf{Write down your answers in the lab report}
+	
+	\item Now, using the last frame of the image, use the orbital path traced in the video which came closest to Sag A* to place an upper limit on its radius. Use the straight line tool to measure this limit in arcseconds and convert to cm the same way as before. 
+	
+	
+\end{enumerate}
+\section{General Relativity and Schwarzschild Radii}
+While Newtonian dynamics is useful for describing most orbital systems, extreme systems or objects such as black holes cannot be fully described without also incorporating general relativity. In particular for this lab we will be using a particular description of the universe in which gravity, rather than being an "attraction" between objects, is actually the result of curved "space-time". To visualize this, imagine space-time as sheet of stretched out fabric. Normally, if you were to try to roll light objects across the sheet they would travel in a straight line. However, if you were to place a large weight in the center, the fabric would "droop" inwards and any object you tried to roll would instead fall inwards towards the depressed region (the following video demonstrates this analogy \url{https://youtu.be/MTY1Kje0yLg}). This is analogous to the effect which gravity has on space time. The key to this description is that anything traveling through space-time will follow this curvature, even if it has no mass such as light. This means that, theoretically, an object can exist which bends space-time so much that not even light can climb back out and escape. Luckily, using the principles of gravitation developed by Newton, we can approximate what such an object might look like. 
+
+\subsection{Steps}
+\begin{enumerate}
+	\item In newtonian dynamics, the minimum speed an object needs to escape the gravitational pull of an object is given by 
+	\begin{equation}\label{gc:eq:escape-speed}
+		v_\textrm{escape} = \sqrt{\frac{2 G M}{r}} \,.
+	\end{equation}
+	where $r$ is the distance from its center of mass $M$. First, manipulate this equation in order to get an expression for $r$ in terms of the other values.
+	
+	\item If you now plug in the speed of light $c = 2.998 \times 10^{10}$cm/s as the escape velocity into the equation you just derived, you get an expression for what is known as the Schwarszchild radius. The Schwarzschild radius is an estimate of the radius of a black hole and, more importantly, its the minimum size an object of a given mass can be before it becomes a black hole. Using the equation you found, calculate the schwarzchild radii for the following objects.
+	\begin{itemize}
+		\item One of your group members.
+		\item the Earth.
+		\item the Sun.
+		\item the Solar System.
+		\item The Milky Way Galaxy.
+	\end{itemize}
+	
+	\item Now, using the estimate you found for the mass of Sag A*, calculate its Schwarzschild radius. How does this compare to the upper limit you estimated for its radius? 
+	
+	\item Based on this alone, how likely do you think it is that Sag A* is a black hole? What additional evidence would you need in order to conclude this? What sources of error could be affecting your estimates? 
+\end{enumerate}
+
+
