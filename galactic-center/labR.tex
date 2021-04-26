@@ -17,6 +17,33 @@ In this lab you will examine the gravitational system you saw in the video and s
 	\item Identify assumptions made during analysis and their effects on calculations.
 \end{itemize}
 
+\section{Team roles}
+
+\begin{steps}
+	\item \textbf{Decide on roles} for each group member.
+\end{steps}
+
+The available roles are:
+
+\begin{itemize}
+	\item Facilitator: ensures time and group focus are efficiently used
+	\item Scribe: ensures work is recorded
+	\item Technician: oversees apparatus assembly, usage
+	\item Skeptic: ensures group is questioning itself
+\end{itemize}
+
+These roles can rotate each lab, and you will report at the end of the lab report on how it went for each role. If you have fewer than 4 people in your group, then some members will be holding more than one role. For example, you could have the skeptic double with another role. Consider taking on a role you are less comfortable with, to gain experience and more comfort in that role.
+
+Additionally, if you are finding the lab roles more restrictive than helpful, you can decide to co-hold some or all roles, or think of them more like functions that every team needs to carry out, and then reflecting on how the team executed each function.
+
+\section{Add members to Canvas lab report assignment group}
+
+\begin{steps}
+	\item On Canvas, navigate to the People section, then to the ``Lab 4 Groups'' tab. Find a group that is not yet used, and have each person in your group add themselves to that same lab group.
+\end{steps}
+
+This enables group grading of your lab report. Only one person will submit the group report, and all members of the group will receive the grade and have access to view the graded assignment.
+
 \section{Installing ``ImageJ''}
 For some parts of this lab you will be using a image analysis software called ``ImageJ'' to gather numerical data from images.
 \begin{steps}
@@ -66,7 +93,7 @@ To determine whether the object at the center of our galaxy is a black hole, we 
 
 \subsection{Finding the mass of Sag A* using stellar orbits}
 
-INTRO TEXT
+%todo INTRO TEXT
 
 In general, an \textit{orbit} is what we call the path an object follows when under the gravitational influence of a larger mass. The interactions between two gravitationally bound objects can be approximated using Newtonian mechanics, with the force of gravity between two objects given by 
 \begin{equation}\label{gc:eq:newton}
@@ -89,7 +116,7 @@ Kepler's First Law states that \textit{a planet orbits the Sun in an ellipse, wi
 		mass will be located at one of the foci.}\label{gc:fig:ellipse}
 \end{figure}
 
-\subsection{Kepler's Third Law}
+\subsubsection{Kepler's Third Law}
 
 Kepler’s Third law addresses the path of an object $m$ as it orbits a much more massive object of mass $M$. Specifically, it relates the orbital period $P$ (the time it takes for one complete orbit to occur) to the semi-major axis $a$ of the ellipse according to
 \begin{equation}\label{gc:eq:kepler-3}
@@ -137,13 +164,13 @@ Use Kepler's 3rd Law to analyze a test system.
 \begin{steps}
 	\item Open the link provided in the Available Equipment section above. This will open an orbit simulator.
 	
-	\item Make sure the simulation is paused. Now manipulate the initial distance from the sun, the initial speed of the planet, and the mass of the sun by moving the slider over the bars on the left-hand side on the screen. For now, don't pay particular attention to the different variables, in this step you just need to focus on the orbit itself. How does the orbit change shape as you manipulate the initial conditions? How does this conform to Kepler's First Law? \textbf{Record your answers.}
+	\item Make sure the simulation is paused. Now manipulate the initial distance from the sun, the initial speed of the planet, and the mass of the sun by moving the slider over the bars on the left-hand side on the screen. For now, don't pay particular attention to the different variables, in this step you just need to focus on the orbit itself. How does the orbit change shape as you manipulate the initial conditions? How does this align with what Kepler's First Law predicts? Are there exceptions? \textbf{Record your answers.}
 	
-	\item Reset the simulation by clicking the arrow symbol to the right of the ``zoom out'' button. This time, you will carry out a similar process as the previous step, however, this time, you will only be manipulating one variable at a time. How does the shape of the orbit change as you change each variable? Does this change in shape conform to Kepler's third Law? How does the value of the semi-major axis $a$ change? How is the change in period reflected in the orbital path? \textbf{Record answers.}
+	\item Reset the simulation by clicking the arrow symbol to the right of the ``zoom out'' button. This time, you will carry out a similar process as the previous step, however, this time, you will only be manipulating one variable at a time. How does the shape of the orbit change as you change each variable? Does this change in shape align with predictions from Kepler's third law? How does the value of the semi-major axis $a$ change? How is the change in period reflected in the orbital path? \textbf{Record your answers.}
 	
 	\item Use Equation~\ref{gc:eq:kepler-3} to find the mass of the Sun, given the period of the Earth's orbit (converted to seconds) and its semi-major axis (approximately the radius, since Earth has a nearly circular orbit). Check your answer with standard references to ensure that you have used this method correctly.
-	
-	\item To test that you have an effective technique for using Kepler's third law given a visual orbit, reset the simulation and use Kepler's third law to predict the period of this orbit. Ensure that you get about $3.3\:$seconds.
+
+	\item To test that you have an effective technique for using Kepler's third law with a visual orbit, reset the simulation to the default initial conditions and use Kepler's third law to predict the period of this orbit. Ensure that you get about $3.3\:$seconds.
 
 %	\item Reset the simulation once more. Now, \textbf{un}-check the box labeled ``Show Kepler's Second Law Trace'' and click the button that says ``run''. How does the motion of the planet correspond to the shape of the orbit? In the previous step, you attempted to determine geometrically whether Kepler's third law held. Do your observation match the actual motion of the planet? \textbf{Record your answers.}
 	
@@ -173,7 +200,7 @@ Use Kepler's 3rd Law to analyze a test system.
 %\end{steps}
 
 \section{Determining the mass of Sag A*}
-Now that you have a good understanding of orbits, you will analyze orbital data gathered by UCLA and use these to calculate the mass of the object located at Sag A*.
+Now that you have an understanding of orbits, you will analyze orbital data gathered by UCLA and use these to calculate the mass of the object located at Sag A*.
 
 \subsection{Goal}
 
@@ -191,7 +218,7 @@ Use measurements from two stars orbiting the object located at Sag A* to estimat
 
 	\item Determine two stars for which you can find and measure the semi-major axis $a$ and the period $P$. Note that the timestamp in the upper-left corner is in decimal years. \textbf{Record which stars you picked and why you picked them.}
 	
-	\item Set the video to full screen and take a screenshot, so that you can carefully measure the semi-major axis of both stars.
+	\item Set the video to full screen and take a screenshot near the end of the video, so that you can carefully measure the semi-major axis of both stars.
 
 %	\item  Restart the video and take a screenshot of the first frame. Then, advance the video by one second take another screenshot. Repeat this for every second such that by the end you have 9 different frames of the stars in different positions along their orbits (the video is 11 seconds but the stars no longer advance after second 9). \textit{Capture the images with the video on full-screen, so that your length measurement will be more precise.} 
 \end{steps}
@@ -222,25 +249,68 @@ This section will guide you through the process of taking length measurements us
 	
 	\item Measure the semi-major axis of both stars that you chose. Make an estimate of the uncertainty of these measurements as well. \textbf{Record the star labels and their axes measurements with uncertainties.}
 	
-	\item Currently your measurement is an angular separation in units of arcseconds. Kepler's Third Law deals with the physical distance, so you will need to convert the angular separation to physical distance. Convert the angular separation from arcseconds to radians. Then multiply by the distance from Earth to Sag A*, $2.47 \pm 0.05 \times 10^{20}\:$m. This gives you the distance $s$ in meters.
+	\item\label{gc:step:angle-to-distance} Currently your measurement is an angular separation in units of arcseconds. Kepler's Third Law deals with the physical distance, so you will need to convert the angular separation to physical distance. Convert the angular separation from arcseconds to radians. Then multiply by the distance from Earth to Sag A*, $2.47 \pm 0.05 \times 10^{20}\:$m. This gives you the distance $s$ in meters. Propagate uncertainty according to Appendix\ \ref{unc:sec:prop}. \textbf{Record your work and results.}
 	
-	\item Use the video to measure the period of each star's orbit. If the star you picked does not complete an entire period, devise a way to estimate the entire period.
+	\item Use the video to measure the period of each star's orbit. If the star you picked does not complete an entire period, develop a way to estimate the entire period. Note that the time is given in decimal years (so 2020.3 means $3/10$ of the year past the beginning of 2020). \textbf{Record your work and results.}
 
-	\item Use Kepler's Third Law to calculate the mass of Sag A* from the orbital properties of both stars that you analyzed. \textbf{Record the two calculated masses and their uncertainties.}
+	\item Use Kepler's Third Law to calculate the mass of Sag A* from the orbital properties of both stars that you analyzed. Your measurement should be on the order of millions of solar masses. \textbf{Record the two calculated masses and their uncertainties.}
 	
-	\item CHECK FOR CONSISTENCY BETWEEN MASS RESULTS
+	\item Use the $t'$ statistic to determine if the calculated masses from both stars are plausibly the same value ($t' < 1$). If they are not, reconsider your methods and uncertainty analysis. \textbf{Record your work and results.}
 	
-	\item Using the last frame of the image, use the orbital path traced in the video which came closest to Sag A* to place an upper limit on its radius. Use the straight line tool to measure this limit in arcseconds and convert to distance in meters as above.
+	\item Make a final determination of your measurement of the mass (with uncertainty), based on your two calculated masses.
 
-	\item Now, using the estimate you found for the mass of Sag A*, calculate its Schwarzschild radius. How does this compare to the upper limit you estimated for its radius? 
+\section{Finding the size of Sag A* and testing for black hole plausibility}
+
+	\item Using the last frame of the image, use the orbital path traced in the video which came closest to Sag A* to place an upper limit on its radius. Use the straight line tool to measure this limit in arcseconds and convert to distance in meters as in Step\ \ref{gc:step:angle-to-distance}. \textbf{Record your work and results.}
+
+	\item Now, using the estimate you found for the mass of Sag A*, calculate its Schwarzschild radius. How does this compare to the upper limit you estimated for its radius? \textbf{Record your work and results.}
 	
-	\item Based on this alone, how likely do you think it is that Sag A* is a black hole? What additional evidence would you need in order to conclude this? What sources of error could be affecting your estimates? 
+	\item Based on this alone, how likely do you think it is that Sag A* is a black hole? What additional evidence would you need in order to conclude this? What sources of error could be affecting your estimates? What assumptions were made in this analysis that might be incorrect? \textbf{Record your discussion and determination.}
+	
+\section{Checking an assumption about perspective}
 	
 	\item Go back and watch the video you watched at the start of the lab. This time, focus on one or two orbits and not how they change as the camera moves. How does the observed 2D shape of the orbit change? \textbf{Record your observations in the lab report}
 	
 	\item Once you have a good idea of how the change in perspective affects our observation of the different orbits, discuss in your group how this might lead to errors when estimating orbital parameters. Think back to the different calculations you made throughout the lab, what errors could have arisen from assuming that you were always observing orbits directly from above? If we tried using this assumption to calculate the mass of the central object in an orbit, and that assumption was false, would the mass be over- or under-estimated? \textbf{Record your answer with justification.}
-
 \end{steps}
+
+\section{Group functioning}
+
+\begin{steps}
+	\item Write a 100--200 word reflection on group dynamics. Address the following topics: who did what in the lab, how did you work together, how group roles functioned, what successes and challenges in group functioning did you have, and what do you want to continue doing or do differently?
+\end{steps}
+
+\subsection{Items to include in your report}
+
+\begin{enumerate}
+	\item Expression for Schwarzchild radius in terms of mass, gravitational constant, and speed of light {Step 7} \{0.25 pt\}
+	
+	\item Schwarzchild radii for various objects (Step 8) \{0.25 pt\}
+	
+	\item Observations and comparing with Kepler's first law (Step 10) \{0.25 pt\}
+	
+	\item Observations and comparing with Kepler's third law (Step 11) \{0.25 pt\}
+	
+	\item Initial impressions of video and identification of stars to measure (Steps 14--15) \{0.25 pt\}
+	
+	\item Measurement of semi-major axis of each star and conversion to distance (Steps 20-21) \{0.25 pt\}
+	
+	\item Measurement of period of each star's orbit (Step 22) \{0.25 pt\}
+	
+	\item Calculation of Sag A* mass using each star's orbit (Step 23) [Rubric Row G2] \{1 pt\}
+	
+	\item Comparison of two masses, discussion, and final judgment of Sag A*'s mass (Steps 24-25) [Rubric Row D4] \{1 pt\}.
+	
+	\item Measurement of upper limit on Sag A* radius and calculation of its Schwarzchild radius (Steps 26-27) \{0.25 pt\}
+	
+	\item Judgment on the hypothesis that Sag A* is a black hole with discussion of errors and assumptions (Step 28) [Rubric Rows C8, D8] \{2 pt\}
+	
+	\item Analysis of effects of angular orientation assumption (Step 29--30) [Rubric Row D9] \{1 pt\}
+	
+	\item A discussion of the findings of the experiment and why it's helpful (for you and/or for science) [Rubric Row F2] \{1 pt\}
+	
+	\item Analysis of group functioning (Step 31) \{0.5 pt\}
+\end{enumerate}
 
 %\begin{framed}
 %	\textbf{Angular separation $d$ and angular orientation $\theta$}
