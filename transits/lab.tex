@@ -3,44 +3,193 @@
 %TODO have TAs take data a couple weeks in advance, so they get experience with the whole process.
 %TODO instead of each group doing a different system, have the whole lab section do one system and split the observations across different groups, to reduce tedium and simulate being part of a larger research group.
 
-Over the next two weeks, you will learn how to use the transit method to detect exoplanets. You will use    one    of    the    MicroObservatory    telescopes,    built    and    maintained    by    the    Harvard‐Smithsonian    Center    for    Astrophysics    and    located    at    the    Whipple    Observatory    in    Amado,    Arizona    to    take    a    series    of    images    of    a    ``target''    star in order to calculate a light curve for that star, which could be used to learn about the planet(s) orbiting them.    These    images    will    form    the    basis    of    your    subsequent    investigation in the Image Lab on the LSE website.
+In the previous lab, we studied the Radial Velocity technique which is
+used for both detecting and studying systems of exoplanets. In this lab,
+we will explore another technique, called transit photometry, which
+complements the radial velocity technique. The transit method is
+employed by instruments like the Kepler satellite to discover new
+exoplanets and to measure their properties including the orbital size
+and the size of the planet. In turn, these properties can be combined
+with the temperature of the star to estimate the planet’s characteristic
+temperature to answer the question as to whether an exoplanet is
+habitable (capable of supporting biological life similar to that of Earth).
+
+Over the next two weeks, you will learn how to use the transit method to detect exoplanets. You will use    one    of    the    MicroObservatory    telescopes,    built    and    maintained    by    the    Harvard‐Smithsonian    Center    for    Astrophysics    and    located    at    the    Whipple    Observatory    in    Amado,    Arizona    to    take    a    series    of    images    of    a    ``target''    star in order to calculate a light curve for that star, which could be used to learn about the planet(s) orbiting them.    These    images    will    form    the    basis    of    your    subsequent    investigation in the DIY Planet Search.
 
 \section{Scheduling observations}
 
 First, schedule the remote observations. The observations are made at night in Arizona, and they can be scheduled during the day before those observations.
 
 \begin{steps}
-	\item Find the transit calendar in the Lab 3 Files folder in the Files section on Canvas. Pick an exoplanet transit that will be observable sometime during the next two weeks. Note that all times listed here are local to Arizona.
+%	\item Find the transit calendar in the Lab 3 Files folder in the Files section on Canvas. Pick an exoplanet transit that will be observable sometime during the next two weeks. Note that all times listed here are local to Arizona.
+
+	\item As a group, create a single account that you will all log in to at the DIY Planet Search website at \url{https://waps.cfa.harvard.edu/microobservatory/diy/index.php}.
 	
-	\item Log into the exoplanet lab website at \url{https://www.cfa.harvard.edu/smgphp/otherworlds/ExoLab/index.html} using the username and password your TA has given you. If you haven't received this yet, skip this section until you receive it.
+	\item Navigate to About and read the ``About DIY Planet Search'' and ``About MicroObservatory'' sections.
 	
-	\item Click "Go to the lab", and then select the Telescope tab. Go through the sections on the right side of the page to learn
-	about the remote observatory we are using and how to schedule observations.
+%	\item Log into the exoplanet lab website at \url{https://www.cfa.harvard.edu/smgphp/otherworlds/ExoLab/index.html} using the username and password your TA has given you. If you haven't received this yet, skip this section until you receive it.
 	
-	\item On the day before the transit is observable, go to this website and schedule your observations. Each transit will require observing for $\approx 1\:$hour before and $\approx 1\:$hour after the
-	transit for a total observation time of 4--5 hours. This corresponds to 80--100 exposures. You can split this effort among your group mates, each scheduling under their own user name.
+	\item Navigate to ``DIYTools'', watch the ``Schedule Target Tutorial'', and schedule observations of at least two different star systems. For both, choose ``All hours'' and 60 second exposures.
+	
 \end{steps}
 
-\section{Tutorials and analysis}
+You will only analyze one star system, but it may be cloudy on one night, so observing two different ones makes it more likely you get data to analyze.
 
-\includepdf[pages=1-4]{transits/transits-part-1}
+\section{Analysis of sample data}
+
+You will now analyze the simulated transit data. Complete as much of
+this as you can the first day. If you aren’t able to finish to analysis,
+complete it when you return the second day. The properties for the two star-planet systems are given in Table\ \ref{tr:tab:properties}. Some are already filled in, and you will calculate the remaining ones.
+
+\begin{table}
+	\centering
+	\begin{tabular}{l|c|c}
+		\toprule
+		& Planet 1 & Planet 2 \\
+		\midrule
+		star radius & $0.85 \times R_\textrm{\astrosun}$ & $0.202 \times R_\textrm{\astrosun}$  \\
+		\midrule
+		star mass & $0.9 \times M_\textrm{\astrosun}$ & $0.15 \times M_\textrm{\astrosun}$ \\
+		\midrule
+		star luminosity & $0.656 \times L_\textrm{\astrosun}$ & $0.00292 \times L_\textrm{\astrosun}$ \\
+		\midrule
+		planet radius (in $R_\textrm{J}$ or $R_\textrm{E}$) & & \\
+		orbital period & 12.164 days & \\
+		\midrule
+		orbital radius (in AU) & & \\
+		\midrule
+		irradiance at planet (W$/$m$^2$) & & \\
+		\midrule
+		power absorbed by planet (W) & & \\
+		\midrule
+		planet temperature (K) & & \\
+		\midrule
+		planet temperature (\textdegree F) & & \\
+		\bottomrule
+	\end{tabular}
+	\caption{Properties of two simulated star-planet systems.}\label{tr:tab:properties}
+\end{table}
+
+\begin{steps}
+	\item For Planet 1, plot the light curve (flux versus time) and print it out
+(include it in your write up).
+
+	\item On the plot, mark where the transit starts
+and stops. Estimate the flux of the star for when the planet is transiting
+and when it isn’t. Write down your values on the plot.
+
+	\item From these
+numbers, calculate the radius of Planet 1 and record it in the table.
+Report the radius in the appropriate units (either $R_J$, if the planet is
+closer in size to Jupiter, or $R_E$, if the planet is closer in size to Earth).
+
+	\item Repeat the analysis for Planet 2 using only the first two days of data.
+
+	\item For Planet 2, plot the light curve for the first 14 days of data and
+estimate the orbital period for Planet 2.
+\end{steps}
+
+We can use the orbital periods together with the mass of the host star to
+determine the distance of the planet from the star (the orbital radius)
+using Kepler’s third law,
+\begin{equation}
+ P^2 = \frac{4 \pi^2}{GM} a^3 \,,
+\end{equation}
+where $P$ is the orbital period, $a$ is the orbital radius, $M$ is the mass of
+the host star, and $G = 6.674\times 10^{-11}\: \textrm{N} \cdot \textrm{m}^2 / \textrm{kg}^2$ is Newton’s gravitational
+constant.
+
+\begin{steps}
+	\item Use Kepler's law to determine the orbital radius for Planet 1
+and Planet 2 and write down your values in the table.
+\end{steps}
+
+The irradiance at the planet corresponds to the radiated flux (power per
+unit area) by the host star at the planet’s orbital radius. It is calculated
+as
+\begin{equation}
+\textrm{irradiance} = \frac{\textrm{star luminosity}}{4 \pi a^2} \,,
+\end{equation}
+
+\begin{steps}
+\item Use the above formula to fill in the table
+for the two planets.
+\end{steps}
+
+If we assume that the planet absorbs all of the light hitting it from its
+host star, we can then calculate the total power absorbed by the planet
+by multiplying the irradiance by the cross sectional area of the planet
+\begin{equation}
+ \textrm{power absorbed} = \textrm{irradiance} \times \pi r^2 \,,
+\end{equation}
+where $r$ is the radius of the planet.
+
+\begin{steps}
+	\item Calculate the absorbed power and
+enter it in the table.
+\end{steps}
+
+The planet not only absorbs radiation, but it also emits thermal
+radiation. Assuming that the planet radiates as a perfect blackbody (as in it does not reflect anything), the
+flux (power per unit area) radiated is related to the planet's
+temperature by the Stefan-Boltzmann law
+\begin{equation}
+ \textrm{thermal flux} = \sigma \times T_p^4 \,,
+\end{equation}
+where $T_p$ is the temperature of the planet (in kelvins) and $\sigma = 5.67 \times 10^{-8}\: \textrm{W} \cdot \textrm{m}^{-2} \textrm{K}^{-4}$ is the Stefan-Boltzmann constant.
+
+The total power radiated by the planet is then given by
+\begin{equation}
+\textrm{thermal radiation} = 4 \pi r^2 \times (\textrm{thermal flux}) \,.
+\end{equation}
+If the planet has a stable temperature, then the power absorbed must
+equal the thermal power emitted, that is,
+\begin{equation}
+ \textrm{thermal radiation} = \textrm{power absorbed} \,.
+\end{equation}
+
+\begin{steps}
+\item Use this relationship to calculate the temperature of both planets (in
+kelvins) and record the value in the table.
+
+\item To get a better sense of the temperature for each planet, convert your
+calculated temperature into Fahrenheit and record the values in the table. How do these temperatures compare with the weather outside?
+
+\end{steps}
 
 \section{Analyzing your own data}
 
-You will use the LSE website to analyze an example image, then can analyze your own images for the report.
+You will measure the brightness of the target star in each image that was taken. Since this will be around 80--100 images, you will probably want to split up the work among group members.
 
 \begin{steps}
-	\item Click on the “Image Lab” and go through the 9 page tutorial. Practice
-your analysis on the “Demo\_Images” for TRES-3. Make sure you subtract
-and appropriate Dark Image (note that the image filenames include the
-date and time of the exposure).
+	\item Log in to DIY Planet Search, navigate to ``DIYTools'', and select ``Measure Brightness'' from the menu at the left.
+	
+	\item Watch the three tutorials at the right.
+	
+	\item Select a ``dark'' image to use for calibration by opening it from the My Requests menu.
+	
+	\item Follow the five steps listed for each image. In the first step, ensure that you calibrate your image by selecting ``Calibrate''
+	
+	\item If you cannot find the target star using the Finder, and your instructor cannot either, follow these instructions or ask your TA to follow these instructions to locate the star:
+	\begin{enumerate}
+		\item Save the image locally as a FITS file using the Images menu.
+		
+		\item Navigate to \url{astrometry.net}, go to ``Upload'', and upload the FITS file. This website will ``plate solve'' the image, finding where in the sky the telescope was pointing, and assigning an RA,Dec coordinate to each pixel.
+		
+		\item Once it finishes analyzing, click ``go to results page'' and select ``new-image.fits'' to download a FITS file with the coordinates overlaid.
+		
+		\item Look up the star's name in Wikipedia or elsewhere to find its RA,Dec coordinates.
+		
+		\item Open the new FITS file in SaoImage DS9. Right-click on the image and drag around to adjust the contrast so you can see the stars.
+		
+		\item The RA, Dec coordinates of the mouse pointer are displayed at the top of the window. Move the pointer so that it points to the coordinates of the star. This should identify the target star.
+	\end{enumerate}
 
-	\item Once it’s been taken, analyze the data from your scheduled
-observations. Be sure to press the “Calculate \& Record” button to save
-your results.
-
-	\item Combine your data with the rest of your group by looking at the “class graph.” \textbf{Save this light curve and turn it in with your write up.}
-
+	\item Once all images have been analyzed, select ``Interpret and Share'' from the left-hand menu.
+	
+	\item Use your data to estimate the transit depth and optionally share your comments and results to the whole DIY Planet Search community.
+	
+	\item Using the guidance in the other tabs, estimate how big the planet is, whether it is tilted, and its distance to its star.
 \end{steps}
 
 \section{Report checklist and grading}
@@ -50,7 +199,7 @@ Each item below is worth 10 points.
 \begin{enumerate}
 	\item Data table from Part 1.
 	
-	\item Plots of your light curves for Planet 1, Planet 2, and the planet you observed with LSE. 
+	\item Plots of your light curves for Planet 1 and Planet 2.
 	
 	\item Discuss how different features of the light curve connected to physical
 	properties of the orbital system.
@@ -58,7 +207,9 @@ Each item below is worth 10 points.
 	\item Your calculated temperature for Planet 1 and Planet 2, and your interpretation of the
 	temperatures for the simulated planets.
 	
-	\item List which scheduled observations your group performed. Were you able to see a light curve from your scheduled observations? Why or why not?
+	\item Plot of your light curve from DIY Planet Search.
+	
+	\item Your estimation of the transit depth, planet size, tilt, and star-planet distance of your observed star.
 	
 	\item A 100--200 word reflection on group dynamics and feedback on the lab manual. Address the following topics: who did what in the lab, how did you work together, what successes and challenges in group functioning did you have, and what would you keep and change about the lab write-up?
 \end{enumerate}
