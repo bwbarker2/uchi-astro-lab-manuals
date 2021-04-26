@@ -6,47 +6,20 @@
 
 %TODO for "conduct an experiment", be more clear about what deliverables / product is wanted
 
-Everything glows (gives off electromagnetic radiation) when it has a temperature --- particles are wiggling around randomly (faster if it's hotter) and giving off energy as they wiggle. This \textbf{thermal radiation}, also called blackbody radiation, is the same for any object at the same temperature. The spectral density $B$ of this radiation at wavelength $\lambda$ and temperature $T$ is given by Planck's Law:
-\begin{equation}\label{ic:eq:planck}
- B(\lambda, T) = \frac{2 h c^2}{\lambda^5}
- \frac{1}{\exp\left( \frac{hc}{\lambda k_\textrm{B} T} \right) - 1} \,,
-\end{equation}
-where $h$ is the Planck constant, $c$ is the speed of light in the medium, and $k_\textrm{B}$ is the Boltzmann constant. The peak of this distribution $\lambda_\textrm{peak}$ is given by Wien's displacement law,
-\begin{equation}\label{ic:eq:wien}
-	\lambda_\textrm{peak} = \frac{b}{T} \,,
-\end{equation}
-where $b \approx 2898\:\mu$m$\cdot$K is Wien's displacement constant. This universal behavior means we can take something's temperature by looking at the spectrum of light it gives off. This is great for learning about something's temperature at a distance, like stars.
+Everything glows (gives off electromagnetic radiation) when it has a temperature --- particles are wiggling around randomly (faster if it's hotter) and giving off energy as they wiggle. This \textbf{thermal radiation}, also called blackbody radiation, is the same for any object at the same temperature. This means we can take something's temperature by looking at the spectrum of light it gives off. This is great for learning about something's temperature at a distance, like stars.
 
 %Incandescent lightbulbs are so warm that they glow in the visible spectrum (like stars). In this lab, you'll investigate the radiation that is given off by a lightbulb at various temperatures, then use filters to mimic the situation astronomers are in when they observe astronomical objects with different color filters. You'll invent a metric to numerically state the temperature of the lightbulb, even without knowing the actual temperature. Finally, you'll use the various images that you took with SEO with different color filters and combine them to form a color image.
 
-\section{Forming Groups}
+\section{Lab Team Roles}
 
-If you are attending the lab session live and do not yet have a group, one way the TA could assist is to arrange "speed networking" among those who still need a group. This would involve the TA organizing Zoom Breakout Rooms, where each room is 2-3 students, and each group talks about how they work and what they are looking for in a group member. Then after 5 minutes or so, the Rooms are changed so people are with different people. This could help people get to know each other enough to form lab groups.
+Decide which team members will hold each role this week: facilitator, scribe, technician, skeptic. If there are three members, consider having the skeptic double with another role. Consider taking on a role you are less comfortable with, to gain experience and more comfort in that role.
 
-\begin{steps}
-	\item\label{ic:step:team-comm} Once you have a group, meet with each other and decide a) what tools you will use to communicate and collaborate, b) when you will meet, c) what you will do when you need to change an agreement, and d) what you will do when you a person has an issue with how the group is functioning.
-	\textbf{Write this in your lab report. This part counts as data collection and analysis, so it can be identical in each member's report.}
-\end{steps}
-
-\section{Team roles}
-
-\textbf{Decide on roles} for each group member. The available roles are:
-
-\begin{itemize}
-	\item Facilitator: ensures time and group focus are efficiently used
-	\item Scribe: ensures work is recorded
-	\item Technician: oversees apparatus assembly, usage
-	\item Skeptic: ensures group is questioning itself
-\end{itemize}
-
-These roles can rotate each lab, and you will report at the end of the lab report on how it went for each role. If you have fewer than 4 people in your group, then some members will be holding more than one role. For example, you could have the skeptic double with another role. Consider taking on a role you are less comfortable with, to gain experience and more comfort in that role.
-
-Additionally, if you are finding the lab roles more restrictive than helpful, you can decide to co-hold some or all roles, or think of them more like functions that every team needs to carry out, and then reflecting on how the team executed each function.
+Additionally, if you are finding the lab roles more restrictive than helpful, you can decide to co-hold some or all roles, or thinking of them more like functions that every team needs to carry out, and then reflecting on how the team executed each function.
 
 \section{Exploring thermal radiation}\label{ic:sec:exploring}
 
 \begin{steps}
-	\item\label{ic:step:load-sim} Load the interactive thermal radiation simulation at \url{https://phet.colorado.edu/sims/html/blackbody-spectrum/latest/blackbody-spectrum_en.html}
+	\item Load the interactive thermal radiation simulation at \url{https://phet.colorado.edu/sims/html/blackbody-spectrum/latest/blackbody-spectrum_en.html}
 	
 	\item Play with the controls and see what happens. Discuss among your team.
 	
@@ -54,9 +27,7 @@ Additionally, if you are finding the lab roles more restrictive than helpful, yo
 	
 	\item At what peak wavelength do you radiate? Use the sim to determine this and estimate your uncertainty. \textbf{Record your findings.}
 	
-	\item Using your estimated temperature, calculate your peak wavelength according to Wien's law.
-	
-	\item\label{ic:step:qual-color} Comparing the spectra of the light bulb, Sun, and Sirius A, how can you use the spectrum to determine what color each one appears as?
+	\item Comparing the spectra of the light bulb, Sun, and Sirius A, how can you use the spectrum to determine what color each one appears as?
 \end{steps}
 
 \section{CCDs and filters}
@@ -83,9 +54,7 @@ A filter is characterized by its \textbf{transmission function}: a function that
 
 This spreadsheet calculates the same theoretical thermal radiation curve (according to Planck's Law) as the PhET simulation above, seen in the first two columns. Then it applies the transmission functions of the SDSS filters and plots the remaining power spectrum that gets through each filter. Finally, it sums up each filter's power spectrum and gives a total pixel value and magnitude. The pixel value is the relative number of counts a pixel with that filter would read. This is proportional to the brightness it sees.
 
-\subsection{Magnitude}
-
-Astronomers measure brightness of stars using a measurement system called \textit{magnitude}. About two millenia ago, astronomers categorized stars into 6 different brightness classes, 1st class through 6th class. When brightness began to be more quantified, it was found that first magnitude stars were about 100 times brighter than 6th magnitude stars. Then it was decided to scale the 6 classes logarithmically, to account for the several orders of magnitude involved. The relationship between intensity (power per unit area) \textit{I} and magnitude $m$ is defined as
+Since brightness as perceived by humans is logarithmic (10 times the number of photons yields 2 times the perceived brightness), astronomers express brightness in a logarithmic form called \textit{magnitude}. The relationship between intensity (power per unit area) \textit{I} and magnitude $m$ is defined as
 \begin{equation}
  m \equiv -2.5 \log_{10} \left(\frac{I}{I_\textrm{ref}}\right) \,,
 \end{equation}
@@ -96,7 +65,7 @@ where $I_\textrm{ref}$ is the intensity of some standard reference object. In th
 In Section \ref{ic:sec:exploring}, you learned that the color of a thermally radiating object is related to its temperature. Here, you will develop a quantitative color index and use it to determine the temperature of the Sun.
 
 \begin{steps}
-	\item\label{ic:step:see-thermal} In the spreadsheet, change the temperature of the blackbody (edit cell \texttt{B1}) and watch how the spectrum changes, and how the filter magnitudes change with respect to each other. \textbf{Record your observations.}
+	\item In the spreadsheet, change the temperature of the blackbody (edit cell \texttt{B1}) and watch how the spectrum changes, and how the filter magnitudes change with respect to each other. \textbf{Record your observations.}
 \end{steps}
 	
 The magnitude depends not just on the temperature, but also on the size of the star and the distance away from us. So to characterize a star's color quantitatively, independent of the size and distance, astronomers use a ratio of brightnesses of different filters. This is equivalent to subtracting the magnitudes. The subtraction of two broadband filter magnitudes is called the \textit{color index}.
@@ -108,7 +77,7 @@ In order to use the color index of a star to find its temperature, you need to d
 \begin{steps}
 	\item Choose the filters from which to make your color index. Do you want to choose filters that detect wavelengths right next to each other, or farther apart? If you're not sure, try both and see which is better for this application. You can call the resulting color index ``$x - y$'', for example $g' - r'$ if you are subtracting the $r'$ filter value from the $g'$ value.
 	
-	\item\label{ic:step:tempcolor} Make a table and graph of temperature vs. color index. \textbf{Record your table and graph.}
+	\item Make a table and graph of various temperatures and color indices. \textbf{Record your table and graph.}
 \end{steps}
 
 \subsection{Taking the Sun's temperature}
@@ -116,9 +85,9 @@ In order to use the color index of a star to find its temperature, you need to d
 \begin{steps}
 	\item Switch to the ``Sun'' tab in the spreadsheet. This has experimentally determined values for the intensity of EM radiation impinging on the Earth from the Sun, alongside the same filtering system as in the theoretical tab.
 	
-	\item\label{ic:step:proc-color} Design a procedure to use the filter magnitudes of the Sun to determine its temperature and your uncertainty of that temperature. Run this procedure by your TA to get feedback on it before starting.
+	\item Using the filter magnitudes here, calculate the color index of the Sun.
 	
-	\item Conduct your experiment and keep a log.
+	\item Use your theoretical data from the previous section to find the temperature of the Sun.
 	
 	\item Look up the effective temperature of the Sun's photosphere on Wikipedia.
 	
@@ -126,8 +95,6 @@ In order to use the color index of a star to find its temperature, you need to d
 	\begin{equation}
 	 \textrm{percent difference} = \frac{\abs{a-b}}{\frac{a+b}{2}} \times 100\%
 	\end{equation}
-	
-	\item\label{ic:step:solar-compare} Use the $t'$ statistic described in Appendix\ \ref{unc:sec:comparing} to compare the two values and interpret the result --- do these two measurements really measure the same thing? If they are very different, check your procedure, and if the difference stays, discuss what could be different about the methods used to find the temperature, or different assumptions used. \textbf{Record your discussion.}
 \end{steps}
 
 %\section{Lightbulbs}
@@ -231,7 +198,7 @@ In order to use the color index of a star to find its temperature, you need to d
 To create the beautiful color astronomy images we like to see, one must manually combine images taken with different filters. There are always choices to be made that will change how the combined image looks.
 
 \begin{steps}
-	\item\label{ic:step:color-image} Using the directions below, create a false color image of either the Orion nebula (M42), a stellar nursery, or the Crab nebula (M1), the remnant of a supernova. You can find the relevant images on Canvas in the Lab module.
+	\item Using the directions below, create a false color image of either the Orion nebula (M42), a stellar nursery, or the Crab nebula (M1), the remnant of a supernova. You can find the relevant images on Canvas in the Lab module.
 \end{steps}
 
 Now you'll create a color image from three separate images of the same target. You can use the broadband filters that you used in the previous section, and you can also try using the narrowband filters h-alpha, oiii, and sii. These filters only allow specific wavelengths through, that correspond to particular electronic excitations of hydrogen, oxygen, and silicon, respectively. Different features can be seen with different filters, as seen in Figure \ref{ic:fig:m1-filters}.
@@ -288,31 +255,27 @@ Since there is not a 1-to-1 correspondence between the red-green-blue options in
 Each item below is worth 10 points. See Appendix\ \ref{cha:lab-report-format} for guidance on writing the report and formatting tables and graphs.
 
 \begin{enumerate}
-
-	\item List of team role assignments and agreements about group communication (Step \ref{ic:step:team-comm}).
-
-	\item Pattern of how shape of spectrum changes with temperature, your peak wavelength, and how to use spectrum to predict color (Steps \ref{ic:step:load-sim}--\ref{ic:step:qual-color}).
 	
-	\item Observations of how spectrum and filter magnitudes change with temperature (Step \ref{ic:step:see-thermal}).
+	\item Pattern of how shape of spectrum changes with temperature, your peak wavelength, and how to use spectrum to predict color (Steps 1--5).
 	
-	\item Table and graph of color index versus temperature (Step \ref{ic:step:tempcolor}).
+	\item Observations of how spectrum and filter magnitudes change with temperature (Step 8).
 	
-	\item Procedure, calculations, and determination of solar temperature and uncertainty.
+	\item Table and graph of color index versus temperature (Step 10).
 	
-	\item Comparison with percent difference, $t'$ statistic, and discussion (Steps \ref{ic:step:proc-color}--\ref{ic:step:solar-compare}).
+	\item Procedure, calculations, and determination of solar temperature with percent difference (Steps 12--15).
 	
-	\item Your beautiful color image (Step \ref{ic:step:color-image}).
+	\item Your beautiful color image (Step 16).
 	
 	\item Discuss the findings and reflect deeply on the quality and importance of the findings. This can
 	be both in the frame of a scientist conducting the experiment (“What did the experiment tell us
 	about the world?”) and in the frame of a student (“What skills or mindsets did I learn?”).
 	
-%	\item A 100–200 word reflection on group dynamics and feedback on the lab manual. Address the
-%	following topics: who did what in the lab, how did you work together, what successes and
-%	challenges in group functioning did you have, and what would you keep and change about the
-%	lab write-up?
-	
-	\item Write a paragraph (100--200 words) reporting back from each of the four roles: facilitator, scribe, technician,
-	skeptic. Where did you see each function happening during this lab, and where did you see gaps? Which did you do, and how did that go? what successes and	challenges in group functioning did you have, and what would you keep and change about the
+	\item A 100–200 word reflection on group dynamics and feedback on the lab manual. Address the
+	following topics: who did what in the lab, how did you work together, what successes and
+	challenges in group functioning did you have, and what would you keep and change about the
 	lab write-up?
+	
+	\item Write a paragraph reporting back from each of the four roles: facilitator, scribe, technician,
+	skeptic. Where did you see each function happening during this lab, and where did you see
+	gaps?
 \end{enumerate}
