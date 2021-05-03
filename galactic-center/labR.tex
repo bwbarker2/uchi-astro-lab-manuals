@@ -52,19 +52,19 @@ For some parts of this lab you will be using a image analysis software called ``
 	\item Once the file is downloaded, right click on the folder and choose ``extract all''. Once it is finished go into the folder you extracted the files to and click on the icon labeled ``Imagej''
 \end{steps}
 
-\section{Testing experiment: Is Sag A* a black hole?}
+%\section{Testing experiment: Is Sag A* a black hole?}
 
-\subsection{Goal}
+%\subsection{Goal}
 
-Test the hypothesis that Sag A* is a black hole by measuring the mass, determining it's Schwarzchild radius, measuring its maximum radius, and then comparing those radii.
+%Test the hypothesis that Sag A* is a black hole by measuring the mass, determining it's Schwarzchild radius, measuring its maximum radius, and then comparing those radii.
 
-\subsubsection{Equipment}
-\begin{itemize}
-	\item ImageJ: \url{https://imagej.nih.gov/ij/download.html}. This is an image processing program which you will use this to extract numerical data from the video
-	\item Stars Orbiting Galactic Center: \url{https://youtu.be/7vcSKbXnLJA}. This is the video you will be analyzing
-\end{itemize}
+%\subsubsection{Equipment}
+%\begin{itemize}
+%	\item ImageJ: \url{https://imagej.nih.gov/ij/download.html}. This is an image processing program which you will use this to extract numerical data from the video
+%	\item Stars Orbiting Galactic Center: \url{https://youtu.be/7vcSKbXnLJA}. This is the video you will be analyzing
+%\end{itemize}
 
-\subsection{General Relativity and Schwarzschild Radii}
+\section{General Relativity and Schwarzschild Radii}
 While Newtonian dynamics is useful for describing most orbital systems, extreme systems or objects such as black holes cannot be fully described without also incorporating general relativity. In particular for this lab we will be using a particular description of the universe in which gravity, rather than being an ``attraction'' between objects, is actually the result of curved ``spacetime''. To visualize this, imagine space-time as sheet of stretched out fabric. Normally, if you were to try to roll light objects across the sheet they would travel in a straight line. However, if you were to place a large weight in the center, the fabric would droop inwards and any object you tried to roll would instead fall inwards towards the depressed region (the following video demonstrates this analogy: \url{https://youtu.be/MTY1Kje0yLg}). This is analogous to the effect that gravity has on spacetime. The key to this description is that anything traveling through spacetime will follow this curvature, even if it has no mass such as light. This means that, theoretically, an object can exist which bends spacetime so much that not even light can climb back out and escape (it would orbit the object or fall back inward). Using the principles of gravitation developed by Newton, we can estimate how massive and small such an object would be.
 
 In Newtonian dynamics, the minimum speed an object needs to escape the gravitational pull of an object is given by 
@@ -91,7 +91,7 @@ If you now plug in the speed of light $c = 2.998 \times 10^{8}\:$m/s as the esca
 
 To determine whether the object at the center of our galaxy is a black hole, we need to measure its mass, calculate its Schwarzchild radius based on that, then measure its radius and compare them.
 
-\subsection{Finding the mass of Sag A* using stellar orbits}
+\section{Understanding orbits}
 
 %todo INTRO TEXT
 
@@ -101,7 +101,7 @@ F_\textrm{grav} = G \frac{m_1 \: m_2}{r^2} \, ,
 \end{equation}
 where $m_1$ and $m_2$ are the masses of the two objects, $r$ is the distance between them, and $G$ is the Newtonian constant of gravitation, $G=6.67 \times 10^{-11}\:\textrm{m}^3 \: \textrm{kg}^{-1} \: \textrm{s}^{-2}$. This equation, coupled with Newton's Second Law of Motion $F = ma$ or force $F$ equals mass $m$ times acceleration $a$, tells us that the stronger the force of gravity, the greater the acceleration due to gravity. With these two fundamental principles, it is possible to derive many of the properties of orbital mechanics. Moreover, they allow us to understand the physics behind the mathematical description of orbits formulated by Johannes Kepler nearly a century earlier.
 
-\subsubsection{Orbits, ellipses, and Kepler's First Law}
+\subsection{Orbits, ellipses, and Kepler's First Law}
 Kepler's First Law states that \textit{a planet orbits the Sun in an ellipse, with the Sun at one focus of the ellipse}. This is true generally for any mass orbiting a much more massive object. An \textit{ellipse} (commonly referred to as an oval) is a generalization of a circle, allowing for the circle to be stretched along a certain direction. See Figure~\ref{gc:fig:ellipse} for details.
 
 \begin{figure}
@@ -116,7 +116,7 @@ Kepler's First Law states that \textit{a planet orbits the Sun in an ellipse, wi
 		mass will be located at one of the foci.}\label{gc:fig:ellipse}
 \end{figure}
 
-\subsubsection{Kepler's Third Law}
+\subsection{Kepler's Third Law}
 
 Kepler’s Third law addresses the path of an object $m$ as it orbits a much more massive object of mass $M$. Specifically, it relates the orbital period $P$ (the time it takes for one complete orbit to occur) to the semi-major axis $a$ of the ellipse according to
 \begin{equation}\label{gc:eq:kepler-3}
