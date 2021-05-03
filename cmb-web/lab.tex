@@ -1,28 +1,79 @@
 \chapter{Modeling the Cosmic Microwave Background}
 
-%todo what do we do about the "ANSWER" button in the sim?
+\section{Introduction}
 
-In this lab, you will analyze the power spectrum of the cosmic microwave background (CMB). It is assumed that you have already heard of it. If you don't know what it is yet, search online and learn a little about it. Once you're back, continue with this lab.
+In this lab, you will analyze the fluctuations of the cosmic microwave background (CMB) to determine the proportion of normal matter, dark matter, and dark energy in the universe, as well as finding its age and curvature.
+
+For introductory background on the CMB and fluctuations in it, see this online book chapter: \url{https://openstax.org/books/astronomy/pages/29-4-the-cosmic-microwave-background}
+
+\section{Team roles}
+
+\textbf{Decide on roles} for each group member. The available roles are:
+
+\begin{itemize}
+	\item Facilitator: ensures time and group focus are efficiently used
+	\item Scribe: ensures work is recorded
+	\item Technician: oversees apparatus assembly, usage
+	\item Skeptic: ensures group is questioning itself
+\end{itemize}
+
+These roles can rotate each lab, and you will report at the end of the lab report on how it went for each role. If you have fewer than 4 people in your group, then some members will be holding more than one role. For example, you could have the skeptic double with another role. Consider taking on a role you are less comfortable with, to gain experience and more comfort in that role.
+
+Additionally, if you are finding the lab roles more restrictive than helpful, you can decide to co-hold some or all roles, or think of them more like functions that every team needs to carry out, and then reflecting on how the team executed each function.
+
+\section{Steps}
 
 \begin{steps}
-	\item Go to the CMB Analyzer simulation at \url{https://map.gsfc.nasa.gov/resources/camb_tool/index.html}.
+
+\item Open the CMB Simulator at \url{https://chrisnorth.github.io/planckapps/Simulator/}
+
+\item Click on the info button at the top right (gray circle with an `i') and read this to get an understanding of what you are looking at.
+
 \end{steps}
 
-This interactive simulation allows you to model the CMB angular power spectrum. You can change the different parameters that go into the model and see how it affects the spectrum. You can even change the parameters until your model spectrum matches the experimental spectrum. This would give you confidence that your chosen parameters are correct.
-
-\begin{steps}
-	\item Play with the sliders and read through the text that appears when you hover on a slider. Move a few sliders around and observe how they affect the power spectrum.
-	
-	\item To understand the CMB and the power spectrum, read through the ``Parameters of Cosmology'' here: \url{https://map.gsfc.nasa.gov/mission/sgoals_parameters.html}. There are 7 pages to this document, and you can navigate using the ``next page'' link in the lower right of the text. While you learn about each parameter, go to the CMB Analyzer and vary that parameter to become more familiar with it.
-	
-	\item For each parameter that can be varied in the model, describe what the parameter means for the universe and how changing that variable changes the power spectrum. \textbf{Record this for your report.}
-\end{steps}
-	
-For complicated models like this, scientists learn about the universe, for example the proportion of matter, dark matter, and dark energy, by changing the free parameters in their model to see what best fits the observed data. If they trust that their model contains the right physics, then the parameters that fit best are likely to be correct.
+Displayed on the right is an image of the CMB fluctuations as produced by a simulation. In the upper right, the simulation matches the properties of the experimentally determined CMB. On the lower right is the simulation run with the parameters set by the sliders on the left. Below the image are other properties of your simulated universe.
 
 \begin{steps}
-	\item Move the sliders to find the parameter values that make the model fit the experimental data best. \textbf{Take a screenshot of the best fit and record the values.}
+
+	\item Using the image, design a procedure to measure the fundamental scale --- that is, quantitatively answer the question: "generally how big are the blobs", in degrees. In the scale of the image, the circle in the lower right corner of the image is 1\textdegree{} in diameter. \textbf{Record your procedure.}
+
+	\item For three different slider configurations (click the refresh button in the upper right to generate random configurations), use your procedure to determine the fundamental scale. \textbf{Record screenshots of the images and sufficient data to follow along with your work.} 
+	
+	\item Determine how close your result is to the scale listed below the image by calculating the percent difference and \textbf{record your result}.
+
+	\item Click the power spectrum button (upper right corner of page, second button from the right) to display the power spectrum for your simulated universe. \textbf{Describe what feature of the plot corresponds to the fundamental scale you found.}
+
+	\item Determine how moving each slider affects the power spectrum and image. \textbf{Record your findings of how the plot and image change.} \textit{For example, does it shift any parts of the spectrum in different directions or expand any parts? Do parts of the image get brighter or dimmer or fuzzier?}
+
+	\item The apparent need for dark matter was not widely accepted by astronomers before 1980 or so. Set dark matter ($\Omega_\textrm{C}$) and dark energy ($\Omega_\Lambda$) to zero. Assuming only normal matter exists and adjusting $\Omega_\textrm{b}$, how close can you make your simulated universe match the real one (what percentage)? \textbf{Record your finding.}
+
+	\item Now, assuming normal and dark matter can exist, but not yet dark energy, how close can you make your simulated universe match the real one (what percentage)? \textbf{Record your finding.}
+	
+	\item The first direct evidence for dark energy was found in 1998. Now using all three sliders, how close can you make your simulated universe match the real one (what percentage)? \textbf{Record your finding.}
+
+	\item Based on your simulation studies here, what is the age and curvature of the universe?
+
 \end{steps}
+
+%\begin{steps}
+%	\item Go to the CMB Analyzer simulation at \url{https://map.gsfc.nasa.gov/resources/camb_tool/index.html}.
+%\end{steps}
+%
+%This interactive simulation allows you to model the CMB angular power spectrum. You can change the different parameters that go into the model and see how it affects the spectrum. You can even change the parameters until your model spectrum matches the experimental spectrum. This would give you confidence that your chosen parameters are correct.
+%
+%\begin{steps}
+%	\item Play with the sliders and read through the text that appears when you hover on a slider. Move a few sliders around and observe how they affect the power spectrum.
+%	
+%	\item To understand the CMB and the power spectrum, read through the ``Parameters of Cosmology'' here: \url{https://map.gsfc.nasa.gov/mission/sgoals_parameters.html}. There are 7 pages to this document, and you can navigate using the ``next page'' link in the lower right of the text. While you learn about each parameter, go to the CMB Analyzer and vary that parameter to become more familiar with it.
+%	
+%	\item For each parameter that can be varied in the model, describe what the parameter means for the universe and how changing that variable changes the power spectrum. \textbf{Record this for your report.}
+%\end{steps}
+%	
+%For complicated models like this, scientists learn about the universe, for example the proportion of matter, dark matter, and dark energy, by changing the free parameters in their model to see what best fits the observed data. If they trust that their model contains the right physics, then the parameters that fit best are likely to be correct.
+%
+%\begin{steps}
+%	\item Move the sliders to find the parameter values that make the model fit the experimental data best. \textbf{Take a screenshot of the best fit and record the values.}
+%\end{steps}
 
 \section{Testing the Big Bang Theory}
 
@@ -35,19 +86,27 @@ Here is a hypothetical observation that is \textit{not} predicted by the Big Ban
 \begin{steps}
 	\item Imagine what would happen if it were actually observed --- whether it could be explained with the existing Big Bang theory, could be explained with a revision to the Big Bang theory, or would force us to abandon the Big Bang theory. \textbf{Write down your team's reasoning.}
 
-    Note: you may want to assume these four roles for your discussion: \textit{Scribe} --- takes notes on the group's activities; \textit{Proposer} --- suggests tentative explanations to the group; \textit{Skeptic} --- points out weaknesses in proposed explanations; \textit{Moderator} --- leads group discussion and makes sure everyone contributes and no one is dominating the discussion.
+%    Note: you may want to assume these four roles for your discussion: \textit{Scribe} --- takes notes on the group's activities; \textit{Proposer} --- suggests tentative explanations to the group; \textit{Skeptic} --- points out weaknesses in proposed explanations; \textit{Moderator} --- leads group discussion and makes sure everyone contributes and no one is dominating the discussion.
 \end{steps}
 
 \section{Report checklist and grading}
 
-Each item below is worth 10 points. Every item except the last one can be identical between lab group members.
+Include the following in your lab report. See Appendix~\ref{cha:lab-report-format} for formatting details. Each item below is worth 10 points.
 
 \begin{enumerate}
-	\item Parameter descriptions and effect on power spectrum (Step 4)
+%	\item Parameter descriptions and effect on power spectrum (Step 4)
+%	
+%	\item Best fit parameters and screenshot of best fit (Step 5)
 	
-	\item Best fit parameters and screenshot of best fit (Step 5)
+	\item Procedure for measuring the fundamental scale (Step 3)
 	
-	\item Conclusion and reasoning for effects of hypothetical observation on Big Bang theory (Step 6)
+	\item Screenshots and determination of fundamental scale for three different universes, with percent differences compared to the displayed scale (Step 4--5)
+	
+	\item Description of how the parameters affect the power spectrum (Step 7)
+	
+	\item Matching the real universe using different parameter constraints and reporting your determination of the age and curvature of the universe (Steps 8--11)
+
+	\item Conclusion and reasoning for effects of hypothetical observation on Big Bang theory (Step 12)
 	
 	\item A 100--200 word reflection on group dynamics and feedback on the lab manual. Address the following topics: who did what in the lab, how did you work together, what successes and challenges in group functioning did you have, and what would you keep and change about the lab write-up?
 \end{enumerate}
