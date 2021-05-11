@@ -11,13 +11,39 @@ To study the composition of a planet, it is useful to know its density --- then 
 
 Under nominal circumstances, we would have you schedule the observations yourself, so you could analyze the data that you, yourself, took. However, the observatory is not operating well enough right now to let that happen. Fortunately, we have archival images that were taken in 2017 by this observatory that you can analyze.
 
+\section{Team roles}
+
+\begin{steps}
+	\item \textbf{Decide on roles} for each group member.
+\end{steps}
+
+The available roles are:
+\begin{itemize}
+	\item Facilitator: ensures time and group focus are efficiently used
+	\item Scribe: ensures work is recorded
+	\item Technician: oversees apparatus assembly, usage
+	\item Skeptic: ensures group is questioning itself
+\end{itemize}
+
+These roles can rotate each lab, and you will report at the end of the lab report on how it went for each role. Some members will be holding more than one role. For example, you could have the skeptic double with another role. Consider taking on a role you are less comfortable with, to gain experience and more comfort in that role.
+
+Additionally, if you are finding the lab roles more restrictive than helpful, you can decide to co-hold some or all roles, or think of them more like functions that every team needs to carry out, and then reflecting on how the team executed each function.
+
+\section{Add members to Canvas lab report assignment group}
+
+\begin{steps}
+	\item On Canvas, navigate to the People section, then to the ``Lab 4 Groups'' tab. Find a group that is not yet used, and have each person in your group add themselves to that same lab group.
+\end{steps}
+
+This enables group grading of your lab report. Only one person will submit the group report, and all members of the group will receive the grade and have access to view the graded assignment.
+
 \section{Using Kepler's laws}
 
 Keplers third law relates the orbital period to the systems semi-major axis. In the case where the planets mass is much smaller than the stars mass, Kepler's third law is:
 \begin{equation}
-P^2 = \frac{4\pi^2}{G M}a^2 \,,
+P^2 = \frac{4\pi^2}{G M}a^3 \,,
 \end{equation}
-where $P$ is the orbital period, $G$ is Newton's constant ($6.674 \times 10^{11}\:\textrm{N}\:\textrm{m}^2/\textrm{kg}^2$), $M$ is the mass of Jupiter, and $a$ is the semi-major axis.
+where $P$ is the orbital period, $G$ is Newton's constant ($6.674 \times 10^{-11}\:\textrm{N}\:\textrm{m}^2/\textrm{kg}^2$), $M$ is the mass of Jupiter, and $a$ is the semi-major axis.
 
 We can rewrite the third law as:
 
@@ -27,13 +53,13 @@ We can rewrite the third law as:
 
 where $R$ is the radius of Jupiter and $\rho$ (the Greek letter pronounced ``row'') is the density of Jupiter. Solving for $\rho$ gives:
 
-\begin{equation}
+\begin{equation}\label{jd:eqn:kepden}
 \rho = \left(\frac{a}{R}\right)^3\frac{3\pi}{G P^2}
 \end{equation}
 
 The goal for this lab is to use our data to determine the ratio $(a/R)$ for each moon. We can then combine that with the moons period to estimate the density of Jupiter.
 
-To determine the semi-major axis, $a$, for a moon's orbit, we can assume that the orbit is actually a circular orbit, and we know that we are viewing the orbits edge-on. So what we are seeing is a projection of a circular motion onto one dimension, which results in a sinusoidal motion, with the amplitude of that motion being the radius of the orbit (and thus the semi-major axis). So here we will analyze images taken at different times, plot the angular position of the moon over time, and fit those data points to a sine (or, equivalently, a cosine) function, and the amplitude will be the semi-major axis, $a$.
+To determine the semi-major axis, $a$, for a moon's orbit, we can assume that the orbit is actually a circular orbit, and we know that we are viewing the orbits edge-on. So what we are seeing is a projection of a circular motion onto one dimension, which results in a sinusoidal motion, with the amplitude of that motion being the radius of the orbit (and thus the semi-major axis). So here we will analyze images taken at different times, plot the angular position of the moon over time, fit those data points to a sine (or, equivalently, a cosine) function, and the amplitude will be the semi-major axis, $a$.
 
 \section{The set of observations}
 
@@ -59,25 +85,87 @@ You will use the \textit{clear} images to measure the position of the moons rela
 \textit{gri} images to measure the radius of Jupiter. Since we will be using the ratio of moon position to Jupiter radius, we can use whatever units are convenient to measure the distance, as long as we are consistent, as the unit divides by itself in the calculation.
 
 \begin{steps}
-	\item \textbf{Use} DS9 to load and analyze each of the FITS files. To get a better view, select ``Scale >> Log'' from the drop-down menus. Using the Ruler function (described in the following paragraph), \textbf{for each timestamp, estimate the radius} of Jupiter from the \textit{i}-filter file (where available) \textbf{and the position} of each moon relative to Jupiter from the \textit{clear}-filter file. Keep track of whether the moon is on the East or West side of Jupiter by making all locations on the East side positive and locations on the West side negative.
+	
+	\item Download and install DS9 from \url{http://ds9.si.edu/site/Download.html}. SAOImage DS9, or DS9 for short, is an image viewer, analyzer, and processor written and used by astronomers for working with astronomical images.
+	
+	If you click the link to download, it might say "redirecting" while never actually redirecting. In this case, copy the link into the address bar directly.
+	\begin{framed}	
+		\textbf{For MacOS}, unless you know otherwise, choose from the top set of choices (to the right of
+		the blue apple logo). To find your version, from the Apple menu in the corner of the screen,
+		choose “About This Mac”.
+		
+		If it displays a warning and prevents you from installed from an unidentified developer, follow the instructions at the following link to create an exception:
+		
+		\url{https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac}
+	\end{framed}
+
+	\item Open the Google Sheet found here: \url{https://docs.google.com/spreadsheets/d/1y1vfi3l1KzGoE0cOctwA0Z5s7ioptaRFpSLItBoRv2c/edit?usp=sharing}
+	
+	\item Make a copy of this sheet for your group to use. Explore the parts of the sheet. Notice the model equation and fit parameters at the top. Notice the data columns, including the time, distance from the center of Jupiter \texttt{x}, and the radius of Jupiter \texttt{R\_Jupiter}. There is also a plot of the measured and model $x/R$. There is a different sheet for each moon you are observing. Notice the different tabs at the bottom of the window for each of the four moons.
+	
+	\item Download the Jupiter data zip file from Canvas and extract it to a folder on your computer.
+	
+	\item Start DS9 and open the file from the earliest timestamp, with the clear filter.
+	
+	\item \textbf{Record the time} the image was taken by going to the \textit{File} menu and then \textit{Display Fits Header}. Towards the bottom of the header will be listed the \textit{DATE-OBS} which will be in the UTC timezone.
+	
+	\item Convert the time given to decimal time in days after 2017-04-14T00:00:00. It may help to use the converter below the plot in the spreadsheet.
 \end{steps}
 
-You can use the DS9 \textit{Ruler} function to measure the distance (in pixels) between two points in the image. To use the \textit{Ruler}, first go to the Region menu from the toolbar at the top. Select the \textit{Shape} sub-menu and click \textit{Ruler}. Then, click the \textit{Edit} menu button and select \textit{Region}. You can then use the mouse to draw a line between two points and DS9 will calculate the distance for you. If you have trouble using the \textit{Ruler} feature, you can also read off the $(x,y)$ coordinates for each point and calculate the distance yourself. \textbf{Record your values} in a data table in a spreadsheet.
+In the data table, there is an entry for each tenth of a day, so that the model $x/R$ can be computed and plotted.
 
 \begin{steps}
-	\item \textbf{Record the time} the image was taken by going to the \textit{File} menu and then \textit{Display Fits Header}. Towards the bottom of the header will be listed the \textit{DATE-OBS} which will be in UTC time. To identify each moon at the time of the picture, use the following site: \url{http://www.shallowsky.com/jupiter/}, be sure to enter the correct date into the site. 
+	\item To include your measurement, insert a new row for the image's timestamp by right-clicking the row number of the time just before the image's timestamp and selecting ``Insert 1 below''.
+	
+	\item Enter your image's decimal time in the time column.
 
-	\item For each moon, find the semi-major axis of its orbit by fitting a sine curve to the data, using the following procedure:
-
+	\item Identify the moons in your image by doing the following:
 	\begin{enumerate}
-		\item Copy your data into a new table in SciDAVis. It should have the time in days (include fraction of days) in the $x$ column and the $x/R$ ratio in the $y$ column. For your report, format the table and graph according to Appendix~\ref{cha:lab-report-format}.
+		\item Adjust the contrast and zoom in your image until you can clearly see Jupiter and four moons. To get a better view, select ``Scale $>>$ Log'' from the drop-down menus, and also right-click-drag up, down, left, and right anywhere on the image to adjust the contrast dynamically.
 		
-		\item Use SciDAVis to fit the following function to the data:
-		\begin{equation}
-		 X_i = A \cos \left( \frac{2\pi T_i}{P} + \phi \right)\,.
-		\end{equation}
-		Here, $X_i$ is the position of the moon scaled to the radius of Jupiter, $A$ the amplitude of the sinusoid, which corresponds to the corresponds to the orbit semi-major axis divided by $R_\textrm{Jupiter}$, $T_i$ the time of the observation, $P$ the period of the moon's orbit, and $\phi$ the phase of the orbit. $X_i$ and $T_i$ are the data you obtain with your observations, and $A$ and $\phi$ are the parameters you will fit. Enter the period for the relevant moon from Table~\ref{jd:tab:periods}.
+		\item In another browser tab, open \url{http://www.shallowsky.com/jupiter/}, enter the observation time, and press the circular arrow ``refresh'' symbol. It automatically adjusts for your local timezone (in Chicago it adds ``-5'' to the end of the timestamp.), so to unadjust back to UTC, do that arithmetic operation to the entered time. In the case of Chicago and ``-5'', subtract 5 hours from the entered time.
+		
+		\item Ensure the images match and correct the time if necessary. If the image seems flipped or rotated, select a different orientation from the drop-down.
 	\end{enumerate}
+	
+	\item \textbf{Use} DS9 to measure the distance from the center of Jupiter to each moon using the Ruler function described in the following paragraph. Keep track of whether the moon is on the East or West side of Jupiter by making all locations on the left side positive and locations on the right side negative. \textbf{Record your value} in the data table for each moon.
+\end{steps}
+
+You can use the DS9 \textit{Ruler} function to measure the distance (in pixels) between two points in the image. To use the \textit{Ruler}, first go to the Region menu from the toolbar at the top. Select the \textit{Shape} sub-menu and click \textit{Ruler}. Then, click the \textit{Edit} menu button and select \textit{Region}. You can then use the mouse to draw a line between two points and DS9 will calculate the distance for you. If you have trouble using the \textit{Ruler} feature, you can also read off the $(x,y)$ coordinates for each point and calculate the distance yourself using Pythagorean's theorem.
+
+\begin{steps}
+	\item Repeat the above analysis for each of the four timestamps.
+\end{steps}
+
+The apparent radius of Jupiter can be different for each image, since the apparent brightness can change depending on local weather conditions. So if available, you will measure its radius for each timestamp.
+
+\begin{steps} 
+	\item For each timestamp, if its available, load the image taken with the ``i'' filter, listed in the filename, and measure Jupiter's radius, recording it in the table. If there is no such image, take an average of the other image's measured radii.
+\end{steps}
+
+You should now have 4 distances for each of the four moons recorded in their respective data tables. Now you will plot them and fit the sine functions, to find the semi-major axis of each one.
+
+\section{Plotting and fitting}
+
+\begin{steps}
+	\item For each row of measured data, enter the formula for the ``$x/R$ measured'' row. In Google Sheets, the procedure is as follows:
+	\begin{enumerate}
+		\item Select the cell in which you want to enter the formula (to the right of your measured \texttt{R\_Jupiter}.)
+		
+		\item Enter ``\texttt{=}'', click the cell that contains your measured $x$ to insert that cell's identifier, enter ``/'', click the cell that contains your measured $R_J$, and press enter. Ensure that it divided the correct values.
+	\end{enumerate}
+
+	\item In the next column, marked ``x/R model'', you need to continue the formula from the row above, in order to computer the model x/R for that timestamp. To do this, click on the cell in the row above, then click and drag the box on the lower right of the cell's border down by one cell.
+	
+	\item Do the same for the \texttt{diff\^{}2} column.
+\end{steps}
+
+Now you should have all four data points displaying on the plot, for each moon, and you are ready to fit the sine curve for each moon, so you can find the ratio semi-major axis divided by Jupiter radius, $a/R$, as needed for applying Kepler's third law as in Equation\ \ref{jd:eqn:kepden}.
+
+\begin{steps}
+	\item For each moon, enter the period of its orbit (from Table\ \ref{jd:tab:periods}) in the fit parameter for period, \texttt{B}.
+	
+	\item For each moon, adjust the other fit parameters, amplitude and time offset, to visually match the measured points, and then fine-adjust to minimize the rms deviation.
 \end{steps}
 
 \begin{table}
@@ -98,7 +186,7 @@ You can use the DS9 \textit{Ruler} function to measure the distance (in pixels) 
 The amplitude from your fit corresponds to the ratio, $(a/R)$ which we will use in Kepler’s Third law.
 
 \begin{steps}
-	\item For each moon, use the amplitude of the curve together with Keplers Third law
+	\item For each moon, use the amplitude of the curve together with Kepler's Third law
 	to estimate the density of Jupiter. Make sure you use the right units for your values. \textit{Hint:
 	look at the units for the Gravitational constant. What units do you need for the moons
 	orbital period?}
@@ -107,7 +195,7 @@ The amplitude from your fit corresponds to the ratio, $(a/R)$ which we will use 
 	
 	\item Compare your result to a value of the density you find online, using the uncertainties and the procedure in Appendix~\ref{unc:sec:comparing}. How close are they? What are possible sources of uncertainty of your measurement?
 	
-	\item\label{jd:step:composition} Rocky planets in our solar system have densities ranging from 3000--5000$\:$kg/m$^3$. Given this and your result, would you conclude that Jupiter is rocky or gaseous, and why?
+	\item\label{jd:step:composition} Rocky planets in our solar system have densities ranging from 3000--5000$\:$kg/m$^3$, and water has a density of 1000$\:$kg/m$^3$ (atmospheric air at sea level on Earth has a density of about 1$\:$kg/m$^3$). Given these ranges and your result, would you conclude that Jupiter is rocky or gaseous, and why?
 \end{steps}
 
 \section{Report checklist and grading}
