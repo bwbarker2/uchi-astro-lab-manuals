@@ -1,0 +1,91 @@
+\documentclass{article}
+\usepackage{url}
+\usepackage{hyperref}
+
+\title{SCT, SBIG camera, and CCDOps}
+\date{Updated Autumn 2021}
+
+\begin{document}
+\maketitle
+	
+\section{Setup}
+
+The SBIG camera should already be attached to the Schmidt-Cassegrain Telescope (SCT), which is attached to a fork, which is mounted on a tripod.
+
+\subsection{Starting up the camera}
+
+\begin{enumerate}
+	\item Plug in the camera's power cord. The fan should start automatically, and the filter wheel will rotate, making a repetitive clicking sound for about a second. The fan prevents condensation from forming on the camera whenever it is colder than room temperature.
+	
+	\item Ensure that the USB cord from the camera is connected to the computer.
+	
+	\item Ensure the computer is turned on.
+	
+	\item Open CCDOps by clicking the icon on the desktop.
+	
+	In the lower right of the program window, you will see a series of camera status indicators that are all blank, marked with hyphens (`-'). This is because the camera is not yet connected to the program.
+	
+	\item Click the Setup button in the toolbar. Set Temperature Control to Enabled, and set the desired temperature to 0 (degrees Celsius). Press OK.
+	
+	CCDOps will connect with the camera. The filter wheel will rotate again inside its housing, making more clicking noises for about a second. The status indicators should now give readings. The temperature should be decreasing towards zero, and the parentheses after the temperature should read ``(100\%)'', which means the cooling system is running at full strength. As the temperature reaches the target temperature, the cooling power level will decrease, since it doesn't need to work as hard.
+\end{enumerate}
+
+\subsection{Aiming the telescope}
+
+The camera is mounted on an equatorial mount, which means the mount rotates in the RA and Dec directions. Since we are using it to point across the room, we have it set up so that the RA axis is fixed, and the Dec axis actually adjusts our altitude, or how up and down we go.
+
+\subsection{Moving in azimuth}
+
+To move the telescope in azimuth (left and right), you will need to move the entire tripod. Avoid doing that by moving the target when possible, especially for fine adjustments.
+
+\subsection{Moving in altitude}
+
+To adjust the telescope's altitude (point it more up or more down), you will either turn a fine adjustment knob, or release a lock to let the telescope move freely in that direction while you manually aim it.
+
+\subsubsection{Fine adjustments}
+
+For fine adjustments, rotate the knob on the lower part of the left fork (as you look from behind the telescope).
+
+\subsubsection{Coarse adjustments}
+
+\begin{enumerate}
+	\item First get ready to support the weight of the telescope by holding on to the rear of the silver rail that runs along the underside of the telescope. When you release the lock, the camera end will want to fall downward. Don't let it.
+	
+	\item While supporting the rear of the telescope near the camera with your right hand, use your left hand to locate the aluminum lever on top of the left fork, near where the telescope connects to it.
+	
+	\item Continue being ready to support the telescope. Release the lock on the fork by rotating the lever towards you. The telescope should now rotate freely in this axis.
+	
+	\item Use your supporting hand to aim the telescope where you want to aim it.
+	
+	\item Rotate the lever forward again to lock the telescope in place.
+\end{enumerate}
+
+\section{Shutting down the camera}
+
+At the end of your lab section, if there is not another one immediately following, you will need to shut down the camera. You need to turn off the cooling before turning off the fan. Otherwise, as the CCD warms up, since it is still cooler than the air, condensation can build up on its surface. The fan will prevent this from happening.
+
+\begin{enumerate}
+	\item Open the camera setup menu.
+	
+	\item Disable the cooling and press OK. The cooling power should now be at 0\% and the temperature should be increasing towards room temperature.
+	
+	\item Once the CCD temperature reaches about 10 or 15 degrees C, it is above the dew point and condensation should not form. At this point you can close CCDOps and unplug the camera.
+\end{enumerate}
+
+\section{Troubleshooting}
+
+\subsection{The altitude fine adjust knob won't turn.}
+
+The fine adjust knob has a finite angle that it can traverse in one direction before it needs to be wound back. Look at the inside of the fork and see if the vertical bar is all the way at one end of the knob's bolt threads. If so, then you need to turn the knob to move the bar back to the middle, in order to use it again. If the vertical bar is all the way forward, then use some force to get the knob turning clockwise. If it's all the way back, do the same in the counterclockwise direction instead.
+
+\subsection{The image is completely dark, or no features can be seen.}
+
+\subsubsection{There might be a cap on the end of telescope.}
+
+If so, take it off and try again.
+
+\subsubsection{Exposure might not be long enough.}
+
+If you are taking an image in the darkened room, you may need 60 seconds of exposure or more to get an image of your target.
+
+\end{document}

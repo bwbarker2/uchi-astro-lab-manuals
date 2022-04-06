@@ -4,7 +4,15 @@
 
 %todo difference between measurement uncertainty and comparing between known and unknown quantities.
 
+%todo remove pythag part: if one is measuring just the horizontal shift in position of the camera, then only the horizontal shift in the star should be measured.
+
 %todo add clarification to pixel scale section - this is used to get the pixel scale so we can get the distance for other objects later in lab using the parallax technique and not the direct measurement like we are doing here.
+
+%todo feedback from 2022 winter:
+% - index finger and pinky finger used interchangeably - settle this
+% - students' distant stars were often not far enough - emphasize "make distant star as far as possible, 2x away from nearby
+% - it's unclear if the precise experiment should be the same situation as the crude, so setups were hard to reproduce. specify.
+% - unclear how to get uncertainty in second step.
 
 \section{Introduction}
 
@@ -47,6 +55,8 @@ You will now use the parallax technique to measure the distance to an object in 
 \begin{steps}
 	\item In the Hubble Lounge, look north towards the downtown skyline. Identify an object to be your ``nearby star'' and another as your ``distant star'', by analogy to the figure in the worksheet. An identifiable point on a white pillar rising from the Ratner gym serves well as the nearby star, while a corner of a building in the far distance can be your background star. See Fig.~\ref{par:fig:images} for an example.
 \end{steps}
+	
+You'll first use crude measuring tools to compute the nearby star's distance with the parallax technique, and then use a more precise method. First, you'll use the pinky finger on your outstretched arm as a measurement of angular size --- the width of this finger covers (``subtends'') about 1 degree.
 
 \begin{figure}
 	\includegraphics[width=0.5\textwidth]{parallax/parallax-image-1}
@@ -55,8 +65,10 @@ You will now use the parallax technique to measure the distance to an object in 
 \end{figure}
 
 \begin{steps}
-	\item Also choose the positions to view from as ``Earth (January)'' and ``Earth (July)''. When picking the stars and your Earth positions, check to see that from each Earth position, the distant star does not appear to move much, compared to the nearby star, and your guessed distance to the nearby star is at least 10 times greater than the distance between your two Earth positions.
-
+	\item Identify an object to be your ``nearby star'' and another as your ``distant star'', by analogy to the figure in the worksheet. An identifiable point on a white pillar rising from the Ratner gym serves well as the nearby star, while a corner of a building in the distance can be your background star.
+	
+	\item Find a place where you can stand and move a meter or two side to side and still see both ``stars''. The movement will simulate the Earth moving from its January to its July position. When picking the stars and your Earth positions, check to see that from each Earth position, the distant star does not appear to move much, compared to the nearby star, and your guessed distance to the nearby star is at least 10 times greater than the distance between your two Earth positions.
+	
 	\item Looking from just one eye, move so that the two stars appear to be directly overlapping. Mark your current position as Earth (January). Hold up your smallest finger at arm's length and move to your left or right until your finger fits just in between the two stars. This means that they are 1 degree away from each other in angular separation. Mark this position as Earth (July).
 	
 	\item Draw a diagram, similar to the second figure in the worksheet, and find your own Earth-Sun distance (half the distance between your Earth positions). Calculate the parallax angle, which is half the 1 degree you measured with your finger, and convert it to radians.
@@ -113,12 +125,12 @@ In the next section, you will compare these values with each other using their u
 
 Using a finger for measuring angular separation is not very precise. Here you'll use the parallax technique to determine the same distance to the nearby star, but using a telescope, camera and analysis software instead.
 
-%You will now use the telescope apparatus to measure the parallax of a “foreground star”
+You will now use the telescope apparatus to measure the parallax of a “foreground star”
 %(actually a ball on a stick)
-%(actually a nearby building), with the
+(actually a nearby building), with the
 %mock-up star field
-%Chicago skyline
-%serving as “background stars.”
+Chicago skyline
+serving as “background stars.”
 %Place the “foreground star” part way down the hallway between the telescopes and the observing target.
 \begin{steps}
     \item Aim the telescopes at the same ``nearby star'' that you measured with the finger method. The white pillars look similar to each other, so be careful to aim at the same one. Ensure that the telescopes are at the same height, so we don't have to factor in vertical displacements.
@@ -231,6 +243,7 @@ Now that you have the pixel scale of the image, you can use that to measure the 
 Include the following in your lab report. See Appendix~\ref{cha:lab-report-format} for formatting details. Each item below is worth 10 points.
 
 \begin{enumerate}
+	\item Your group's agreements about communication.
 	\item The completed worksheet ``The Parsec''.
 	\item Work and final answer for your distance measurements using your finger, with uncertainty.
 	\item Work and final answer for direct distance measurement, along with percent difference between the two measurements.

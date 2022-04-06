@@ -1,0 +1,304 @@
+\chapter{How fast is the galaxy rotating and what does it mean?}
+
+\section{Introduction}
+
+Observational astronomy using light at radio wavelengths, i.e., meter
+through millimeter wavelengths, is a relatively new field, starting with Karl
+Jansky’s discovery of radio wavelength emission from the sky in 1933. Jansky
+worked at Bell Labs and was trying to understand the excess noise in trans-
+Atlantic radio communications. It was a remarkable discovery, making headlines
+in the New York Times and leading to the birth of new field. However, Bell Labs
+did not pursue radio astronomy further at that time. An enthusiast Grote Weber
+did, however. As a hobby, he built in 1933 the first modern radio telescope in his
+backyard in Wheaton, IL and used it to map the sky, identifying many interesting
+astrophysical sources. He was detecting continuum emission, most of the
+sources were later found to be highly energetic active galactic nuclei emitting a
+type of radiation called synchrotron emission. In 1944, Hendrik van de Hulst
+worked out the theory of the hydrogen spin-flip transition, often simply called 21
+cm hydrogen emission, which soon became a powerful tool for astronomy. It still
+is today. The 21 cm line (1420.5 MHz frequency) is used to map the cold neutral
+hydrogen gas in the Galaxy and other galaxies. It was used to show
+unambiguously the spiral arms in the Milky Way. It also allows astronomers to
+measure the rotation curves of galaxies and solve for the enclosed mass. Such
+measurements have led to the discovery that large halos of an invisible, “dark”
+matter dominate the mass of galaxies. In this lab you will make such a
+measurement. In so doing you will learn the basics of radio astronomical
+observations and use them to measure the rotation of the Milky Way.
+
+\section{Team roles}
+
+\textbf{Decide on roles} for each group member. The available roles are:
+
+\begin{itemize}
+	\item Facilitator: ensures time and group focus are efficiently used
+	\item Scribe: ensures work is recorded
+	\item Technician: oversees apparatus assembly, usage
+	\item Skeptic: ensures group is questioning itself
+\end{itemize}
+
+These roles can rotate each lab, and you will report at the end of the lab report on how it went for each role. If you have fewer than 4 people in your group, then some members will be holding more than one role. For example, you could have the skeptic double with another role. Consider taking on a role you are less comfortable with, to gain experience and more comfort in that role.
+
+Additionally, if you are finding the lab roles more restrictive than helpful, you can decide to co-hold some or all roles, or think of them more like functions that every team needs to carry out, and then reflecting on how the team executed each function.
+
+\subsection{Add members to Canvas lab report assignment group}
+
+\begin{steps}
+	\item On Canvas, navigate to the People section, then to the ``Groups'' tab. Scroll to a group called ``L4 Rotation [number]'' that isn't used and have each person in your group add themselves to that same lab group.
+\end{steps}
+
+This enables group grading of your lab report. Only one person will submit the group report, and all members of the group will receive the grade and have access to view the graded assignment.
+
+\section{Masses and Orbital Velocity} %working title only
+
+Here you will learn how to use the rotation curve (plot of velocity vs distance from center) of a gravitationally bound rotating system to deduce information about the distribution of mass in it. You'll do this by deriving the relationship between the velocity of an orbiting body and the mass of everything within its orbit, and then exploring what the velocity looks like for several different theoretical mass distributions.
+
+%\subsection{Goal}
+%Learn how new phenomena can be predicted or inferred from basic physical principles and how to interpret rotation curves.
+
+\subsection{Equipment}
+
+\begin{itemize}
+	\item Desmos Graphing Calculator: \url{https://www.desmos.com/calculator}
+\end{itemize}
+
+\subsection{Steps}
+
+\begin{steps}
+	\item First, we know from Newton's first law that the force on an object is equal to its mass times its acceleration, $F=ma$. We also know that an object moving in a circle will experience an acceleration towards the center of its path which is given by $a = \dfrac{v^2}{r}$, where $v$ is the velocity of the object and $r$ is the radius the circle it travels along. Combine these two equations to find an equation for the force experienced by an object undergoing circular motion. \textbf{Record your derivation and final equation.}
+	
+	\item Objects in orbit also move in an approximately circular path and the force of gravity they experience is given by $F = G\dfrac{Mm}{r^2}$, where $M$ and $m$ are the masses of the two objects and $G$ is the gravitational constant. Using the equation you found in the previous step, derive an equation for the velocity of the orbiting object as a function of its radius.\textit{Hint: plug equations into each other to remove variables that are common in both equations. Your final equation should be in terms of $v$, $M$, $r$, and $G$}. \textbf{Record your derivation and final equation.}
+	
+	\item Create a plot of your equation for the velocity as a function of radius, for example using the online graphing calculator listed in the equipment. To plot it, type the equation in the left side of the screen. It will graph $y$ on the vertical, $x$ on the horizontal axis, so use $y$ in place of your $v$ and $x$ in place of your $r$. For the variables $M$ and $G$, click the ``add slider'' button so you can plot the shape of the curve. You can leave them set to equal 1, since we are using this to see the shape of the curve, not the absolute value. \textbf{Include this graph in your report.}
+	
+	\item Adjust the mass slider to larger values and observe what happens to the curve. How does it change? \textbf{Record your answer.}
+\end{steps}
+
+The graph you created is called a \textit{rotation curve}, which plots the orbital velocities of objects in an orbital system against their distance from the center. Using these curves, it is possible to learn a lot about the system it describes.
+
+When you first derived the equation for rotational velocity, you assumed that $M$ represented the mass for a single object at the center. Now we will assume that this equation holds true in the case that $M$ represents the total mass contained within the orbital radius. This assumption is valid for a spherically symmetric system, which is a good enough approximation for us. Let's explore some cases for different mass distributions.
+
+\begin{steps}
+	
+	\item For the case where the mass is uniformly distributed in a disk, the total enclosed mass increases as $r^2$. To graph this, delete the $M$ slider and create a new expression $M = c x^2$. How is this curve different from the previous one? \textbf{Include your answer and plot in your report.}
+	
+	\item Play with different mass distributions by changing the equation for $M$ and observing how the curve changes.
+	
+	\item The rotation curve for a sample orbital system is shown in Figure \ref{sbr:fig:solar-rot}. Change the mass formula in your plot to visually match the shape of this curve. How is the mass distributed in this orbital system? \textbf{Record your plot, mass equation, and answer.}
+	
+	\item Another rotation curve is shown in Figure \ref{sbr:fig:rotations-a-b} (line B). Change the mass formula in your plot to visually match the shape of this curve, ignoring the initial steep rise of the velocity at small distance. How is the mass distributed in this orbital system? \textbf{Record your plot, mass equation, and answer.}
+\end{steps}
+
+\begin{figure}
+	\centering
+	\includegraphics[scale = .6]{srt-background-rotation/keplerian-orbit.jpg}
+	\caption{Rotation curve of an example orbital system, where each of the objects marked on the graph are orbiting the center of the system.}\label{sbr:fig:solar-rot}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[scale = .3]{srt-background-rotation/galactic_rotation_curve}
+	\caption{Rotation curves for two example orbital systems A and B.}\label{sbr:fig:rotations-a-b}
+\end{figure}
+
+\begin{steps}
+	\item Look up information on the masses of the planets in the solar system as well as the Sun. Which of the rotation curves would you expect the solar system to have? \textit{It might help to add up all the masses and see how much each planet contributes to the total mass.} \textbf{Record your answer.}
+\end{steps}
+
+\section{Measuring the velocity of Hydrogen clouds in the galaxy}
+Hydrogen is the most common element in the universe. It exists in
+interstellar space as individual atoms, each atom consisting of a proton and an
+electron. Both particles have a property called spin and a hydrogen atom can
+exist either with the spins of the proton and electron parallel or anti-parallel.
+Sometimes the atom changes its spin state and, in doing this, emits a radio wave
+at a precisely known frequency of 1420.4 MHz corresponding to the wavelength
+of 21cm. By tuning the radio telescope receiver to this frequency, we can directly measure
+the amount of hydrogen in that direction and, importantly, its velocity.
+We can measure its velocity through the effect known as Doppler Shift.
+When an object is moving towards or away from an observer, the wavelengths of
+the light observed from the object get compressed or stretched. Since the
+wavelength and frequency of light are inversely related, frequencies are
+respectively increased or decreased. This is called Doppler Shift. Thus if we
+know the intrinsic frequency at which an object emits – in this case from the
+fundamental physics of the Hydrogen spin-flip transition – then we can calculate
+the velocity of that object with respect to our observational frame of reference –
+in this case the Earth. Your TA will go over this important concept with you in
+more detail during the first lab section. (Make sure you understand what’s going
+on and ask questions if you are confused!)
+To do this, the radio telescope measures the flux at a number of very finely
+spaced frequencies
+%, typically 7.5 kHz wide and spaced 7.5 kHz apart,
+ and so can produce a spectrum of the hydrogen line. This allows us to measure the Doppler
+shift of the atomic hydrogen clouds in the interstellar space of the Milky Way
+emitting the radio waves and allows us to measure the rotation velocity of that
+gas around the center of our Galaxy.
+
+\begin{steps}
+	\item Given what you have read and learned so far, \textbf{answer the following questions}:
+	\begin{enumerate}
+		\item You spot a star which you know should be emitting a signal at 800nm. However, you instead detect a signal at 900nm. What does this tell you about the stars motion? 
+		
+		\item You spot two gas clouds which should both be emitting at frequencies of around 1400hz. However, for cloud A you detect a signal of 1500hz and for cloud B you detect 1350hz. Which cloud is moving towards you? Away from you? Which one is moving faster?
+		
+		\item If an astronomical object is moving away from you, will its light become more red or more blue? What if its moving towards you?
+	\end{enumerate}
+	
+%	\item In section 20.2 of Openstax Astronomy, you read and learned about hydrogen clouds and the 21cm line. In your group, use your creativity and imagination to design an experiment to find the velocity of these hydrogen clouds. 
+\end{steps}
+
+%\section{Rotation of the Milky Way}
+
+Our star system, the Solar System, resides within the Milky Way Galaxy. When we observe it directly, it looks like the following:
+\begin{framed}
+	\url{https://en.wikipedia.org/wiki/Milky_Way#/media/File:ESO-VLT-Laser-phot-33a-07.jpg}.
+\end{framed}	
+The galaxy has a spiral disc shape, and this image is looking towards the center of the galaxy. While we can't move outside our galaxy to take a picture of it, based on what we know, it probably looks like the artist's rendition here:
+\begin{framed}
+	\url{https://en.wikipedia.org/wiki/Galactic_coordinate_system#/media/File:Artist's_impression_of_the_Milky_Way_(updated_-_annotated).jpg}
+\end{framed}
+Locate the Sun in that image and notice the coordinate system that extends from it. This is the system of galactic longitude, shown as a schematic here:
+\begin{framed}
+	\url{https://en.wikipedia.org/wiki/Galactic_coordinate_system#/media/File:Galactic_coordinates.JPG}
+\end{framed}
+Throughout the galaxy, there are neutral hydrogen gas clouds in the spiral arms. The neutral hydrogen clouds emit light with a spectral line at a wavelength of 21 cm (frequency of 1420.4 MHz). Since they are all moving at different velocities, when we observe 21 cm line in the galactic disc (galactic latitude $b=0$), we see different distinct peaks at wavelengths close to 21 cm, caused by their differing Doppler shifts. So we can use Doppler shift to find the velocity of those clouds. A sample observation is found in Figure \ref{sgr:fig:hicloud1}.
+
+\begin{figure}
+	\centering
+	\includegraphics[width = 0.7\textwidth]{srt-galaxy-rotation/hicloud1}
+	\caption{On the left, a graph of intensity vs line of sight velocity for 4 different gas clouds observed from Earth. The maximum line of sight velocity is from cloud C, since it's velocity orbiting the galactic center aligns with the line of sight. (Image from Swinburne University of Technology, \url{https://astronomy.swin.edu.au/cosmos/H/HI+cloud})}\label{sgr:fig:hicloud1}
+\end{figure}
+
+\subsection{Calculating Rotational Velocity}
+When measuring the velocity of these objects, we have to keep in mind that we are moving relative to them. As such, we are not measuring their rotational velocity, but their velocity relative to us. We therefore have to do several calculations to get their orbital velocity. To do this calculation, we will need several components. First, we will need the velocity of the sun in the line of sight for the galactic longitude $l$. This is because the Sun is also moving along the galactic plane, and thus we need to be able to account for it in our measurements. We already know that the velocity of the Local Standard of Rest (the local stellar environment around the Sun) is 220km/s, so using some trigonometry, we can see that the line of sight velocity is given by
+\begin{equation}
+V_\textrm{sun}(l) = (220\:\mathrm{km}/\mathrm{s}) \sin(l) \,.
+\end{equation}
+We also need to account for Earths rotation around the sun as well as relative motion of the solar system compared to the LSR. These are given to you by the SRT altogether as the VLSR or Velocity relative to the Local Standard of Rest. From the graph generated by the telescope, we simply need the maximum VLSR, as it corresponds to the hydrogen cloud directly in our line of sight. The circular velocity of the cloud can thus be obtained by
+\begin{equation}
+V_c(r) = v_\textrm{max} (l) + v_\textrm{sun}(l) \,.
+\end{equation}
+Finally, for the final data processing, you will need the distance of that cloud from the center of the galaxy. Once again, from the geometry of the graph above, we can see that this can be found from the distance of the Sun to the center $r_0 = 8.5\textrm{kpc}$ (kiloparsec) and the galactic longitude $l$. The distance is then given by
+\begin{equation}
+r = r_0 \sin(l)
+\end{equation}
+
+% Change gamma to l, parenthesis around 220km, spacing between number and unit use example on slack
+
+\subsection{Goal}
+Measure the rotational velocity of the galactic plane along different orbital radii, create a rotation curve for the milky way and infer the mass distribution from it.
+\subsection{Equipment}
+\begin{itemize}
+	\item LAB sky survey: \url{https://www.astro.uni-bonn.de/hisurvey/AllSky_profiles/}
+%	\item Small Radio Telescope
+\end{itemize}
+
+\begin{steps}
+
+\item Open the link to the LAB sky survey provided in the equipment section.
+
+\item In the search box, make sure that only the LAB survey box is checked and that Dec is always at 0. Figure \ref{sgr:fig:lab-box} demonstrates how the display should look like.
+
+\begin{figure}
+	\centering
+	\includegraphics[width = 0.7\textwidth]{srt-galaxy-rotation/LAB_box}
+	\caption{The input form for accessing the LAB spectra. Dec is always set to 0, only LAB is selected, FWHM is set to 0.2 and galactic coordinate system is used.} 
+	\label{sgr:fig:lab-box}
+\end{figure}
+
+\item Choose the galactic longitude to be  10 degrees and obtain a plot of brightness temperature vs VLSR (Velocity relative to Local Standard of Rest). The horizontal axis has already been translated from frequency of the hydrogen spin-flip line into relative velocity, using Doppler shift.
+
+\item Interpret the plot according to Fig.~\ref{sgr:fig:hicloud1}. Measure the velocity of the fastest gas cloud, $v_\textrm{max}$ (note these will be max positive for
+longitudes 10 to 90 deg. and max negative for longitudes -10 to -90
+deg.). You will note that the spectrum does not provide a clean
+maximum velocity. Think about the best way to measure
+maximum velocity, given that you may be observing several hydrogen clouds all in a line, moving at different velocities. \textbf{Record your findings in a table formatted like Table~\ref{sgr:tab:data}}.
+
+\item Record the spectrum by taking a screenshot of the spectrum plot. If necessary, crop the image in your preferred image editor such that only the spectrum viewer is visible. Your screenshot should look something like Figure \ref{sgr:fig:spec-example}.
+\end{steps}%
+\begin{figure}
+\centering
+\includegraphics[width = 0.7\textwidth]{srt-galaxy-rotation/spectrum_ex}
+\caption{An example of a good capture of the spectrum plot. Note the different clear peaks that are seen.} 
+\label{sgr:fig:spec-example}
+\end{figure}%
+
+\begin{steps}
+\item Perform the same analysis for the other longitudes listed in Table~\ref{sgr:tab:data}.
+
+\item Assuming a distance from the Sun to the galactic center of 8.5 kpc and
+a circular velocity of 220 km/s at this radius, make a spreadsheet that follows the template in Table \ref{sgr:tab:data} with the
+results of your calculations using your measurements of $v_\textrm{max}$ and
+equations above.
+\end{steps}
+
+\begin{table}
+	\centering
+	\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+		\toprule
+		Galactic Longitude (degrees) & Tangential Distance r (kpc) & Maximum VLSR $v_\textrm{max}$ (km/sec) & Line of Sight Solar Velocity $V_\textrm{sun}$ (km/sec) & Circular Velocity $v_c$ (km/sec) \\ \midrule 10 & & & & \\ \midrule 20 &&&& \\ \midrule 30 &&&&\\ \midrule 40 &&&& \\ \midrule 50 &&&& \\ \midrule 60 &&&& \\ \midrule 70 &&&& \\ \midrule 80 &&&& \\ \midrule 90 &&&& \\ \midrule -10 &&&& \\ \midrule -20 &&&& \\ \midrule -30 &&&& \\ \midrule -40 &&&& \\ \midrule -50&&&& \\ \midrule -60 &&&& \\ \midrule -70 &&&& \\ \midrule -80 &&&& \\ \midrule -90 &&&& \\ \bottomrule
+	\end{tabular}
+	\caption{Data Table for measurement of the rotation velocity of the Galaxy}\label{sgr:tab:data}
+\end{table}
+
+\begin{steps}
+\item Plot the orbital velocity versus the distance from the center in kpc using your plotting program of choice. \textbf{Include this graph in your report.}
+
+\item From the rotation curve you obtain, how do you expect the matter to be distributed in the galaxy? \textbf{Record your answer.}
+\end{steps}
+
+In our own solar system, the sun makes up most of the mass. As such, a safe assumption to make is that the mass in a given region of our galaxy is roughly proportional to its brightness (the brighter a region, the more stars and therefore the more mass there is). The brightness of our galaxy as a function of the radius roughly follows an exponential decay with radius,
+\begin{equation}
+I(r) = e^{-r/r_0} \,,
+\end{equation}
+where $r_0 = 2.1\:\textrm{kpc}$ is the characteristic length. To find the brightness within a given radius, we integrate that equation to find the total brightness within radius $r$, so that total brightness is proportional to:
+\begin{equation}\label{gr:eq:brightness}
+I_{\textrm{within }r} = 1 + \left(\frac{r}{r_0} - 1\right) e^{-r/r_0}
+\end{equation}
+
+\begin{steps}
+\item In Desmos online graphing calculator, plot Equation~\ref{gr:eq:brightness}.
+
+\item Take a screenshot of the graph you obtain. Describe the behavior of the graph. How does brightness change as you move farther away from the center of the milky way?
+
+\item Using the assumption above that mass density is roughly proportional to brightness, how would you expect mass to be distributed in the Milky way? How does it compare to what you found from the rotation curve.
+
+\item Think of possible explanations for the discrepancy between the distribution of mass suggested by the brightness curve and the distribution suggested by the rotation curve. Think about the assumptions that went into the equations and how you came to your original conclusions for each curve. \textbf{Record your discussion.}
+
+\end{steps}
+
+\section{Report Checklist}
+
+Include the following in your lab report. See Appendix~\ref{cha:lab-report-format} for formatting details. Each item below is worth 10 points.
+
+\begin{enumerate}
+	\item Derivation and final equation for the speed of an orbiting body (Steps 2--3)
+	
+	\item Graph of velocity vs radius with description of effect of different masses (Steps 4--5)
+	
+	\item Graph and description of rotation curve for uniformm disk (Step 6)
+	
+	\item Plot, mass equation, and description for first sample orbital system (Step 8)
+	
+	\item Plot, mass equation, and description for second sample orbital system (Step 9)
+	
+	\item Determination of rotation curve for the Solar System (Step 10)
+	
+	\item Answers to Doppler shift conceptual questions (Step 11)
+	
+	\item Plots of LAB spectra and table of maximum velocities of gas clouds at various longitudes (Steps 15--17)
+	
+	\item Calculation of tangential distances, line of sight solar velocities, and circular velocities (Step 18)
+	
+	\item Plot of rotation curve of the Milky Way Galaxy and interpretation of mass distribution (Step 19)
+	
+	\item Plot and description of brightness vs radius of our galaxy (Step 21--22)
+	
+	\item Determination of mass distribution as determined by brightness plot and comparison with determination from the rotation curve (Step 23)
+	
+	\item Discussion of explanations for any differences found between the two mass distributions (Step 24)
+	
+	\item Discuss the findings and reflect deeply on the quality and importance of the findings. This can
+	be both in the frame of a scientist conducting the experiment (“What did the experiment tell us
+	about the world?”) and in the frame of a student (“What skills or mindsets did I learn?”).
+	
+	\item Write a 100--200 word paragraph reporting back from each of the four roles: facilitator, scribe, technician, skeptic. Where did you see each function happening during this lab, and where did you see gaps? What successes and challenges in group functioning did you have? What do you want to do differently next time?
+\end{enumerate}

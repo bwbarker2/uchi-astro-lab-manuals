@@ -1,6 +1,12 @@
 \chapter{Answering questions with astronomical images}
 
-Last week, you queued up some images to be taken by the robotic telescope and learned how telescopes work to create images. This week, you'll learn how we record these images, and you'll learn one way to analyze those images to create knowledge about the distance between stars.
+%todo The rubric asks for "Image from SEO, with your two stars marked..." but this is not mentioned anywhere else in the lab
+
+%todo step 5 in the checklist doesn't ask for uncertainty, but the lab procedure does for that part
+
+Last week, you learned how we use lenses and telescopes to bend light. This week, you will analyze images that were taken by a research-grade robotic telescope, learn how we record these images, and learn one way to analyze those images to create knowledge about the distance between stars.
+
+%Last week, you queued up some images to be taken by the robotic telescope and learned how telescopes work to create images. This week, you'll learn how we record these images, and you'll learn one way to analyze those images to create knowledge about the distance between stars.
 
 \section{Learning goals}
 
@@ -14,9 +20,49 @@ Last week, you queued up some images to be taken by the robotic telescope and le
 	\item Gain insight of and appreciation for the scale of astronomical distances.
 \end{itemize}
 
+\subsection{Other skills learned}
+\begin{itemize}
+	\item Calculate pixel scale, plate scale from an image of known objects
+	\item Measure distances with DS9
+	\item Convert between angular separation and length
+	\item Use trig functions with triangles for the above conversion
+\end{itemize}
+
+\subsection{Team roles}
+
+\begin{steps}
+	\item \textbf{Decide on roles} for each group member.
+\end{steps}
+
+The available roles are:
+\begin{itemize}
+	\item Facilitator: ensures time and group focus are efficiently used
+	\item Scribe: ensures work is recorded
+	\item Technician: oversees apparatus assembly, usage
+	\item Skeptic: ensures group is questioning itself
+\end{itemize}
+
+These roles can rotate each lab, and you will report at the end of the lab report on how it went for each role. Some members will be holding more than one role. For example, you could have the skeptic double with another role. Consider taking on a role you are less comfortable with, to gain experience and more comfort in that role.
+
+Additionally, if you are finding the lab roles more restrictive than helpful, you can decide to co-hold some or all roles, or think of them more like functions that every team needs to carry out, and then reflect on how the team executed each function.
+
+\subsection{Add members to Canvas lab report assignment group}
+
+\begin{steps}
+	\item On Canvas, navigate to the People section, then to the ``Groups'' tab. Scroll to a group called ``L2 Astro Images [number]'' that isn't used and have each person in your group add themselves to that same lab group.
+\end{steps}
+
+This enables group grading of your lab report. Only one person will submit the group report, and all members of the group will receive the grade and have access to view the graded assignment.
+
 \section{How big is your face?}
 
-This is a simple question, so that you can learn some astronomical concepts and tools while answering it and still keeping the subject matter intuitive.
+This is a simple question, so that you can learn some astronomical concepts and tools while answering it and still keeping the subject matter intuitive. But first, some necessary background.
+
+\subsection{Telescopes and angular size}
+
+To gain some intuition for the functions of telescopes and for the concept of angular size, \textbf{complete the worksheets on the next 4 pages}. For ease, you can answer them in your lab report instead of drawing right on them, if you'd like.
+
+\includepdf[pages={-}]{astro-images-remote/ALT-ASS-Astro-telescopes-angular-res.pdf}
 
 \subsection{Background: reflecting telescopes and CCDs}
 
@@ -29,16 +75,19 @@ The primary utility of a telescope is its ability to gather light, thereby enabl
 		Light rays from astronomical objects enter the telescope in parallel because their source is effectively at infinity. They are then reflected by a parabolic primary mirror onto a secondary mirror that again reflects the light to a focus. An eyepiece or a camera is placed at the focal plane of the resulting image. Image source: \url{https://en.wikipedia.org/wiki/Cassegrain\_reflector\#/media/File:Schmidt-Cassegrain-Telescope.svg}}\label{sot:fig:schmidt}
 \end{figure}
 
-To take images in this lab, and to observe astronomical objects using the SEO, we make use of a \textbf{Charge Coupled Device (CCD)}. CCDs are the standard detectors for taking astronomical images at wavelengths blueward of approximately 1 micron. Think of the CCD we are using as a
+To take images in this lab, %
+% and to observe astronomical objects using the SEO
+and for the images taken by the Stone Edge Observatory telescope, %
+we make use of a \textbf{Charge Coupled Device (CCD)}. CCDs are the standard detectors for taking astronomical images at wavelengths blueward of approximately 1 micron. Think of the CCD we are using as a
 very advanced low-noise digital detector, not wholly dissimilar from the digital detector in your
 smartphone. Every time a photon within a certain energy range hits the detector, an electron is knocked off of the incident pixel, charging that pixel's capacitor. Thus, for each pixel, more photons $\implies$ more electrons $\implies$ more charge, and the charge can be read off into a digital signal that is then processed as an image. 
 
-The main thing to note is that the CCD material is not sensitive to all wavelengths of light uniformly. Photons of certain energies are more likely to excite electrons in the detector and thus contribute to the output image. Consequently, the observed image intensity will be weighted by the response function of the detector.
+%The main thing to note is that the CCD material is not sensitive to all wavelengths of light uniformly. Photons of certain energies are more likely to excite electrons in the detector and thus contribute to the output image. Consequently, the observed image intensity will be weighted by the response function of the detector.
 
 \subsection{Telescope Set Up, Preliminary Observations}\label{ai:sec:setup}
 
 The telescope and camera assembly is an expensive and relatively fragile piece of hardware, so
-move carefully when interacting with the system. We have only two setups, so the class will be split into two groups for using the classroom telescope.
+move carefully when interacting with the system. We have only one setup, so the class will be split into two groups and take turns using the classroom telescope.
 
 First we will be observing an object at the opposite end of the lab room with the lights turned off. During this exercise we will 1) check that the telescope is focused (which should already be the case), 2) gain practice positioning the telescope and targets, and 3) demonstrate the light gathering and angular resolution capabilities of the telescope with a physical object for which you have an direct sense of scale. \textbf{NOTE: For safety purposes, do not walk around the
 	lab while the lights are off; instead, turn the lights off only as needed to gather data
@@ -75,7 +124,9 @@ First we will be observing an object at the opposite end of the lab room with th
 %	the lab lights off and the blinds closed.
 	
 	\item Save this image in ‘fits’ format; the ‘ds9’ tool available on all of the lab
-	computers can be used to examine the image in detail (you can also install this free software on your computer). You can use the university supported
+	computers can be used to examine the image in detail (you can also install this free software on your computer\footnote{Install from here: \url{https://sites.google.com/cfa.harvard.edu/saoimageds9/download} . \textbf{For MacOS}, unless you know otherwise, choose from the top set of choices (to the right of
+		the blue apple logo). To find your Mac version, from the Apple menu in the upper-right corner of your screen,
+		choose “About This Mac”. If it displays a warning and prevents you from installed from an unidentified developer, follow the instructions at the following link to create an exception: \url{https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac}}). You can use the university supported
 	’Box’ system to share data with your lab classmates (or any other filesharing app that you prefer). See \url{uchicago.account.box.com/login}
 	for details.
 	
@@ -89,68 +140,90 @@ First we will be observing an object at the opposite end of the lab room with th
 
 	\item Load the image in DS9. You can adjust the contrast of the image by holding down the right-click and dragging left, right, up, and down. In the upper right window, you can drag the frame around to view different parts of the image. To measure a length, select Region $>$ Shape $>$ Ruler from the drop-down menu. Then select Edit $>$ Region. Now if you click and drag on the image, it will draw a line and display the distance in pixels, or in angular separation if the image file has been calibrated withe pixel scale already.
 	
-	\item In the acquired and saved image you can see a mm scale, which correponds to some number
+	\item In the acquired and saved image you can see a mm scale, which corresponds to some number
 	of pixels. Compute and report the ‘pixel scale’ in mm/pixel. Given the distance between the
-	telescope and the target, what is the angular pixel scale in arcseconds/pixel?
+	telescope and the target, what is the angular pixel scale in arcseconds/pixel? \textbf{Record your work and answer for your report.}
 	
 	To find this, note that for an arc (segment) of a circle, the length of that arc $s$ is related to the radius of circle $r$, and the angle (in radians) subtended by that arc $\theta$ by
 	\begin{equation}
 	s = r \theta
 	\end{equation}
 
-	\item Based on the pixel scale alone, how far apart in angle would two stars need to be in order to be distinguished as two objects instead of one?
+	\item Based on the pixel scale alone, how far apart in angle would two stars need to be in order to be distinguished as two objects instead of one? \textbf{Record your answer.}
 	
 	\item Observe the target from the vantage
 	point of the telescope by eye. What detail can you see? How does that compare to what
-	you can see with the telescope?
+	you can see with the telescope? \textbf{Record your answers.}
 	
-	\item Now take an image of part of one of your groupmates with the telescope. Centering on their eye can make for a fun picture. Use the pixel scale that you determined, along with that image, to find the angular separation (or ``angular distance'') between two points in the image --- for example, what is the angle subtended by their eye? Use the distance from the telescope to the person to also determine the distance between those two points, for example in millimeters. %Estimate your uncertainty and compare this measurement to a direct one (by holding up a ruler, for example.)
+	\item Now take an image of part of one of your groupmates with the telescope. Centering on their eye can make for a fun picture. Use the pixel scale that you determined, along with that image, to find the angular separation (or ``angular distance'') between two points in the image --- for example, what is the angle subtended by their eye? Use the distance from the telescope to the person to also determine the distance between those two points, for example in millimeters. \textbf{Record the angular separation you found, as well as the physical distance.} %Estimate your uncertainty and compare this measurement to a direct one (by holding up a ruler, for example.)
 \end{steps}
 
 \section{How far apart are these stars?}
 
-Now that you have experience measuring distances for objects you can directly measure, you'll try your hand at measuring distant objects that none of us can measure directly --- other stars in your image from SEO! The goal here is to pick two stars in your image and find the angular separation between them, as well as physical distance. To get the physical distance, you'll need to know their distances from Earth. To get that, you'll need to match up those stars in your image to known stars. You can use Stellarium for this, a free virtual observatory app. Then you can select those stars in the app and easily find information about them.
+Now that you have experience measuring distances for objects you can directly measure, you'll try your hand at measuring distant objects that none of us can measure directly --- stars that were imaged by our robotic telescope at Stone Edge Observatory.
+%other stars in your image from SEO!
+The goal here is to pick two stars in your image and find the angular separation between them.
+%, as well as physical distance. To get the physical distance, you'll need to know their distances from Earth.
+To check your work, you can compare to the known positions of these stars. To get that, you'll need to match up those stars in your image to known stars. You can use Stellarium for this, a free virtual observatory app. Then you can select those stars in the app and easily find information about them.
 
-Note that since we are using a real robotic telescope, many things can go wrong that may result in you not having an image that you've taken. There could have been cloudy nights all week, or smoke from wildfires, or planned power outages to protect from wildfires, or part of the observatory could have broken down. We have archival images in the case that your images are not taken, so that you can still complete the lab.
+%Note that since we are using a real robotic telescope, many things can go wrong that may result in you not having an image that you've taken. There could have been cloudy nights all week, or smoke from wildfires, or planned power outages to protect from wildfires, or part of the observatory could have broken down. We have archival images in the case that your images are not taken, so that you can still complete the lab.
 
 \begin{steps}
-	\item Log into \url{queue.stoneedgeobservatory.com}, find your completed observation, and click ``go to image''. If you don't have a completed observation, find a classmate's or TA's image URL to visit to get an image to work with. If the image that appears is very fuzzy or has no stars in it, choose a different option from the ``Pipe Step'' drop-down menu.
-	
-	\item Select the link ``Download Selected FITS File'' to do so. Open it in DS9.
-	
-	\item Also open Stellarium on a computer. It is a free open source virtual observatory, so you can install it on your computer if you'd like. Use Stellarium to find your target (hover over the left edge of the screen to find the menu that includes the Search function). Toggle the Ground and Atmosphere in the bottom menu, so you can see the star clearly. Zoom in by selecting the rectangle icon third from the right in the upper-right-hand corner. This simulates a field of view that is similar to our telescope.
-	
-	\item Use the Stellarium view to identify two stars from your image. The two pictures might be rotated relative to each other.
-	
-	\item For those two stars, use DS9 to measure the angular separation (angular distance) between them. You may need to use the pixel scale of the Stone Edge Observatory telescope, which is 0.76''/pix (arcseconds per pixel). \textbf{Record this and your uncertainty for it.}
-	
-	\item In Stellarium, select each of the two stars in turn and record their equatorial coordinates (RA/Dec J2000.0). Calculate the angular separation using a web form, for example \url{http://hea.iki.rssi.ru/AZT22/ENG/cgi-bin/c_dist.htm}.
-	
+	\item Download the FITS file for 51 Pegasi from the Labs module in Canvas. 51 Peg is the star system where humans detected our first exoplanet.
+
+% Second brightest star is Gaia DR2 2832576492727851136. The angular distance between 51 Peg and that one is 0.159841 deg (9'35.4'')
+
+	\item Load the image in DS9. You can adjust the contrast of the image by holding down the right-click and dragging left, right, up, and down. In the upper right window, you can drag the frame around to view different parts of the image.
+
+%	\item Log into \url{queue.stoneedgeobservatory.com}, find your completed observation, and click ``go to image''. If you don't have a completed observation, find a classmate's or TA's image URL to visit to get an image to work with. If the image that appears is very fuzzy or has no stars in it, choose a different option from the ``Pipe Step'' drop-down menu.
+
+%	\item Select the link ``Download Selected FITS File'' to do so. Open it in DS9.
+
+	\item Also open \url{stellarium-web.org} and search for 51 Pegasi.
+
+%	\item Also open Stellarium on a computer. It is a free open source virtual observatory, so you can install it on your computer if you'd like. Use Stellarium to find your target (hover over the left edge of the screen to find the menu that includes the Search function). Toggle the Ground and Atmosphere in the bottom menu, so you can see the star clearly. Zoom in by selecting the rectangle icon third from the right in the upper-right-hand corner. This simulates a field of view that is similar to our telescope.
+
+	\item The field of view (total angular size of image) for SEO is 27', so zoom in Stellarium to the same approximate field of view.
+
+	\item Use the Stellarium and the downloaded image to identify two stars, 51 Peg and one other. Note that the two pictures might be rotated or flipped relative to each other.
+
+	\item For those two stars, use DS9 to measure the angular separation (angular distance) between them. You may need to use the pixel scale of the Stone Edge Observatory telescope, which is 0.76''/pix (arcseconds per pixel). The image might have "binning" applied, which means that the photons from groups of neighboring pixels were put in the same "bin" (added up), resulting in a larger pixel scale. For example, if the image filename has "bin2" in it, then groups of 2x2 pixels were binned together, so the pixel scale of the image is double the original. \textbf{Record your procedure, value, and uncertainty for the angular separation.}
+
+	\item In Stellarium, select each of the two stars in turn and record their equatorial coordinates (RA/Dec). Calculate the angular separation using a web form, for example \url{http://hea.iki.rssi.ru/AZT22/ENG/cgi-bin/c_dist.htm}.
+
 	\item Use the $t'$ statistic (see Appendix\ \ref{unc:sec:comparing}) to compare these two values of angular separation.
-	
+
 %	\item To find the physical distance between them, use the distances from Earth as given in Stellarium, along with the angular separation and some geometry.
-	
+
 %	\item How long does it take light to travel from one of those stars to the other?
 \end{steps}
 
-\section{But wait! Next set of observations with SEO}
+%\section{But wait! Next set of observations with SEO}
 
-In the next lab, we will be exploring the use of color in astronomical images. The CCD image sensor is monochrome. That is, it has a relatively flat sensitivity to different wavelengths in the visible spectrum. To gain information about color, or the relative contributions of different wavelengths, you'll use filters that can be placed in front of the sensor. So for next week, \textbf{queue another observation or several} (no more than 1 per student per week). Choose the same target from last week. Select the r, g, and b filters (red, green, and blue, respectively), and leave the "dark" checked as well. For the exposure time, you can adjust it if you think the image was over- or under-exposed, but be careful --- the color filters cut down the intensity of light, even in the color that it transmits the most, by at least a factor of two.
+%In the next lab, we will be exploring the use of color in astronomical images. The CCD image sensor is monochrome. That is, it has a relatively flat sensitivity to different wavelengths in the visible spectrum. To gain information about color, or the relative contributions of different wavelengths, you'll use filters that can be placed in front of the sensor. So for next week, \textbf{queue another observation or several} (no more than 1 per student per week). Choose the same target from last week. Select the r, g, and b filters (red, green, and blue, respectively), and leave the "dark" checked as well. For the exposure time, you can adjust it if you think the image was over- or under-exposed, but be careful --- the color filters cut down the intensity of light, even in the color that it transmits the most, by at least a factor of two.
 
 \section{Report checklist and grading}
 
-Each item below is worth 10 points, and there is an additional 10 points for attendance and participation. See Appendix\ \ref{cha:lab-report-format} for guidance on writing the report and formatting tables and graphs.
+Each item below is worth 10 points. See Appendix\ \ref{cha:lab-report-format} for guidance on writing the report and formatting tables and graphs.
 
-\begin{itemize}
+\begin{enumerate}
 	
-	\item Image of the target that you captured, with the calculation of pixel scale. (Step 8)
+	\item Image of the target that you captured, with the calculation of pixel scale (Steps 7, 10)
 	
-	\item Observation from Step 10.
+	\item Determination of minimum angle resolved (Step 11)
 	
-	\item Image of a person, with calculation of the angular separation and linear separation. (Step 11)
+	\item Observation from Step 12
 	
-	\item Image from SEO, with your two stars marked, along with the calculation of angular separation. (Step 16)
+	\item Image of a person, with calculation of the angular separation and physical distance. (Step 13)
 	
-	\item Calculation of angular separation from Stellarium's coordinates, along with the comparison using the $t'$ statistic.
+	\item Image from SEO, with your two stars marked, along with the calculation of angular separation (Step 19)
 	
-\end{itemize}
+	\item Calculation of angular separation from Stellarium's coordinates, along with the comparison using the $t'$ statistic (Steps 20--21)
+	
+	\item Discuss the findings and reflect deeply on the quality and importance of the findings. This can
+	be both in the frame of a scientist conducting the experiment (“What did the experiment tell us
+	about the world?”) and in the frame of a student (“What skills or mindsets did I learn?”).
+	
+	\item Write a 100--200 word paragraph reporting back from each of the four roles: facilitator, scribe, technician, skeptic. Where did you see each function happening during this lab, and where did you see gaps? What successes and challenges in group functioning did you have? What do you want to do differently next time?
+	
+\end{enumerate}
