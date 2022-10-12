@@ -1,0 +1,47 @@
+\documentclass{article}
+
+\title{RV lab partial answer key}
+
+
+\begin{document}
+
+\maketitle
+
+\textbf{center of mass of system.}
+\begin{equation}
+	x_{cm} = \frac{m_1 x_1 + m_2 x_2}{m_1 + m_2}
+\end{equation}
+
+For convenience, set the coordinate system zero at the center of the star, so that the cm position $x_{cm}$ is also the distance from the star, which is the thing that is asked for.
+\begin{equation}
+	x_{cm} = \frac{m_S (0\:\textrm{AU}) + m_P d}{m_S + m_P}
+\end{equation}
+\begin{equation}
+	x_{cm} = 2.5132 \times 10^{-5}\:\textrm{AU}
+\end{equation}
+
+\textbf{orbital radius.} Ah, the star is orbiting the center of mass, so the star's orbital radius $r_S$ is equal to the distance from its center to the cm, so
+\begin{equation}
+	r_S = 2.5132\times 10^{-5}\:\textrm{AU} \,.
+\end{equation}
+
+\textbf{orbital velocity of star.} speed is distance divided by time, and the time we have is the period. So we need the distance the star travels during one period, which is equal to the circumference of the circle the orbit makes:
+
+\begin{eqnarray}
+	v &=& \frac{\delta x}{\delta t} \\
+	&=& \frac{2 \pi r_S}{T} \\
+	&=& \frac{2 \pi (2.5132 \times 10^{-5}\:\textrm{AU})}{4.23\:\textrm{days}} \\
+	&=& 3.7331 \times 10^{-5}\:\textrm{AU}/\textrm{day} \\
+	&=& 64.638 \:\textrm{m}/\textrm{s}
+\end{eqnarray}
+
+I picked meters per second here just to get some sense of scale, to know how much it is actually moving here.
+
+\textbf{system with planet with twice the mass.} I redo the above calculation with the new mass equal to $M_J$ to get
+\begin{eqnarray}
+	r_S &=& 5.0241 \times 10^{-5}\:\textrm{AU} \\
+	v_S &=& 129.22 \:\textrm{m}/\textrm{s}
+\end{eqnarray}
+These are about twice the values of the first system. Fun fact for the TA, not expected to be part of their answer: This factor is about equal to the factor of increase of the planet mass, only because the planet mass is much less than the star mass, so the denominator of the center of mass equation is not significantly changed by doubling the planet mass.
+
+\end{document}
