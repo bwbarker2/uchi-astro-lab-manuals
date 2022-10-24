@@ -141,7 +141,7 @@ First we will be observing an object at the opposite end of the lab room with th
 	\item Load the image in DS9. You can adjust the contrast of the image by holding down the right-click and dragging left, right, up, and down. In the upper right window, you can drag the frame around to view different parts of the image. To measure a length, select Region $>$ Shape $>$ Ruler from the drop-down menu. Then select Edit $>$ Region. Now if you click and drag on the image, it will draw a line and display the distance in pixels, or in angular separation if the image file has been calibrated withe pixel scale already.
 	
 	\item In the acquired and saved image you can see a mm scale, which corresponds to some number
-	of pixels. Compute and report the ‘pixel scale’ in mm/pixel. Given the distance between the
+	of pixels. Given the distance between the
 	telescope and the target, what is the angular pixel scale in arcseconds/pixel? \textbf{Record your work and answer for your report.}
 	
 	To find this, note that for an arc (segment) of a circle, the length of that arc $s$ is related to the radius of circle $r$, and the angle (in radians) subtended by that arc $\theta$ by
@@ -183,9 +183,9 @@ To check your work, you can compare to the known positions of these stars. To ge
 
 %	\item Also open Stellarium on a computer. It is a free open source virtual observatory, so you can install it on your computer if you'd like. Use Stellarium to find your target (hover over the left edge of the screen to find the menu that includes the Search function). Toggle the Ground and Atmosphere in the bottom menu, so you can see the star clearly. Zoom in by selecting the rectangle icon third from the right in the upper-right-hand corner. This simulates a field of view that is similar to our telescope.
 
-	\item The field of view (total angular size of image) for SEO is 27', so zoom in Stellarium to the same approximate field of view.
+	\item The field of view (total angular size of image, FOV) for SEO is 27' (27 arcminutes), so zoom in Stellarium to the same approximate field of view. The FOV is listed in degrees in the upper right corner of the window, so you'll need to convert from arcminutes to degrees.
 
-	\item Use the Stellarium and the downloaded image to identify two stars, 51 Peg and one other. Note that the two pictures might be rotated or flipped relative to each other.
+	\item Use Stellarium and the downloaded image to identify two stars, 51 Peg and one other, in both images. To aid this, look for the same pattern of stars in each. Note that the two pictures might be rotated or flipped relative to each other.
 
 	\item For those two stars, use DS9 to measure the angular separation (angular distance) between them. You may need to use the pixel scale of the Stone Edge Observatory telescope, which is 0.76''/pix (arcseconds per pixel). The image might have "binning" applied, which means that the photons from groups of neighboring pixels were put in the same "bin" (added up), resulting in a larger pixel scale. For example, if the image filename has "bin2" in it, then groups of 2x2 pixels were binned together, so the pixel scale of the image is double the original. \textbf{Record your procedure, value, and uncertainty for the angular separation.}
 
@@ -216,7 +216,7 @@ Each item below is worth 10 points. See Appendix\ \ref{cha:lab-report-format} fo
 	
 	\item Image of a person, with calculation of the angular separation and physical distance. (Step 13)
 	
-	\item Image from SEO, with your two stars marked, along with the calculation of angular separation (Step 19)
+	\item Image from SEO, with your two stars marked, along with the calculation of angular separation with uncertainty (Step 19)
 	
 	\item Calculation of angular separation from Stellarium's coordinates, along with the comparison using the $t'$ statistic (Steps 20--21)
 	
