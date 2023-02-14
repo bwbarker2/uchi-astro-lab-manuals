@@ -38,53 +38,53 @@ In this lab you will use a Hertzsprung-Russell (H-R) Diagram to learn about a st
 \section{Learning goals}
 
 \begin{itemize}
-%    \item Gain an understanding of astronomical observation, image analysis and photometry
+    \item Gain an understanding of astronomical observation, image analysis and photometry
 	\item Gain practice performing basic calculations on datasets and making informative scientific figures from those data
 	\item Retrieve data from astronomical databases.
 	\item Learn where different stellar populations lie on the HR diagram, and understand the physical reasons behind these localizations
-	\item Estimate stellar cluster ages using the predictions of stellar evolutionary models. 
+%	\item Estimate stellar cluster ages using the predictions of stellar evolutionary models. 
 \end{itemize}
 
 %\textbf{Rubric rows to focus on:} D1, D4, F1, F2, G2, G4, G5
 
 \section{Scientific background}
 
-See the slides from Lectures 1 and 2 on Canvas.
+%See the slides from Lectures 1 and 2 on Canvas.
 
 For the basics of H-R diagrams, you can also read this textbook chapter: \url{https://openstax.org/books/astronomy/pages/18-4-the-h-r-diagram}
 
-%Stars evolve (i.e., change their properties) over millions and often billions of years – too slow for us to see the evolution over a human lifespan.  Such impressive longevity is due to the fact that stars are powered by thermonuclear reactions, which are very efficient in generating abundant energy and have quite a bit of fuel to last for a long time. Stars like our Sun last about 10 billion years (so the Sun is in its middle age). The long timescale of evolution also means that we have to develop a different way to study stellar evolution. 
+Stars evolve (i.e., change their properties) over millions and often billions of years – too slow for us to see the evolution over a human lifespan.  Such impressive longevity is due to the fact that stars are powered by thermonuclear reactions, which are very efficient in generating abundant energy and have quite a bit of fuel to last for a long time. Stars like our Sun last about 10 billion years (so the Sun is in its middle age). The long timescale of evolution also means that we have to develop a different way to study stellar evolution. 
 
-%Astronomers explore evolution of stars by observing large populations of stars where different stars are in different stages of evolution. Of course, in order to do this we need to be able to tell which star is in what stage. This is done by a combination of observations – which measure luminosity and surface temperatures – and theoretical models – which predict how luminosity and surface temperature change as stars evolve. The key is that luminosity and temperature at a certain age are determined by star's mass, chemical composition, and details of thermonuclear reactions (which elements are burning, over what fraction of star's volume, etc.).
+Astronomers explore evolution of stars by observing large populations of stars where different stars are in different stages of evolution. Of course, in order to do this we need to be able to tell which star is in what stage. This is done by a combination of observations – which measure luminosity and surface temperatures – and theoretical models – which predict how luminosity and surface temperature change as stars evolve. The key is that luminosity and temperature at a certain age are determined by star's mass, chemical composition, and details of thermonuclear reactions (which elements are burning, over what fraction of star's volume, etc.).
 
-%Luminosity and temperature of stars are related because they are both determined by their internal structure, which, in turn, is determined by the basic physical properties (mass, chemical composition, age). Therefore, stars are not scattered randomly in the luminosity and temperature space but follow well-defined sequences, which reflect the ranges of the controlling parameters in a given stellar population. 
+Luminosity and temperature of stars are related because they are both determined by their internal structure, which, in turn, is determined by the basic physical properties (mass, chemical composition, age). Therefore, stars are not scattered randomly in the luminosity and temperature space but follow well-defined sequences, which reflect the ranges of the controlling parameters in a given stellar population. 
 
-%The surface temperatures of stars can be deduced by fitting a blackbody radiation spectrum to their spectra. Even for stars that do not have spectra measured, their temperatures can be deduced from their colors (Recall: does bluer color correspond to cooler or hotter temperature?). Our eyes and brain perceive color by analyzing spectral composition of the incoming light. In astronomy, a star's color is defined as the difference between its magnitudes measured through two different filters that block out all light except light within a fairly narrow range of wavelengths. 
+The surface temperatures of stars can be deduced by fitting a blackbody radiation spectrum to their spectra. Even for stars that do not have spectra measured, their temperatures can be deduced from their colors (Recall: does bluer color correspond to cooler or hotter temperature?). Our eyes and brain perceive color by analyzing spectral composition of the incoming light. In astronomy, a star's color is defined as the difference between its magnitudes measured through two different filters that block out all light except light within a fairly narrow range of wavelengths. 
 
-%In order to interpret evolutionary states, we look at physical groupings of stars called stellar clusters, which are located at the same distance from us and were born at the same time from the same cloud of dense gas. The spread in their properties will thus not be due to different ages or initial compositions, but mainly due to different masses. As you will see, stars occupy distinct regions of the observable equivalent of the luminosity-temperature space --- the magnitude-color space called the Hertzsprung-Russell (H-R) diagram. We will make this diagram for a star cluster.
+In order to interpret evolutionary states, we look at physical groupings of stars called stellar clusters, which are located at the same distance from us and were born at the same time from the same cloud of dense gas. The spread in their properties will thus not be due to different ages or initial compositions, but mainly due to different masses. As you will see, stars occupy distinct regions of the observable equivalent of the luminosity-temperature space --- the magnitude-color space called the Hertzsprung-Russell (H-R) diagram. We will make this diagram for a star cluster.
 
-%\subsection{Filters}
-%Light is composed of energy-packets termed \textbf{photons} with energies that determine their wavelengths (sorter wavelength $\implies$ higher energy). Thus every light source exhibits a \textbf{spectrum} of energies based on its components, which are determined by the physics of the light emission process. Observing the spectrum of radiation emitted from astronomical objects is a fundamental tool in observational astrophysics. However, obtaining the specific intensity of radiation as a function of energy for many dim sources is challenging. An easier way to asses the electromagnetic energies observed is to image them in different \textbf{filters}: materials placed at the opening of a telescope that are transparent to a known range of wavelengths and opaque to all others (thus ``filtering'' the light). Thus, one can image the same object with multiple different filters to get a sense of the wavelength regimes that dominate the light from a source.
-%
-%A filter is characterized by its \textbf{transmission function}: a function that characterizes the amount of light that is transmitted by the filter at each wavelength. Figure~\ref{sdss_filters} shows the transmission functions for some standard astronomical filters (similar to the one's you'll be using in this class).
-%
-%\begin{figure}
-%\label{sdss_filters}
-%\includegraphics{hr_diagram/fig_sdss_filters_1.png}
-%\caption{Filter Transmission Functions for the Sloan Digetal Sky Survey, overlaid on a stellar spectrum. The magnitude observed by each filter will be proportional to the integrated spectrum multiplied by the filter transmission. It's clear in this image that the underlying spectrum of the star will cause the different filters to have different magnitudes. Image source: \texttt{http://www.astroml.org/\_images/fig\_sdss\_filters\_1.png}}
-%\end{figure}
-%
-%\section{Defining color}
-%
-%Since different bands measure brightness in different wavelengths, the ratio of flux in two bands is a measure of an object's color. Therefore, the difference between astronomical magnitudes of an object in different bands is a measure of its color, since the magnitude scale is logarithmic:
-%
-%\begin{equation}
-%m_A - m_B = -2.5\log\left(\frac{F_A}{F_B}\right).
-%\end{equation}
-%
-%An H-R diagram is a plot of stellar magnitude vs. color - aka a ``color magnitude diagram''. A star's color is an observational indication of it's surface temperature. Since all of the stars in a star cluster are at approximately the same distance, their apparent magnitude gives a good relative indicator of luminosity. Therefore, a color-magnitude diagram of stars at roughly constant distance is effectively a temperature-luminosity diagram, and stars fall in characteristic regions of this parameter space based on their mass, age, and metallicity.
+\subsection{Filters}
+Light is composed of energy-packets termed \textbf{photons} with energies that determine their wavelengths (sorter wavelength $\implies$ higher energy). Thus every light source exhibits a \textbf{spectrum} of energies based on its components, which are determined by the physics of the light emission process. Observing the spectrum of radiation emitted from astronomical objects is a fundamental tool in observational astrophysics. However, obtaining the specific intensity of radiation as a function of energy for many dim sources is challenging. An easier way to asses the electromagnetic energies observed is to image them in different \textbf{filters}: materials placed at the opening of a telescope that are transparent to a known range of wavelengths and opaque to all others (thus ``filtering'' the light). Thus, one can image the same object with multiple different filters to get a sense of the wavelength regimes that dominate the light from a source.
 
-%We will have data in two wavelength bands, so we can subtract those magnitudes to get a color index. With the software or coding language of your choice, you will plot $g$ on the vertical axis and $g - r$ on the horizontal axis.
+A filter is characterized by its \textbf{transmission function}: a function that characterizes the amount of light that is transmitted by the filter at each wavelength. Figure~\ref{sdss_filters} shows the transmission functions for some standard astronomical filters (similar to the one's you'll be using in this class).
+
+\begin{figure}
+\label{sdss_filters}
+\includegraphics{hr_diagram/fig_sdss_filters_1.png}
+\caption{Filter Transmission Functions for the Sloan Digetal Sky Survey, overlaid on a stellar spectrum. The magnitude observed by each filter will be proportional to the integrated spectrum multiplied by the filter transmission. It's clear in this image that the underlying spectrum of the star will cause the different filters to have different magnitudes. Image source: \texttt{http://www.astroml.org/\_images/fig\_sdss\_filters\_1.png}}
+\end{figure}
+
+\section{Defining color}
+
+Since different bands measure brightness in different wavelengths, the ratio of flux in two bands is a measure of an object's color. Therefore, the difference between astronomical magnitudes of an object in different bands is a measure of its color, since the magnitude scale is logarithmic:
+
+\begin{equation}
+m_A - m_B = -2.5\log\left(\frac{F_A}{F_B}\right).
+\end{equation}
+
+An H-R diagram is a plot of stellar magnitude vs. color - aka a ``color magnitude diagram''. A star's color is an observational indication of it's surface temperature. Since all of the stars in a star cluster are at approximately the same distance, their apparent magnitude gives a good relative indicator of luminosity. Therefore, a color-magnitude diagram of stars at roughly constant distance is effectively a temperature-luminosity diagram, and stars fall in characteristic regions of this parameter space based on their mass, age, and metallicity.
+
+We will have data in two wavelength bands, so we can subtract those magnitudes to get a color index. With the software or coding language of your choice, you will plot $g$ on the vertical axis and $g - r$ on the horizontal axis.
 %Add error bars to your plot. If doing so for each data point becomes crowded on your figure, you can estimate a typical error from your data and include it in a legend. 
 
 \section{Team roles}
@@ -102,21 +102,67 @@ These roles can rotate each lab, and you will report at the end of the lab repor
 
 Additionally, if you are finding the lab roles more restrictive than helpful, you can decide to co-hold some or all roles, or think of them more like functions that every team needs to carry out, and then reflecting on how the team executed each function.
 
-\section{Identifying trends in color-magnitude diagrams}
-
-Four unlabeled color-magnitude diagrams (another term for H-R diagrams) are shown in Figure\ \ref{hr:fig:hrs}. What trends do you see among them? They have been modified so that the vertical axis is the absolute magnitude rather than apparent magnitude so that they can be compared. These four clusters were not all formed at the same time. In fact, they have distinct ages that are quite different from one another. \textbf{Determine the sequence from youngest to oldest, and provide an explanation.}
-
-\begin{figure}
-	\includegraphics[width=0.5\textwidth]{hr-diagram-pos/mystery-hr-1}
-	\includegraphics[width=0.5\textwidth]{hr-diagram-pos/mystery-hr-2}
-		\includegraphics[width=0.5\textwidth]{hr-diagram-pos/mystery-hr-3}
-			\includegraphics[width=0.5\textwidth]{hr-diagram-pos/mystery-hr-4}
-	\caption{H-R diagrams for several clusters of stars. The vertical axes have been changed to absolute magnitude for comparison purposes.}\label{hr:fig:hrs}
-\end{figure}
+%\section{Identifying trends in color-magnitude diagrams}
+%
+%Four unlabeled color-magnitude diagrams (another term for H-R diagrams) are shown in Figure\ \ref{hr:fig:hrs}. What trends do you see among them? They have been modified so that the vertical axis is the absolute magnitude rather than apparent magnitude so that they can be compared. These four clusters were not all formed at the same time. In fact, they have distinct ages that are quite different from one another. \textbf{Determine the sequence from youngest to oldest, and provide an explanation.}
+%
+%\begin{figure}
+%	\includegraphics[width=0.5\textwidth]{hr-diagram-pos/mystery-hr-1}
+%	\includegraphics[width=0.5\textwidth]{hr-diagram-pos/mystery-hr-2}
+%		\includegraphics[width=0.5\textwidth]{hr-diagram-pos/mystery-hr-3}
+%			\includegraphics[width=0.5\textwidth]{hr-diagram-pos/mystery-hr-4}
+%	\caption{H-R diagrams for several clusters of stars. The vertical axes have been changed to absolute magnitude for comparison purposes.}\label{hr:fig:hrs}
+%\end{figure}
 
 \section{Making an HR Diagram}
 
-To learn about a star cluster, you'll make a color-magnitude diagram of the stars in that cluster. You'll be analyzing M15, a globular star cluster in the Pegasus constellation. To make the diagram, you need magnitudes in at least two different filters for many stars in the cluster. Since this would be incredibly time-consuming to do by hand, you will retrieve this information from an online database.
+To learn about a star cluster, you'll make a color-magnitude diagram of the stars in that cluster. You'll be analyzing M15, a globular star cluster in the Pegasus constellation. To make the diagram, you need magnitudes in at least two different filters for many stars in the cluster.
+
+You will first construct a rudimentary H-R diagram by analyzing images taken with our robotic Stone Edge Observatory (the files are in the Modules section on Canvas), then use catalog data to create a research-grade diagram to analyze later.
+
+%Since this would be incredibly time-consuming to do by hand, you will retrieve this information from an online database.
+
+\section{Analyzing the data in DS9}
+
+To analyze our observations we will be using DS9 (\texttt{http://ds9.si.edu/site/Home.html}), a popular software package for the visualization and basic analysis of image data within the astronomical community. If you are working on a lab computer, the software is already installed. If you are using your personal computer, it can be downloaded and installed from the provided link. 
+
+We will use this tool to measure the flux in both observed filters for as many stars as possible. Each group should use separate, adjacent computers - bring up images in DS9 for each filter, one filter per computer. To better visualize the images in DS9, logarithmically scale the display by selecting \texttt{scale} $\blacktriangleright$ \texttt{log}. Contrast and bias of the display image can be modified by right clicking and dragging - you should adjust these so that the stars are optimally visible.
+
+To determine how much flux comes form each star, we will use the ``regions'' functionality of DS9 that gives information about a selected region in the image. First click \texttt{edit} $\blacktriangleright$ \texttt{region}, and then you will create a region -- indicated by a green circle -- each time you click on the image. Clicking in the center of the region will allow you to move it about the image, while clicking on the edge allows you to adjust it's size. For each star you measure, you'll want to create a region that contains as much flux as possible without contamination from a nearby star or the background. Once this is accomplished, double click the region (which will cause a window with basic information to appear), and select \texttt{Analysis} $\blacktriangleright$ \texttt{Statistics}, which will cause a separate panel to appear with information about the data contained in that region. \texttt{Sum} is an instrument-and-observation specific measure of the flux --- the energy per unit surface area per unit time --- incident on the detector from the light of the astronomical object we observe. Record this value and it's listed error. How are these values related (hint: you can directly calculate the error from the sum with a simple mathematical operation)? Why are they related in this way? Also record the ``Center" coordinates and radius of the region. Do this in both filters, for each star that you measure.
+% the flux (in an astronomy-specific unit called ``Janskys", abbreviated as Jy) value you should record. Also record the ``Center" coordinates and radius of the region. Do this in both filters, for each star that you measure. \textit{Note that the error listed under ``Statistics" is \textbf{not} a correct estimate of the error in the flux value, so do not record this}.
+
+%Error in your measurement can be the result of several causes, but one that is easy to quantify is the presence of background noise (from e.g. sky brightness or scattered light in the telescope). 
+
+Note that even regions in the image that do not contain a discernable source have non-zero flux. This \textbf{background} is from scattered light from the earth's atmosphere (particularly when it's cloudy) and from light scattered by the apparatus inside the telescope. Since this background is not the signal we wish to analyze from our source, we should subtract it from the measured flux from each star. From several circular regions over nothing in particular, determine how many counts there are per unit area, just from the backgrounds.  The \texttt{surf$\_$bri} value gives what we need.  Do this several times to determine the variance in the background.  Thus quantify this background and its error. For each of your stars, compute the background that was likely in the aperture.  This involves multiplying the surface brightness by the area you chose.  Note that the error in the surface brightness propagates, so if you have a very big region, that will likely determine the error on your final measurement. 
+
+Try to measure fluxes and errors for as many stars as possible in your lab session. There will inevitably be some overlap between groups, which is fine, but try to obtain measurements for stars at a wide range of brightnesses. 50 stars is a good target, but the more the better. Thirty minutes before lab ends, stop collecting data, and share your data among your section so that you can finish the rest of the analysis.
+
+\section{Calculating Magnitudes}
+
+In astronomy we deal with magnitudes, which are scaled logarithmically, and increase with decreasing source brightness. Specifically, the equation for the magnitude $m_X$ of an object in a wavelength band $X$ with flux $F_X$ is given by 
+
+\begin{equation}
+	m_{X} = -2.5\log_{10}\left(\frac{F_X}{F_{X,{\textrm{ref}}}}\right)
+\end{equation}
+
+where $F_{X,{\textrm{ref}}}$ is a reference flux value for the given band and magnitude system. Note that the \texttt{sum} value we recorded is not actually the physical flux -- the process of converting observed image brightness's to physical fluxes is a non-trivial calibration procedure we will not undertake here. Instead, we will calculate instrument-specific magnitudes by adopting the counts from the brightest star as the reference flux $F_{X,\textrm{ref}}$. \textit{Note: you must use the same star in both bands for these magnitudes to be compared. Determine the reference star in your section, and calculate magnitudes in both bands from all of the stars measured by your section using Excel or any other software/coding language of your choice.}
+
+%For the SDSS magnitude system we are using, $F_{\textrm{ref}} = 3631 {\textrm{Jy}}$ for both $g'$ and $r'$ measurements. Calculate magnitudes in both bands for all of the stars measured in your section. You can use Excel or any other software/coding language of your choice to do this.  
+
+\section{Making an HR Diagram}
+
+Since different bands measure brightness in different wavelengths, the ratio of flux in two bands is a measure of an object's color. Therefore, the difference between astronomical magnitudes of an object in different bands is a measure of its color, since the magnitude scale is logarithmic:
+
+\begin{equation}
+	m_A - m_B = -2.5\log\left(\frac{F_A}{F_B}\right).
+\end{equation}
+
+An H-R diagram is a plot of stellar magnitude vs. color - aka a ``color magnitude diagram''. A star's color is an observational indication of it's surface temperature. Since all of the stars in a star cluster are at approximately the same distance, their apparent magnitude gives a good relative indicator of luminosity. Therefore, a color-magnitude diagram of stars at roughly constant distance is effectively a temperature-luminosity diagram, and stars fall in characteristic regions of this parameter space based on their mass, age, and metallicity.
+
+We have data in two wavelength bands, so we can subtract those magnitudes to get a color measure. With the software or coding language of your choice, plot $r'$ on the y-axis and $g' - r'$ on the x-axis. Add error bars to your plot. If doing so for each data point becomes crowded on your figure, you can estimate a typical error from your data and include it in a legend. 
+
+
+\section{Making a diagram from catalog data}
 
 \begin{steps}
 	\item Open the SkyServer Search Form in a browser: \url{http://cas.sdss.org/dr7/en/tools/search/form/Default.aspx}.
@@ -140,19 +186,19 @@ To learn about a star cluster, you'll make a color-magnitude diagram of the star
 	\item Label the different stages of stellar evolution on your plot.
 \end{steps}
 
-\section{Comparing to stellar evolution models}
-
-The last portion of this lab involves estimating the age of these stellar populations by comparing their color magnitude diagrams with predictions from a stellar evolution model. Stellar physics is sufficiently well-understood that accurate evolutionary models have been constructed to calculate the observable properties of stars across their lifetimes. Because stars evolve in their position on the HR diagram, we can estimate the age of our observed cluster by comparing these models to our observations.
-
-Several files containing model predictions for the magnitudes of stars at different ages are provided on the course website. These have been calculated using the web tools provided by the Dartmoth Stellar Evolution Database \cite{Dotter2008}, which allows for easy generation of theoretical stellar evolution data based on state-of-the-art models. They assume the observationally measured metallicity [Fe/H] = -2.15 \cite{DurrellHarris1993} and predict the positions of stars at ages $1$, $2$, $5$, $10$, $12$ and $15$ Gigayears ($10^9$ years). These are called isochrones - stellar properties as a function of stellar mass for a fixed age and metallicity. Note that these magnitudes have been corrected for cluster distance \cite{DurrellHarris1993} and extinction due to intervening galactic dust \cite{Schlafly2011} (obtained from \url{http://ned.ipac.caltech.edu/uri/NED::ByName/MESSIER%2015}).
-
-\begin{steps}
-	\item Plot these isochrones on your H-R diagrams and compare them to your data to estimate the cluster age. Be sure to estimate an error on this value and explain your method in your lab report.
-	
-	\item What changes in stellar properties are represented by the different locations of isochrones of different ages?
-	
-	\item What physical processes occuring inside the star underlie those changes?
-\end{steps}
+%\section{Comparing to stellar evolution models}
+%
+%The last portion of this lab involves estimating the age of these stellar populations by comparing their color magnitude diagrams with predictions from a stellar evolution model. Stellar physics is sufficiently well-understood that accurate evolutionary models have been constructed to calculate the observable properties of stars across their lifetimes. Because stars evolve in their position on the HR diagram, we can estimate the age of our observed cluster by comparing these models to our observations.
+%
+%Several files containing model predictions for the magnitudes of stars at different ages are provided on the course website. These have been calculated using the web tools provided by the Dartmoth Stellar Evolution Database \cite{Dotter2008}, which allows for easy generation of theoretical stellar evolution data based on state-of-the-art models. They assume the observationally measured metallicity [Fe/H] = -2.15 \cite{DurrellHarris1993} and predict the positions of stars at ages $1$, $2$, $5$, $10$, $12$ and $15$ Gigayears ($10^9$ years). These are called isochrones - stellar properties as a function of stellar mass for a fixed age and metallicity. Note that these magnitudes have been corrected for cluster distance \cite{DurrellHarris1993} and extinction due to intervening galactic dust \cite{Schlafly2011} (obtained from \url{http://ned.ipac.caltech.edu/uri/NED::ByName/MESSIER%2015}).
+%
+%\begin{steps}
+%	\item Plot these isochrones on your H-R diagrams and compare them to your data to estimate the cluster age. Be sure to estimate an error on this value and explain your method in your lab report.
+%	
+%	\item What changes in stellar properties are represented by the different locations of isochrones of different ages?
+%	
+%	\item What physical processes occuring inside the star underlie those changes?
+%\end{steps}
 
 \section{Report checklist and grading}
 
@@ -160,19 +206,23 @@ Each item below is worth 10 points, and there is an additional 10 points for att
 %See Appendix\ \ref{cha:lab-report-format} for guidance on writing the report and formatting tables and graphs.
 
 \begin{enumerate}
-	\item Identification of trends in the four mystery H-R diagrams and determination of relative ages.
+%	\item Identification of trends in the four mystery H-R diagrams and determination of relative ages.
 
-	\item The coordinates of M15 and the radius you choose, along with how you found these (Step 3).
+%	\item The coordinates of M15 and the radius you choose, along with how you found these.
 	
-	\item The plot of $g$ vs. $g-r$ with labels of different stages of stellar evolution (Steps 9--10).
+	\item Description of your procedure to analyze the images. You can reference the lab manual, and include any changes you made to that procedure. Include screenshots of your work.
 	
-	\item Plot of H-R diagram with isochrones (Step 11).
+	\item The H-R diagram created from your data, with any features marked that you can identify (e.g. main sequence, turn-off, red giants, white dwarfs).
 	
-	\item Analysis and determination of cluster age, with uncertainty (Step 11).
+	\item From the catalog data, your plot of $g$ vs. $g-r$ with labels of different stages of stellar evolution.
 	
-	\item Answers to questions in Steps 12--13.
+%	\item Plot of H-R diagram with isochrones (Step 11).
+	
+%	\item Analysis and determination of cluster age, with uncertainty (Step 11).
+	
+%	\item Answers to questions in Steps 12--13.
 	
 	\item Discuss the findings and reflect deeply on the quality and importance of the findings. This can be both in the frame of a scientist conducting the experiment (“What did the experiment tell us about the world?”) and in the frame of a student (“What skills or mindsets did I learn?”).
 	
-	\item Write a paragraph (100--200 words) reporting back from each of the four roles: facilitator, scribe, technician, skeptic. Where did you see each function happening during this lab, and where did you see gaps? Which did you do, and how did that go? what successes and	challenges in group functioning did you have, and what would you keep and change about the lab write-up?
+	\item Write a paragraph (100--200 words) reporting back from each of the four roles: facilitator, scribe, technician, skeptic. Where did you see each function happening during this lab, and where did you see gaps? Which did you do, and how did that go? what successes and	challenges in group functioning did you have, and what would you do differently?
 \end{enumerate}
