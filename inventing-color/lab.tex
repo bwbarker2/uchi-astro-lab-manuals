@@ -1,5 +1,37 @@
 \chapter{Inventing Color}
 
+%todo edits suggested:
+%
+%1. (Most important)  I have found some technical difficulties with the procedure. Ideally, the students would select a large span of voltages to obtain the color index. Currently, the students can only use a range of ~20-30 V, which is just barely enough to get a meaningful slope.
+%
+%This is because the green filter transmission is quite low. When the students use low voltages with the green filter, the spectrum is entirely noise dominated.
+%
+%I had them fix this by increasing the integration time for the green exposures at low voltages. However, this means they must divide the spectrum by the fractional increase in integration time before integrating the spectrum.
+%
+%I think it would be helpful for this step to be included in the manual.
+%
+%-----------------------------------
+%
+%2. As you already mentioned, the section on DS9 is a bit confusing for the students. I think explicitly listing the steps would be helpful for them (i.e. 1. Frame > new RGB 2. Select [red/green/blue] on window 3. File > Open [select image] 4. Adjust scale of image 5. Repeat (2-4) for other color images 6. Adjust alignment).
+%
+%-----------------------------------
+%
+%3. Potentially, the filter -> color correspondence for DS9 could be:
+%
+%Blue: g
+%Green: r
+%Red: i
+%
+%I think this would open up discussion about how false color images are generally used to show relative wavelengths of observations to the human eye. Currently the i filter corresponds to blue, which is not correct relative to the other filters, since the i band is the reddest wavelength of the set.
+%
+%-----------------------------------
+%
+%4. The students were very confused about how to save spectra and images. I think it would be helpful to include a picture of the icon they need to click for copying both numerical data and images to the clipboard. I needed to help every group with this. I think because they wanted to click the fourth from left icon on the left hand side, rather than the icons on the right side.
+%
+%-----------------------------------
+%
+%5. The current wording of the manual (step 12) sounds like they should put the diffraction grating in front of the probe. It may be helpful to clarify in the manual that they should be looking through the grating with their eyes, not the probe.
+
 Everything glows (gives off electromagnetic radiation) when it has a temperature --- particles are wiggling around randomly (faster if it's hotter) and giving off energy as they wiggle. This \textbf{thermal radiation}, also called blackbody radiation, is the same for any object at the same temperature. This means we can take something's temperature by looking at the spectrum of light it gives off. This is great for learning about something's temperature at a distance, like stars.
 
 Incandescent lightbulbs are so warm that they glow in the visible spectrum (like stars). In this lab, you'll investigate the radiation that is given off by a lightbulb at various temperatures, then use filters to mimic the situation astronomers are in when they observe astronomical objects with different color filters. You'll invent a metric to numerically state the temperature of the lightbulb, even without knowing the actual temperature. Finally, you will make a color image by combining colors from different wavelength
