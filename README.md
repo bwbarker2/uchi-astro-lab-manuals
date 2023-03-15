@@ -31,9 +31,11 @@ $ pdflatex lab-manual-phy252.tex
 * Avoid capitalizing an entire word for emphasis. It reads as shouting and can be confused with acronyms. Instead, use boldface and underlining.
 * For acronyms, use the smallcaps fontface, e.g. \textsc{MSU}. This makes the acronym read more easily with text.
 * For labels of buttons on hardware, software menu items, and spreadsheet commands, use \texttt{} to differentiate. For example,
+
 ...To average the cells \texttt{A1}--\texttt{A3} in a spreadsheet, type \texttt{=AVERAGE(A1:A3)}.
 * For descending into menus, use a right-facing triangle:
-...`\texttt{Plot} $\blacktriangleright$ \texttt{Axis Options}`
+
+```\texttt{Plot} $\blacktriangleright$ \texttt{Axis Options}```
 * Images should be kept at 512 kb or less, to keep the total file size of the manual low.
 * Quotes in latex are done ``like this''. Notice 2 backquotes (the key to the left of '1' on a standard US keyboard) beforehand and 2 single apostrophes after. This will make the quotes open and close correctly.
 
