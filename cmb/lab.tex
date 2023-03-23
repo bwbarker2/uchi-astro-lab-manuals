@@ -139,6 +139,14 @@ measure $T_{total}$ at each of the zenith angles with the hot load  -- cold load
 
 Because the receiver has some sensitivity to emission from angles far outside of its beam referred to as the beam sidelobe response (and at extreme angles as the far sidelobe response),  it is important to account for the excess power picked up by the sidelobe response from the warm buildings, the ground and also the Sun. We do this by making measurements at each zenith angle with the   ``ground shield" (see right panel of Fig.~\ref{fig:details}).  Once the sky and load measurements are obtained at a given zenith angle, take several measurements in quick succession of the power on the sky with the ground shield off and placed along the beam axis.  If the shield is well aligned (use two spotters to make sure it is), then the receiver output power will be lower when the shield is in place, especially at lower elevations (higher zenith angles) due to emission from the warm buildings.  Determine the percentage change to the sky power for each zenith angle. You then correct the power in Eq.~\ref{five} before calculating the $T_{total}$ for Eq.~\ref{seven}.
 
+\begin{figure}
+	\begin{center}
+		\includegraphics[trim=0pt 0pt 0pt 0pt,width=0.95\textwidth]{cmb/cmb-lab-flow-chart.png}
+		\caption{Flow chart for taking sky data. It is important to make sure you obtain consistent results for each elevation angle. The ratio of the power on ambient to liquid nitrogen load should be very stable, since the scale factor $\alpha$ in Eq.~\ref{one} cancels in the ratio.  If the ratio is not stable there is a problem with the instrument (or liquid nitrogen load was not full immersed) and you will not get reliable results for Cosmic Microwave Background results.  The ratio of the output power for the ambient load to the nitrogen cooled load should be about 3.4 to 3.6, depending on the temperature of the ambient load. The typical receiver temperature should be around 11 K.  On a cloudy day the sky measurements may not be stable enough to achieve reliable results.  Why is that? \textit{Hint, light at cm wavelengths is also known as microwave radiation.  What is it that your microwave oven is heating up? And, if it absorbs the microwave radiation, then it must also emit it.}}
+		\label{fig:flow-chart}
+	\end{center}
+\end{figure}
+
 Note, because of the sidelobe response, it is important that everyone is far from beam of the receiver when you are taking measurements. It is best for everyone to stay behind the plane defined by the front of the receiver. 
 
 During the measurements, different students in the lab will take on a particular role to handle hot or cold load, read off power, put on ground shield, record the data.
@@ -149,16 +157,7 @@ During the measurements, different students in the lab will take on a particular
 
 %\newpage
 
-
-
 %\newpage
-\begin{figure}
-	\begin{center}
-		\includegraphics[trim=0pt 0pt 0pt 0pt,width=0.95\textwidth]{cmb/cmb-lab-flow-chart.png}
-		\caption{Flow chart for taking sky data. It is important to make sure you obtain consistent results for each elevation angle. The ratio of the power on ambient to liquid nitrogen load should be very stable, since the scale factor $\alpha$ in Eq.~\ref{one} cancels in the ratio.  If the ratio is not stable there is a problem with the instrument (or liquid nitrogen load was not full immersed) and you will not get reliable results for Cosmic Microwave Background results.  The ratio of the output power for the ambient load to the nitrogen cooled load should be about 3.4 to 3.6, depending on the temperature of the ambient load. The typical receiver temperature should be around 11 K.  On a cloudy day the sky measurements may not be stable enough to achieve reliable results.  Why is that? \textit{Hint, light at cm wavelengths is also known as microwave radiation.  What is it that your microwave oven is heating up? And, if it absorbs the microwave radiation, then it must also emit it.}}
-		\label{fig:flow-chart}
-	\end{center}
-\end{figure}
 
 \section{Analysis}
 

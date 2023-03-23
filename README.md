@@ -9,8 +9,8 @@ See the LICENSE.md for the license granted to you regarding this repository.
 * The name of the course lab manual .tex file follows the convention {lowercase course prefix}{course number}-{`lab-manual.tex`}. For example, the 2018 Autumn quarter lab manual for PHSC 12700 Stars filename should be `phsc12700-lab-manual.tex`.
 * Compile using pdflatex and biber. At the command line, type
 ```$ pdflatex lab-manual-phy252.tex
-$ biber lab-manual-phy252
 $ pdflatex lab-manual-phy252.tex
+$ biber lab-manual-phy252
 $ pdflatex lab-manual-phy252.tex
 ```
 * Latex packages required for compilation:
