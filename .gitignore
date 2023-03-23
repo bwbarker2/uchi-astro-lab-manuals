@@ -24,3 +24,9 @@
 *.cut
 
 srt-background-rotation/techguide.pdf
+
+# Emacs backup files
+*.tex~
+
+# Apple Finder files
+.DS_Store
