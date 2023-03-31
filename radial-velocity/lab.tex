@@ -107,10 +107,11 @@ So in this equation, if we substitute in $a$ from Eq. \ref{rv:eq:circular} and $
  \frac{v_1^2}{r_1} &=& \frac{G \frac{m_1 \: m_2}{r_{12}^2}}{m_1} \\
  \frac{v_1^2}{r_1} &=& G \frac{m_2}{r_{12}^2}
 \end{eqnarray}
+These ideas should be familiar from assignment 2. 
 
 \subsection{Analyzing a sample orbital system}
 
-Consider the picture in Figure~\ref{rv:fig:two-body-cm} and define $M_\textrm{p} = 0.5 M_\textrm{J}$ as the mass of the planet (the smaller object),  $M_\textrm{S} = 1.0 M_\textrm{Sun}$ as the mass of the star (the larger object), and $d = 0.0527\:$AU be the separation between the two. Assume the system is in a circular orbit.
+Consider the picture in Figure~\ref{rv:fig:two-body-cm} and define $M_\textrm{p} = 0.5 M_\textrm{J}$ as the mass of the planet (the smaller object),  $M_\textrm{S} = 1.0 M_\textrm{Sun}$ as the mass of the star (the larger object), and $r_{12} = 0.0527\:$AU be the separation between the two. Assume the system is in a circular orbit.
 
 \begin{figure}
 	\centering
@@ -121,10 +122,10 @@ Consider the picture in Figure~\ref{rv:fig:two-body-cm} and define $M_\textrm{p}
 \begin{steps}
 	\item How far is the Center of Mass from the center of the star (in AU)?
 	
-	\item What is the star’s orbital radius (in AU)?
+	\item What is the star’s orbital radius, $r_1$ (in AU)?
 \end{steps}
 
-Since the star is moving around the Center of Mass, it has a non-zero velocity. Let the orbital period of the system be $T = 4.23\:$days.
+Since the star is moving around the Center of Mass, it has a non-zero velocity. Let the orbital period of the system be $P = 4.42\:$days.
 
 \begin{steps}
 	\item What is the orbital velocity of the host star?
@@ -148,7 +149,8 @@ Astronomers can use spectroscopic techniques for measuring the velocity of stars
 	\item How are the period and amplitude related to the orbital period and the star’s velocity?
 \end{steps}
 
-Consider a similar system only with a planet that is twice the mass ($M_\textrm{p} = M_\textrm{J}$, $M_\textrm{S} = M_\textrm{Sun}$, $d = 0.0527\:$AU, and $T = 4.23\:$days).
+Next, consider a similar system only with a planet that is twice the mass ($M_\textrm{p} = M_\textrm{J}$, $M_\textrm{S} = M_\textrm{Sun}$, $d = 0.0527\:$AU, and $P = 4.42\:$days).
+
 
 \begin{steps}
 	\item What is the system's host star orbital radius (in AU) and orbital velocity (in m/s)?
@@ -180,7 +182,7 @@ This spreadsheet contains the data in Table~\ref{rv:tab:51peg}, as well as a mod
 \begin{equation}
  v(t) = \textrm{A} \sin \left[\frac{2 \pi}{\textrm{B}}\left(t + \textrm{C}\right)\right] + \textrm{D} \,,
 \end{equation}
-where A is the amplitude of the motion and B is the period of the motion. C is a time offset, to account for where the star is in its oscillation cycle at $t=0$. D is constant velocity offset, to account for any constant line of sight velocity that was not already compensated for (for example, the motion of the Sun relative to the star).
+where A is the amplitude of the motion and B is the period of the motion. C is a time offset, to account for where the star is in its oscillation cycle at $t=0$. D is constant velocity offset, to account for any constant line of sight velocity that was not already compensated for (for example, the observer's motion with respect to the barycenter of the exoplanet system).
 
 %Use the free software SciDAVis to plot this data. You can download and install it on your computer from \url{https://sourceforge.net/projects/scidavis/}.
 %, or you can use the lab computers, which have it installed already.
@@ -212,7 +214,7 @@ The smaller the rms deviation, the closer the fit. The rms deviation is already 
 %You can retrieve the fit parameters and their uncertainties from the Results Log on the main window. \textbf{Include the graph, the fit parameters, and their uncertainties in your report.}
 
 \begin{steps}
-	\item From your fit to the data, what is the orbital period (days) and host star orbital velocity (m/s)?
+	\item From your fit to the data, what is the orbital period (days) and host star orbital velocity (m/s) -- assuming the planetary orbit is edge-on so the radial velocity amplitude equals its full velocity?
 	
 	\item What is the orbital radius (in AU) for the host star?
 \end{steps}
@@ -232,7 +234,7 @@ The host star orbital radius and the semimajor axis are related by the Center of
 %todo clarify that they should use CoM equation, rather than K3L, since we need to not neglect the planet mass to find it.
 
 \begin{steps}
-	\item Using the system's semimajor axis, the mass of 51Peg, and the host star’s orbital period, determine the planet’s mass (in units of $M_\textrm{J}$).
+	\item Using the system's semimajor axis, the host star radius, and the mass of 51Peg, determine the planet’s mass (in units of $M_\textrm{J}$). Of course, we really mean its minimum mass, $m \sin i$, due to the assumption of an edge-on orbit. 
 \end{steps}
 
 \section{Radial velocities for other systems}
@@ -245,7 +247,7 @@ The host star orbital radius and the semimajor axis are related by the Center of
 	\item Follow the steps of that tutorial to analyze radial velocity data for 51Peg.
 \end{steps}
 
-Note that one key analysis tool you will use in the remainder of the lab is the power spectrum of the radial velocity data. We know that we can create any periodic function from the sum of sinusoids of different frequencies and phases. The power spectrum tells us which frequencies dominate that decomposition. Therefore, peaks in the power spectrum correspond to periodicities in the data, and hence point to possible planetary periods in the radial velocity measurements.
+Note that one key analysis tool you will use in the remainder of the lab is the power spectrum of the radial velocity data. Any periodic function from the sum of sinusoids of different frequencies and phases: that's why Ptolomy's mechanics of epicycles could fit the motion of the planets so well! The power spectrum tells us which frequencies {\itshape dominate} that decomposition. Therefore, peaks in the power spectrum correspond to periodicities in the data, and hence point to possible planetary periods in the radial velocity measurements, with smaller peaks being attributable to noise.
 
 \begin{steps}
 	\item How do the mass and separation results from Systemic compare with your earlier 51Peg numbers? Print out a plot of the ``Phased Radial Velocity'' and write on it the Period and Mass for the system.
