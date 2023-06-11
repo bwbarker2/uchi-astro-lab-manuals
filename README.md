@@ -7,15 +7,16 @@ See the LICENSE.md for the license granted to you regarding this repository.
 * Each lab write-up and appendix lives in its own directory, to be included in the main course lab manual's .tex file at the repository root. The lab write-up can then have the convenient file name `lab.tex` or something similar.
 * Each lab write-up or appendix file should start with its title as a chapter. For example, the source file for the lab about measuring the local acceleration of gravity starts with `\chapter{Little g}`.
 * The name of the course lab manual .tex file follows the convention {lowercase course prefix}{course number}-{`lab-manual.tex`}. For example, the 2018 Autumn quarter lab manual for PHSC 12700 Stars filename should be `phsc12700-lab-manual.tex`.
+* For certain courses, latex parent documents exist which only contain the instructions for a single lab. For example, the file `parallax-manual.tex` generates a document containing only the `parallax/lab.tex` file.
+* Latex packages required for compilation:
+  * latex, biblatex-biber
+  * several texlive packages including texlive-fonts-extra
 * Compile using pdflatex and biber. At the command line, type
 ```$ pdflatex lab-manual-phy252.tex
 $ pdflatex lab-manual-phy252.tex
 $ biber lab-manual-phy252
 $ pdflatex lab-manual-phy252.tex
 ```
-* Latex packages required for compilation:
-  * latex, biblatex-biber
-  * several texlive packages including texlive-fonts-extra
 
 ### Text Style Guide
 
